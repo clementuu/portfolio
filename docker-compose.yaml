@@ -1,0 +1,11 @@
+services:
+  back:
+    image: golang:1.22-alpine
+    container_name: back
+    build:
+      context: ./
+      dockerfile: ./back/Dockerfile
+    ports:
+      - "8080:8080"
+    working_dir: /app
+    command: go run main.go

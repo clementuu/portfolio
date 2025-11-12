@@ -1,0 +1,33 @@
+# Node.js / Svelte + esbuild
+node_modules/
+dist/
+.build/
+.vite/
+.esbuild/
+*.log
+.env
+.env.local
+
+# Go
+bin/
+*.exe
+*.out
+*.test
+*.o
+*.a
+*.so
+*.dll
+*.dylib
+*.prof
+coverage/
+go.sum
+
+# Docker
+*.tar
+*.img
+*.container
+
+# IDE / Editor configs
+.vscode/
+
+GEMINI.md
