@@ -2,6 +2,8 @@ package main
 
 import (
 	"back/cfg"
+	"back/service"
+	"back/web"
 	"log"
 	"net/http"
 )
@@ -12,8 +14,12 @@ func main() {
 		log.Fatal(err)
 	}
 
+	service.Init()
+
 	fs := http.FileServer(http.Dir(config.StaticDir))
 	http.Handle("/", fs)
+
+	web.MakeRoutes()
 
 	log.Printf("Listening on %s...", config.Port)
 	err = http.ListenAndServe(config.Port, nil)

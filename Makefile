@@ -2,7 +2,7 @@ webdev:
 	npm install && node esbuild.js --dev
 
 srvdev:
-	cd back && DIR=../ihm go run ./cmd/main.go
+	cd back && DIR=../ihm go run .
 
 build:
 	docker compose build
