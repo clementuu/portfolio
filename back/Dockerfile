@@ -16,4 +16,4 @@ COPY back .
 EXPOSE 8080
 
 # Commande pour lancer l'application
-CMD ["go", "run", "main.go"]
+CMD ["go", "run", "cmd/main.go"]
