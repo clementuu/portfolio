@@ -82,6 +82,39 @@ function start_hydrating() {
 function end_hydrating() {
   is_hydrating = false;
 }
+function append(target, node) {
+  target.appendChild(node);
+}
+function append_styles(target, style_sheet_id, styles) {
+  const append_styles_to = get_root_for_style(target);
+  if (!append_styles_to.getElementById(style_sheet_id)) {
+    const style = element("style");
+    style.id = style_sheet_id;
+    style.textContent = styles;
+    append_stylesheet(append_styles_to, style);
+  }
+}
+function get_root_for_style(node) {
+  if (!node)
+    return document;
+  const root = node.getRootNode ? node.getRootNode() : node.ownerDocument;
+  if (root && /** @type {ShadowRoot} */
+  root.host) {
+    return (
+      /** @type {ShadowRoot} */
+      root
+    );
+  }
+  return node.ownerDocument;
+}
+function append_stylesheet(node, style) {
+  append(
+    /** @type {Document} */
+    node.head || node,
+    style
+  );
+  return style.sheet;
+}
 function insert(target, node, anchor) {
   target.insertBefore(node, anchor || null);
 }
@@ -90,8 +123,20 @@ function detach(node) {
     node.parentNode.removeChild(node);
   }
 }
+function destroy_each(iterations, detaching) {
+  for (let i = 0; i < iterations.length; i += 1) {
+    if (iterations[i])
+      iterations[i].d(detaching);
+  }
+}
 function element(name) {
   return document.createElement(name);
+}
+function text(data) {
+  return document.createTextNode(data);
+}
+function space() {
+  return text(" ");
 }
 function attr(node, attribute, value) {
   if (value == null)
@@ -203,6 +248,11 @@ function transition_in(block, local) {
   }
 }
 
+// node_modules/svelte/src/runtime/internal/each.js
+function ensure_array_like(array_like_or_iterator) {
+  return array_like_or_iterator?.length !== void 0 ? array_like_or_iterator : Array.from(array_like_or_iterator);
+}
+
 // node_modules/svelte/src/shared/boolean_attributes.js
 var _boolean_attributes = (
   /** @type {const} */
@@ -269,7 +319,7 @@ function make_dirty(component, i) {
   }
   component.$$.dirty[i / 31 | 0] |= 1 << i % 31;
 }
-function init(component, options, instance, create_fragment2, not_equal, props, append_styles = null, dirty = [-1]) {
+function init(component, options, instance2, create_fragment2, not_equal, props, append_styles2 = null, dirty = [-1]) {
   const parent_component = current_component;
   set_current_component(component);
   const $$ = component.$$ = {
@@ -293,9 +343,9 @@ function init(component, options, instance, create_fragment2, not_equal, props, 
     skip_bound: false,
     root: options.target || parent_component.$$.root
   };
-  append_styles && append_styles($$.root);
+  append_styles2 && append_styles2($$.root);
   let ready = false;
-  $$.ctx = instance ? instance(component, options.props || {}, (i, ret, ...rest) => {
+  $$.ctx = instance2 ? instance2(component, options.props || {}, (i, ret, ...rest) => {
     const value = rest.length ? rest[0] : ret;
     if ($$.ctx && not_equal($$.ctx[i], $$.ctx[i] = value)) {
       if (!$$.skip_bound && $$.bound[i])
@@ -628,30 +678,185 @@ if (typeof window !== "undefined")
   (window.__svelte || (window.__svelte = { v: /* @__PURE__ */ new Set() })).v.add(PUBLIC_VERSION);
 
 // ihm/contacts.svelte
-function create_fragment(ctx) {
-  let div;
+function add_css(target) {
+  append_styles(target, "svelte-1chbm1x", '@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");.contact-list.svelte-1chbm1x.svelte-1chbm1x{display:flex;flex-direction:column;gap:1em;padding:1em;max-width:600px;margin:auto}.contact-item.svelte-1chbm1x.svelte-1chbm1x{display:flex;align-items:center;gap:1em;padding:0.5em 0;border-bottom:1px solid #eee}.contact-item.svelte-1chbm1x.svelte-1chbm1x:last-child{border-bottom:none}.contact-icon.svelte-1chbm1x.svelte-1chbm1x{width:24px;height:24px}.contact-item.svelte-1chbm1x strong.svelte-1chbm1x{flex-grow:1}.contact-item.svelte-1chbm1x a.svelte-1chbm1x{color:#007bff;text-decoration:none}.contact-item.svelte-1chbm1x a.svelte-1chbm1x:hover{text-decoration:underline}');
+}
+function get_each_context(ctx, list, i) {
+  const child_ctx = ctx.slice();
+  child_ctx[1] = list[i];
+  return child_ctx;
+}
+function create_each_block(ctx) {
+  let div1;
+  let div0;
+  let i;
+  let i_class_value;
+  let t0;
+  let strong;
+  let t3;
+  let a;
+  let t4_value = (
+    /*contact*/
+    ctx[1].value + ""
+  );
+  let t4;
+  let a_href_value;
+  let t5;
   return {
     c() {
-      div = element("div");
-      div.innerHTML = `<h2>Contacts</h2>`;
+      div1 = element("div");
+      div0 = element("div");
+      i = element("i");
+      t0 = space();
+      strong = element("strong");
+      strong.textContent = `${/*contact*/
+      ctx[1].type}:`;
+      t3 = space();
+      a = element("a");
+      t4 = text(t4_value);
+      t5 = space();
+      attr(i, "class", i_class_value = "bi " + /*contact*/
+      ctx[1].iconClass + " svelte-1chbm1x");
+      attr(div0, "class", "contact-icon svelte-1chbm1x");
+      attr(strong, "class", "svelte-1chbm1x");
+      attr(a, "href", a_href_value = /*contact*/
+      ctx[1].link);
+      attr(a, "target", "_blank");
+      attr(a, "rel", "noopener noreferrer");
+      attr(a, "class", "svelte-1chbm1x");
+      attr(div1, "class", "contact-item svelte-1chbm1x");
     },
     m(target, anchor) {
-      insert(target, div, anchor);
+      insert(target, div1, anchor);
+      append(div1, div0);
+      append(div0, i);
+      append(div1, t0);
+      append(div1, strong);
+      append(div1, t3);
+      append(div1, a);
+      append(a, t4);
+      append(div1, t5);
     },
     p: noop,
-    i: noop,
-    o: noop,
     d(detaching) {
       if (detaching) {
-        detach(div);
+        detach(div1);
       }
     }
   };
 }
+function create_fragment(ctx) {
+  let link;
+  let t0;
+  let h2;
+  let t2;
+  let div;
+  let each_value = ensure_array_like(
+    /*contacts*/
+    ctx[0]
+  );
+  let each_blocks = [];
+  for (let i = 0; i < each_value.length; i += 1) {
+    each_blocks[i] = create_each_block(get_each_context(ctx, each_value, i));
+  }
+  return {
+    c() {
+      link = element("link");
+      t0 = space();
+      h2 = element("h2");
+      h2.textContent = "Me Contacter";
+      t2 = space();
+      div = element("div");
+      for (let i = 0; i < each_blocks.length; i += 1) {
+        each_blocks[i].c();
+      }
+      attr(link, "rel", "stylesheet");
+      attr(link, "href", "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+      attr(div, "class", "contact-list svelte-1chbm1x");
+    },
+    m(target, anchor) {
+      append(document.head, link);
+      insert(target, t0, anchor);
+      insert(target, h2, anchor);
+      insert(target, t2, anchor);
+      insert(target, div, anchor);
+      for (let i = 0; i < each_blocks.length; i += 1) {
+        if (each_blocks[i]) {
+          each_blocks[i].m(div, null);
+        }
+      }
+    },
+    p(ctx2, [dirty]) {
+      if (dirty & /*contacts*/
+      1) {
+        each_value = ensure_array_like(
+          /*contacts*/
+          ctx2[0]
+        );
+        let i;
+        for (i = 0; i < each_value.length; i += 1) {
+          const child_ctx = get_each_context(ctx2, each_value, i);
+          if (each_blocks[i]) {
+            each_blocks[i].p(child_ctx, dirty);
+          } else {
+            each_blocks[i] = create_each_block(child_ctx);
+            each_blocks[i].c();
+            each_blocks[i].m(div, null);
+          }
+        }
+        for (; i < each_blocks.length; i += 1) {
+          each_blocks[i].d(1);
+        }
+        each_blocks.length = each_value.length;
+      }
+    },
+    i: noop,
+    o: noop,
+    d(detaching) {
+      if (detaching) {
+        detach(t0);
+        detach(h2);
+        detach(t2);
+        detach(div);
+      }
+      detach(link);
+      destroy_each(each_blocks, detaching);
+    }
+  };
+}
+function instance($$self) {
+  const contacts = [
+    {
+      type: "T\xE9l\xE9phone",
+      value: "+33 6 12 34 56 78",
+      link: "tel:+33612345678",
+      iconClass: "bi-telephone"
+    },
+    {
+      type: "Email",
+      value: "clement.calia@example.com",
+      link: "mailto:clement.calia@example.com",
+      iconClass: "bi-envelope"
+    },
+    {
+      type: "LinkedIn",
+      value: "Cl\xE9ment Calia",
+      link: "https://www.linkedin.com/in/clement-calia/",
+      iconClass: "bi-linkedin"
+    },
+    {
+      type: "GitHub",
+      value: "clementcalia",
+      link: "https://github.com/clementuu",
+      iconClass: "bi-github"
+    }
+  ];
+  return [contacts];
+}
 var Contacts = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, null, create_fragment, safe_not_equal, {});
+    init(this, options, instance, create_fragment, safe_not_equal, {}, add_css);
   }
 };
 customElements.define("contacts-portfolio", create_custom_element(Contacts, {}, [], [], true));

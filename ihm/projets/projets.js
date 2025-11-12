@@ -18,6 +18,16 @@ function is_function(thing) {
 function safe_not_equal(a, b) {
   return a != a ? b == b : a !== b || a && typeof a === "object" || typeof a === "function";
 }
+var src_url_equal_anchor;
+function src_url_equal(element_src, url) {
+  if (element_src === url)
+    return true;
+  if (!src_url_equal_anchor) {
+    src_url_equal_anchor = document.createElement("a");
+  }
+  src_url_equal_anchor.href = url;
+  return element_src === src_url_equal_anchor.href;
+}
 function is_empty(obj) {
   return Object.keys(obj).length === 0;
 }
@@ -82,6 +92,39 @@ function start_hydrating() {
 function end_hydrating() {
   is_hydrating = false;
 }
+function append(target, node) {
+  target.appendChild(node);
+}
+function append_styles(target, style_sheet_id, styles) {
+  const append_styles_to = get_root_for_style(target);
+  if (!append_styles_to.getElementById(style_sheet_id)) {
+    const style = element("style");
+    style.id = style_sheet_id;
+    style.textContent = styles;
+    append_stylesheet(append_styles_to, style);
+  }
+}
+function get_root_for_style(node) {
+  if (!node)
+    return document;
+  const root = node.getRootNode ? node.getRootNode() : node.ownerDocument;
+  if (root && /** @type {ShadowRoot} */
+  root.host) {
+    return (
+      /** @type {ShadowRoot} */
+      root
+    );
+  }
+  return node.ownerDocument;
+}
+function append_stylesheet(node, style) {
+  append(
+    /** @type {Document} */
+    node.head || node,
+    style
+  );
+  return style.sheet;
+}
 function insert(target, node, anchor) {
   target.insertBefore(node, anchor || null);
 }
@@ -90,8 +133,20 @@ function detach(node) {
     node.parentNode.removeChild(node);
   }
 }
+function destroy_each(iterations, detaching) {
+  for (let i = 0; i < iterations.length; i += 1) {
+    if (iterations[i])
+      iterations[i].d(detaching);
+  }
+}
 function element(name) {
   return document.createElement(name);
+}
+function text(data) {
+  return document.createTextNode(data);
+}
+function space() {
+  return text(" ");
 }
 function attr(node, attribute, value) {
   if (value == null)
@@ -101,6 +156,13 @@ function attr(node, attribute, value) {
 }
 function children(element2) {
   return Array.from(element2.childNodes);
+}
+function set_data(text2, data) {
+  data = "" + data;
+  if (text2.data === data)
+    return;
+  text2.data = /** @type {string} */
+  data;
 }
 function get_custom_elements_slots(element2) {
   const result = {};
@@ -196,11 +258,49 @@ function flush_render_callbacks(fns) {
 
 // node_modules/svelte/src/runtime/internal/transitions.js
 var outroing = /* @__PURE__ */ new Set();
+var outros;
+function group_outros() {
+  outros = {
+    r: 0,
+    c: [],
+    p: outros
+    // parent group
+  };
+}
+function check_outros() {
+  if (!outros.r) {
+    run_all(outros.c);
+  }
+  outros = outros.p;
+}
 function transition_in(block, local) {
   if (block && block.i) {
     outroing.delete(block);
     block.i(local);
   }
+}
+function transition_out(block, local, detach2, callback) {
+  if (block && block.o) {
+    if (outroing.has(block))
+      return;
+    outroing.add(block);
+    outros.c.push(() => {
+      outroing.delete(block);
+      if (callback) {
+        if (detach2)
+          block.d(1);
+        callback();
+      }
+    });
+    block.o(local);
+  } else if (callback) {
+    callback();
+  }
+}
+
+// node_modules/svelte/src/runtime/internal/each.js
+function ensure_array_like(array_like_or_iterator) {
+  return array_like_or_iterator?.length !== void 0 ? array_like_or_iterator : Array.from(array_like_or_iterator);
 }
 
 // node_modules/svelte/src/shared/boolean_attributes.js
@@ -237,6 +337,9 @@ var _boolean_attributes = (
 var boolean_attributes = /* @__PURE__ */ new Set([..._boolean_attributes]);
 
 // node_modules/svelte/src/runtime/internal/Component.js
+function create_component(block) {
+  block && block.c();
+}
 function mount_component(component, target, anchor) {
   const { fragment, after_update } = component.$$;
   fragment && fragment.m(target, anchor);
@@ -269,7 +372,7 @@ function make_dirty(component, i) {
   }
   component.$$.dirty[i / 31 | 0] |= 1 << i % 31;
 }
-function init(component, options, instance, create_fragment2, not_equal, props, append_styles = null, dirty = [-1]) {
+function init(component, options, instance3, create_fragment3, not_equal, props, append_styles2 = null, dirty = [-1]) {
   const parent_component = current_component;
   set_current_component(component);
   const $$ = component.$$ = {
@@ -293,9 +396,9 @@ function init(component, options, instance, create_fragment2, not_equal, props, 
     skip_bound: false,
     root: options.target || parent_component.$$.root
   };
-  append_styles && append_styles($$.root);
+  append_styles2 && append_styles2($$.root);
   let ready = false;
-  $$.ctx = instance ? instance(component, options.props || {}, (i, ret, ...rest) => {
+  $$.ctx = instance3 ? instance3(component, options.props || {}, (i, ret, ...rest) => {
     const value = rest.length ? rest[0] : ret;
     if ($$.ctx && not_equal($$.ctx[i], $$.ctx[i] = value)) {
       if (!$$.skip_bound && $$.bound[i])
@@ -308,7 +411,7 @@ function init(component, options, instance, create_fragment2, not_equal, props, 
   $$.update();
   ready = true;
   run_all($$.before_update);
-  $$.fragment = create_fragment2 ? create_fragment2($$.ctx) : false;
+  $$.fragment = create_fragment3 ? create_fragment3($$.ctx) : false;
   if (options.target) {
     if (options.hydrate) {
       start_hydrating();
@@ -627,18 +730,90 @@ var PUBLIC_VERSION = "4";
 if (typeof window !== "undefined")
   (window.__svelte || (window.__svelte = { v: /* @__PURE__ */ new Set() })).v.add(PUBLIC_VERSION);
 
-// ihm/projets/projets.svelte
+// ihm/projets/card.svelte
+function add_css(target) {
+  append_styles(target, "svelte-1qxx6zu", ".project-card.svelte-1qxx6zu.svelte-1qxx6zu{border:1px solid #eee;border-radius:8px;padding:1em;margin:1em;box-shadow:2px 2px 8px rgba(0, 0, 0, 0.1);display:flex;flex-direction:column;align-items:center;text-align:center;max-width:300px}.project-card.svelte-1qxx6zu img.svelte-1qxx6zu{max-width:100%;height:auto;border-radius:4px;margin-bottom:1em}.project-card.svelte-1qxx6zu h3.svelte-1qxx6zu{margin-top:0;color:#333}.project-card.svelte-1qxx6zu p.svelte-1qxx6zu{color:#666;font-size:0.9em}");
+}
 function create_fragment(ctx) {
   let div;
+  let img;
+  let img_src_value;
+  let t0;
+  let h3;
+  let t1;
+  let t2;
+  let p;
+  let t3;
   return {
     c() {
       div = element("div");
-      div.innerHTML = `<h2>Projets</h2>`;
+      img = element("img");
+      t0 = space();
+      h3 = element("h3");
+      t1 = text(
+        /*title*/
+        ctx[0]
+      );
+      t2 = space();
+      p = element("p");
+      t3 = text(
+        /*summary*/
+        ctx[1]
+      );
+      if (!src_url_equal(img.src, img_src_value = /*image*/
+      ctx[2]))
+        attr(img, "src", img_src_value);
+      attr(
+        img,
+        "alt",
+        /*title*/
+        ctx[0]
+      );
+      attr(img, "class", "svelte-1qxx6zu");
+      attr(h3, "class", "svelte-1qxx6zu");
+      attr(p, "class", "svelte-1qxx6zu");
+      attr(div, "class", "project-card svelte-1qxx6zu");
     },
     m(target, anchor) {
       insert(target, div, anchor);
+      append(div, img);
+      append(div, t0);
+      append(div, h3);
+      append(h3, t1);
+      append(div, t2);
+      append(div, p);
+      append(p, t3);
     },
-    p: noop,
+    p(ctx2, [dirty]) {
+      if (dirty & /*image*/
+      4 && !src_url_equal(img.src, img_src_value = /*image*/
+      ctx2[2])) {
+        attr(img, "src", img_src_value);
+      }
+      if (dirty & /*title*/
+      1) {
+        attr(
+          img,
+          "alt",
+          /*title*/
+          ctx2[0]
+        );
+      }
+      if (dirty & /*title*/
+      1)
+        set_data(
+          t1,
+          /*title*/
+          ctx2[0]
+        );
+      if (dirty & /*summary*/
+      2)
+        set_data(
+          t3,
+          /*summary*/
+          ctx2[1]
+        );
+    },
     i: noop,
     o: noop,
     d(detaching) {
@@ -648,10 +823,217 @@ function create_fragment(ctx) {
     }
   };
 }
+function instance($$self, $$props, $$invalidate) {
+  let { title } = $$props;
+  let { summary } = $$props;
+  let { image } = $$props;
+  $$self.$$set = ($$props2) => {
+    if ("title" in $$props2)
+      $$invalidate(0, title = $$props2.title);
+    if ("summary" in $$props2)
+      $$invalidate(1, summary = $$props2.summary);
+    if ("image" in $$props2)
+      $$invalidate(2, image = $$props2.image);
+  };
+  return [title, summary, image];
+}
+var Card = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance, create_fragment, safe_not_equal, { title: 0, summary: 1, image: 2 }, add_css);
+  }
+  get title() {
+    return this.$$.ctx[0];
+  }
+  set title(title) {
+    this.$$set({ title });
+    flush();
+  }
+  get summary() {
+    return this.$$.ctx[1];
+  }
+  set summary(summary) {
+    this.$$set({ summary });
+    flush();
+  }
+  get image() {
+    return this.$$.ctx[2];
+  }
+  set image(image) {
+    this.$$set({ image });
+    flush();
+  }
+};
+create_custom_element(Card, { "title": {}, "summary": {}, "image": {} }, [], [], true);
+var card_default = Card;
+
+// ihm/projets/projets.svelte
+function add_css2(target) {
+  append_styles(target, "svelte-16hc4vy", ".projects-grid.svelte-16hc4vy{display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1em;justify-items:center;padding:1em}");
+}
+function get_each_context(ctx, list, i) {
+  const child_ctx = ctx.slice();
+  child_ctx[1] = list[i];
+  return child_ctx;
+}
+function create_each_block(ctx) {
+  let card;
+  let current;
+  card = new card_default({
+    props: {
+      title: (
+        /*project*/
+        ctx[1].title
+      ),
+      summary: (
+        /*project*/
+        ctx[1].summary
+      ),
+      image: (
+        /*project*/
+        ctx[1].image
+      )
+    }
+  });
+  return {
+    c() {
+      create_component(card.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(card, target, anchor);
+      current = true;
+    },
+    p: noop,
+    i(local) {
+      if (current)
+        return;
+      transition_in(card.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(card.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(card, detaching);
+    }
+  };
+}
+function create_fragment2(ctx) {
+  let div1;
+  let h2;
+  let t1;
+  let div0;
+  let current;
+  let each_value = ensure_array_like(
+    /*projects*/
+    ctx[0]
+  );
+  let each_blocks = [];
+  for (let i = 0; i < each_value.length; i += 1) {
+    each_blocks[i] = create_each_block(get_each_context(ctx, each_value, i));
+  }
+  const out = (i) => transition_out(each_blocks[i], 1, 1, () => {
+    each_blocks[i] = null;
+  });
+  return {
+    c() {
+      div1 = element("div");
+      h2 = element("h2");
+      h2.textContent = "Mes Projets";
+      t1 = space();
+      div0 = element("div");
+      for (let i = 0; i < each_blocks.length; i += 1) {
+        each_blocks[i].c();
+      }
+      attr(div0, "class", "projects-grid svelte-16hc4vy");
+    },
+    m(target, anchor) {
+      insert(target, div1, anchor);
+      append(div1, h2);
+      append(div1, t1);
+      append(div1, div0);
+      for (let i = 0; i < each_blocks.length; i += 1) {
+        if (each_blocks[i]) {
+          each_blocks[i].m(div0, null);
+        }
+      }
+      current = true;
+    },
+    p(ctx2, [dirty]) {
+      if (dirty & /*projects*/
+      1) {
+        each_value = ensure_array_like(
+          /*projects*/
+          ctx2[0]
+        );
+        let i;
+        for (i = 0; i < each_value.length; i += 1) {
+          const child_ctx = get_each_context(ctx2, each_value, i);
+          if (each_blocks[i]) {
+            each_blocks[i].p(child_ctx, dirty);
+            transition_in(each_blocks[i], 1);
+          } else {
+            each_blocks[i] = create_each_block(child_ctx);
+            each_blocks[i].c();
+            transition_in(each_blocks[i], 1);
+            each_blocks[i].m(div0, null);
+          }
+        }
+        group_outros();
+        for (i = each_value.length; i < each_blocks.length; i += 1) {
+          out(i);
+        }
+        check_outros();
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      for (let i = 0; i < each_value.length; i += 1) {
+        transition_in(each_blocks[i]);
+      }
+      current = true;
+    },
+    o(local) {
+      each_blocks = each_blocks.filter(Boolean);
+      for (let i = 0; i < each_blocks.length; i += 1) {
+        transition_out(each_blocks[i]);
+      }
+      current = false;
+    },
+    d(detaching) {
+      if (detaching) {
+        detach(div1);
+      }
+      destroy_each(each_blocks, detaching);
+    }
+  };
+}
+function instance2($$self) {
+  const projects = [
+    {
+      title: "Projet Alpha",
+      summary: "Un projet passionnant qui a explor\xE9 les limites de la technologie X.",
+      image: ""
+    },
+    {
+      title: "Projet Beta",
+      summary: "D\xE9veloppement d'une application mobile innovante pour la gestion de t\xE2ches.",
+      image: ""
+    },
+    {
+      title: "Projet Gamma",
+      summary: "Optimisation des performances d'une base de donn\xE9es distribu\xE9e.",
+      image: ""
+    }
+  ];
+  return [projects];
+}
 var Projets = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, null, create_fragment, safe_not_equal, {});
+    init(this, options, instance2, create_fragment2, safe_not_equal, {}, add_css2);
   }
 };
 customElements.define("projets-portfolio", create_custom_element(Projets, {}, [], [], true));

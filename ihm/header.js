@@ -669,7 +669,7 @@ function create_fragment(ctx) {
   return {
     c() {
       nav = element("nav");
-      nav.innerHTML = `<a href="/" class="svelte-xnl057">Accueil</a> <a href="/projets.html" class="svelte-xnl057">Projets</a> <a href="/competences.html" class="svelte-xnl057">Comp\xE9tences</a> <a href="/contacts.html" class="svelte-xnl057">Contacts</a>`;
+      nav.innerHTML = `<a href="/" class="svelte-xnl057">Accueil</a> <a href="/projets/projets.html" class="svelte-xnl057">Projets</a> <a href="/competences/competences.html" class="svelte-xnl057">Comp\xE9tences</a> <a href="/contacts.html" class="svelte-xnl057">Contacts</a>`;
       attr(nav, "class", "svelte-xnl057");
     },
     m(target, anchor) {

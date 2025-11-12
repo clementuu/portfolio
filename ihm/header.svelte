@@ -5,8 +5,8 @@
 
 <nav>
   <a href="/">Accueil</a>
-  <a href="/projets.html">Projets</a>
-  <a href="/competences.html">Compétences</a>
+  <a href="/projets/projets.html">Projets</a>
+  <a href="/competences/competences.html">Compétences</a>
   <a href="/contacts.html">Contacts</a>
 </nav>
 

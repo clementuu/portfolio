@@ -126,12 +126,6 @@ function detach(node) {
 function element(name) {
   return document.createElement(name);
 }
-function text(data) {
-  return document.createTextNode(data);
-}
-function space() {
-  return text(" ");
-}
 function attr(node, attribute, value) {
   if (value == null)
     node.removeAttribute(attribute);
@@ -666,27 +660,19 @@ var PUBLIC_VERSION = "4";
 if (typeof window !== "undefined")
   (window.__svelte || (window.__svelte = { v: /* @__PURE__ */ new Set() })).v.add(PUBLIC_VERSION);
 
-// ihm/index.svelte
+// ihm/App.svelte
 function add_css(target) {
-  append_styles(target, "svelte-165yxii", "@import './style/style.css';@import 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css';");
+  append_styles(target, "svelte-j3czbe", `@import './style/style.css';@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");`);
 }
 function create_fragment(ctx) {
-  let link;
-  let t0;
   let div;
   return {
     c() {
-      link = element("link");
-      t0 = space();
       div = element("div");
-      div.innerHTML = `<h1>Cl\xE9ment Calia</h1> <h2>Expert en ing\xE9nierie logicielle</h2>`;
-      attr(link, "rel", "stylesheet");
-      attr(link, "href", "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");
+      div.innerHTML = `<h1 class="h1 mt-5">Cl\xE9ment Calia</h1> <h2 class="h2">Expert en ing\xE9nierie logicielle</h2>`;
       attr(div, "class", "centered");
     },
     m(target, anchor) {
-      append(document.head, link);
-      insert(target, t0, anchor);
       insert(target, div, anchor);
     },
     p: noop,
@@ -694,21 +680,19 @@ function create_fragment(ctx) {
     o: noop,
     d(detaching) {
       if (detaching) {
-        detach(t0);
         detach(div);
       }
-      detach(link);
     }
   };
 }
-var Ihm = class extends SvelteComponent {
+var App = class extends SvelteComponent {
   constructor(options) {
     super();
     init(this, options, null, create_fragment, safe_not_equal, {}, add_css);
   }
 };
-customElements.define("index-portfolio", create_custom_element(Ihm, {}, [], [], true));
-var ihm_default = Ihm;
+customElements.define("index-portfolio", create_custom_element(App, {}, [], [], true));
+var App_default = App;
 export {
-  ihm_default as default
+  App_default as default
 };
