@@ -8,8 +8,8 @@
     const contacts = [
         {
             type: "Téléphone",
-            value: "+33 6 12 34 56 78",
-            link: "tel:+33612345678",
+            value: "+33 6 25 45 25 66",
+            link: "tel:+33625452566",
             iconClass: "bi-telephone"
         },
         {
@@ -21,7 +21,7 @@
         {
             type: "LinkedIn",
             value: "Clément Calia",
-            link: "www.linkedin.com/in/clement-calia",
+            link: "https://www.linkedin.com/in/clement-calia",
             iconClass: "bi-linkedin"
         },
         {

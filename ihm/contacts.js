@@ -828,8 +828,8 @@ function instance($$self) {
   const contacts = [
     {
       type: "T\xE9l\xE9phone",
-      value: "+33 6 12 34 56 78",
-      link: "tel:+33612345678",
+      value: "+33 6 25 45 25 66",
+      link: "tel:+33625452566",
       iconClass: "bi-telephone"
     },
     {
@@ -841,7 +841,7 @@ function instance($$self) {
     {
       type: "LinkedIn",
       value: "Cl\xE9ment Calia",
-      link: "www.linkedin.com/in/clement-calia",
+      link: "https://www.linkedin.com/in/clement-calia",
       iconClass: "bi-linkedin"
     },
     {
