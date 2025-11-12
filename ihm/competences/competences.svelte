@@ -1,56 +1,28 @@
 <svelte:options customElement="competences-portfolio" />
 
 <script>
-  import Card from './card.svelte';
+    import Card from './card.svelte';
 
-  const competences = [
-    {
-      name: "Go",
-      image: "",
-      rating: 5
-    },
-    {
-        name: "Java",
-        image: "",
-        rating: 3
-    },
-    {
-        name: "Spring",
-        image: "",
-        rating: 3
-    },
-    
-    {
-      name: "HTML/CSS",
-      image: "",
-      rating: 5
-    },
-    {
-      name: "JavaScript",
-      image: "",
-      rating: 4
-    },
-    {
-      name: "Svelte",
-      image: "",
-      rating: 4
-    },
-    {
-        name: "SQL",
-        image: "",
-        rating: 4
-    },
-    {
-      name: "Docker",
-      image: "",
-      rating: 4
-    },
-    {
-        name: "Kubernetes",
-        image: "",
-        rating: 2
+    let competences = [];
+
+    async function getCompetences() {
+        try {
+            const response = await fetch('/competences');
+
+            if (!response.ok) {
+                // Gestion des erreurs HTTP (ex: 404, 500)
+                throw new Error(`Erreur HTTP ${response.status}: ${response.statusText}`);
+            }
+
+            const data = await response.json();
+            competences = data;
+        } catch (error) {
+            // Affichage plus clair et utile pour le développeur
+            console.error("Échec de la récupération des compétences :", error.message || error);
+        }
     }
-  ];
+
+    getCompetences();
 </script>
 
 <div>
@@ -67,11 +39,11 @@
 </div>
 
 <style>
-  .competences-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 1em;
-    justify-items: center;
-    padding: 1em;
-  }
+    .competences-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 1em;
+        justify-items: center;
+        padding: 1em;
+    }
 </style>

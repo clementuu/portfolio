@@ -14,19 +14,19 @@
         },
         {
             type: "Email",
-            value: "clement.calia@example.com",
-            link: "mailto:clement.calia@example.com",
+            value: "clementcalia@gmail.com",
+            link: "mailto:clementcalia@gmail.com",
             iconClass: "bi-envelope"
         },
         {
             type: "LinkedIn",
             value: "Clément Calia",
-            link: "https://www.linkedin.com/in/clement-calia/",
+            link: "www.linkedin.com/in/clement-calia",
             iconClass: "bi-linkedin"
         },
         {
             type: "GitHub",
-            value: "clementcalia",
+            value: "clementuu",
             link: "https://github.com/clementuu",
             iconClass: "bi-github"
         }

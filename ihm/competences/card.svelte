@@ -18,38 +18,46 @@
 </script>
 
 <style>
-  .competence-card {
-    border: 1px solid #eee;
-    border-radius: 8px;
-    padding: 1em;
-    margin: 1em;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    max-width: 200px; /* Adjust as needed */
-  }
+    .competence-card {
+        border: 1px solid #eee;
+        border-radius: 8px;
+        padding: 1em;
+        margin: 1em;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        max-width: 200px; /* Adjust as needed */
+    }
 
-  .competence-card img {
-    max-width: 80px;
-    height: auto;
-    margin-bottom: 1em;
-  }
+    .competence-card img {
+        max-width: 50px;
+        max-height: 50px;
+        margin-bottom: 1em;
+    }
 
-  .competence-card h3 {
-    margin-top: 0;
-    color: #333;
-  }
+    .image-wrapper {
+        height: 50px;
+        display: flex;
+        justify-content: center;
+    }
 
-  .competence-card .stars {
-    font-size: 1.2em;
-    color: gold; /* Or any other color for stars */
-  }
+    .competence-card h3 {
+        margin-top: 0;
+        color: #333;
+    }
+
+    .competence-card .stars {
+        font-size: 1.2em;
+        color: gold; /* Or any other color for stars */
+    }
 </style>
 
 <div class="competence-card">
-  <img src={image} alt={name} />
-  <h3>{name}</h3>
-  <div class="stars">{getStars(rating)}</div>
+    <div class="image-wrapper">
+        <img src={image} alt={name} />
+    </div>
+    <h3>{name}</h3>
+    <div class="stars">{getStars(rating)}</div>
 </div>

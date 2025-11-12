@@ -732,17 +732,18 @@ if (typeof window !== "undefined")
 
 // ihm/competences/card.svelte
 function add_css(target) {
-  append_styles(target, "svelte-obwmut", ".competence-card.svelte-obwmut.svelte-obwmut{border:1px solid #eee;border-radius:8px;padding:1em;margin:1em;box-shadow:2px 2px 8px rgba(0, 0, 0, 0.1);display:flex;flex-direction:column;align-items:center;text-align:center;max-width:200px}.competence-card.svelte-obwmut img.svelte-obwmut{max-width:80px;height:auto;margin-bottom:1em}.competence-card.svelte-obwmut h3.svelte-obwmut{margin-top:0;color:#333}.competence-card.svelte-obwmut .stars.svelte-obwmut{font-size:1.2em;color:gold}");
+  append_styles(target, "svelte-dqt499", ".competence-card.svelte-dqt499.svelte-dqt499{border:1px solid #eee;border-radius:8px;padding:1em;margin:1em;box-shadow:2px 2px 8px rgba(0, 0, 0, 0.1);display:flex;flex-direction:column;align-items:center;text-align:center;max-width:200px}.competence-card.svelte-dqt499 img.svelte-dqt499{max-width:50px;max-height:50px;margin-bottom:1em}.image-wrapper.svelte-dqt499.svelte-dqt499{height:50px;display:flex;justify-content:center}.competence-card.svelte-dqt499 h3.svelte-dqt499{margin-top:0;color:#333}.competence-card.svelte-dqt499 .stars.svelte-dqt499{font-size:1.2em;color:gold}");
 }
 function create_fragment(ctx) {
-  let div1;
+  let div2;
+  let div0;
   let img;
   let img_src_value;
   let t0;
   let h3;
   let t1;
   let t2;
-  let div0;
+  let div1;
   let t3_value = getStars(
     /*rating*/
     ctx[2]
@@ -750,7 +751,8 @@ function create_fragment(ctx) {
   let t3;
   return {
     c() {
-      div1 = element("div");
+      div2 = element("div");
+      div0 = element("div");
       img = element("img");
       t0 = space();
       h3 = element("h3");
@@ -759,7 +761,7 @@ function create_fragment(ctx) {
         ctx[0]
       );
       t2 = space();
-      div0 = element("div");
+      div1 = element("div");
       t3 = text(t3_value);
       if (!src_url_equal(img.src, img_src_value = /*image*/
       ctx[1]))
@@ -770,20 +772,22 @@ function create_fragment(ctx) {
         /*name*/
         ctx[0]
       );
-      attr(img, "class", "svelte-obwmut");
-      attr(h3, "class", "svelte-obwmut");
-      attr(div0, "class", "stars svelte-obwmut");
-      attr(div1, "class", "competence-card svelte-obwmut");
+      attr(img, "class", "svelte-dqt499");
+      attr(div0, "class", "image-wrapper svelte-dqt499");
+      attr(h3, "class", "svelte-dqt499");
+      attr(div1, "class", "stars svelte-dqt499");
+      attr(div2, "class", "competence-card svelte-dqt499");
     },
     m(target, anchor) {
-      insert(target, div1, anchor);
-      append(div1, img);
-      append(div1, t0);
-      append(div1, h3);
+      insert(target, div2, anchor);
+      append(div2, div0);
+      append(div0, img);
+      append(div2, t0);
+      append(div2, h3);
       append(h3, t1);
-      append(div1, t2);
-      append(div1, div0);
-      append(div0, t3);
+      append(div2, t2);
+      append(div2, div1);
+      append(div1, t3);
     },
     p(ctx2, [dirty]) {
       if (dirty & /*image*/
@@ -818,7 +822,7 @@ function create_fragment(ctx) {
     o: noop,
     d(detaching) {
       if (detaching) {
-        detach(div1);
+        detach(div2);
       }
     }
   };
@@ -880,11 +884,11 @@ var card_default = Card;
 
 // ihm/competences/competences.svelte
 function add_css2(target) {
-  append_styles(target, "svelte-1vhgus7", ".competences-grid.svelte-1vhgus7{display:grid;grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));gap:1em;justify-items:center;padding:1em}");
+  append_styles(target, "svelte-1jbq63b", ".competences-grid.svelte-1jbq63b{display:grid;grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));gap:1em;justify-items:center;padding:1em}");
 }
 function get_each_context(ctx, list, i) {
   const child_ctx = ctx.slice();
-  child_ctx[1] = list[i];
+  child_ctx[2] = list[i];
   return child_ctx;
 }
 function create_each_block(ctx) {
@@ -894,15 +898,15 @@ function create_each_block(ctx) {
     props: {
       name: (
         /*competence*/
-        ctx[1].name
+        ctx[2].name
       ),
       image: (
         /*competence*/
-        ctx[1].image
+        ctx[2].image
       ),
       rating: (
         /*competence*/
-        ctx[1].rating
+        ctx[2].rating
       )
     }
   });
@@ -914,7 +918,22 @@ function create_each_block(ctx) {
       mount_component(card, target, anchor);
       current = true;
     },
-    p: noop,
+    p(ctx2, dirty) {
+      const card_changes = {};
+      if (dirty & /*competences*/
+      1)
+        card_changes.name = /*competence*/
+        ctx2[2].name;
+      if (dirty & /*competences*/
+      1)
+        card_changes.image = /*competence*/
+        ctx2[2].image;
+      if (dirty & /*competences*/
+      1)
+        card_changes.rating = /*competence*/
+        ctx2[2].rating;
+      card.$set(card_changes);
+    },
     i(local) {
       if (current)
         return;
@@ -957,7 +976,7 @@ function create_fragment2(ctx) {
       for (let i = 0; i < each_blocks.length; i += 1) {
         each_blocks[i].c();
       }
-      attr(div0, "class", "competences-grid svelte-1vhgus7");
+      attr(div0, "class", "competences-grid svelte-1jbq63b");
     },
     m(target, anchor) {
       insert(target, div1, anchor);
@@ -1021,18 +1040,21 @@ function create_fragment2(ctx) {
     }
   };
 }
-function instance2($$self) {
-  const competences = [
-    { name: "Go", image: "", rating: 5 },
-    { name: "Java", image: "", rating: 3 },
-    { name: "Spring", image: "", rating: 3 },
-    { name: "HTML/CSS", image: "", rating: 5 },
-    { name: "JavaScript", image: "", rating: 4 },
-    { name: "Svelte", image: "", rating: 4 },
-    { name: "SQL", image: "", rating: 4 },
-    { name: "Docker", image: "", rating: 4 },
-    { name: "Kubernetes", image: "", rating: 2 }
-  ];
+function instance2($$self, $$props, $$invalidate) {
+  let competences = [];
+  async function getCompetences() {
+    try {
+      const response = await fetch("/competences");
+      if (!response.ok) {
+        throw new Error(`Erreur HTTP ${response.status}: ${response.statusText}`);
+      }
+      const data = await response.json();
+      $$invalidate(0, competences = data);
+    } catch (error) {
+      console.error("\xC9chec de la r\xE9cup\xE9ration des comp\xE9tences :", error.message || error);
+    }
+  }
+  getCompetences();
   return [competences];
 }
 var Competences = class extends SvelteComponent {
