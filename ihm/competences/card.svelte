@@ -1,7 +1,5 @@
 <script>
-  export let name;
-  export let image;
-  export let rating; // A number from 0 to 5
+  export let competence;
 
   // Function to generate star icons
   function getStars(rating) {
@@ -14,6 +12,11 @@
       }
     }
     return stars;
+  }
+
+  function handleClick() {
+    sessionStorage.setItem('selectedCompetence', JSON.stringify(competence));
+    window.location.href = 'detail.html';
   }
 </script>
 
@@ -29,6 +32,12 @@
         align-items: center;
         text-align: center;
         max-width: 200px; /* Adjust as needed */
+        transition: transform 0.2s;
+        cursor: pointer;
+    }
+
+    .competence-card:hover {
+        transform: scale(1.05);
     }
 
     .competence-card img {
@@ -54,10 +63,10 @@
     }
 </style>
 
-<div class="competence-card">
+<button class="competence-card" on:click={handleClick} type="button" tabindex="0">
     <div class="image-wrapper">
-        <img src={image} alt={name} />
+        <img src={competence.image} alt={competence.name} />
     </div>
-    <h3>{name}</h3>
-    <div class="stars">{getStars(rating)}</div>
-</div>
+    <h3>{competence.name}</h3>
+    <div class="stars">{getStars(competence.rating)}</div>
+  </button>

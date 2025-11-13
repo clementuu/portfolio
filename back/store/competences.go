@@ -1,22 +1,33 @@
 package store
 
-import "back/model"
+import (
+	"back/constants"
+	"back/model"
+)
 
 var competencesList = []model.Competence{
-	{Name: "Go", Image: "../assets/icons8-golang.svg", Rating: 5},
-	{Name: "Java", Image: "../assets/icons8-logo-java-coffee-cup.svg", Rating: 3},
-	{Name: "Spring", Image: "../assets/icons8-logo-de-printemps.svg", Rating: 3},
-	{Name: "HTML", Image: "../assets/icons8-html.svg", Rating: 5},
-	{Name: "CSS", Image: "../assets/icons8-css.svg", Rating: 5},
-	{Name: "JavaScript", Image: "../assets/icons8-js.svg", Rating: 4},
-	{Name: "Svelte", Image: "../assets/Svelte_Logo.svg", Rating: 4},
-	{Name: "SQL", Image: "../assets/icons8-mysql.svg", Rating: 4},
-	{Name: "Docker", Image: "../assets/icons8-docker.svg", Rating: 4},
-	{Name: "Kubernetes", Image: "../assets/icons8-kubernetes.svg", Rating: 2},
-	{Name: "Rebol", Image: "../assets/Rebol_logo.png", Rating: 3},
-	{Name: "R", Image: "../assets/RStudio_logo_flat.svg", Rating: 3},
+	{Name: "Go", Image: constants.GolangSVG, Rating: 5, Desc: constants.DescGO},
+	{Name: "Java", Image: constants.JavaSVG, Rating: 3, Desc: constants.DescJava},
+	{Name: "Spring", Image: constants.SpringSVG, Rating: 3, Desc: constants.DescSpring},
+	{Name: "Python", Image: constants.PythonSVG, Rating: 4, Desc: constants.DescPython},
+	{Name: "HTML", Image: constants.HtmlSVG, Rating: 5, Desc: constants.DescHTML},
+	{Name: "CSS", Image: constants.CssSVG, Rating: 5, Desc: constants.DescCSS},
+	{Name: "JavaScript", Image: constants.JsSVG, Rating: 4, Desc: constants.DescJS},
+	{Name: "Svelte", Image: constants.SvelteSVG, Rating: 4, Desc: constants.DescSvelte},
+	{Name: "TypeScript", Image: constants.TScriptSVG, Rating: 2, Desc: constants.DescTS},
+	{Name: "Angular", Image: constants.AngularSVG, Rating: 3, Desc: constants.DescAngular},
+	{Name: "SQL", Image: constants.SqlSVG, Rating: 4, Desc: constants.DescSQL},
+	{Name: "Docker", Image: constants.DockerSVG, Rating: 4, Desc: constants.DescDocker},
+	{Name: "Kubernetes", Image: constants.KubeSVG, Rating: 2, Desc: constants.DescKube},
+	{Name: "Rebol", Image: constants.RebolSVG, Rating: 3, Desc: constants.DescRebol},
+	{Name: "R", Image: constants.RStudioSVG, Rating: 3, Desc: constants.DescRStudio},
+	{Name: "Ansible", Image: constants.AnsibleSVG, Rating: 2, Desc: constants.DescAnsible},
 }
 
-func (s *RAMStore) GetCompetences() []model.Competence {
-	return competencesList
+func (s *RAMStore) GetCompetences() (competences []model.Competence) {
+	for i, competence := range competencesList {
+		competence.ID = i + 1
+		competences = append(competences, competence)
+	}
+	return competences
 }

@@ -133,12 +133,6 @@ function detach(node) {
     node.parentNode.removeChild(node);
   }
 }
-function destroy_each(iterations, detaching) {
-  for (let i = 0; i < iterations.length; i += 1) {
-    if (iterations[i])
-      iterations[i].d(detaching);
-  }
-}
 function element(name) {
   return document.createElement(name);
 }
@@ -147,10 +141,6 @@ function text(data) {
 }
 function space() {
   return text(" ");
-}
-function listen(node, event, handler, options) {
-  node.addEventListener(event, handler, options);
-  return () => node.removeEventListener(event, handler, options);
 }
 function attr(node, attribute, value) {
   if (value == null)
@@ -183,6 +173,14 @@ function get_custom_elements_slots(element2) {
 var current_component;
 function set_current_component(component) {
   current_component = component;
+}
+function get_current_component() {
+  if (!current_component)
+    throw new Error("Function called outside component initialization");
+  return current_component;
+}
+function onMount(fn) {
+  get_current_component().$$.on_mount.push(fn);
 }
 
 // node_modules/svelte/src/runtime/internal/scheduler.js
@@ -262,49 +260,11 @@ function flush_render_callbacks(fns) {
 
 // node_modules/svelte/src/runtime/internal/transitions.js
 var outroing = /* @__PURE__ */ new Set();
-var outros;
-function group_outros() {
-  outros = {
-    r: 0,
-    c: [],
-    p: outros
-    // parent group
-  };
-}
-function check_outros() {
-  if (!outros.r) {
-    run_all(outros.c);
-  }
-  outros = outros.p;
-}
 function transition_in(block, local) {
   if (block && block.i) {
     outroing.delete(block);
     block.i(local);
   }
-}
-function transition_out(block, local, detach2, callback) {
-  if (block && block.o) {
-    if (outroing.has(block))
-      return;
-    outroing.add(block);
-    outros.c.push(() => {
-      outroing.delete(block);
-      if (callback) {
-        if (detach2)
-          block.d(1);
-        callback();
-      }
-    });
-    block.o(local);
-  } else if (callback) {
-    callback();
-  }
-}
-
-// node_modules/svelte/src/runtime/internal/each.js
-function ensure_array_like(array_like_or_iterator) {
-  return array_like_or_iterator?.length !== void 0 ? array_like_or_iterator : Array.from(array_like_or_iterator);
 }
 
 // node_modules/svelte/src/shared/boolean_attributes.js
@@ -341,9 +301,6 @@ var _boolean_attributes = (
 var boolean_attributes = /* @__PURE__ */ new Set([..._boolean_attributes]);
 
 // node_modules/svelte/src/runtime/internal/Component.js
-function create_component(block) {
-  block && block.c();
-}
 function mount_component(component, target, anchor) {
   const { fragment, after_update } = component.$$;
   fragment && fragment.m(target, anchor);
@@ -376,7 +333,7 @@ function make_dirty(component, i) {
   }
   component.$$.dirty[i / 31 | 0] |= 1 << i % 31;
 }
-function init(component, options, instance3, create_fragment3, not_equal, props, append_styles2 = null, dirty = [-1]) {
+function init(component, options, instance2, create_fragment2, not_equal, props, append_styles2 = null, dirty = [-1]) {
   const parent_component = current_component;
   set_current_component(component);
   const $$ = component.$$ = {
@@ -402,7 +359,7 @@ function init(component, options, instance3, create_fragment3, not_equal, props,
   };
   append_styles2 && append_styles2($$.root);
   let ready = false;
-  $$.ctx = instance3 ? instance3(component, options.props || {}, (i, ret, ...rest) => {
+  $$.ctx = instance2 ? instance2(component, options.props || {}, (i, ret, ...rest) => {
     const value = rest.length ? rest[0] : ret;
     if ($$.ctx && not_equal($$.ctx[i], $$.ctx[i] = value)) {
       if (!$$.skip_bound && $$.bound[i])
@@ -415,7 +372,7 @@ function init(component, options, instance3, create_fragment3, not_equal, props,
   $$.update();
   ready = true;
   run_all($$.before_update);
-  $$.fragment = create_fragment3 ? create_fragment3($$.ctx) : false;
+  $$.fragment = create_fragment2 ? create_fragment2($$.ctx) : false;
   if (options.target) {
     if (options.hydrate) {
       start_hydrating();
@@ -734,110 +691,207 @@ var PUBLIC_VERSION = "4";
 if (typeof window !== "undefined")
   (window.__svelte || (window.__svelte = { v: /* @__PURE__ */ new Set() })).v.add(PUBLIC_VERSION);
 
-// ihm/competences/card.svelte
+// ihm/competences/detail.svelte
 function add_css(target) {
-  append_styles(target, "svelte-1uuzf6", ".competence-card.svelte-1uuzf6.svelte-1uuzf6{border:1px solid #eee;border-radius:8px;padding:1em;margin:1em;box-shadow:2px 2px 8px rgba(0, 0, 0, 0.1);display:flex;flex-direction:column;align-items:center;text-align:center;max-width:200px;transition:transform 0.2s;cursor:pointer}.competence-card.svelte-1uuzf6.svelte-1uuzf6:hover{transform:scale(1.05)}.competence-card.svelte-1uuzf6 img.svelte-1uuzf6{max-width:50px;max-height:50px;margin-bottom:1em}.image-wrapper.svelte-1uuzf6.svelte-1uuzf6{height:50px;display:flex;justify-content:center}.competence-card.svelte-1uuzf6 h3.svelte-1uuzf6{margin-top:0;color:#333}.competence-card.svelte-1uuzf6 .stars.svelte-1uuzf6{font-size:1.2em;color:gold}");
+  append_styles(target, "svelte-n6qr2x", ".detail-container.svelte-n6qr2x.svelte-n6qr2x{padding:2em;max-width:800px;margin:2em auto;background:#f9f9f9;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.1);text-align:center}.detail-container.svelte-n6qr2x img.svelte-n6qr2x{max-width:100px;margin-bottom:1em}.stars.svelte-n6qr2x.svelte-n6qr2x{font-size:1.5em;color:gold;margin-bottom:1em}.detail-text.svelte-n6qr2x.svelte-n6qr2x{text-align:justify;margin-top:1.5em;line-height:1.6}.error.svelte-n6qr2x.svelte-n6qr2x{color:red;text-align:center;margin-top:2em}");
 }
-function create_fragment(ctx) {
-  let button;
-  let div0;
-  let img;
-  let img_src_value;
-  let img_alt_value;
-  let t0;
-  let h3;
-  let t1_value = (
+function create_else_block(ctx) {
+  let p;
+  return {
+    c() {
+      p = element("p");
+      p.textContent = "Chargement des d\xE9tails de la comp\xE9tence...";
+    },
+    m(target, anchor) {
+      insert(target, p, anchor);
+    },
+    p: noop,
+    d(detaching) {
+      if (detaching) {
+        detach(p);
+      }
+    }
+  };
+}
+function create_if_block_1(ctx) {
+  let div1;
+  let h1;
+  let t0_value = (
     /*competence*/
     ctx[0].name + ""
   );
+  let t0;
   let t1;
+  let img;
+  let img_src_value;
+  let img_alt_value;
   let t2;
-  let div1;
+  let div0;
   let t3_value = getStars(
     /*competence*/
     ctx[0].rating
   ) + "";
   let t3;
-  let mounted;
-  let dispose;
+  let t4;
+  let p;
+  let t5_value = (
+    /*competence*/
+    ctx[0].desc + ""
+  );
+  let t5;
   return {
     c() {
-      button = element("button");
-      div0 = element("div");
-      img = element("img");
-      t0 = space();
-      h3 = element("h3");
-      t1 = text(t1_value);
-      t2 = space();
       div1 = element("div");
+      h1 = element("h1");
+      t0 = text(t0_value);
+      t1 = space();
+      img = element("img");
+      t2 = space();
+      div0 = element("div");
       t3 = text(t3_value);
+      t4 = space();
+      p = element("p");
+      t5 = text(t5_value);
       if (!src_url_equal(img.src, img_src_value = /*competence*/
       ctx[0].image))
         attr(img, "src", img_src_value);
-      attr(img, "alt", img_alt_value = /*competence*/
-      ctx[0].name);
-      attr(img, "class", "svelte-1uuzf6");
-      attr(div0, "class", "image-wrapper svelte-1uuzf6");
-      attr(h3, "class", "svelte-1uuzf6");
-      attr(div1, "class", "stars svelte-1uuzf6");
-      attr(button, "class", "competence-card svelte-1uuzf6");
-      attr(button, "type", "button");
-      attr(button, "tabindex", "0");
+      attr(img, "alt", img_alt_value = `Logo de ${/*competence*/
+      ctx[0].name}`);
+      attr(img, "class", "svelte-n6qr2x");
+      attr(div0, "class", "stars svelte-n6qr2x");
+      attr(p, "class", "detail-text svelte-n6qr2x");
+      attr(div1, "class", "detail-container svelte-n6qr2x");
     },
     m(target, anchor) {
-      insert(target, button, anchor);
-      append(button, div0);
-      append(div0, img);
-      append(button, t0);
-      append(button, h3);
-      append(h3, t1);
-      append(button, t2);
-      append(button, div1);
-      append(div1, t3);
-      if (!mounted) {
-        dispose = listen(
-          button,
-          "click",
-          /*handleClick*/
-          ctx[1]
-        );
-        mounted = true;
-      }
+      insert(target, div1, anchor);
+      append(div1, h1);
+      append(h1, t0);
+      append(div1, t1);
+      append(div1, img);
+      append(div1, t2);
+      append(div1, div0);
+      append(div0, t3);
+      append(div1, t4);
+      append(div1, p);
+      append(p, t5);
     },
-    p(ctx2, [dirty]) {
+    p(ctx2, dirty) {
+      if (dirty & /*competence*/
+      1 && t0_value !== (t0_value = /*competence*/
+      ctx2[0].name + ""))
+        set_data(t0, t0_value);
       if (dirty & /*competence*/
       1 && !src_url_equal(img.src, img_src_value = /*competence*/
       ctx2[0].image)) {
         attr(img, "src", img_src_value);
       }
       if (dirty & /*competence*/
-      1 && img_alt_value !== (img_alt_value = /*competence*/
-      ctx2[0].name)) {
+      1 && img_alt_value !== (img_alt_value = `Logo de ${/*competence*/
+      ctx2[0].name}`)) {
         attr(img, "alt", img_alt_value);
       }
-      if (dirty & /*competence*/
-      1 && t1_value !== (t1_value = /*competence*/
-      ctx2[0].name + ""))
-        set_data(t1, t1_value);
       if (dirty & /*competence*/
       1 && t3_value !== (t3_value = getStars(
         /*competence*/
         ctx2[0].rating
       ) + ""))
         set_data(t3, t3_value);
+      if (dirty & /*competence*/
+      1 && t5_value !== (t5_value = /*competence*/
+      ctx2[0].desc + ""))
+        set_data(t5, t5_value);
+    },
+    d(detaching) {
+      if (detaching) {
+        detach(div1);
+      }
+    }
+  };
+}
+function create_if_block(ctx) {
+  let p;
+  let t;
+  return {
+    c() {
+      p = element("p");
+      t = text(
+        /*error*/
+        ctx[1]
+      );
+      attr(p, "class", "error svelte-n6qr2x");
+    },
+    m(target, anchor) {
+      insert(target, p, anchor);
+      append(p, t);
+    },
+    p(ctx2, dirty) {
+      if (dirty & /*error*/
+      2)
+        set_data(
+          t,
+          /*error*/
+          ctx2[1]
+        );
+    },
+    d(detaching) {
+      if (detaching) {
+        detach(p);
+      }
+    }
+  };
+}
+function create_fragment(ctx) {
+  let div;
+  function select_block_type(ctx2, dirty) {
+    if (
+      /*error*/
+      ctx2[1]
+    )
+      return create_if_block;
+    if (
+      /*competence*/
+      ctx2[0]
+    )
+      return create_if_block_1;
+    return create_else_block;
+  }
+  let current_block_type = select_block_type(ctx, -1);
+  let if_block = current_block_type(ctx);
+  return {
+    c() {
+      div = element("div");
+      if_block.c();
+      attr(div, "class", "container");
+    },
+    m(target, anchor) {
+      insert(target, div, anchor);
+      if_block.m(div, null);
+    },
+    p(ctx2, [dirty]) {
+      if (current_block_type === (current_block_type = select_block_type(ctx2, dirty)) && if_block) {
+        if_block.p(ctx2, dirty);
+      } else {
+        if_block.d(1);
+        if_block = current_block_type(ctx2);
+        if (if_block) {
+          if_block.c();
+          if_block.m(div, null);
+        }
+      }
     },
     i: noop,
     o: noop,
     d(detaching) {
       if (detaching) {
-        detach(button);
+        detach(div);
       }
-      mounted = false;
-      dispose();
+      if_block.d();
     }
   };
 }
 function getStars(rating) {
+  if (rating === null || rating === void 0)
+    return "";
   let stars = "";
   for (let i = 0; i < 5; i++) {
     if (i < rating) {
@@ -849,198 +903,31 @@ function getStars(rating) {
   return stars;
 }
 function instance($$self, $$props, $$invalidate) {
-  let { competence } = $$props;
-  function handleClick() {
-    sessionStorage.setItem("selectedCompetence", JSON.stringify(competence));
-    window.location.href = "detail.html";
-  }
-  $$self.$$set = ($$props2) => {
-    if ("competence" in $$props2)
-      $$invalidate(0, competence = $$props2.competence);
-  };
-  return [competence, handleClick];
+  let competence = null;
+  let error = null;
+  onMount(() => {
+    const storedCompetence = sessionStorage.getItem("selectedCompetence");
+    if (storedCompetence) {
+      try {
+        const competenceData = JSON.parse(storedCompetence);
+        $$invalidate(0, competence = competenceData);
+      } catch (e) {
+        $$invalidate(1, error = "Erreur lors de la lecture des donn\xE9es de la comp\xE9tence.");
+      }
+    } else {
+      $$invalidate(1, error = "Aucune donn\xE9e de comp\xE9tence trouv\xE9e. Veuillez retourner \xE0 la page des comp\xE9tences et en s\xE9lectionner une.");
+    }
+  });
+  return [competence, error];
 }
-var Card = class extends SvelteComponent {
+var Detail = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance, create_fragment, safe_not_equal, { competence: 0 }, add_css);
-  }
-  get competence() {
-    return this.$$.ctx[0];
-  }
-  set competence(competence) {
-    this.$$set({ competence });
-    flush();
+    init(this, options, instance, create_fragment, safe_not_equal, {}, add_css);
   }
 };
-create_custom_element(Card, { "competence": {} }, [], [], true);
-var card_default = Card;
-
-// ihm/competences/competences.svelte
-function add_css2(target) {
-  append_styles(target, "svelte-1jbq63b", ".competences-grid.svelte-1jbq63b{display:grid;grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));gap:1em;justify-items:center;padding:1em}");
-}
-function get_each_context(ctx, list, i) {
-  const child_ctx = ctx.slice();
-  child_ctx[2] = list[i];
-  return child_ctx;
-}
-function create_each_block(ctx) {
-  let card;
-  let current;
-  card = new card_default({
-    props: { competence: (
-      /*competence*/
-      ctx[2]
-    ) }
-  });
-  return {
-    c() {
-      create_component(card.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(card, target, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      const card_changes = {};
-      if (dirty & /*competences*/
-      1)
-        card_changes.competence = /*competence*/
-        ctx2[2];
-      card.$set(card_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(card.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(card.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(card, detaching);
-    }
-  };
-}
-function create_fragment2(ctx) {
-  let div1;
-  let h2;
-  let t1;
-  let div0;
-  let current;
-  let each_value = ensure_array_like(
-    /*competences*/
-    ctx[0]
-  );
-  let each_blocks = [];
-  for (let i = 0; i < each_value.length; i += 1) {
-    each_blocks[i] = create_each_block(get_each_context(ctx, each_value, i));
-  }
-  const out = (i) => transition_out(each_blocks[i], 1, 1, () => {
-    each_blocks[i] = null;
-  });
-  return {
-    c() {
-      div1 = element("div");
-      h2 = element("h2");
-      h2.textContent = "Mes Comp\xE9tences";
-      t1 = space();
-      div0 = element("div");
-      for (let i = 0; i < each_blocks.length; i += 1) {
-        each_blocks[i].c();
-      }
-      attr(div0, "class", "competences-grid svelte-1jbq63b");
-    },
-    m(target, anchor) {
-      insert(target, div1, anchor);
-      append(div1, h2);
-      append(div1, t1);
-      append(div1, div0);
-      for (let i = 0; i < each_blocks.length; i += 1) {
-        if (each_blocks[i]) {
-          each_blocks[i].m(div0, null);
-        }
-      }
-      current = true;
-    },
-    p(ctx2, [dirty]) {
-      if (dirty & /*competences*/
-      1) {
-        each_value = ensure_array_like(
-          /*competences*/
-          ctx2[0]
-        );
-        let i;
-        for (i = 0; i < each_value.length; i += 1) {
-          const child_ctx = get_each_context(ctx2, each_value, i);
-          if (each_blocks[i]) {
-            each_blocks[i].p(child_ctx, dirty);
-            transition_in(each_blocks[i], 1);
-          } else {
-            each_blocks[i] = create_each_block(child_ctx);
-            each_blocks[i].c();
-            transition_in(each_blocks[i], 1);
-            each_blocks[i].m(div0, null);
-          }
-        }
-        group_outros();
-        for (i = each_value.length; i < each_blocks.length; i += 1) {
-          out(i);
-        }
-        check_outros();
-      }
-    },
-    i(local) {
-      if (current)
-        return;
-      for (let i = 0; i < each_value.length; i += 1) {
-        transition_in(each_blocks[i]);
-      }
-      current = true;
-    },
-    o(local) {
-      each_blocks = each_blocks.filter(Boolean);
-      for (let i = 0; i < each_blocks.length; i += 1) {
-        transition_out(each_blocks[i]);
-      }
-      current = false;
-    },
-    d(detaching) {
-      if (detaching) {
-        detach(div1);
-      }
-      destroy_each(each_blocks, detaching);
-    }
-  };
-}
-function instance2($$self, $$props, $$invalidate) {
-  let competences = [];
-  async function getCompetences() {
-    try {
-      const response = await fetch("/competences");
-      if (!response.ok) {
-        throw new Error(`Erreur HTTP ${response.status}: ${response.statusText}`);
-      }
-      const data = await response.json();
-      $$invalidate(0, competences = data);
-    } catch (error) {
-      console.error("\xC9chec de la r\xE9cup\xE9ration des comp\xE9tences :", error.message || error);
-    }
-  }
-  getCompetences();
-  return [competences];
-}
-var Competences = class extends SvelteComponent {
-  constructor(options) {
-    super();
-    init(this, options, instance2, create_fragment2, safe_not_equal, {}, add_css2);
-  }
-};
-customElements.define("competences-portfolio", create_custom_element(Competences, {}, [], [], true));
-var competences_default = Competences;
+customElements.define("competence-detail", create_custom_element(Detail, {}, [], [], true));
+var detail_default = Detail;
 export {
-  competences_default as default
+  detail_default as default
 };

@@ -30,9 +30,7 @@
     <div class="competences-grid">
         {#each competences as competence}
             <Card
-                name={competence.name}
-                image={competence.image}
-                rating={competence.rating}
+                competence={competence}
             />
         {/each}
     </div>
