@@ -1,14 +1,12 @@
 <script>
-  export let title;
-  export let summary;
-  export let image;
+  export let projet;
 </script>
 
-<div class="project-card">
-  <img src={image} alt={title} />
-  <h3>{title}</h3>
-  <p>{summary}</p>
-</div>
+<button on:click={() => window.location=`/projets/detail.html?id=${projet.id}`} class="project-card">
+  <img src={projet.image} alt={projet.name} />
+  <h3>{projet.name}</h3>
+  <p>{projet.desc}</p>
+</button>
 
 <style>
     @import '../style/style.css';
@@ -24,11 +22,20 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    max-width: 300px; /* Adjust as needed */
+    transition: transform 0.2s;
+    max-width: 300px; 
+    cursor: pointer;
+    color: inherit; /* Make link text color same as parent */
+    text-decoration: none; /* Remove underline from link */
+  }
+
+  .project-card:hover {
+    transform: scale(1.05);
+    text-decoration: none; /* Ensure no underline on hover */
   }
 
   .project-card img {
-    max-width: 100%;
+    max-width: 70px;
     height: auto;
     border-radius: 4px;
     margin-bottom: 1em;

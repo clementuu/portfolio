@@ -1,20 +1,45 @@
 <svelte:options customElement="header-portfolio" />
 
+<script>
+  import { onMount } from "svelte";
+
+    let projets = [];
+
+    async function getProjetsNames() {
+        try {
+            const response = await fetch('/projets/names');
+
+            if (!response.ok) {
+                throw new Error(`Erreur HTTP ${response.status}: ${response.statusText}`);
+            }
+
+            const data = await response.json();
+            projets = data;
+        } catch (error) {
+            console.error("Échec de la récupération des compétences :", error.message || error);
+        }
+    }
+
+    onMount(async ()=> {
+        await getProjetsNames();
+    })
+</script>
+
 <nav>
     <a href="/">Accueil</a>
     <div class="dropdown">
         <a href="/projets/projets.html">Projets</a>
         <div class="dropdown-content">
-            <a href="/projets/detail.html?id=projet-a">Projet A</a>
-            <a href="/projets/detail.html?id=projet-b">Projet B</a>
-            <a href="/projets/detail.html?id=projet-c">Projet C</a>
+            {#each projets as projet}
+                <a href="/projets/detail.html?id={projet.id}">{projet.name}</a>
+            {/each}
         </div>
     </div>
     <div class="dropdown">
         <a href="/competences/competences.html">Compétences</a>
         <div class="dropdown-content">
-            <a href="/competences/competences.html?type=technique">Compétences techniques</a>
-            <a href="/competences/competences.html?type=humain">Compétences humaines</a>
+            <a href="/competences/competences.html?type=technique">Hard skills</a>
+            <a href="/competences/competences.html?type=humain">Soft skills</a>
         </div>
     </div>
     <a href="/contacts.html">Contacts</a>

@@ -148,6 +148,10 @@ function text(data) {
 function space() {
   return text(" ");
 }
+function listen(node, event, handler, options) {
+  node.addEventListener(event, handler, options);
+  return () => node.removeEventListener(event, handler, options);
+}
 function attr(node, attribute, value) {
   if (value == null)
     node.removeAttribute(attribute);
@@ -740,139 +744,122 @@ if (typeof window !== "undefined")
 
 // ihm/projets/card.svelte
 function add_css(target) {
-  append_styles(target, "svelte-zi3x6f", `@import '../style/style.css';@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");.project-card.svelte-zi3x6f.svelte-zi3x6f{border:1px solid #eee;border-radius:8px;padding:1em;margin:1em;box-shadow:2px 2px 8px rgba(0, 0, 0, 0.1);display:flex;flex-direction:column;align-items:center;text-align:center;max-width:300px}.project-card.svelte-zi3x6f img.svelte-zi3x6f{max-width:100%;height:auto;border-radius:4px;margin-bottom:1em}.project-card.svelte-zi3x6f h3.svelte-zi3x6f{margin-top:0;color:#333}.project-card.svelte-zi3x6f p.svelte-zi3x6f{color:#666;font-size:0.9em}`);
+  append_styles(target, "svelte-jtt0vc", `@import '../style/style.css';@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");.project-card.svelte-jtt0vc.svelte-jtt0vc{border:1px solid #eee;border-radius:8px;padding:1em;margin:1em;box-shadow:2px 2px 8px rgba(0, 0, 0, 0.1);display:flex;flex-direction:column;align-items:center;text-align:center;transition:transform 0.2s;max-width:300px;cursor:pointer;color:inherit;text-decoration:none}.project-card.svelte-jtt0vc.svelte-jtt0vc:hover{transform:scale(1.05);text-decoration:none}.project-card.svelte-jtt0vc img.svelte-jtt0vc{max-width:70px;height:auto;border-radius:4px;margin-bottom:1em}.project-card.svelte-jtt0vc h3.svelte-jtt0vc{margin-top:0;color:#333}.project-card.svelte-jtt0vc p.svelte-jtt0vc{color:#666;font-size:0.9em}`);
 }
 function create_fragment(ctx) {
-  let div;
+  let button;
   let img;
   let img_src_value;
+  let img_alt_value;
   let t0;
   let h3;
+  let t1_value = (
+    /*projet*/
+    ctx[0].name + ""
+  );
   let t1;
   let t2;
   let p;
+  let t3_value = (
+    /*projet*/
+    ctx[0].desc + ""
+  );
   let t3;
+  let mounted;
+  let dispose;
   return {
     c() {
-      div = element("div");
+      button = element("button");
       img = element("img");
       t0 = space();
       h3 = element("h3");
-      t1 = text(
-        /*title*/
-        ctx[0]
-      );
+      t1 = text(t1_value);
       t2 = space();
       p = element("p");
-      t3 = text(
-        /*summary*/
-        ctx[1]
-      );
-      if (!src_url_equal(img.src, img_src_value = /*image*/
-      ctx[2]))
+      t3 = text(t3_value);
+      if (!src_url_equal(img.src, img_src_value = /*projet*/
+      ctx[0].image))
         attr(img, "src", img_src_value);
-      attr(
-        img,
-        "alt",
-        /*title*/
-        ctx[0]
-      );
-      attr(img, "class", "svelte-zi3x6f");
-      attr(h3, "class", "svelte-zi3x6f");
-      attr(p, "class", "svelte-zi3x6f");
-      attr(div, "class", "project-card svelte-zi3x6f");
+      attr(img, "alt", img_alt_value = /*projet*/
+      ctx[0].name);
+      attr(img, "class", "svelte-jtt0vc");
+      attr(h3, "class", "svelte-jtt0vc");
+      attr(p, "class", "svelte-jtt0vc");
+      attr(button, "class", "project-card svelte-jtt0vc");
     },
     m(target, anchor) {
-      insert(target, div, anchor);
-      append(div, img);
-      append(div, t0);
-      append(div, h3);
+      insert(target, button, anchor);
+      append(button, img);
+      append(button, t0);
+      append(button, h3);
       append(h3, t1);
-      append(div, t2);
-      append(div, p);
+      append(button, t2);
+      append(button, p);
       append(p, t3);
+      if (!mounted) {
+        dispose = listen(
+          button,
+          "click",
+          /*click_handler*/
+          ctx[1]
+        );
+        mounted = true;
+      }
     },
     p(ctx2, [dirty]) {
-      if (dirty & /*image*/
-      4 && !src_url_equal(img.src, img_src_value = /*image*/
-      ctx2[2])) {
+      if (dirty & /*projet*/
+      1 && !src_url_equal(img.src, img_src_value = /*projet*/
+      ctx2[0].image)) {
         attr(img, "src", img_src_value);
       }
-      if (dirty & /*title*/
-      1) {
-        attr(
-          img,
-          "alt",
-          /*title*/
-          ctx2[0]
-        );
+      if (dirty & /*projet*/
+      1 && img_alt_value !== (img_alt_value = /*projet*/
+      ctx2[0].name)) {
+        attr(img, "alt", img_alt_value);
       }
-      if (dirty & /*title*/
-      1)
-        set_data(
-          t1,
-          /*title*/
-          ctx2[0]
-        );
-      if (dirty & /*summary*/
-      2)
-        set_data(
-          t3,
-          /*summary*/
-          ctx2[1]
-        );
+      if (dirty & /*projet*/
+      1 && t1_value !== (t1_value = /*projet*/
+      ctx2[0].name + ""))
+        set_data(t1, t1_value);
+      if (dirty & /*projet*/
+      1 && t3_value !== (t3_value = /*projet*/
+      ctx2[0].desc + ""))
+        set_data(t3, t3_value);
     },
     i: noop,
     o: noop,
     d(detaching) {
       if (detaching) {
-        detach(div);
+        detach(button);
       }
+      mounted = false;
+      dispose();
     }
   };
 }
 function instance($$self, $$props, $$invalidate) {
-  let { title } = $$props;
-  let { summary } = $$props;
-  let { image } = $$props;
+  let { projet } = $$props;
+  const click_handler = () => window.location = `/projets/detail.html?id=${projet.id}`;
   $$self.$$set = ($$props2) => {
-    if ("title" in $$props2)
-      $$invalidate(0, title = $$props2.title);
-    if ("summary" in $$props2)
-      $$invalidate(1, summary = $$props2.summary);
-    if ("image" in $$props2)
-      $$invalidate(2, image = $$props2.image);
+    if ("projet" in $$props2)
+      $$invalidate(0, projet = $$props2.projet);
   };
-  return [title, summary, image];
+  return [projet, click_handler];
 }
 var Card = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance, create_fragment, safe_not_equal, { title: 0, summary: 1, image: 2 }, add_css);
+    init(this, options, instance, create_fragment, safe_not_equal, { projet: 0 }, add_css);
   }
-  get title() {
+  get projet() {
     return this.$$.ctx[0];
   }
-  set title(title) {
-    this.$$set({ title });
-    flush();
-  }
-  get summary() {
-    return this.$$.ctx[1];
-  }
-  set summary(summary) {
-    this.$$set({ summary });
-    flush();
-  }
-  get image() {
-    return this.$$.ctx[2];
-  }
-  set image(image) {
-    this.$$set({ image });
+  set projet(projet) {
+    this.$$set({ projet });
     flush();
   }
 };
-create_custom_element(Card, { "title": {}, "summary": {}, "image": {} }, [], [], true);
+create_custom_element(Card, { "projet": {} }, [], [], true);
 var card_default = Card;
 
 // ihm/projets/projets.svelte
@@ -887,22 +874,10 @@ function get_each_context(ctx, list, i) {
 function create_each_block(ctx) {
   let card;
   let current;
-  card = new card_default({
-    props: {
-      title: (
-        /*projet*/
-        ctx[2].name
-      ),
-      summary: (
-        /*projet*/
-        ctx[2].desc
-      ),
-      image: (
-        /*projet*/
-        ctx[2].image
-      )
-    }
-  });
+  card = new card_default({ props: { projet: (
+    /*projet*/
+    ctx[2]
+  ) } });
   return {
     c() {
       create_component(card.$$.fragment);
@@ -915,16 +890,8 @@ function create_each_block(ctx) {
       const card_changes = {};
       if (dirty & /*projets*/
       1)
-        card_changes.title = /*projet*/
-        ctx2[2].name;
-      if (dirty & /*projets*/
-      1)
-        card_changes.summary = /*projet*/
-        ctx2[2].desc;
-      if (dirty & /*projets*/
-      1)
-        card_changes.image = /*projet*/
-        ctx2[2].image;
+        card_changes.projet = /*projet*/
+        ctx2[2];
       card.$set(card_changes);
     },
     i(local) {

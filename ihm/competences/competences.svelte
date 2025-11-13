@@ -4,20 +4,23 @@
     import Card from './card.svelte';
     import { onMount } from 'svelte';
 
+    let error = null;
     let allCompetences = [];
-    let displayedCompetences = []; // compétences à afficher après filtrage
+    let displayedCompetences = null; // compétences à afficher après filtrage
 
     async function getCompetences() {
         try {
             const response = await fetch('/competences');
 
             if (!response.ok) {
-                throw new Error(`Erreur HTTP ${response.status}: ${response.statusText}`);
+                error = response.statusText
+                throw new Error(`Erreur HTTP ${response.status}: ${error}`);
             }
 
             const data = await response.json();
             allCompetences = data;
-        } catch (error) {
+        } catch (e) {
+            error = e;
             console.error("Échec de la récupération des compétences :", error.message || error);
         }
     }
@@ -40,14 +43,20 @@
 </script>
 
 <div>
-    <h2>Mes Compétences</h2>
-    <div class="competences-grid">
-        {#each displayedCompetences as competence}
-            <Card
-                competence={competence}
-            />
-        {/each}
-    </div>
+    {#if error}
+        <p class="error">{error}</p>
+    {:else if displayedCompetences}
+        <h2>Mes Compétences</h2>
+        <div class="competences-grid">
+            {#each displayedCompetences as competence}
+                <Card
+                    competence={competence}
+                />
+            {/each}
+        </div>
+    {:else}
+        Chargement des compétences...
+    {/if}
 </div>
 
 <style>

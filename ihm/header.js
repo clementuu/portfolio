@@ -123,8 +123,20 @@ function detach(node) {
     node.parentNode.removeChild(node);
   }
 }
+function destroy_each(iterations, detaching) {
+  for (let i = 0; i < iterations.length; i += 1) {
+    if (iterations[i])
+      iterations[i].d(detaching);
+  }
+}
 function element(name) {
   return document.createElement(name);
+}
+function text(data) {
+  return document.createTextNode(data);
+}
+function space() {
+  return text(" ");
 }
 function attr(node, attribute, value) {
   if (value == null)
@@ -134,6 +146,13 @@ function attr(node, attribute, value) {
 }
 function children(element2) {
   return Array.from(element2.childNodes);
+}
+function set_data(text2, data) {
+  data = "" + data;
+  if (text2.data === data)
+    return;
+  text2.data = /** @type {string} */
+  data;
 }
 function get_custom_elements_slots(element2) {
   const result = {};
@@ -150,6 +169,14 @@ function get_custom_elements_slots(element2) {
 var current_component;
 function set_current_component(component) {
   current_component = component;
+}
+function get_current_component() {
+  if (!current_component)
+    throw new Error("Function called outside component initialization");
+  return current_component;
+}
+function onMount(fn) {
+  get_current_component().$$.on_mount.push(fn);
 }
 
 // node_modules/svelte/src/runtime/internal/scheduler.js
@@ -236,6 +263,11 @@ function transition_in(block, local) {
   }
 }
 
+// node_modules/svelte/src/runtime/internal/each.js
+function ensure_array_like(array_like_or_iterator) {
+  return array_like_or_iterator?.length !== void 0 ? array_like_or_iterator : Array.from(array_like_or_iterator);
+}
+
 // node_modules/svelte/src/shared/boolean_attributes.js
 var _boolean_attributes = (
   /** @type {const} */
@@ -302,7 +334,7 @@ function make_dirty(component, i) {
   }
   component.$$.dirty[i / 31 | 0] |= 1 << i % 31;
 }
-function init(component, options, instance, create_fragment2, not_equal, props, append_styles2 = null, dirty = [-1]) {
+function init(component, options, instance2, create_fragment2, not_equal, props, append_styles2 = null, dirty = [-1]) {
   const parent_component = current_component;
   set_current_component(component);
   const $$ = component.$$ = {
@@ -328,7 +360,7 @@ function init(component, options, instance, create_fragment2, not_equal, props, 
   };
   append_styles2 && append_styles2($$.root);
   let ready = false;
-  $$.ctx = instance ? instance(component, options.props || {}, (i, ret, ...rest) => {
+  $$.ctx = instance2 ? instance2(component, options.props || {}, (i, ret, ...rest) => {
     const value = rest.length ? rest[0] : ret;
     if ($$.ctx && not_equal($$.ctx[i], $$.ctx[i] = value)) {
       if (!$$.skip_bound && $$.bound[i])
@@ -664,31 +696,175 @@ if (typeof window !== "undefined")
 function add_css(target) {
   append_styles(target, "svelte-50icqd", `@import '/style/style.css';@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");nav.svelte-50icqd.svelte-50icqd{background-color:#333;padding:1em;color:white;display:flex;justify-content:center;align-items:center;gap:1em}a.svelte-50icqd.svelte-50icqd{color:white;text-decoration:none;padding:0.5em 1em;border-radius:5px}a.svelte-50icqd.svelte-50icqd:hover{background-color:#555}.dropdown.svelte-50icqd.svelte-50icqd{position:relative}.dropdown-content.svelte-50icqd.svelte-50icqd{display:none;position:absolute;background-color:#f9f9f9;min-width:160px;box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);z-index:1;border-radius:5px;top:2em}.dropdown-content.svelte-50icqd a.svelte-50icqd{color:black;padding:12px 16px;text-decoration:none;display:block;text-align:left}.dropdown-content.svelte-50icqd a.svelte-50icqd:hover{background-color:#ddd}.dropdown.svelte-50icqd:hover .dropdown-content.svelte-50icqd{display:block}`);
 }
+function get_each_context(ctx, list, i) {
+  const child_ctx = ctx.slice();
+  child_ctx[2] = list[i];
+  return child_ctx;
+}
+function create_each_block(ctx) {
+  let a;
+  let t_value = (
+    /*projet*/
+    ctx[2].name + ""
+  );
+  let t;
+  let a_href_value;
+  return {
+    c() {
+      a = element("a");
+      t = text(t_value);
+      attr(a, "href", a_href_value = "/projets/detail.html?id=" + /*projet*/
+      ctx[2].id);
+      attr(a, "class", "svelte-50icqd");
+    },
+    m(target, anchor) {
+      insert(target, a, anchor);
+      append(a, t);
+    },
+    p(ctx2, dirty) {
+      if (dirty & /*projets*/
+      1 && t_value !== (t_value = /*projet*/
+      ctx2[2].name + ""))
+        set_data(t, t_value);
+      if (dirty & /*projets*/
+      1 && a_href_value !== (a_href_value = "/projets/detail.html?id=" + /*projet*/
+      ctx2[2].id)) {
+        attr(a, "href", a_href_value);
+      }
+    },
+    d(detaching) {
+      if (detaching) {
+        detach(a);
+      }
+    }
+  };
+}
 function create_fragment(ctx) {
   let nav;
+  let a0;
+  let t1;
+  let div1;
+  let a1;
+  let t3;
+  let div0;
+  let t4;
+  let div3;
+  let t10;
+  let a5;
+  let each_value = ensure_array_like(
+    /*projets*/
+    ctx[0]
+  );
+  let each_blocks = [];
+  for (let i = 0; i < each_value.length; i += 1) {
+    each_blocks[i] = create_each_block(get_each_context(ctx, each_value, i));
+  }
   return {
     c() {
       nav = element("nav");
-      nav.innerHTML = `<a href="/" class="svelte-50icqd">Accueil</a> <div class="dropdown svelte-50icqd"><a href="/projets/projets.html" class="svelte-50icqd">Projets</a> <div class="dropdown-content svelte-50icqd"><a href="/projets/detail.html?id=projet-a" class="svelte-50icqd">Projet A</a> <a href="/projets/detail.html?id=projet-b" class="svelte-50icqd">Projet B</a> <a href="/projets/detail.html?id=projet-c" class="svelte-50icqd">Projet C</a></div></div> <div class="dropdown svelte-50icqd"><a href="/competences/competences.html" class="svelte-50icqd">Comp\xE9tences</a> <div class="dropdown-content svelte-50icqd"><a href="/competences/competences.html?type=technique" class="svelte-50icqd">Comp\xE9tences techniques</a> <a href="/competences/competences.html?type=humain" class="svelte-50icqd">Comp\xE9tences humaines</a></div></div> <a href="/contacts.html" class="svelte-50icqd">Contacts</a>`;
+      a0 = element("a");
+      a0.textContent = "Accueil";
+      t1 = space();
+      div1 = element("div");
+      a1 = element("a");
+      a1.textContent = "Projets";
+      t3 = space();
+      div0 = element("div");
+      for (let i = 0; i < each_blocks.length; i += 1) {
+        each_blocks[i].c();
+      }
+      t4 = space();
+      div3 = element("div");
+      div3.innerHTML = `<a href="/competences/competences.html" class="svelte-50icqd">Comp\xE9tences</a> <div class="dropdown-content svelte-50icqd"><a href="/competences/competences.html?type=technique" class="svelte-50icqd">Hard skills</a> <a href="/competences/competences.html?type=humain" class="svelte-50icqd">Soft skills</a></div>`;
+      t10 = space();
+      a5 = element("a");
+      a5.textContent = "Contacts";
+      attr(a0, "href", "/");
+      attr(a0, "class", "svelte-50icqd");
+      attr(a1, "href", "/projets/projets.html");
+      attr(a1, "class", "svelte-50icqd");
+      attr(div0, "class", "dropdown-content svelte-50icqd");
+      attr(div1, "class", "dropdown svelte-50icqd");
+      attr(div3, "class", "dropdown svelte-50icqd");
+      attr(a5, "href", "/contacts.html");
+      attr(a5, "class", "svelte-50icqd");
       attr(nav, "class", "svelte-50icqd");
     },
     m(target, anchor) {
       insert(target, nav, anchor);
+      append(nav, a0);
+      append(nav, t1);
+      append(nav, div1);
+      append(div1, a1);
+      append(div1, t3);
+      append(div1, div0);
+      for (let i = 0; i < each_blocks.length; i += 1) {
+        if (each_blocks[i]) {
+          each_blocks[i].m(div0, null);
+        }
+      }
+      append(nav, t4);
+      append(nav, div3);
+      append(nav, t10);
+      append(nav, a5);
     },
-    p: noop,
+    p(ctx2, [dirty]) {
+      if (dirty & /*projets*/
+      1) {
+        each_value = ensure_array_like(
+          /*projets*/
+          ctx2[0]
+        );
+        let i;
+        for (i = 0; i < each_value.length; i += 1) {
+          const child_ctx = get_each_context(ctx2, each_value, i);
+          if (each_blocks[i]) {
+            each_blocks[i].p(child_ctx, dirty);
+          } else {
+            each_blocks[i] = create_each_block(child_ctx);
+            each_blocks[i].c();
+            each_blocks[i].m(div0, null);
+          }
+        }
+        for (; i < each_blocks.length; i += 1) {
+          each_blocks[i].d(1);
+        }
+        each_blocks.length = each_value.length;
+      }
+    },
     i: noop,
     o: noop,
     d(detaching) {
       if (detaching) {
         detach(nav);
       }
+      destroy_each(each_blocks, detaching);
     }
   };
+}
+function instance($$self, $$props, $$invalidate) {
+  let projets = [];
+  async function getProjetsNames() {
+    try {
+      const response = await fetch("/projets/names");
+      if (!response.ok) {
+        throw new Error(`Erreur HTTP ${response.status}: ${response.statusText}`);
+      }
+      const data = await response.json();
+      $$invalidate(0, projets = data);
+    } catch (error) {
+      console.error("\xC9chec de la r\xE9cup\xE9ration des comp\xE9tences :", error.message || error);
+    }
+  }
+  onMount(async () => {
+    await getProjetsNames();
+  });
+  return [projets];
 }
 var Header = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, null, create_fragment, safe_not_equal, {}, add_css);
+    init(this, options, instance, create_fragment, safe_not_equal, {}, add_css);
   }
 };
 customElements.define("header-portfolio", create_custom_element(Header, {}, [], [], true));

@@ -18,16 +18,6 @@ function is_function(thing) {
 function safe_not_equal(a, b) {
   return a != a ? b == b : a !== b || a && typeof a === "object" || typeof a === "function";
 }
-var src_url_equal_anchor;
-function src_url_equal(element_src, url) {
-  if (element_src === url)
-    return true;
-  if (!src_url_equal_anchor) {
-    src_url_equal_anchor = document.createElement("a");
-  }
-  src_url_equal_anchor.href = url;
-  return element_src === src_url_equal_anchor.href;
-}
 function is_empty(obj) {
   return Object.keys(obj).length === 0;
 }
@@ -691,16 +681,17 @@ var PUBLIC_VERSION = "4";
 if (typeof window !== "undefined")
   (window.__svelte || (window.__svelte = { v: /* @__PURE__ */ new Set() })).v.add(PUBLIC_VERSION);
 
-// ihm/competences/detail.svelte
+// ihm/projets/detail.svelte
 function add_css(target) {
-  append_styles(target, "svelte-wundgz", '@import "../style/style.css";@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");.detail-container.svelte-wundgz.svelte-wundgz{padding:2em;max-width:800px;margin:2em auto;background:#f9f9f9;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.1);text-align:center}.detail-container.svelte-wundgz img.svelte-wundgz{max-width:100px;margin-bottom:1em}.stars.svelte-wundgz.svelte-wundgz{font-size:1.5em;color:gold;margin-bottom:1em}.detail-text.svelte-wundgz.svelte-wundgz{text-align:justify;margin-top:1.5em;line-height:1.6}');
+  append_styles(target, "svelte-1gywgjn", ".projet-detail-container.svelte-1gywgjn{padding:2rem;max-width:900px;margin:2rem auto;background-color:#fff;border-radius:8px;box-shadow:0 4px 8px rgba(0,0,0,0.1)}h1.svelte-1gywgjn{color:#333;border-bottom:2px solid #eee;padding-bottom:0.5rem;margin-bottom:1rem}p.svelte-1gywgjn{color:#555;line-height:1.6}");
 }
 function create_else_block(ctx) {
   let p;
   return {
     c() {
       p = element("p");
-      p.textContent = "Chargement des d\xE9tails de la comp\xE9tence...";
+      p.textContent = "Chargement du projet...";
+      attr(p, "class", "svelte-1gywgjn");
     },
     m(target, anchor) {
       insert(target, p, anchor);
@@ -714,96 +705,51 @@ function create_else_block(ctx) {
   };
 }
 function create_if_block_1(ctx) {
-  let div1;
   let h1;
   let t0_value = (
-    /*competence*/
+    /*projet*/
     ctx[0].name + ""
   );
   let t0;
   let t1;
-  let img;
-  let img_src_value;
-  let img_alt_value;
-  let t2;
-  let div0;
-  let t3_value = getStars(
-    /*competence*/
-    ctx[0].rating
-  ) + "";
-  let t3;
-  let t4;
   let p;
-  let t5_value = (
-    /*competence*/
-    ctx[0].desc + ""
+  let t2_value = (
+    /*projet*/
+    ctx[0].description + ""
   );
-  let t5;
+  let t2;
   return {
     c() {
-      div1 = element("div");
       h1 = element("h1");
       t0 = text(t0_value);
       t1 = space();
-      img = element("img");
-      t2 = space();
-      div0 = element("div");
-      t3 = text(t3_value);
-      t4 = space();
       p = element("p");
-      t5 = text(t5_value);
-      if (!src_url_equal(img.src, img_src_value = /*competence*/
-      ctx[0].image))
-        attr(img, "src", img_src_value);
-      attr(img, "alt", img_alt_value = `Logo de ${/*competence*/
-      ctx[0].name}`);
-      attr(img, "class", "svelte-wundgz");
-      attr(div0, "class", "stars svelte-wundgz");
-      attr(p, "class", "detail-text svelte-wundgz");
-      attr(div1, "class", "detail-container svelte-wundgz");
+      t2 = text(t2_value);
+      attr(h1, "class", "svelte-1gywgjn");
+      attr(p, "class", "svelte-1gywgjn");
     },
     m(target, anchor) {
-      insert(target, div1, anchor);
-      append(div1, h1);
+      insert(target, h1, anchor);
       append(h1, t0);
-      append(div1, t1);
-      append(div1, img);
-      append(div1, t2);
-      append(div1, div0);
-      append(div0, t3);
-      append(div1, t4);
-      append(div1, p);
-      append(p, t5);
+      insert(target, t1, anchor);
+      insert(target, p, anchor);
+      append(p, t2);
     },
     p(ctx2, dirty) {
-      if (dirty & /*competence*/
-      1 && t0_value !== (t0_value = /*competence*/
+      if (dirty & /*projet*/
+      1 && t0_value !== (t0_value = /*projet*/
       ctx2[0].name + ""))
         set_data(t0, t0_value);
-      if (dirty & /*competence*/
-      1 && !src_url_equal(img.src, img_src_value = /*competence*/
-      ctx2[0].image)) {
-        attr(img, "src", img_src_value);
-      }
-      if (dirty & /*competence*/
-      1 && img_alt_value !== (img_alt_value = `Logo de ${/*competence*/
-      ctx2[0].name}`)) {
-        attr(img, "alt", img_alt_value);
-      }
-      if (dirty & /*competence*/
-      1 && t3_value !== (t3_value = getStars(
-        /*competence*/
-        ctx2[0].rating
-      ) + ""))
-        set_data(t3, t3_value);
-      if (dirty & /*competence*/
-      1 && t5_value !== (t5_value = /*competence*/
-      ctx2[0].desc + ""))
-        set_data(t5, t5_value);
+      if (dirty & /*projet*/
+      1 && t2_value !== (t2_value = /*projet*/
+      ctx2[0].description + ""))
+        set_data(t2, t2_value);
     },
     d(detaching) {
       if (detaching) {
-        detach(div1);
+        detach(h1);
+        detach(t1);
+        detach(p);
       }
     }
   };
@@ -818,7 +764,7 @@ function create_if_block(ctx) {
         /*error*/
         ctx[1]
       );
-      attr(p, "class", "error");
+      attr(p, "class", "error svelte-1gywgjn");
     },
     m(target, anchor) {
       insert(target, p, anchor);
@@ -849,7 +795,7 @@ function create_fragment(ctx) {
     )
       return create_if_block;
     if (
-      /*competence*/
+      /*projet*/
       ctx2[0]
     )
       return create_if_block_1;
@@ -861,7 +807,7 @@ function create_fragment(ctx) {
     c() {
       div = element("div");
       if_block.c();
-      attr(div, "class", "container");
+      attr(div, "class", "projet-detail-container svelte-1gywgjn");
     },
     m(target, anchor) {
       insert(target, div, anchor);
@@ -889,36 +835,27 @@ function create_fragment(ctx) {
     }
   };
 }
-function getStars(rating) {
-  if (rating === null || rating === void 0)
-    return "";
-  let stars = "";
-  for (let i = 0; i < 5; i++) {
-    if (i < rating) {
-      stars += "\u2B50";
-    } else {
-      stars += "\u2606";
-    }
-  }
-  return stars;
-}
 function instance($$self, $$props, $$invalidate) {
-  let competence = null;
+  let projet = null;
   let error = null;
-  onMount(() => {
-    const storedCompetence = sessionStorage.getItem("selectedCompetence");
-    if (storedCompetence) {
-      try {
-        const competenceData = JSON.parse(storedCompetence);
-        $$invalidate(0, competence = competenceData);
-      } catch (e) {
-        $$invalidate(1, error = "Erreur lors de la lecture des donn\xE9es de la comp\xE9tence.");
+  onMount(async () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get("id");
+    if (!id) {
+      $$invalidate(1, error = "Aucun ID de projet n'a \xE9t\xE9 fourni.");
+      return;
+    }
+    try {
+      const response = await fetch(`/projet/${id}`);
+      if (!response.ok) {
+        throw new Error("La requ\xEAte a \xE9chou\xE9.");
       }
-    } else {
-      $$invalidate(1, error = "Aucune donn\xE9e de comp\xE9tence trouv\xE9e. Veuillez retourner \xE0 la page des comp\xE9tences et en s\xE9lectionner une.");
+      $$invalidate(0, projet = await response.json());
+    } catch (e) {
+      $$invalidate(1, error = e.message);
     }
   });
-  return [competence, error];
+  return [projet, error];
 }
 var Detail = class extends SvelteComponent {
   constructor(options) {
@@ -926,7 +863,7 @@ var Detail = class extends SvelteComponent {
     init(this, options, instance, create_fragment, safe_not_equal, {}, add_css);
   }
 };
-customElements.define("competence-detail", create_custom_element(Detail, {}, [], [], true));
+customElements.define("projet-detail", create_custom_element(Detail, {}, [], [], true));
 var detail_default = Detail;
 export {
   detail_default as default

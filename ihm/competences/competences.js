@@ -925,58 +925,36 @@ function add_css2(target) {
 }
 function get_each_context(ctx, list, i) {
   const child_ctx = ctx.slice();
-  child_ctx[4] = list[i];
+  child_ctx[5] = list[i];
   return child_ctx;
 }
-function create_each_block(ctx) {
-  let card;
-  let current;
-  card = new card_default({
-    props: { competence: (
-      /*competence*/
-      ctx[4]
-    ) }
-  });
+function create_else_block(ctx) {
+  let t;
   return {
     c() {
-      create_component(card.$$.fragment);
+      t = text("Chargement des comp\xE9tences...");
     },
     m(target, anchor) {
-      mount_component(card, target, anchor);
-      current = true;
+      insert(target, t, anchor);
     },
-    p(ctx2, dirty) {
-      const card_changes = {};
-      if (dirty & /*displayedCompetences*/
-      1)
-        card_changes.competence = /*competence*/
-        ctx2[4];
-      card.$set(card_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(card.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(card.$$.fragment, local);
-      current = false;
-    },
+    p: noop,
+    i: noop,
+    o: noop,
     d(detaching) {
-      destroy_component(card, detaching);
+      if (detaching) {
+        detach(t);
+      }
     }
   };
 }
-function create_fragment2(ctx) {
-  let div1;
+function create_if_block_1(ctx) {
   let h2;
   let t1;
-  let div0;
+  let div;
   let current;
   let each_value = ensure_array_like(
     /*displayedCompetences*/
-    ctx[0]
+    ctx[1]
   );
   let each_blocks = [];
   for (let i = 0; i < each_value.length; i += 1) {
@@ -987,34 +965,32 @@ function create_fragment2(ctx) {
   });
   return {
     c() {
-      div1 = element("div");
       h2 = element("h2");
       h2.textContent = "Mes Comp\xE9tences";
       t1 = space();
-      div0 = element("div");
+      div = element("div");
       for (let i = 0; i < each_blocks.length; i += 1) {
         each_blocks[i].c();
       }
-      attr(div0, "class", "competences-grid svelte-vqci63");
+      attr(div, "class", "competences-grid svelte-vqci63");
     },
     m(target, anchor) {
-      insert(target, div1, anchor);
-      append(div1, h2);
-      append(div1, t1);
-      append(div1, div0);
+      insert(target, h2, anchor);
+      insert(target, t1, anchor);
+      insert(target, div, anchor);
       for (let i = 0; i < each_blocks.length; i += 1) {
         if (each_blocks[i]) {
-          each_blocks[i].m(div0, null);
+          each_blocks[i].m(div, null);
         }
       }
       current = true;
     },
-    p(ctx2, [dirty]) {
+    p(ctx2, dirty) {
       if (dirty & /*displayedCompetences*/
-      1) {
+      2) {
         each_value = ensure_array_like(
           /*displayedCompetences*/
-          ctx2[0]
+          ctx2[1]
         );
         let i;
         for (i = 0; i < each_value.length; i += 1) {
@@ -1026,7 +1002,7 @@ function create_fragment2(ctx) {
             each_blocks[i] = create_each_block(child_ctx);
             each_blocks[i].c();
             transition_in(each_blocks[i], 1);
-            each_blocks[i].m(div0, null);
+            each_blocks[i].m(div, null);
           }
         }
         group_outros();
@@ -1053,24 +1029,175 @@ function create_fragment2(ctx) {
     },
     d(detaching) {
       if (detaching) {
-        detach(div1);
+        detach(h2);
+        detach(t1);
+        detach(div);
       }
       destroy_each(each_blocks, detaching);
     }
   };
 }
+function create_if_block(ctx) {
+  let p;
+  let t;
+  return {
+    c() {
+      p = element("p");
+      t = text(
+        /*error*/
+        ctx[0]
+      );
+      attr(p, "class", "error");
+    },
+    m(target, anchor) {
+      insert(target, p, anchor);
+      append(p, t);
+    },
+    p(ctx2, dirty) {
+      if (dirty & /*error*/
+      1)
+        set_data(
+          t,
+          /*error*/
+          ctx2[0]
+        );
+    },
+    i: noop,
+    o: noop,
+    d(detaching) {
+      if (detaching) {
+        detach(p);
+      }
+    }
+  };
+}
+function create_each_block(ctx) {
+  let card;
+  let current;
+  card = new card_default({
+    props: { competence: (
+      /*competence*/
+      ctx[5]
+    ) }
+  });
+  return {
+    c() {
+      create_component(card.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(card, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const card_changes = {};
+      if (dirty & /*displayedCompetences*/
+      2)
+        card_changes.competence = /*competence*/
+        ctx2[5];
+      card.$set(card_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(card.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(card.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(card, detaching);
+    }
+  };
+}
+function create_fragment2(ctx) {
+  let div;
+  let current_block_type_index;
+  let if_block;
+  let current;
+  const if_block_creators = [create_if_block, create_if_block_1, create_else_block];
+  const if_blocks = [];
+  function select_block_type(ctx2, dirty) {
+    if (
+      /*error*/
+      ctx2[0]
+    )
+      return 0;
+    if (
+      /*displayedCompetences*/
+      ctx2[1]
+    )
+      return 1;
+    return 2;
+  }
+  current_block_type_index = select_block_type(ctx, -1);
+  if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+  return {
+    c() {
+      div = element("div");
+      if_block.c();
+    },
+    m(target, anchor) {
+      insert(target, div, anchor);
+      if_blocks[current_block_type_index].m(div, null);
+      current = true;
+    },
+    p(ctx2, [dirty]) {
+      let previous_block_index = current_block_type_index;
+      current_block_type_index = select_block_type(ctx2, dirty);
+      if (current_block_type_index === previous_block_index) {
+        if_blocks[current_block_type_index].p(ctx2, dirty);
+      } else {
+        group_outros();
+        transition_out(if_blocks[previous_block_index], 1, 1, () => {
+          if_blocks[previous_block_index] = null;
+        });
+        check_outros();
+        if_block = if_blocks[current_block_type_index];
+        if (!if_block) {
+          if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx2);
+          if_block.c();
+        } else {
+          if_block.p(ctx2, dirty);
+        }
+        transition_in(if_block, 1);
+        if_block.m(div, null);
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(if_block);
+      current = true;
+    },
+    o(local) {
+      transition_out(if_block);
+      current = false;
+    },
+    d(detaching) {
+      if (detaching) {
+        detach(div);
+      }
+      if_blocks[current_block_type_index].d();
+    }
+  };
+}
 function instance2($$self, $$props, $$invalidate) {
+  let error = null;
   let allCompetences = [];
-  let displayedCompetences = [];
+  let displayedCompetences = null;
   async function getCompetences() {
     try {
       const response = await fetch("/competences");
       if (!response.ok) {
-        throw new Error(`Erreur HTTP ${response.status}: ${response.statusText}`);
+        $$invalidate(0, error = response.statusText);
+        throw new Error(`Erreur HTTP ${response.status}: ${error}`);
       }
       const data = await response.json();
       allCompetences = data;
-    } catch (error) {
+    } catch (e) {
+      $$invalidate(0, error = e);
       console.error("\xC9chec de la r\xE9cup\xE9ration des comp\xE9tences :", error.message || error);
     }
   }
@@ -1078,16 +1205,16 @@ function instance2($$self, $$props, $$invalidate) {
     const urlParams = new URLSearchParams(window.location.search);
     const type = urlParams.get("type");
     if (type) {
-      $$invalidate(0, displayedCompetences = allCompetences.filter((comp) => comp.type.toLowerCase() === type));
+      $$invalidate(1, displayedCompetences = allCompetences.filter((comp) => comp.type.toLowerCase() === type));
     } else {
-      $$invalidate(0, displayedCompetences = allCompetences);
+      $$invalidate(1, displayedCompetences = allCompetences);
     }
   }
   onMount(async () => {
     await getCompetences();
     filterCompetences();
   });
-  return [displayedCompetences];
+  return [error, displayedCompetences];
 }
 var Competences = class extends SvelteComponent {
   constructor(options) {

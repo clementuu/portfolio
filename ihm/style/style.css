@@ -7,3 +7,8 @@
 h2 {
     padding: 1em 2em;
 }
+
+.error {
+    color: red;
+    text-align: center;
+}

@@ -35,6 +35,21 @@
     }
 </script>
 
+<div class="container">
+    {#if error}
+        <p class="error">{error}</p>
+    {:else if competence}
+        <div class="detail-container">
+            <h1>{competence.name}</h1>
+            <img src={competence.image} alt={`Logo de ${competence.name}`} />
+            <div class="stars">{getStars(competence.rating)}</div>
+            <p class="detail-text">{competence.desc}</p>
+        </div>
+    {:else}
+        <p>Chargement des détails de la compétence...</p>
+    {/if}
+</div>
+
 <style>
     @import "../style/style.css";
     @import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");
@@ -62,24 +77,4 @@
         margin-top: 1.5em;
         line-height: 1.6;
     }
-    .error {
-        color: red;
-        text-align: center;
-        margin-top: 2em;
-    }
 </style>
-
-<div class="container">
-    {#if error}
-        <p class="error">{error}</p>
-    {:else if competence}
-        <div class="detail-container">
-            <h1>{competence.name}</h1>
-            <img src={competence.image} alt={`Logo de ${competence.name}`} />
-            <div class="stars">{getStars(competence.rating)}</div>
-            <p class="detail-text">{competence.desc}</p>
-        </div>
-    {:else}
-        <p>Chargement des détails de la compétence...</p>
-    {/if}
-</div>

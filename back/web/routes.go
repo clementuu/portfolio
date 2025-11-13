@@ -9,6 +9,8 @@ func MakeRoutes() {
 	}{
 		{"GET /competences", GetAllCompetences},
 		{"GET /projets", GetAllProjets},
+		{"GET /projets/names", GetProjetsNames},
+		{"GET /projet/{id}", GetProjetByID},
 	}
 
 	for _, r := range routes {

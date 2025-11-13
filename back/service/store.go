@@ -8,6 +8,8 @@ import (
 type webStore interface {
 	GetCompetences() []model.Competence
 	GetProjets() []model.Projet
+	GetProjetsNames() (mps []model.MiniProjet)
+	GetProjet(id int) (model.Projet, error)
 }
 
 var storage webStore

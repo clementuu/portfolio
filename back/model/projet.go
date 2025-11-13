@@ -7,3 +7,8 @@ type Projet struct {
 	Competences []Competence
 	Desc        string
 }
+
+type MiniProjet struct {
+	ID   int    `json:"id"`
+	Name string `json:"name"`
+}

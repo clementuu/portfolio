@@ -31,11 +31,7 @@
     <h2>Mes Projets</h2>
     <div class="projets-grid">
         {#each projets as projet}
-            <Card
-                title={projet.name}
-                summary={projet.desc}
-                image={projet.image}
-            />
+            <Card {projet} />
         {/each}
     </div>
 </div>
