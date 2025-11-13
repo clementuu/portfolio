@@ -34,6 +34,53 @@
 	</div>
 </div>
 
+<div class="cv-container">
+	<section class="experiences">
+		<h2>Expériences professionnelles</h2>
+		<article>
+			<h3>Développeur fullstack [Alternance]</h3>
+			<p><strong>Softinnov | mars 2024 à mars 2026</strong></p>
+			<ul>
+				<li>Conception et développement d'applications et de solutions web pour divers clients.</li>
+				<li>Administration de systèmes, migration de base de données.</li>
+			</ul>
+		</article>
+		<article>
+			<h3>Etude du gaspillage alimentaire [Service Civique]</h3>
+			<p><strong>Mairie de Saint-Jean de Védas | novembre 2022 à juillet 2023</strong></p>
+			<ul>
+				<li>Diagnostique du gaspillage alimentaire à travers la collecte et l'étude de données.</li>
+				<li>Rédaction d'un rapport et présentation des résultats aux élus locaux.</li>
+				<li>Création d'un jeu vidéo éducatif en javascript pour sensibiliser aux écogestes.</li>
+			</ul>
+		</article>
+		<article>
+			<h3>Support sur un projet d'innovation [Stage]</h3>
+			<p><strong>IDEMIA – R&D Sophia-Antipolis | mai 2022 à août 2022</strong></p>
+			<ul>
+				<li>Création et automatisation de tests d'UI.</li>
+				<li>Utilisation d'un framework de test « End to End » (Python, Selenium, Serenity, Behave).</li>
+			</ul>
+		</article>
+	</section>
+
+	<section class="formations">
+		<h2>Formations</h2>
+		<article>
+			<h3>Mastère Expert en Ingénierie Logicielle</h3>
+			<p><strong>ISCOD | 2023 - 2025</strong></p>
+		</article>
+		<article>
+			<h3>Licence de mathématiques et informatique appliquées</h3>
+			<p><strong>Paul Valéry Montpellier 3 | 2019 - 2022</strong></p>
+		</article>
+		<article>
+			<h3>Baccalauréat Scientifique</h3>
+			<p><strong>Lycée Laetitia Bonaparte | 2013 - 2016</strong></p>
+		</article>
+	</section>
+</div>
+
 <style>
 	@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");
 
@@ -81,4 +128,49 @@
 	.banner-content h2.fade-out {
 		opacity: 0;
 	}
+
+    .cv-container {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: 2rem auto;
+        overflow: hidden;
+    }
+
+    .cv-container h2, .cv-container h3 {
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .cv-container h2 {
+        font-size: 1.8rem;
+    }
+
+    .cv-container h3 {
+        font-size: 1.2rem;
+        border-bottom: none;
+        margin-top: 1.5rem;
+    }
+
+    .cv-container section {
+        margin-bottom: 2rem;
+    }
+
+    .cv-container ul {
+        padding-left: 20px;
+    }
+
+    .cv-container li {
+        margin-bottom: 0.5rem;
+    }
+
+    .cv-container article {
+        margin-bottom: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+        .cv-container {
+            flex-direction: column;
+        }
+    }
 </style>
