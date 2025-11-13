@@ -13,7 +13,7 @@ const (
 	DockerLogo  = "../assets/icons8-docker.svg"
 	KubeLogo    = "../assets/icons8-kubernetes.svg"
 	RebolLogo   = "../assets/Rebol_logo.png"
-	RStudioLogo = "../assets/RStudio_logo_flat.svg"
+	RLogo       = "../assets/Rlogo.svg"
 	PythonLogo  = "../assets/icons8-python.svg"
 	AngularLogo = "../assets/icons8-angularjs.svg"
 	TScriptLogo = "../assets/icons8-manuscrit.svg"
@@ -24,4 +24,5 @@ const (
 	// logos projets
 	AntiGapsiLogo = "../assets/playerDown1.png"
 	CaisseLogo    = "../assets/Panier.png"
+	SaintJeanLogo = "../assets/Logo_de_saint-jean_de_vedas.jpg"
 )
