@@ -10,12 +10,18 @@
             <a href="/projets/detail.html?id=projet-c">Projet C</a>
         </div>
     </div>
-    <a href="/competences/competences.html">Compétences</a>
+    <div class="dropdown">
+        <a href="/competences/competences.html">Compétences</a>
+        <div class="dropdown-content">
+            <a href="/competences/competences.html?type=technique">Compétences techniques</a>
+            <a href="/competences/competences.html?type=humain">Compétences humaines</a>
+        </div>
+    </div>
     <a href="/contacts.html">Contacts</a>
 </nav>
 
 <style>
-    @import './style/style.css';
+    @import '/style/style.css';
     @import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");
 
     nav {
@@ -40,6 +46,10 @@
     }
 
     /* Dropdown styles */
+    .dropdown {
+        position: relative;
+    }
+
     .dropdown-content {
         display: none;
         position: absolute;

@@ -686,7 +686,7 @@ if (typeof window !== "undefined")
 
 // ihm/app.svelte
 function add_css(target) {
-  append_styles(target, "svelte-enydm6", `@import './style/style.css';@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");.banner.svelte-enydm6.svelte-enydm6{position:relative;height:300px;display:flex;align-items:center;overflow:hidden;background-image:url('../assets/background.webp');background-size:auto;background-position:center}.banner.svelte-enydm6.svelte-enydm6::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background-image:inherit;background-size:cover;background-position:center;filter:blur(2px);z-index:0}.banner-content.svelte-enydm6.svelte-enydm6{position:absolute;z-index:1;color:white;text-align:left;text-shadow:2px 2px 4px rgba(0, 0, 0, 0.9);min-width:fit-content;padding-left:20px}.banner-content.svelte-enydm6 h1.svelte-enydm6,.banner-content.svelte-enydm6 h2.svelte-enydm6{margin:0;padding:0.2em 0;text-align:left;transition:opacity 0.5s ease-in-out}.banner-content.svelte-enydm6 h2.fade-out.svelte-enydm6{opacity:0}`);
+  append_styles(target, "svelte-25gyd9", `@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");.banner.svelte-25gyd9.svelte-25gyd9{position:relative;height:300px;display:flex;align-items:center;overflow:hidden;background-image:url('../assets/background.webp');background-size:auto;background-position:center}.banner.svelte-25gyd9.svelte-25gyd9::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background-image:inherit;background-size:cover;background-position:center;z-index:0}.banner-content.svelte-25gyd9.svelte-25gyd9{position:absolute;z-index:1;color:white;text-align:left;text-shadow:2px 2px 4px rgba(0, 0, 0, 0.9);min-width:fit-content;padding-left:20px}.banner-content.svelte-25gyd9 h1.svelte-25gyd9,.banner-content.svelte-25gyd9 h2.svelte-25gyd9{margin:0;padding:0.2em 0;text-align:left;transition:opacity 0.5s ease-in-out}.banner-content.svelte-25gyd9 h2.fade-out.svelte-25gyd9{opacity:0}`);
 }
 function create_fragment(ctx) {
   let div1;
@@ -707,16 +707,16 @@ function create_fragment(ctx) {
         /*currentH2Text*/
         ctx[0]
       );
-      attr(h1, "class", "h1 svelte-enydm6");
-      attr(h2, "class", "h2 svelte-enydm6");
+      attr(h1, "class", "h1 svelte-25gyd9");
+      attr(h2, "class", "h2 svelte-25gyd9");
       toggle_class(
         h2,
         "fade-out",
         /*isFading*/
         ctx[1]
       );
-      attr(div0, "class", "banner-content svelte-enydm6");
-      attr(div1, "class", "banner svelte-enydm6");
+      attr(div0, "class", "banner-content svelte-25gyd9");
+      attr(div1, "class", "banner svelte-25gyd9");
     },
     m(target, anchor) {
       insert(target, div1, anchor);

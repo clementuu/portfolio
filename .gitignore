@@ -30,3 +30,4 @@ go.sum
 .vscode/
 
 GEMINI.md
+build/

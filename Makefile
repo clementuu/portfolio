@@ -4,9 +4,6 @@ webdev:
 srvdev:
 	cd back && DIR=../ihm go run .
 
-build:
-	docker compose build
-
 start:
 	docker compose up -d
 

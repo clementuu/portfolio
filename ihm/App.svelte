@@ -35,7 +35,6 @@
 </div>
 
 <style>
-	@import './style/style.css';
 	@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");
 
 	.banner {
@@ -59,7 +58,6 @@
 		background-image: inherit;
 		background-size: cover;
 		background-position: center;
-		filter: blur(2px);
 		z-index: 0;
 	}
 

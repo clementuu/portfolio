@@ -18,4 +18,5 @@ const (
 	DescRebol   = "Rebol est un langage de programmation léger et expressif, conçu pour la communication et l'échange de données entre systèmes."
 	DescRStudio = "R est un langage de programmation et un environnement logiciel dédié au calcul statistique, à l'analyse de données et à la visualisation graphique."
 	DescAnsible = "Ansible est un outil open source d'automatisation IT, agentless, qui permet la configuration, le déploiement et l'orchestration d'infrastructures via des Playbooks en YAML."
+	DescPHP     = "PHP est un langage de script open source principalement utilisé pour le développement web côté serveur, permettant de générer dynamiquement du contenu HTML et d'interagir avec des bases de données."
 )

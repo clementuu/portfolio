@@ -18,4 +18,7 @@ const (
 	AngularSVG = "../assets/icons8-angularjs.svg"
 	TScriptSVG = "../assets/icons8-manuscrit.svg"
 	AnsibleSVG = "../assets/icons8-ansible.svg"
+	PhpSVG     = "../assets/php-svgrepo-com.svg"
+	ManageSVG  = "../assets/icons8-project-management-48.png"
+	ClientSVG  = "../assets/icons8-relation-48.png"
 )
