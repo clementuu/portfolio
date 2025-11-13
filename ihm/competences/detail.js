@@ -693,7 +693,7 @@ if (typeof window !== "undefined")
 
 // ihm/competences/detail.svelte
 function add_css(target) {
-  append_styles(target, "svelte-n6qr2x", ".detail-container.svelte-n6qr2x.svelte-n6qr2x{padding:2em;max-width:800px;margin:2em auto;background:#f9f9f9;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.1);text-align:center}.detail-container.svelte-n6qr2x img.svelte-n6qr2x{max-width:100px;margin-bottom:1em}.stars.svelte-n6qr2x.svelte-n6qr2x{font-size:1.5em;color:gold;margin-bottom:1em}.detail-text.svelte-n6qr2x.svelte-n6qr2x{text-align:justify;margin-top:1.5em;line-height:1.6}.error.svelte-n6qr2x.svelte-n6qr2x{color:red;text-align:center;margin-top:2em}");
+  append_styles(target, "svelte-hjo6lo", '@import "../style/style.css";@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");.detail-container.svelte-hjo6lo.svelte-hjo6lo{padding:2em;max-width:800px;margin:2em auto;background:#f9f9f9;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.1);text-align:center}.detail-container.svelte-hjo6lo img.svelte-hjo6lo{max-width:100px;margin-bottom:1em}.stars.svelte-hjo6lo.svelte-hjo6lo{font-size:1.5em;color:gold;margin-bottom:1em}.detail-text.svelte-hjo6lo.svelte-hjo6lo{text-align:justify;margin-top:1.5em;line-height:1.6}.error.svelte-hjo6lo.svelte-hjo6lo{color:red;text-align:center;margin-top:2em}');
 }
 function create_else_block(ctx) {
   let p;
@@ -757,10 +757,10 @@ function create_if_block_1(ctx) {
         attr(img, "src", img_src_value);
       attr(img, "alt", img_alt_value = `Logo de ${/*competence*/
       ctx[0].name}`);
-      attr(img, "class", "svelte-n6qr2x");
-      attr(div0, "class", "stars svelte-n6qr2x");
-      attr(p, "class", "detail-text svelte-n6qr2x");
-      attr(div1, "class", "detail-container svelte-n6qr2x");
+      attr(img, "class", "svelte-hjo6lo");
+      attr(div0, "class", "stars svelte-hjo6lo");
+      attr(p, "class", "detail-text svelte-hjo6lo");
+      attr(div1, "class", "detail-container svelte-hjo6lo");
     },
     m(target, anchor) {
       insert(target, div1, anchor);
@@ -818,7 +818,7 @@ function create_if_block(ctx) {
         /*error*/
         ctx[1]
       );
-      attr(p, "class", "error svelte-n6qr2x");
+      attr(p, "class", "error svelte-hjo6lo");
     },
     m(target, anchor) {
       insert(target, p, anchor);

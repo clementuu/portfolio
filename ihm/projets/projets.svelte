@@ -36,11 +36,14 @@
 </div>
 
 <style>
-  .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1em;
-    justify-items: center;
-    padding: 1em;
-  }
+	@import '../style/style.css';
+    @import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");
+  
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1em;
+        justify-items: center;
+        padding: 1em;
+    }
 </style>

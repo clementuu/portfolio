@@ -123,8 +123,14 @@ function detach(node) {
     node.parentNode.removeChild(node);
   }
 }
-function element(name) {
-  return document.createElement(name);
+function element(name2) {
+  return document.createElement(name2);
+}
+function text(data) {
+  return document.createTextNode(data);
+}
+function space() {
+  return text(" ");
 }
 function attr(node, attribute, value) {
   if (value == null)
@@ -134,6 +140,16 @@ function attr(node, attribute, value) {
 }
 function children(element2) {
   return Array.from(element2.childNodes);
+}
+function set_data(text2, data) {
+  data = "" + data;
+  if (text2.data === data)
+    return;
+  text2.data = /** @type {string} */
+  data;
+}
+function toggle_class(element2, name2, toggle) {
+  element2.classList.toggle(name2, !!toggle);
 }
 function get_custom_elements_slots(element2) {
   const result = {};
@@ -150,6 +166,14 @@ function get_custom_elements_slots(element2) {
 var current_component;
 function set_current_component(component) {
   current_component = component;
+}
+function get_current_component() {
+  if (!current_component)
+    throw new Error("Function called outside component initialization");
+  return current_component;
+}
+function onMount(fn) {
+  get_current_component().$$.on_mount.push(fn);
 }
 
 // node_modules/svelte/src/runtime/internal/scheduler.js
@@ -302,7 +326,7 @@ function make_dirty(component, i) {
   }
   component.$$.dirty[i / 31 | 0] |= 1 << i % 31;
 }
-function init(component, options, instance, create_fragment2, not_equal, props, append_styles2 = null, dirty = [-1]) {
+function init(component, options, instance2, create_fragment2, not_equal, props, append_styles2 = null, dirty = [-1]) {
   const parent_component = current_component;
   set_current_component(component);
   const $$ = component.$$ = {
@@ -328,7 +352,7 @@ function init(component, options, instance, create_fragment2, not_equal, props, 
   };
   append_styles2 && append_styles2($$.root);
   let ready = false;
-  $$.ctx = instance ? instance(component, options.props || {}, (i, ret, ...rest) => {
+  $$.ctx = instance2 ? instance2(component, options.props || {}, (i, ret, ...rest) => {
     const value = rest.length ? rest[0] : ret;
     if ($$.ctx && not_equal($$.ctx[i], $$.ctx[i] = value)) {
       if (!$$.skip_bound && $$.bound[i])
@@ -416,14 +440,14 @@ if (typeof HTMLElement === "function") {
     async connectedCallback() {
       this.$$cn = true;
       if (!this.$$c) {
-        let create_slot = function(name) {
+        let create_slot = function(name2) {
           return () => {
             let node;
             const obj = {
               c: function create() {
                 node = element("slot");
-                if (name !== "default") {
-                  attr(node, "name", name);
+                if (name2 !== "default") {
+                  attr(node, "name", name2);
                 }
               },
               /**
@@ -448,15 +472,15 @@ if (typeof HTMLElement === "function") {
         }
         const $$slots = {};
         const existing_slots = get_custom_elements_slots(this);
-        for (const name of this.$$s) {
-          if (name in existing_slots) {
-            $$slots[name] = [create_slot(name)];
+        for (const name2 of this.$$s) {
+          if (name2 in existing_slots) {
+            $$slots[name2] = [create_slot(name2)];
           }
         }
         for (const attribute of this.attributes) {
-          const name = this.$$g_p(attribute.name);
-          if (!(name in this.$$d)) {
-            this.$$d[name] = get_custom_element_value(name, attribute.value, this.$$p_d, "toProp");
+          const name2 = this.$$g_p(attribute.name);
+          if (!(name2 in this.$$d)) {
+            this.$$d[name2] = get_custom_element_value(name2, attribute.value, this.$$p_d, "toProp");
           }
         }
         for (const key in this.$$p_d) {
@@ -660,39 +684,109 @@ var PUBLIC_VERSION = "4";
 if (typeof window !== "undefined")
   (window.__svelte || (window.__svelte = { v: /* @__PURE__ */ new Set() })).v.add(PUBLIC_VERSION);
 
-// ihm/App.svelte
+// ihm/app.svelte
 function add_css(target) {
-  append_styles(target, "svelte-j3czbe", `@import './style/style.css';@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");`);
+  append_styles(target, "svelte-enydm6", `@import './style/style.css';@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");.banner.svelte-enydm6.svelte-enydm6{position:relative;height:300px;display:flex;align-items:center;overflow:hidden;background-image:url('../assets/background.webp');background-size:auto;background-position:center}.banner.svelte-enydm6.svelte-enydm6::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background-image:inherit;background-size:cover;background-position:center;filter:blur(2px);z-index:0}.banner-content.svelte-enydm6.svelte-enydm6{position:absolute;z-index:1;color:white;text-align:left;text-shadow:2px 2px 4px rgba(0, 0, 0, 0.9);min-width:fit-content;padding-left:20px}.banner-content.svelte-enydm6 h1.svelte-enydm6,.banner-content.svelte-enydm6 h2.svelte-enydm6{margin:0;padding:0.2em 0;text-align:left;transition:opacity 0.5s ease-in-out}.banner-content.svelte-enydm6 h2.fade-out.svelte-enydm6{opacity:0}`);
 }
 function create_fragment(ctx) {
-  let div;
+  let div1;
+  let div0;
+  let h1;
+  let t1;
+  let h2;
+  let t2;
   return {
     c() {
-      div = element("div");
-      div.innerHTML = `<h1 class="h1 mt-5">Cl\xE9ment Calia</h1> <h2 class="h2">Expert en ing\xE9nierie logicielle</h2>`;
-      attr(div, "class", "centered");
+      div1 = element("div");
+      div0 = element("div");
+      h1 = element("h1");
+      h1.textContent = `${name}`;
+      t1 = space();
+      h2 = element("h2");
+      t2 = text(
+        /*currentH2Text*/
+        ctx[0]
+      );
+      attr(h1, "class", "h1 svelte-enydm6");
+      attr(h2, "class", "h2 svelte-enydm6");
+      toggle_class(
+        h2,
+        "fade-out",
+        /*isFading*/
+        ctx[1]
+      );
+      attr(div0, "class", "banner-content svelte-enydm6");
+      attr(div1, "class", "banner svelte-enydm6");
     },
     m(target, anchor) {
-      insert(target, div, anchor);
+      insert(target, div1, anchor);
+      append(div1, div0);
+      append(div0, h1);
+      append(div0, t1);
+      append(div0, h2);
+      append(h2, t2);
     },
-    p: noop,
+    p(ctx2, [dirty]) {
+      if (dirty & /*currentH2Text*/
+      1)
+        set_data(
+          t2,
+          /*currentH2Text*/
+          ctx2[0]
+        );
+      if (dirty & /*isFading*/
+      2) {
+        toggle_class(
+          h2,
+          "fade-out",
+          /*isFading*/
+          ctx2[1]
+        );
+      }
+    },
     i: noop,
     o: noop,
     d(detaching) {
       if (detaching) {
-        detach(div);
+        detach(div1);
       }
     }
   };
 }
+var name = "Cl\xE9ment Calia";
+var inge = "Expert en ing\xE9nierie logicielle";
+var fullstack = "D\xE9veloppeur Fullstack";
+var transitionDuration = 500;
+var displayDuration = 3e3;
+function instance($$self, $$props, $$invalidate) {
+  let currentH2Text = inge;
+  let isFading = false;
+  onMount(() => {
+    const interval = setInterval(
+      () => {
+        $$invalidate(1, isFading = true);
+        setTimeout(
+          () => {
+            $$invalidate(0, currentH2Text = currentH2Text === inge ? fullstack : inge);
+            $$invalidate(1, isFading = false);
+          },
+          transitionDuration
+        );
+      },
+      displayDuration + transitionDuration
+    );
+    return () => clearInterval(interval);
+  });
+  return [currentH2Text, isFading];
+}
 var App = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, null, create_fragment, safe_not_equal, {}, add_css);
+    init(this, options, instance, create_fragment, safe_not_equal, {}, add_css);
   }
 };
 customElements.define("index-portfolio", create_custom_element(App, {}, [], [], true));
-var App_default = App;
+var app_default = App;
 export {
-  App_default as default
+  app_default as default
 };

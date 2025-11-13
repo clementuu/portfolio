@@ -736,7 +736,7 @@ if (typeof window !== "undefined")
 
 // ihm/competences/card.svelte
 function add_css(target) {
-  append_styles(target, "svelte-1uuzf6", ".competence-card.svelte-1uuzf6.svelte-1uuzf6{border:1px solid #eee;border-radius:8px;padding:1em;margin:1em;box-shadow:2px 2px 8px rgba(0, 0, 0, 0.1);display:flex;flex-direction:column;align-items:center;text-align:center;max-width:200px;transition:transform 0.2s;cursor:pointer}.competence-card.svelte-1uuzf6.svelte-1uuzf6:hover{transform:scale(1.05)}.competence-card.svelte-1uuzf6 img.svelte-1uuzf6{max-width:50px;max-height:50px;margin-bottom:1em}.image-wrapper.svelte-1uuzf6.svelte-1uuzf6{height:50px;display:flex;justify-content:center}.competence-card.svelte-1uuzf6 h3.svelte-1uuzf6{margin-top:0;color:#333}.competence-card.svelte-1uuzf6 .stars.svelte-1uuzf6{font-size:1.2em;color:gold}");
+  append_styles(target, "svelte-v95iq6", `@import '../style/style.css';@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");.competence-card.svelte-v95iq6.svelte-v95iq6{border:1px solid #eee;border-radius:8px;padding:1em;margin:1em;box-shadow:2px 2px 8px rgba(0, 0, 0, 0.1);display:flex;flex-direction:column;align-items:center;text-align:center;max-width:200px;transition:transform 0.2s;cursor:pointer}.competence-card.svelte-v95iq6.svelte-v95iq6:hover{transform:scale(1.05)}.competence-card.svelte-v95iq6 img.svelte-v95iq6{max-width:50px;max-height:50px;margin-bottom:1em}.image-wrapper.svelte-v95iq6.svelte-v95iq6{height:50px;display:flex;justify-content:center}.competence-card.svelte-v95iq6 h3.svelte-v95iq6{margin-top:0;color:#333}.competence-card.svelte-v95iq6 .stars.svelte-v95iq6{font-size:1.2em;color:gold}`);
 }
 function create_fragment(ctx) {
   let button;
@@ -776,11 +776,11 @@ function create_fragment(ctx) {
         attr(img, "src", img_src_value);
       attr(img, "alt", img_alt_value = /*competence*/
       ctx[0].name);
-      attr(img, "class", "svelte-1uuzf6");
-      attr(div0, "class", "image-wrapper svelte-1uuzf6");
-      attr(h3, "class", "svelte-1uuzf6");
-      attr(div1, "class", "stars svelte-1uuzf6");
-      attr(button, "class", "competence-card svelte-1uuzf6");
+      attr(img, "class", "svelte-v95iq6");
+      attr(div0, "class", "image-wrapper svelte-v95iq6");
+      attr(h3, "class", "svelte-v95iq6");
+      attr(div1, "class", "stars svelte-v95iq6");
+      attr(button, "class", "competence-card svelte-v95iq6");
       attr(button, "type", "button");
       attr(button, "tabindex", "0");
     },
@@ -878,7 +878,7 @@ var card_default = Card;
 
 // ihm/competences/competences.svelte
 function add_css2(target) {
-  append_styles(target, "svelte-1jbq63b", ".competences-grid.svelte-1jbq63b{display:grid;grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));gap:1em;justify-items:center;padding:1em}");
+  append_styles(target, "svelte-vqci63", `@import '../style/style.css';@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");.competences-grid.svelte-vqci63{display:grid;grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));gap:1em;justify-items:center;padding:1em}`);
 }
 function get_each_context(ctx, list, i) {
   const child_ctx = ctx.slice();
@@ -952,7 +952,7 @@ function create_fragment2(ctx) {
       for (let i = 0; i < each_blocks.length; i += 1) {
         each_blocks[i].c();
       }
-      attr(div0, "class", "competences-grid svelte-1jbq63b");
+      attr(div0, "class", "competences-grid svelte-vqci63");
     },
     m(target, anchor) {
       insert(target, div1, anchor);

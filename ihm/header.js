@@ -662,15 +662,15 @@ if (typeof window !== "undefined")
 
 // ihm/header.svelte
 function add_css(target) {
-  append_styles(target, "svelte-xnl057", "nav.svelte-xnl057{background-color:#333;padding:1em;color:white;display:flex;justify-content:center;gap:1em}a.svelte-xnl057{color:white;text-decoration:none;padding:0.5em 1em;border-radius:5px}a.svelte-xnl057:hover{background-color:#555}");
+  append_styles(target, "svelte-pzdwwc", `@import './style/style.css';@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");nav.svelte-pzdwwc.svelte-pzdwwc{background-color:#333;padding:1em;color:white;display:flex;justify-content:center;align-items:center;gap:1em}a.svelte-pzdwwc.svelte-pzdwwc{color:white;text-decoration:none;padding:0.5em 1em;border-radius:5px}a.svelte-pzdwwc.svelte-pzdwwc:hover{background-color:#555}.dropdown-content.svelte-pzdwwc.svelte-pzdwwc{display:none;position:absolute;background-color:#f9f9f9;min-width:160px;box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);z-index:1;border-radius:5px;top:2em}.dropdown-content.svelte-pzdwwc a.svelte-pzdwwc{color:black;padding:12px 16px;text-decoration:none;display:block;text-align:left}.dropdown-content.svelte-pzdwwc a.svelte-pzdwwc:hover{background-color:#ddd}.dropdown.svelte-pzdwwc:hover .dropdown-content.svelte-pzdwwc{display:block}`);
 }
 function create_fragment(ctx) {
   let nav;
   return {
     c() {
       nav = element("nav");
-      nav.innerHTML = `<a href="/" class="svelte-xnl057">Accueil</a> <a href="/projets/projets.html" class="svelte-xnl057">Projets</a> <a href="/competences/competences.html" class="svelte-xnl057">Comp\xE9tences</a> <a href="/contacts.html" class="svelte-xnl057">Contacts</a>`;
-      attr(nav, "class", "svelte-xnl057");
+      nav.innerHTML = `<a href="/" class="svelte-pzdwwc">Accueil</a> <div class="dropdown svelte-pzdwwc"><a href="/projets/projets.html" class="svelte-pzdwwc">Projets</a> <div class="dropdown-content svelte-pzdwwc"><a href="/projets/detail.html?id=projet-a" class="svelte-pzdwwc">Projet A</a> <a href="/projets/detail.html?id=projet-b" class="svelte-pzdwwc">Projet B</a> <a href="/projets/detail.html?id=projet-c" class="svelte-pzdwwc">Projet C</a></div></div> <a href="/competences/competences.html" class="svelte-pzdwwc">Comp\xE9tences</a> <a href="/contacts.html" class="svelte-pzdwwc">Contacts</a>`;
+      attr(nav, "class", "svelte-pzdwwc");
     },
     m(target, anchor) {
       insert(target, nav, anchor);

@@ -732,7 +732,7 @@ if (typeof window !== "undefined")
 
 // ihm/projets/card.svelte
 function add_css(target) {
-  append_styles(target, "svelte-1qxx6zu", ".project-card.svelte-1qxx6zu.svelte-1qxx6zu{border:1px solid #eee;border-radius:8px;padding:1em;margin:1em;box-shadow:2px 2px 8px rgba(0, 0, 0, 0.1);display:flex;flex-direction:column;align-items:center;text-align:center;max-width:300px}.project-card.svelte-1qxx6zu img.svelte-1qxx6zu{max-width:100%;height:auto;border-radius:4px;margin-bottom:1em}.project-card.svelte-1qxx6zu h3.svelte-1qxx6zu{margin-top:0;color:#333}.project-card.svelte-1qxx6zu p.svelte-1qxx6zu{color:#666;font-size:0.9em}");
+  append_styles(target, "svelte-zi3x6f", `@import '../style/style.css';@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");.project-card.svelte-zi3x6f.svelte-zi3x6f{border:1px solid #eee;border-radius:8px;padding:1em;margin:1em;box-shadow:2px 2px 8px rgba(0, 0, 0, 0.1);display:flex;flex-direction:column;align-items:center;text-align:center;max-width:300px}.project-card.svelte-zi3x6f img.svelte-zi3x6f{max-width:100%;height:auto;border-radius:4px;margin-bottom:1em}.project-card.svelte-zi3x6f h3.svelte-zi3x6f{margin-top:0;color:#333}.project-card.svelte-zi3x6f p.svelte-zi3x6f{color:#666;font-size:0.9em}`);
 }
 function create_fragment(ctx) {
   let div;
@@ -769,10 +769,10 @@ function create_fragment(ctx) {
         /*title*/
         ctx[0]
       );
-      attr(img, "class", "svelte-1qxx6zu");
-      attr(h3, "class", "svelte-1qxx6zu");
-      attr(p, "class", "svelte-1qxx6zu");
-      attr(div, "class", "project-card svelte-1qxx6zu");
+      attr(img, "class", "svelte-zi3x6f");
+      attr(h3, "class", "svelte-zi3x6f");
+      attr(p, "class", "svelte-zi3x6f");
+      attr(div, "class", "project-card svelte-zi3x6f");
     },
     m(target, anchor) {
       insert(target, div, anchor);
@@ -869,7 +869,7 @@ var card_default = Card;
 
 // ihm/projets/projets.svelte
 function add_css2(target) {
-  append_styles(target, "svelte-16hc4vy", ".projects-grid.svelte-16hc4vy{display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1em;justify-items:center;padding:1em}");
+  append_styles(target, "svelte-u9d4iy", `@import '../style/style.css';@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");.projects-grid.svelte-u9d4iy{display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1em;justify-items:center;padding:1em}`);
 }
 function get_each_context(ctx, list, i) {
   const child_ctx = ctx.slice();
@@ -946,7 +946,7 @@ function create_fragment2(ctx) {
       for (let i = 0; i < each_blocks.length; i += 1) {
         each_blocks[i].c();
       }
-      attr(div0, "class", "projects-grid svelte-16hc4vy");
+      attr(div0, "class", "projects-grid svelte-u9d4iy");
     },
     m(target, anchor) {
       insert(target, div1, anchor);

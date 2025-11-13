@@ -3,3 +3,7 @@
     margin: auto;
     display:grid;
 }
+
+h2 {
+    padding-left: 2em;
+}

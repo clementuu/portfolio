@@ -21,6 +21,9 @@
 </script>
 
 <style>
+	@import '../style/style.css';
+    @import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");
+
     .competence-card {
         border: 1px solid #eee;
         border-radius: 8px;
