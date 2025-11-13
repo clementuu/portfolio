@@ -694,7 +694,7 @@ if (typeof window !== "undefined")
 
 // ihm/header.svelte
 function add_css(target) {
-  append_styles(target, "svelte-50icqd", `@import '/style/style.css';@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");nav.svelte-50icqd.svelte-50icqd{background-color:#333;padding:1em;color:white;display:flex;justify-content:center;align-items:center;gap:1em}a.svelte-50icqd.svelte-50icqd{color:white;text-decoration:none;padding:0.5em 1em;border-radius:5px}a.svelte-50icqd.svelte-50icqd:hover{background-color:#555}.dropdown.svelte-50icqd.svelte-50icqd{position:relative}.dropdown-content.svelte-50icqd.svelte-50icqd{display:none;position:absolute;background-color:#f9f9f9;min-width:160px;box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);z-index:1;border-radius:5px;top:2em}.dropdown-content.svelte-50icqd a.svelte-50icqd{color:black;padding:12px 16px;text-decoration:none;display:block;text-align:left}.dropdown-content.svelte-50icqd a.svelte-50icqd:hover{background-color:#ddd}.dropdown.svelte-50icqd:hover .dropdown-content.svelte-50icqd{display:block}`);
+  append_styles(target, "svelte-1crjmii", `@import '/style/style.css';@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");nav.svelte-1crjmii.svelte-1crjmii{background-color:#333;padding:1em;color:white;display:flex;justify-content:center;align-items:center;gap:1em}a.svelte-1crjmii.svelte-1crjmii{color:white;text-decoration:none;padding:0.5em 1em;border-radius:5px}a.svelte-1crjmii.svelte-1crjmii:hover{background-color:#555}.dropdown.svelte-1crjmii.svelte-1crjmii{position:relative}.dropdown-content.svelte-1crjmii.svelte-1crjmii{display:none;position:absolute;background-color:#f9f9f9;min-width:160px;box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);z-index:1000;border-radius:5px;top:2em}.dropdown-content.svelte-1crjmii a.svelte-1crjmii{color:black;font-size:14px;padding:12px 16px;text-decoration:none;display:block;text-align:left}.dropdown-content.svelte-1crjmii a.svelte-1crjmii:hover{background-color:#ddd}.dropdown.svelte-1crjmii:hover .dropdown-content.svelte-1crjmii{display:block}`);
 }
 function get_each_context(ctx, list, i) {
   const child_ctx = ctx.slice();
@@ -715,7 +715,7 @@ function create_each_block(ctx) {
       t = text(t_value);
       attr(a, "href", a_href_value = "/projets/detail.html?id=" + /*projet*/
       ctx[2].id);
-      attr(a, "class", "svelte-50icqd");
+      attr(a, "class", "svelte-1crjmii");
     },
     m(target, anchor) {
       insert(target, a, anchor);
@@ -775,20 +775,20 @@ function create_fragment(ctx) {
       }
       t4 = space();
       div3 = element("div");
-      div3.innerHTML = `<a href="/competences/competences.html" class="svelte-50icqd">Comp\xE9tences</a> <div class="dropdown-content svelte-50icqd"><a href="/competences/competences.html?type=technique" class="svelte-50icqd">Hard skills</a> <a href="/competences/competences.html?type=humain" class="svelte-50icqd">Soft skills</a></div>`;
+      div3.innerHTML = `<a href="/competences/competences.html" class="svelte-1crjmii">Comp\xE9tences</a> <div class="dropdown-content svelte-1crjmii"><a href="/competences/competences.html?type=technique" class="svelte-1crjmii">Hard skills</a> <a href="/competences/competences.html?type=humain" class="svelte-1crjmii">Soft skills</a></div>`;
       t10 = space();
       a5 = element("a");
       a5.textContent = "Contacts";
       attr(a0, "href", "/");
-      attr(a0, "class", "svelte-50icqd");
+      attr(a0, "class", "svelte-1crjmii");
       attr(a1, "href", "/projets/projets.html");
-      attr(a1, "class", "svelte-50icqd");
-      attr(div0, "class", "dropdown-content svelte-50icqd");
-      attr(div1, "class", "dropdown svelte-50icqd");
-      attr(div3, "class", "dropdown svelte-50icqd");
+      attr(a1, "class", "svelte-1crjmii");
+      attr(div0, "class", "dropdown-content svelte-1crjmii");
+      attr(div1, "class", "dropdown svelte-1crjmii");
+      attr(div3, "class", "dropdown svelte-1crjmii");
       attr(a5, "href", "/contacts.html");
-      attr(a5, "class", "svelte-50icqd");
-      attr(nav, "class", "svelte-50icqd");
+      attr(a5, "class", "svelte-1crjmii");
+      attr(nav, "class", "svelte-1crjmii");
     },
     m(target, anchor) {
       insert(target, nav, anchor);

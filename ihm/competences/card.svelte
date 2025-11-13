@@ -21,12 +21,12 @@
 </script>
 
 <button class="competence-card" on:click={handleClick} type="button" tabindex="0">
-    <div class="image-wrapper">
+    <div class="image-container">
         <img src={competence.image} alt={competence.name} />
     </div>
     <h4>{competence.name}</h4>
     <div class="stars">{getStars(competence.rating)}</div>
-    <span class={competence.type === 'Technique' ? 'technique' : 'humain'}>#{competence.type}</span>
+    <span class={`card-span ${competence.type === 'Technique' ? 'technique' : 'humain'}`}>#{competence.type}</span>
 </button>
 
 <style>
@@ -53,29 +53,19 @@
     }
 
     .competence-card img {
-        max-width: 50px;
-        max-height: 50px;
-        margin-bottom: 1em;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        border-radius: 4px;
     }
 
-    .competence-card span {
-        margin-top: 1em;
-        padding: 2px;
-        border-radius: 5%;
-    }
-
-    .technique {
-        background-color: darkgrey;
-    }
-
-    .humain {
-        background-color: darkturquoise;
-    }
-
-    .image-wrapper {
+    .image-container {
         height: 50px;
+        width: 100%;
         display: flex;
         justify-content: center;
+        align-items: center;
+        margin-bottom: 1em;
     }
 
     .competence-card h4 {

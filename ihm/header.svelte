@@ -81,13 +81,14 @@
         background-color: #f9f9f9;
         min-width: 160px;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
+        z-index: 1000;
         border-radius: 5px;
         top: 2em;
     }
 
     .dropdown-content a {
         color: black;
+        font-size: 14px;
         padding: 12px 16px;
         text-decoration: none;
         display: block;

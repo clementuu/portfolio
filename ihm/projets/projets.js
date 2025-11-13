@@ -31,6 +31,9 @@ function src_url_equal(element_src, url) {
 function is_empty(obj) {
   return Object.keys(obj).length === 0;
 }
+function null_to_empty(value) {
+  return value == null ? "" : value;
+}
 
 // node_modules/svelte/src/runtime/internal/globals.js
 var globals = typeof window !== "undefined" ? window : typeof globalThis !== "undefined" ? globalThis : (
@@ -744,10 +747,53 @@ if (typeof window !== "undefined")
 
 // ihm/projets/card.svelte
 function add_css(target) {
-  append_styles(target, "svelte-jtt0vc", `@import '../style/style.css';@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");.project-card.svelte-jtt0vc.svelte-jtt0vc{border:1px solid #eee;border-radius:8px;padding:1em;margin:1em;box-shadow:2px 2px 8px rgba(0, 0, 0, 0.1);display:flex;flex-direction:column;align-items:center;text-align:center;transition:transform 0.2s;max-width:300px;cursor:pointer;color:inherit;text-decoration:none}.project-card.svelte-jtt0vc.svelte-jtt0vc:hover{transform:scale(1.05);text-decoration:none}.project-card.svelte-jtt0vc img.svelte-jtt0vc{max-width:70px;height:auto;border-radius:4px;margin-bottom:1em}.project-card.svelte-jtt0vc h3.svelte-jtt0vc{margin-top:0;color:#333}.project-card.svelte-jtt0vc p.svelte-jtt0vc{color:#666;font-size:0.9em}`);
+  append_styles(target, "svelte-hm5wrg", `@import '../style/style.css';@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");.project-card.svelte-hm5wrg.svelte-hm5wrg{border:1px solid #eee;border-radius:8px;padding:1em;margin:1em;box-shadow:2px 2px 8px rgba(0, 0, 0, 0.1);display:flex;flex-direction:column;align-items:center;text-align:center;transition:transform 0.2s;max-width:300px;cursor:pointer;color:inherit;text-decoration:none}.project-card.svelte-hm5wrg.svelte-hm5wrg:hover{transform:scale(1.05);text-decoration:none}.image-container.svelte-hm5wrg.svelte-hm5wrg{height:70px;width:100%;display:flex;justify-content:center;align-items:center;margin-bottom:1em}.project-card.svelte-hm5wrg img.svelte-hm5wrg{max-width:100%;max-height:100%;object-fit:contain;border-radius:4px}.project-card.svelte-hm5wrg h3.svelte-hm5wrg{margin-top:0;color:#333}.project-card.svelte-hm5wrg p.svelte-hm5wrg{color:#666;font-size:0.9em}`);
+}
+function get_each_context(ctx, list, i) {
+  const child_ctx = ctx.slice();
+  child_ctx[2] = list[i];
+  return child_ctx;
+}
+function create_each_block(ctx) {
+  let span;
+  let t_value = (
+    /*competence*/
+    ctx[2].name + ""
+  );
+  let t;
+  let span_class_value;
+  return {
+    c() {
+      span = element("span");
+      t = text(t_value);
+      attr(span, "class", span_class_value = null_to_empty(`card-span ${/*competence*/
+      ctx[2].type === "Technique" ? "technique" : "humain"}`) + " svelte-hm5wrg");
+    },
+    m(target, anchor) {
+      insert(target, span, anchor);
+      append(span, t);
+    },
+    p(ctx2, dirty) {
+      if (dirty & /*projet*/
+      1 && t_value !== (t_value = /*competence*/
+      ctx2[2].name + ""))
+        set_data(t, t_value);
+      if (dirty & /*projet*/
+      1 && span_class_value !== (span_class_value = null_to_empty(`card-span ${/*competence*/
+      ctx2[2].type === "Technique" ? "technique" : "humain"}`) + " svelte-hm5wrg")) {
+        attr(span, "class", span_class_value);
+      }
+    },
+    d(detaching) {
+      if (detaching) {
+        detach(span);
+      }
+    }
+  };
 }
 function create_fragment(ctx) {
   let button;
+  let div0;
   let img;
   let img_src_value;
   let img_alt_value;
@@ -765,11 +811,22 @@ function create_fragment(ctx) {
     ctx[0].desc + ""
   );
   let t3;
+  let t4;
+  let div1;
   let mounted;
   let dispose;
+  let each_value = ensure_array_like(
+    /*projet*/
+    ctx[0].competences
+  );
+  let each_blocks = [];
+  for (let i = 0; i < each_value.length; i += 1) {
+    each_blocks[i] = create_each_block(get_each_context(ctx, each_value, i));
+  }
   return {
     c() {
       button = element("button");
+      div0 = element("div");
       img = element("img");
       t0 = space();
       h3 = element("h3");
@@ -777,25 +834,40 @@ function create_fragment(ctx) {
       t2 = space();
       p = element("p");
       t3 = text(t3_value);
+      t4 = space();
+      div1 = element("div");
+      for (let i = 0; i < each_blocks.length; i += 1) {
+        each_blocks[i].c();
+      }
       if (!src_url_equal(img.src, img_src_value = /*projet*/
       ctx[0].image))
         attr(img, "src", img_src_value);
       attr(img, "alt", img_alt_value = /*projet*/
       ctx[0].name);
-      attr(img, "class", "svelte-jtt0vc");
-      attr(h3, "class", "svelte-jtt0vc");
-      attr(p, "class", "svelte-jtt0vc");
-      attr(button, "class", "project-card svelte-jtt0vc");
+      attr(img, "class", "svelte-hm5wrg");
+      attr(div0, "class", "image-container svelte-hm5wrg");
+      attr(h3, "class", "svelte-hm5wrg");
+      attr(p, "class", "svelte-hm5wrg");
+      attr(div1, "class", "competences");
+      attr(button, "class", "project-card svelte-hm5wrg");
     },
     m(target, anchor) {
       insert(target, button, anchor);
-      append(button, img);
+      append(button, div0);
+      append(div0, img);
       append(button, t0);
       append(button, h3);
       append(h3, t1);
       append(button, t2);
       append(button, p);
       append(p, t3);
+      append(button, t4);
+      append(button, div1);
+      for (let i = 0; i < each_blocks.length; i += 1) {
+        if (each_blocks[i]) {
+          each_blocks[i].m(div1, null);
+        }
+      }
       if (!mounted) {
         dispose = listen(
           button,
@@ -825,6 +897,28 @@ function create_fragment(ctx) {
       1 && t3_value !== (t3_value = /*projet*/
       ctx2[0].desc + ""))
         set_data(t3, t3_value);
+      if (dirty & /*projet*/
+      1) {
+        each_value = ensure_array_like(
+          /*projet*/
+          ctx2[0].competences
+        );
+        let i;
+        for (i = 0; i < each_value.length; i += 1) {
+          const child_ctx = get_each_context(ctx2, each_value, i);
+          if (each_blocks[i]) {
+            each_blocks[i].p(child_ctx, dirty);
+          } else {
+            each_blocks[i] = create_each_block(child_ctx);
+            each_blocks[i].c();
+            each_blocks[i].m(div1, null);
+          }
+        }
+        for (; i < each_blocks.length; i += 1) {
+          each_blocks[i].d(1);
+        }
+        each_blocks.length = each_value.length;
+      }
     },
     i: noop,
     o: noop,
@@ -832,6 +926,7 @@ function create_fragment(ctx) {
       if (detaching) {
         detach(button);
       }
+      destroy_each(each_blocks, detaching);
       mounted = false;
       dispose();
     }
@@ -866,12 +961,12 @@ var card_default = Card;
 function add_css2(target) {
   append_styles(target, "svelte-1vq6jyx", `@import '../style/style.css';@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");.projets-grid.svelte-1vq6jyx{display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1em;justify-items:center;padding:1em}`);
 }
-function get_each_context(ctx, list, i) {
+function get_each_context2(ctx, list, i) {
   const child_ctx = ctx.slice();
   child_ctx[2] = list[i];
   return child_ctx;
 }
-function create_each_block(ctx) {
+function create_each_block2(ctx) {
   let card;
   let current;
   card = new card_default({ props: { projet: (
@@ -921,7 +1016,7 @@ function create_fragment2(ctx) {
   );
   let each_blocks = [];
   for (let i = 0; i < each_value.length; i += 1) {
-    each_blocks[i] = create_each_block(get_each_context(ctx, each_value, i));
+    each_blocks[i] = create_each_block2(get_each_context2(ctx, each_value, i));
   }
   const out = (i) => transition_out(each_blocks[i], 1, 1, () => {
     each_blocks[i] = null;
@@ -959,12 +1054,12 @@ function create_fragment2(ctx) {
         );
         let i;
         for (i = 0; i < each_value.length; i += 1) {
-          const child_ctx = get_each_context(ctx2, each_value, i);
+          const child_ctx = get_each_context2(ctx2, each_value, i);
           if (each_blocks[i]) {
             each_blocks[i].p(child_ctx, dirty);
             transition_in(each_blocks[i], 1);
           } else {
-            each_blocks[i] = create_each_block(child_ctx);
+            each_blocks[i] = create_each_block2(child_ctx);
             each_blocks[i].c();
             transition_in(each_blocks[i], 1);
             each_blocks[i].m(div0, null);

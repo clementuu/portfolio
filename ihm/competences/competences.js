@@ -747,7 +747,7 @@ if (typeof window !== "undefined")
 
 // ihm/competences/card.svelte
 function add_css(target) {
-  append_styles(target, "svelte-1wtdmw1", `@import '../style/style.css';@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");.competence-card.svelte-1wtdmw1.svelte-1wtdmw1{border:1px solid #eee;border-radius:8px;padding:1em;margin:1em;box-shadow:2px 2px 8px rgba(0, 0, 0, 0.1);display:flex;flex-direction:column;align-items:center;text-align:center;width:180px;transition:transform 0.2s;cursor:pointer}.competence-card.svelte-1wtdmw1.svelte-1wtdmw1:hover{transform:scale(1.05)}.competence-card.svelte-1wtdmw1 img.svelte-1wtdmw1{max-width:50px;max-height:50px;margin-bottom:1em}.competence-card.svelte-1wtdmw1 span.svelte-1wtdmw1{margin-top:1em;padding:2px;border-radius:5%}.technique.svelte-1wtdmw1.svelte-1wtdmw1{background-color:darkgrey}.humain.svelte-1wtdmw1.svelte-1wtdmw1{background-color:darkturquoise}.image-wrapper.svelte-1wtdmw1.svelte-1wtdmw1{height:50px;display:flex;justify-content:center}.competence-card.svelte-1wtdmw1 h4.svelte-1wtdmw1{margin-top:0;color:#333}.competence-card.svelte-1wtdmw1 .stars.svelte-1wtdmw1{font-size:1.2em;color:gold}`);
+  append_styles(target, "svelte-7lp2s2", `@import '../style/style.css';@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");.competence-card.svelte-7lp2s2.svelte-7lp2s2{border:1px solid #eee;border-radius:8px;padding:1em;margin:1em;box-shadow:2px 2px 8px rgba(0, 0, 0, 0.1);display:flex;flex-direction:column;align-items:center;text-align:center;width:180px;transition:transform 0.2s;cursor:pointer}.competence-card.svelte-7lp2s2.svelte-7lp2s2:hover{transform:scale(1.05)}.competence-card.svelte-7lp2s2 img.svelte-7lp2s2{max-width:100%;max-height:100%;object-fit:contain;border-radius:4px}.image-container.svelte-7lp2s2.svelte-7lp2s2{height:50px;width:100%;display:flex;justify-content:center;align-items:center;margin-bottom:1em}.competence-card.svelte-7lp2s2 h4.svelte-7lp2s2{margin-top:0;color:#333}.competence-card.svelte-7lp2s2 .stars.svelte-7lp2s2{font-size:1.2em;color:gold}`);
 }
 function create_fragment(ctx) {
   let button;
@@ -800,15 +800,13 @@ function create_fragment(ctx) {
         attr(img, "src", img_src_value);
       attr(img, "alt", img_alt_value = /*competence*/
       ctx[0].name);
-      attr(img, "class", "svelte-1wtdmw1");
-      attr(div0, "class", "image-wrapper svelte-1wtdmw1");
-      attr(h4, "class", "svelte-1wtdmw1");
-      attr(div1, "class", "stars svelte-1wtdmw1");
-      attr(span, "class", span_class_value = null_to_empty(
-        /*competence*/
-        ctx[0].type === "Technique" ? "technique" : "humain"
-      ) + " svelte-1wtdmw1");
-      attr(button, "class", "competence-card svelte-1wtdmw1");
+      attr(img, "class", "svelte-7lp2s2");
+      attr(div0, "class", "image-container svelte-7lp2s2");
+      attr(h4, "class", "svelte-7lp2s2");
+      attr(div1, "class", "stars svelte-7lp2s2");
+      attr(span, "class", span_class_value = null_to_empty(`card-span ${/*competence*/
+      ctx[0].type === "Technique" ? "technique" : "humain"}`) + " svelte-7lp2s2");
+      attr(button, "class", "competence-card svelte-7lp2s2");
       attr(button, "type", "button");
       attr(button, "tabindex", "0");
     },
@@ -862,10 +860,8 @@ function create_fragment(ctx) {
       ctx2[0].type + ""))
         set_data(t6, t6_value);
       if (dirty & /*competence*/
-      1 && span_class_value !== (span_class_value = null_to_empty(
-        /*competence*/
-        ctx2[0].type === "Technique" ? "technique" : "humain"
-      ) + " svelte-1wtdmw1")) {
+      1 && span_class_value !== (span_class_value = null_to_empty(`card-span ${/*competence*/
+      ctx2[0].type === "Technique" ? "technique" : "humain"}`) + " svelte-7lp2s2")) {
         attr(span, "class", span_class_value);
       }
     },

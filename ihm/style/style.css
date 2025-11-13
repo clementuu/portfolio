@@ -8,6 +8,21 @@ h2 {
     padding: 1em 2em;
 }
 
+.card-span {
+    font-size: 12px;
+    margin: 1em 5px 5px 5px;
+    padding: 2px;
+    border-radius: 5%;
+}
+
+.technique {
+    background-color: darkgrey;
+}
+
+.humain {
+    background-color: darkturquoise;
+}
+
 .error {
     color: red;
     text-align: center;
