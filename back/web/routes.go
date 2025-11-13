@@ -7,7 +7,8 @@ func MakeRoutes() {
 		pattern string
 		handler http.HandlerFunc
 	}{
-		{"GET /competences", GetCompetences},
+		{"GET /competences", GetAllCompetences},
+		{"GET /projets", GetAllProjets},
 	}
 
 	for _, r := range routes {

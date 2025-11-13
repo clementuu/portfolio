@@ -1,35 +1,40 @@
 <svelte:options customElement="projets-portfolio" />
 
 <script>
-  import Card from './card.svelte';
+    import Card from './card.svelte';
+    import { onMount } from 'svelte';
 
-  const projects = [
-    {
-      title: "Projet Alpha",
-      summary: "Un projet passionnant qui a exploré les limites de la technologie X.",
-      image: ""
-    },
-    {
-      title: "Projet Beta",
-      summary: "Développement d'une application mobile innovante pour la gestion de tâches.",
-      image: ""
-    },
-    {
-      title: "Projet Gamma",
-      summary: "Optimisation des performances d'une base de données distribuée.",
-      image: ""
+    let projets = [];
+
+    async function getProjets() {
+        try {
+            const response = await fetch('/projets');
+
+            if (!response.ok) {
+                throw new Error(`Erreur HTTP ${response.status}: ${response.statusText}`);
+            }
+
+            const data = await response.json();
+            projets = data; 
+        } catch (error) {
+            console.error("Échec de la récupération des compétences :", error.message || error);
+        }
     }
-  ];
+
+    onMount(async () => {
+        await getProjets();
+        console.log(projets);
+    });
 </script>
 
 <div>
     <h2>Mes Projets</h2>
-    <div class="projects-grid">
-        {#each projects as project}
+    <div class="projets-grid">
+        {#each projets as projet}
             <Card
-                title={project.title}
-                summary={project.summary}
-                image={project.image}
+                title={projet.name}
+                summary={projet.desc}
+                image={projet.image}
             />
         {/each}
     </div>
@@ -39,7 +44,7 @@
 	@import '../style/style.css';
     @import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");
   
-    .projects-grid {
+    .projets-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 1em;

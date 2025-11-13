@@ -1062,10 +1062,6 @@ function create_fragment2(ctx) {
 function instance2($$self, $$props, $$invalidate) {
   let allCompetences = [];
   let displayedCompetences = [];
-  onMount(async () => {
-    await getCompetences();
-    filterCompetences();
-  });
   async function getCompetences() {
     try {
       const response = await fetch("/competences");
@@ -1087,6 +1083,10 @@ function instance2($$self, $$props, $$invalidate) {
       $$invalidate(0, displayedCompetences = allCompetences);
     }
   }
+  onMount(async () => {
+    await getCompetences();
+    filterCompetences();
+  });
   return [displayedCompetences];
 }
 var Competences = class extends SvelteComponent {

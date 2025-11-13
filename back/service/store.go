@@ -7,6 +7,7 @@ import (
 
 type webStore interface {
 	GetCompetences() []model.Competence
+	GetProjets() []model.Projet
 }
 
 var storage webStore

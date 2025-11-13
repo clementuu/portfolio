@@ -180,6 +180,14 @@ var current_component;
 function set_current_component(component) {
   current_component = component;
 }
+function get_current_component() {
+  if (!current_component)
+    throw new Error("Function called outside component initialization");
+  return current_component;
+}
+function onMount(fn) {
+  get_current_component().$$.on_mount.push(fn);
+}
 
 // node_modules/svelte/src/runtime/internal/scheduler.js
 var dirty_components = [];
@@ -869,11 +877,11 @@ var card_default = Card;
 
 // ihm/projets/projets.svelte
 function add_css2(target) {
-  append_styles(target, "svelte-u9d4iy", `@import '../style/style.css';@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");.projects-grid.svelte-u9d4iy{display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1em;justify-items:center;padding:1em}`);
+  append_styles(target, "svelte-1vq6jyx", `@import '../style/style.css';@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");.projets-grid.svelte-1vq6jyx{display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1em;justify-items:center;padding:1em}`);
 }
 function get_each_context(ctx, list, i) {
   const child_ctx = ctx.slice();
-  child_ctx[1] = list[i];
+  child_ctx[2] = list[i];
   return child_ctx;
 }
 function create_each_block(ctx) {
@@ -882,16 +890,16 @@ function create_each_block(ctx) {
   card = new card_default({
     props: {
       title: (
-        /*project*/
-        ctx[1].title
+        /*projet*/
+        ctx[2].name
       ),
       summary: (
-        /*project*/
-        ctx[1].summary
+        /*projet*/
+        ctx[2].desc
       ),
       image: (
-        /*project*/
-        ctx[1].image
+        /*projet*/
+        ctx[2].image
       )
     }
   });
@@ -903,7 +911,22 @@ function create_each_block(ctx) {
       mount_component(card, target, anchor);
       current = true;
     },
-    p: noop,
+    p(ctx2, dirty) {
+      const card_changes = {};
+      if (dirty & /*projets*/
+      1)
+        card_changes.title = /*projet*/
+        ctx2[2].name;
+      if (dirty & /*projets*/
+      1)
+        card_changes.summary = /*projet*/
+        ctx2[2].desc;
+      if (dirty & /*projets*/
+      1)
+        card_changes.image = /*projet*/
+        ctx2[2].image;
+      card.$set(card_changes);
+    },
     i(local) {
       if (current)
         return;
@@ -926,7 +949,7 @@ function create_fragment2(ctx) {
   let div0;
   let current;
   let each_value = ensure_array_like(
-    /*projects*/
+    /*projets*/
     ctx[0]
   );
   let each_blocks = [];
@@ -946,7 +969,7 @@ function create_fragment2(ctx) {
       for (let i = 0; i < each_blocks.length; i += 1) {
         each_blocks[i].c();
       }
-      attr(div0, "class", "projects-grid svelte-u9d4iy");
+      attr(div0, "class", "projets-grid svelte-1vq6jyx");
     },
     m(target, anchor) {
       insert(target, div1, anchor);
@@ -961,10 +984,10 @@ function create_fragment2(ctx) {
       current = true;
     },
     p(ctx2, [dirty]) {
-      if (dirty & /*projects*/
+      if (dirty & /*projets*/
       1) {
         each_value = ensure_array_like(
-          /*projects*/
+          /*projets*/
           ctx2[0]
         );
         let i;
@@ -1010,25 +1033,25 @@ function create_fragment2(ctx) {
     }
   };
 }
-function instance2($$self) {
-  const projects = [
-    {
-      title: "Projet Alpha",
-      summary: "Un projet passionnant qui a explor\xE9 les limites de la technologie X.",
-      image: ""
-    },
-    {
-      title: "Projet Beta",
-      summary: "D\xE9veloppement d'une application mobile innovante pour la gestion de t\xE2ches.",
-      image: ""
-    },
-    {
-      title: "Projet Gamma",
-      summary: "Optimisation des performances d'une base de donn\xE9es distribu\xE9e.",
-      image: ""
+function instance2($$self, $$props, $$invalidate) {
+  let projets = [];
+  async function getProjets() {
+    try {
+      const response = await fetch("/projets");
+      if (!response.ok) {
+        throw new Error(`Erreur HTTP ${response.status}: ${response.statusText}`);
+      }
+      const data = await response.json();
+      $$invalidate(0, projets = data);
+    } catch (error) {
+      console.error("\xC9chec de la r\xE9cup\xE9ration des comp\xE9tences :", error.message || error);
     }
-  ];
-  return [projects];
+  }
+  onMount(async () => {
+    await getProjets();
+    console.log(projets);
+  });
+  return [projets];
 }
 var Projets = class extends SvelteComponent {
   constructor(options) {
