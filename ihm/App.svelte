@@ -3,7 +3,8 @@
 
 <script>	
 	import { onMount } from 'svelte';
-  import Formations from './formations/formations.svelte';
+  	import Formations from './formations/formations.svelte';
+  	import Experiences from './experiences/experiences.svelte';
 
 	let name = "Clément Calia";
 	let inge = "Expert en ingénierie logicielle";
@@ -42,39 +43,8 @@
 	</div>
 </div>
 
-
 <Formations/>
-<div class="cv-container">
-
-	<section class="experiences">
-		<h2>Expériences professionnelles</h2>
-		<article>
-			<h3>Développeur fullstack [Alternance]</h3>
-			<p><strong>Softinnov | mars 2024 à mars 2026</strong></p>
-			<ul>
-				<li>Conception et développement d'applications et de solutions web pour divers clients.</li>
-				<li>Administration de systèmes, migration de base de données.</li>
-			</ul>
-		</article>
-		<article>
-			<h3>Etude du gaspillage alimentaire [Service Civique]</h3>
-			<p><strong>Mairie de Saint-Jean de Védas | novembre 2022 à juillet 2023</strong></p>
-			<ul>
-				<li>Diagnostique du gaspillage alimentaire à travers la collecte et l'étude de données.</li>
-				<li>Rédaction d'un rapport et présentation des résultats aux élus locaux.</li>
-				<li>Création d'un jeu vidéo éducatif en javascript pour sensibiliser aux écogestes.</li>
-			</ul>
-		</article>
-		<article>
-			<h3>Support sur un projet d'innovation [Stage]</h3>
-			<p><strong>IDEMIA – R&D Sophia-Antipolis | mai 2022 à août 2022</strong></p>
-			<ul>
-				<li>Création et automatisation de tests d'UI.</li>
-				<li>Utilisation d'un framework de test « End to End » (Python, Selenium, Serenity, Behave).</li>
-			</ul>
-		</article>
-	</section>
-</div>
+<Experiences/>
 
 <style>
 	@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
@@ -155,51 +125,6 @@
 		}
 	}
 
-    .cv-container {
-        display: flex;
-        flex-wrap: wrap;
-        max-width: 1200px;
-        margin: 2rem auto;
-        overflow: hidden;
-    }
-
-    .cv-container h2, .cv-container h3 {
-        padding-bottom: 0.5rem;
-        margin-bottom: 1rem;
-    }
-    
-    .cv-container h2 {
-        font-size: 1.8rem;
-    }
-
-    .cv-container h3 {
-        font-size: 1.2rem;
-        border-bottom: none;
-        margin-top: 1.5rem;
-    }
-
-    .cv-container section {
-        margin-bottom: 2rem;
-    }
-
-    .cv-container ul {
-        padding-left: 20px;
-    }
-
-    .cv-container li {
-        margin-bottom: 0.5rem;
-    }
-
-    .cv-container article {
-        margin-bottom: 1.5rem;
-    }
-
-    @media (max-width: 768px) {
-        .cv-container {
-            flex-direction: column;
-        }
-    }
-
 	.its-me {
 		display: flex;
 		z-index: 1;
@@ -211,17 +136,17 @@
 		width: 150px;
 		height: 150px;
 		background-color: whitesmoke;
-		border-radius: 50%; /* Make it circular */
-		border: 3px solid rgba(255, 255, 255, 0.7); /* Softer, slightly transparent border */
-		box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.3), /* Halo effect */
-		            0 4px 10px rgba(0, 0, 0, 0.5); /* Depth shadow */
-		object-fit: cover; /* Ensures image covers the circular area */
-		transition: all 0.3s ease; /* Smooth transitions for hover effects */
+		border-radius: 50%;
+		border: 3px solid rgba(255, 255, 255, 0.7);
+		box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.3),
+		            0 4px 10px rgba(0, 0, 0, 0.5);
+		object-fit: cover;
+		transition: all 0.3s ease;
 	}
 
 	.my-pic:hover {
 		transform: scale(1.05);
-		box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.4), /* More pronounced halo */
-		            0 6px 15px rgba(0, 0, 0, 0.6); /* More depth */
+		box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.4),
+		            0 6px 15px rgba(0, 0, 0, 0.6);
 	}
 </style>
