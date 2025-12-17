@@ -11,6 +11,7 @@ type webStore interface {
 	GetProjetsNames() (mps []model.MiniProjet)
 	GetProjet(id int) (model.Projet, error)
 	GetFormations() []model.Formation
+	GetExperiences() []model.Experience
 }
 
 var storage webStore

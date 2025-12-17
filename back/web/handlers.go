@@ -68,3 +68,13 @@ func GetFormations(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 }
+
+// GetExperiences renvoie la liste des expériences professionnelles
+func GetExperiences(w http.ResponseWriter, r *http.Request) {
+	w.WriteHeader(http.StatusOK)
+	err := encodeJSON(w, service.GetExperiences())
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+}
