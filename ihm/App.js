@@ -18,6 +18,16 @@ function is_function(thing) {
 function safe_not_equal(a, b) {
   return a != a ? b == b : a !== b || a && typeof a === "object" || typeof a === "function";
 }
+var src_url_equal_anchor;
+function src_url_equal(element_src, url) {
+  if (element_src === url)
+    return true;
+  if (!src_url_equal_anchor) {
+    src_url_equal_anchor = document.createElement("a");
+  }
+  src_url_equal_anchor.href = url;
+  return element_src === src_url_equal_anchor.href;
+}
 function is_empty(obj) {
   return Object.keys(obj).length === 0;
 }
@@ -123,6 +133,12 @@ function detach(node) {
     node.parentNode.removeChild(node);
   }
 }
+function destroy_each(iterations, detaching) {
+  for (let i = 0; i < iterations.length; i += 1) {
+    if (iterations[i])
+      iterations[i].d(detaching);
+  }
+}
 function element(name2) {
   return document.createElement(name2);
 }
@@ -131,6 +147,9 @@ function text(data) {
 }
 function space() {
   return text(" ");
+}
+function empty() {
+  return text("");
 }
 function attr(node, attribute, value) {
   if (value == null)
@@ -147,6 +166,13 @@ function set_data(text2, data) {
     return;
   text2.data = /** @type {string} */
   data;
+}
+function set_style(node, key, value, important) {
+  if (value == null) {
+    node.style.removeProperty(key);
+  } else {
+    node.style.setProperty(key, value, important ? "important" : "");
+  }
 }
 function toggle_class(element2, name2, toggle) {
   element2.classList.toggle(name2, !!toggle);
@@ -253,11 +279,49 @@ function flush_render_callbacks(fns) {
 
 // node_modules/svelte/src/runtime/internal/transitions.js
 var outroing = /* @__PURE__ */ new Set();
+var outros;
+function group_outros() {
+  outros = {
+    r: 0,
+    c: [],
+    p: outros
+    // parent group
+  };
+}
+function check_outros() {
+  if (!outros.r) {
+    run_all(outros.c);
+  }
+  outros = outros.p;
+}
 function transition_in(block, local) {
   if (block && block.i) {
     outroing.delete(block);
     block.i(local);
   }
+}
+function transition_out(block, local, detach2, callback) {
+  if (block && block.o) {
+    if (outroing.has(block))
+      return;
+    outroing.add(block);
+    outros.c.push(() => {
+      outroing.delete(block);
+      if (callback) {
+        if (detach2)
+          block.d(1);
+        callback();
+      }
+    });
+    block.o(local);
+  } else if (callback) {
+    callback();
+  }
+}
+
+// node_modules/svelte/src/runtime/internal/each.js
+function ensure_array_like(array_like_or_iterator) {
+  return array_like_or_iterator?.length !== void 0 ? array_like_or_iterator : Array.from(array_like_or_iterator);
 }
 
 // node_modules/svelte/src/shared/boolean_attributes.js
@@ -294,6 +358,9 @@ var _boolean_attributes = (
 var boolean_attributes = /* @__PURE__ */ new Set([..._boolean_attributes]);
 
 // node_modules/svelte/src/runtime/internal/Component.js
+function create_component(block) {
+  block && block.c();
+}
 function mount_component(component, target, anchor) {
   const { fragment, after_update } = component.$$;
   fragment && fragment.m(target, anchor);
@@ -326,7 +393,7 @@ function make_dirty(component, i) {
   }
   component.$$.dirty[i / 31 | 0] |= 1 << i % 31;
 }
-function init(component, options, instance2, create_fragment2, not_equal, props, append_styles2 = null, dirty = [-1]) {
+function init(component, options, instance4, create_fragment4, not_equal, props, append_styles2 = null, dirty = [-1]) {
   const parent_component = current_component;
   set_current_component(component);
   const $$ = component.$$ = {
@@ -352,7 +419,7 @@ function init(component, options, instance2, create_fragment2, not_equal, props,
   };
   append_styles2 && append_styles2($$.root);
   let ready = false;
-  $$.ctx = instance2 ? instance2(component, options.props || {}, (i, ret, ...rest) => {
+  $$.ctx = instance4 ? instance4(component, options.props || {}, (i, ret, ...rest) => {
     const value = rest.length ? rest[0] : ret;
     if ($$.ctx && not_equal($$.ctx[i], $$.ctx[i] = value)) {
       if (!$$.skip_bound && $$.bound[i])
@@ -365,7 +432,7 @@ function init(component, options, instance2, create_fragment2, not_equal, props,
   $$.update();
   ready = true;
   run_all($$.before_update);
-  $$.fragment = create_fragment2 ? create_fragment2($$.ctx) : false;
+  $$.fragment = create_fragment4 ? create_fragment4($$.ctx) : false;
   if (options.target) {
     if (options.hydrate) {
       start_hydrating();
@@ -684,81 +751,578 @@ var PUBLIC_VERSION = "4";
 if (typeof window !== "undefined")
   (window.__svelte || (window.__svelte = { v: /* @__PURE__ */ new Set() })).v.add(PUBLIC_VERSION);
 
-// ihm/app.svelte
+// ihm/formations/card.svelte
 function add_css(target) {
-  append_styles(target, "svelte-1rual6n", `@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");.banner.svelte-1rual6n.svelte-1rual6n{position:relative;height:calc(100vh - var(--header-height));display:flex;flex-direction:column;overflow:hidden;background:url('../assets/background.webp') center/cover no-repeat}.banner.svelte-1rual6n.svelte-1rual6n::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background-image:inherit;background-size:cover;background-position:center;z-index:0}.banner-content.svelte-1rual6n.svelte-1rual6n{position:relative;z-index:1;color:white;text-align:left;text-shadow:2px 2px 4px rgba(0, 0, 0, 0.9);min-width:fit-content;padding-left:20px;margin:auto auto auto 0}.banner-content.svelte-1rual6n h1.svelte-1rual6n,.banner-content.svelte-1rual6n h2.svelte-1rual6n{margin:0;padding:0.2em 0;text-align:left;transition:opacity 0.5s ease-in-out}.banner-content.svelte-1rual6n h2.fade-out.svelte-1rual6n{opacity:0}.parcours.svelte-1rual6n.svelte-1rual6n{align-self:center;margin-top:auto;margin-bottom:0.5em;z-index:1;color:white;font-size:1.5rem;text-shadow:2px 2px 4px rgba(0, 0, 0, 0.9)}.scroll-indicator.svelte-1rual6n.svelte-1rual6n{align-self:center;margin-bottom:1rem;font-size:1.5rem;color:white;text-shadow:2px 2px 4px rgba(0, 0, 0, 0.9);z-index:1;animation:svelte-1rual6n-bounce 2s infinite}@keyframes svelte-1rual6n-bounce{0%,20%,50%,80%,100%{transform:translateY(0)}40%{transform:translateY(-10px)}60%{transform:translateY(-5px)}}.cv-container.svelte-1rual6n.svelte-1rual6n{display:flex;flex-wrap:wrap;max-width:1200px;margin:2rem auto;overflow:hidden}.cv-container.svelte-1rual6n h2.svelte-1rual6n,.cv-container.svelte-1rual6n h3.svelte-1rual6n{padding-bottom:0.5rem;margin-bottom:1rem}.cv-container.svelte-1rual6n h2.svelte-1rual6n{font-size:1.8rem}.cv-container.svelte-1rual6n h3.svelte-1rual6n{font-size:1.2rem;border-bottom:none;margin-top:1.5rem}.cv-container.svelte-1rual6n section.svelte-1rual6n{margin-bottom:2rem}.cv-container.svelte-1rual6n ul.svelte-1rual6n{padding-left:20px}.cv-container.svelte-1rual6n li.svelte-1rual6n{margin-bottom:0.5rem}.cv-container.svelte-1rual6n article.svelte-1rual6n{margin-bottom:1.5rem}@media(max-width: 768px){.cv-container.svelte-1rual6n.svelte-1rual6n{flex-direction:column}}`);
+  append_styles(target, "svelte-qiow3e", "article.svelte-qiow3e{background-color:#f9f9f9;padding:1.5rem;margin-bottom:1.5rem;border-radius:8px;box-shadow:0 4px 6px rgba(0, 0, 0, 0.1);opacity:0;transform:translateY(20px);transition:opacity 0.5s ease-out, transform 0.5s ease-out, box-shadow 0.2s ease-in-out}article.visible.svelte-qiow3e{opacity:1;transform:translateY(0)}h3.svelte-qiow3e{font-size:1.3rem;color:#333;margin-top:0;margin-bottom:0.5rem;border-bottom:none}p.svelte-qiow3e{font-size:1rem;color:#555;line-height:1.5}strong.svelte-qiow3e{color:#007bff}");
 }
 function create_fragment(ctx) {
-  let div2;
-  let div0;
-  let h1;
+  let article;
+  let h3;
+  let t0_value = (
+    /*formation*/
+    ctx[0].Intitule + ""
+  );
+  let t0;
   let t1;
-  let h20;
+  let p;
+  let strong;
+  let t2_value = (
+    /*formation*/
+    ctx[0].Etablissement + ""
+  );
   let t2;
   let t3;
-  let span;
-  let t5;
-  let div1;
-  let t6;
-  let div3;
+  let t4_value = (
+    /*formation*/
+    ctx[0].Periode + ""
+  );
+  let t4;
   return {
     c() {
-      div2 = element("div");
+      article = element("article");
+      h3 = element("h3");
+      t0 = text(t0_value);
+      t1 = space();
+      p = element("p");
+      strong = element("strong");
+      t2 = text(t2_value);
+      t3 = text(" | ");
+      t4 = text(t4_value);
+      attr(h3, "class", "svelte-qiow3e");
+      attr(strong, "class", "svelte-qiow3e");
+      attr(p, "class", "svelte-qiow3e");
+      set_style(
+        article,
+        "transition-delay",
+        /*index*/
+        ctx[1] * 150 + "ms"
+      );
+      attr(article, "class", "svelte-qiow3e");
+      toggle_class(
+        article,
+        "visible",
+        /*visible*/
+        ctx[2]
+      );
+    },
+    m(target, anchor) {
+      insert(target, article, anchor);
+      append(article, h3);
+      append(h3, t0);
+      append(article, t1);
+      append(article, p);
+      append(p, strong);
+      append(strong, t2);
+      append(strong, t3);
+      append(strong, t4);
+      ctx[4](article);
+    },
+    p(ctx2, [dirty]) {
+      if (dirty & /*formation*/
+      1 && t0_value !== (t0_value = /*formation*/
+      ctx2[0].Intitule + ""))
+        set_data(t0, t0_value);
+      if (dirty & /*formation*/
+      1 && t2_value !== (t2_value = /*formation*/
+      ctx2[0].Etablissement + ""))
+        set_data(t2, t2_value);
+      if (dirty & /*formation*/
+      1 && t4_value !== (t4_value = /*formation*/
+      ctx2[0].Periode + ""))
+        set_data(t4, t4_value);
+      if (dirty & /*index*/
+      2) {
+        set_style(
+          article,
+          "transition-delay",
+          /*index*/
+          ctx2[1] * 150 + "ms"
+        );
+      }
+      if (dirty & /*visible*/
+      4) {
+        toggle_class(
+          article,
+          "visible",
+          /*visible*/
+          ctx2[2]
+        );
+      }
+    },
+    i: noop,
+    o: noop,
+    d(detaching) {
+      if (detaching) {
+        detach(article);
+      }
+      ctx[4](null);
+    }
+  };
+}
+function instance($$self, $$props, $$invalidate) {
+  let { formation } = $$props;
+  let { index } = $$props;
+  let visible = false;
+  let cardNode;
+  onMount(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            $$invalidate(2, visible = true);
+            observer.unobserve(cardNode);
+          }
+        });
+      },
+      {
+        threshold: 0.1
+        // Trigger when 10% of the element is visible
+      }
+    );
+    observer.observe(cardNode);
+    return () => {
+      if (cardNode) {
+        observer.unobserve(cardNode);
+      }
+    };
+  });
+  function article_binding($$value) {
+    binding_callbacks[$$value ? "unshift" : "push"](() => {
+      cardNode = $$value;
+      $$invalidate(3, cardNode);
+    });
+  }
+  $$self.$$set = ($$props2) => {
+    if ("formation" in $$props2)
+      $$invalidate(0, formation = $$props2.formation);
+    if ("index" in $$props2)
+      $$invalidate(1, index = $$props2.index);
+  };
+  return [formation, index, visible, cardNode, article_binding];
+}
+var Card = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance, create_fragment, safe_not_equal, { formation: 0, index: 1 }, add_css);
+  }
+  get formation() {
+    return this.$$.ctx[0];
+  }
+  set formation(formation) {
+    this.$$set({ formation });
+    flush();
+  }
+  get index() {
+    return this.$$.ctx[1];
+  }
+  set index(index) {
+    this.$$set({ index });
+    flush();
+  }
+};
+create_custom_element(Card, { "formation": {}, "index": {} }, [], [], true);
+var card_default = Card;
+
+// ihm/formations/formations.svelte
+function add_css2(target) {
+  append_styles(target, "svelte-12wbl2a", ".formations.svelte-12wbl2a{margin:2rem}h2.svelte-12wbl2a{font-size:2.5rem;font-weight:700;text-align:center;padding-bottom:0.5rem;margin-bottom:2rem}.error.svelte-12wbl2a{color:red;text-align:center}");
+}
+function get_each_context(ctx, list, i) {
+  const child_ctx = ctx.slice();
+  child_ctx[3] = list[i];
+  child_ctx[5] = i;
+  return child_ctx;
+}
+function create_else_block(ctx) {
+  let p;
+  return {
+    c() {
+      p = element("p");
+      p.textContent = "Chargement des formations...";
+    },
+    m(target, anchor) {
+      insert(target, p, anchor);
+    },
+    p: noop,
+    i: noop,
+    o: noop,
+    d(detaching) {
+      if (detaching) {
+        detach(p);
+      }
+    }
+  };
+}
+function create_if_block_1(ctx) {
+  let each_1_anchor;
+  let current;
+  let each_value = ensure_array_like(
+    /*formations*/
+    ctx[0]
+  );
+  let each_blocks = [];
+  for (let i = 0; i < each_value.length; i += 1) {
+    each_blocks[i] = create_each_block(get_each_context(ctx, each_value, i));
+  }
+  const out = (i) => transition_out(each_blocks[i], 1, 1, () => {
+    each_blocks[i] = null;
+  });
+  return {
+    c() {
+      for (let i = 0; i < each_blocks.length; i += 1) {
+        each_blocks[i].c();
+      }
+      each_1_anchor = empty();
+    },
+    m(target, anchor) {
+      for (let i = 0; i < each_blocks.length; i += 1) {
+        if (each_blocks[i]) {
+          each_blocks[i].m(target, anchor);
+        }
+      }
+      insert(target, each_1_anchor, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      if (dirty & /*formations*/
+      1) {
+        each_value = ensure_array_like(
+          /*formations*/
+          ctx2[0]
+        );
+        let i;
+        for (i = 0; i < each_value.length; i += 1) {
+          const child_ctx = get_each_context(ctx2, each_value, i);
+          if (each_blocks[i]) {
+            each_blocks[i].p(child_ctx, dirty);
+            transition_in(each_blocks[i], 1);
+          } else {
+            each_blocks[i] = create_each_block(child_ctx);
+            each_blocks[i].c();
+            transition_in(each_blocks[i], 1);
+            each_blocks[i].m(each_1_anchor.parentNode, each_1_anchor);
+          }
+        }
+        group_outros();
+        for (i = each_value.length; i < each_blocks.length; i += 1) {
+          out(i);
+        }
+        check_outros();
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      for (let i = 0; i < each_value.length; i += 1) {
+        transition_in(each_blocks[i]);
+      }
+      current = true;
+    },
+    o(local) {
+      each_blocks = each_blocks.filter(Boolean);
+      for (let i = 0; i < each_blocks.length; i += 1) {
+        transition_out(each_blocks[i]);
+      }
+      current = false;
+    },
+    d(detaching) {
+      if (detaching) {
+        detach(each_1_anchor);
+      }
+      destroy_each(each_blocks, detaching);
+    }
+  };
+}
+function create_if_block(ctx) {
+  let p;
+  let t;
+  return {
+    c() {
+      p = element("p");
+      t = text(
+        /*error*/
+        ctx[1]
+      );
+      attr(p, "class", "error svelte-12wbl2a");
+    },
+    m(target, anchor) {
+      insert(target, p, anchor);
+      append(p, t);
+    },
+    p(ctx2, dirty) {
+      if (dirty & /*error*/
+      2)
+        set_data(
+          t,
+          /*error*/
+          ctx2[1]
+        );
+    },
+    i: noop,
+    o: noop,
+    d(detaching) {
+      if (detaching) {
+        detach(p);
+      }
+    }
+  };
+}
+function create_each_block(ctx) {
+  let card;
+  let current;
+  card = new card_default({
+    props: {
+      formation: (
+        /*formation*/
+        ctx[3]
+      ),
+      index: (
+        /*index*/
+        ctx[5]
+      )
+    }
+  });
+  return {
+    c() {
+      create_component(card.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(card, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const card_changes = {};
+      if (dirty & /*formations*/
+      1)
+        card_changes.formation = /*formation*/
+        ctx2[3];
+      card.$set(card_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(card.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(card.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(card, detaching);
+    }
+  };
+}
+function create_fragment2(ctx) {
+  let section;
+  let h2;
+  let t1;
+  let current_block_type_index;
+  let if_block;
+  let current;
+  const if_block_creators = [create_if_block, create_if_block_1, create_else_block];
+  const if_blocks = [];
+  function select_block_type(ctx2, dirty) {
+    if (
+      /*error*/
+      ctx2[1]
+    )
+      return 0;
+    if (
+      /*formations*/
+      ctx2[0].length > 0
+    )
+      return 1;
+    return 2;
+  }
+  current_block_type_index = select_block_type(ctx, -1);
+  if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+  return {
+    c() {
+      section = element("section");
+      h2 = element("h2");
+      h2.textContent = "Formations";
+      t1 = space();
+      if_block.c();
+      attr(h2, "class", "svelte-12wbl2a");
+      attr(section, "class", "formations svelte-12wbl2a");
+    },
+    m(target, anchor) {
+      insert(target, section, anchor);
+      append(section, h2);
+      append(section, t1);
+      if_blocks[current_block_type_index].m(section, null);
+      current = true;
+    },
+    p(ctx2, [dirty]) {
+      let previous_block_index = current_block_type_index;
+      current_block_type_index = select_block_type(ctx2, dirty);
+      if (current_block_type_index === previous_block_index) {
+        if_blocks[current_block_type_index].p(ctx2, dirty);
+      } else {
+        group_outros();
+        transition_out(if_blocks[previous_block_index], 1, 1, () => {
+          if_blocks[previous_block_index] = null;
+        });
+        check_outros();
+        if_block = if_blocks[current_block_type_index];
+        if (!if_block) {
+          if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx2);
+          if_block.c();
+        } else {
+          if_block.p(ctx2, dirty);
+        }
+        transition_in(if_block, 1);
+        if_block.m(section, null);
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(if_block);
+      current = true;
+    },
+    o(local) {
+      transition_out(if_block);
+      current = false;
+    },
+    d(detaching) {
+      if (detaching) {
+        detach(section);
+      }
+      if_blocks[current_block_type_index].d();
+    }
+  };
+}
+function instance2($$self, $$props, $$invalidate) {
+  let formations = [];
+  let error = "";
+  async function getFormations() {
+    try {
+      const response = await fetch("/formations");
+      if (!response.ok) {
+        throw new Error(`Erreur HTTP ${response.status}: ${response.statusText}`);
+      }
+      const data = await response.json();
+      $$invalidate(0, formations = data);
+    } catch (e) {
+      console.error("\xC9chec de la r\xE9cup\xE9ration des formations :", e.message || e);
+      $$invalidate(1, error = "Impossible de charger les formations. Veuillez r\xE9essayer plus tard.");
+    }
+  }
+  onMount(getFormations);
+  return [formations, error];
+}
+var Formations = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance2, create_fragment2, safe_not_equal, {}, add_css2);
+  }
+};
+create_custom_element(Formations, {}, [], [], true);
+var formations_default = Formations;
+
+// ihm/app.svelte
+function add_css3(target) {
+  append_styles(target, "svelte-1wzlex2", `@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");.banner.svelte-1wzlex2.svelte-1wzlex2{position:relative;height:calc(100vh - var(--header-height));display:flex;flex-direction:column;overflow:hidden;background:url('../assets/background.webp') center/cover no-repeat}.banner.svelte-1wzlex2.svelte-1wzlex2::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background-image:inherit;background-size:cover;background-position:center;z-index:0}.banner-content.svelte-1wzlex2.svelte-1wzlex2{position:relative;z-index:1;color:white;text-align:left;text-shadow:2px 2px 4px rgba(0, 0, 0, 0.9);min-width:fit-content;padding-left:20px}.banner-content.svelte-1wzlex2 h1.svelte-1wzlex2,.banner-content.svelte-1wzlex2 h2.svelte-1wzlex2{margin:0;padding:0.2em 0;text-align:left;transition:opacity 0.5s ease-in-out}.banner-content.svelte-1wzlex2 h2.fade-out.svelte-1wzlex2{opacity:0}.parcours.svelte-1wzlex2.svelte-1wzlex2{align-self:center;margin-top:auto;margin-bottom:0.5em;z-index:1;color:white;font-size:1.5rem;text-shadow:2px 2px 4px rgba(0, 0, 0, 0.9)}.scroll-indicator.svelte-1wzlex2.svelte-1wzlex2{align-self:center;margin-bottom:1rem;font-size:1.5rem;color:white;text-shadow:2px 2px 4px rgba(0, 0, 0, 0.9);z-index:1;animation:svelte-1wzlex2-bounce 2s infinite}@keyframes svelte-1wzlex2-bounce{0%,20%,50%,80%,100%{transform:translateY(0)}40%{transform:translateY(-10px)}60%{transform:translateY(-5px)}}.cv-container.svelte-1wzlex2.svelte-1wzlex2{display:flex;flex-wrap:wrap;max-width:1200px;margin:2rem auto;overflow:hidden}.cv-container.svelte-1wzlex2 h2.svelte-1wzlex2,.cv-container.svelte-1wzlex2 h3.svelte-1wzlex2{padding-bottom:0.5rem;margin-bottom:1rem}.cv-container.svelte-1wzlex2 h2.svelte-1wzlex2{font-size:1.8rem}.cv-container.svelte-1wzlex2 h3.svelte-1wzlex2{font-size:1.2rem;border-bottom:none;margin-top:1.5rem}.cv-container.svelte-1wzlex2 section.svelte-1wzlex2{margin-bottom:2rem}.cv-container.svelte-1wzlex2 ul.svelte-1wzlex2{padding-left:20px}.cv-container.svelte-1wzlex2 li.svelte-1wzlex2{margin-bottom:0.5rem}.cv-container.svelte-1wzlex2 article.svelte-1wzlex2{margin-bottom:1.5rem}@media(max-width: 768px){.cv-container.svelte-1wzlex2.svelte-1wzlex2{flex-direction:column}}.its-me.svelte-1wzlex2.svelte-1wzlex2{display:flex;z-index:1;margin:auto auto auto 0}.my-pic.svelte-1wzlex2.svelte-1wzlex2{margin-left:2rem;width:150px;height:150px;background-color:whitesmoke;border-radius:50%;border:3px solid rgba(255, 255, 255, 0.7);box-shadow:0 0 0 5px rgba(255, 255, 255, 0.3), /* Halo effect */
+		            0 4px 10px rgba(0, 0, 0, 0.5);object-fit:cover;transition:all 0.3s ease}.my-pic.svelte-1wzlex2.svelte-1wzlex2:hover{transform:scale(1.05);box-shadow:0 0 0 8px rgba(255, 255, 255, 0.4), /* More pronounced halo */
+		            0 6px 15px rgba(0, 0, 0, 0.6)}`);
+}
+function create_fragment3(ctx) {
+  let div3;
+  let div1;
+  let img;
+  let img_src_value;
+  let t0;
+  let div0;
+  let h1;
+  let t2;
+  let h20;
+  let t3;
+  let t4;
+  let span;
+  let t6;
+  let div2;
+  let t7;
+  let formations;
+  let t8;
+  let div4;
+  let current;
+  formations = new formations_default({});
+  return {
+    c() {
+      div3 = element("div");
+      div1 = element("div");
+      img = element("img");
+      t0 = space();
       div0 = element("div");
       h1 = element("h1");
       h1.textContent = `${name}`;
-      t1 = space();
+      t2 = space();
       h20 = element("h2");
-      t2 = text(
+      t3 = text(
         /*currentH2Text*/
         ctx[0]
       );
-      t3 = space();
+      t4 = space();
       span = element("span");
       span.textContent = "Mon parcours";
-      t5 = space();
-      div1 = element("div");
-      div1.innerHTML = `<i class="bi bi-arrow-down-circle"></i>`;
       t6 = space();
-      div3 = element("div");
-      div3.innerHTML = `<section class="experiences svelte-1rual6n"><h2 class="svelte-1rual6n">Exp\xE9riences professionnelles</h2> <article class="svelte-1rual6n"><h3 class="svelte-1rual6n">D\xE9veloppeur fullstack [Alternance]</h3> <p><strong>Softinnov | mars 2024 \xE0 mars 2026</strong></p> <ul class="svelte-1rual6n"><li class="svelte-1rual6n">Conception et d\xE9veloppement d&#39;applications et de solutions web pour divers clients.</li> <li class="svelte-1rual6n">Administration de syst\xE8mes, migration de base de donn\xE9es.</li></ul></article> <article class="svelte-1rual6n"><h3 class="svelte-1rual6n">Etude du gaspillage alimentaire [Service Civique]</h3> <p><strong>Mairie de Saint-Jean de V\xE9das | novembre 2022 \xE0 juillet 2023</strong></p> <ul class="svelte-1rual6n"><li class="svelte-1rual6n">Diagnostique du gaspillage alimentaire \xE0 travers la collecte et l&#39;\xE9tude de donn\xE9es.</li> <li class="svelte-1rual6n">R\xE9daction d&#39;un rapport et pr\xE9sentation des r\xE9sultats aux \xE9lus locaux.</li> <li class="svelte-1rual6n">Cr\xE9ation d&#39;un jeu vid\xE9o \xE9ducatif en javascript pour sensibiliser aux \xE9cogestes.</li></ul></article> <article class="svelte-1rual6n"><h3 class="svelte-1rual6n">Support sur un projet d&#39;innovation [Stage]</h3> <p><strong>IDEMIA \u2013 R&amp;D Sophia-Antipolis | mai 2022 \xE0 ao\xFBt 2022</strong></p> <ul class="svelte-1rual6n"><li class="svelte-1rual6n">Cr\xE9ation et automatisation de tests d&#39;UI.</li> <li class="svelte-1rual6n">Utilisation d&#39;un framework de test \xAB End to End \xBB (Python, Selenium, Serenity, Behave).</li></ul></article></section> <section class="formations svelte-1rual6n"><h2 class="svelte-1rual6n">Formations</h2> <article class="svelte-1rual6n"><h3 class="svelte-1rual6n">Mast\xE8re Expert en Ing\xE9nierie Logicielle</h3> <p><strong>ISCOD | 2023 - 2025</strong></p></article> <article class="svelte-1rual6n"><h3 class="svelte-1rual6n">Licence de math\xE9matiques et informatique appliqu\xE9es</h3> <p><strong>Paul Val\xE9ry Montpellier 3 | 2019 - 2022</strong></p></article> <article class="svelte-1rual6n"><h3 class="svelte-1rual6n">Baccalaur\xE9at Scientifique</h3> <p><strong>Lyc\xE9e Laetitia Bonaparte | 2013 - 2016</strong></p></article></section>`;
-      attr(h1, "class", "h1 svelte-1rual6n");
-      attr(h20, "class", "h2 svelte-1rual6n");
+      div2 = element("div");
+      div2.innerHTML = `<i class="bi bi-arrow-down-circle"></i>`;
+      t7 = space();
+      create_component(formations.$$.fragment);
+      t8 = space();
+      div4 = element("div");
+      div4.innerHTML = `<section class="experiences svelte-1wzlex2"><h2 class="svelte-1wzlex2">Exp\xE9riences professionnelles</h2> <article class="svelte-1wzlex2"><h3 class="svelte-1wzlex2">D\xE9veloppeur fullstack [Alternance]</h3> <p><strong>Softinnov | mars 2024 \xE0 mars 2026</strong></p> <ul class="svelte-1wzlex2"><li class="svelte-1wzlex2">Conception et d\xE9veloppement d&#39;applications et de solutions web pour divers clients.</li> <li class="svelte-1wzlex2">Administration de syst\xE8mes, migration de base de donn\xE9es.</li></ul></article> <article class="svelte-1wzlex2"><h3 class="svelte-1wzlex2">Etude du gaspillage alimentaire [Service Civique]</h3> <p><strong>Mairie de Saint-Jean de V\xE9das | novembre 2022 \xE0 juillet 2023</strong></p> <ul class="svelte-1wzlex2"><li class="svelte-1wzlex2">Diagnostique du gaspillage alimentaire \xE0 travers la collecte et l&#39;\xE9tude de donn\xE9es.</li> <li class="svelte-1wzlex2">R\xE9daction d&#39;un rapport et pr\xE9sentation des r\xE9sultats aux \xE9lus locaux.</li> <li class="svelte-1wzlex2">Cr\xE9ation d&#39;un jeu vid\xE9o \xE9ducatif en javascript pour sensibiliser aux \xE9cogestes.</li></ul></article> <article class="svelte-1wzlex2"><h3 class="svelte-1wzlex2">Support sur un projet d&#39;innovation [Stage]</h3> <p><strong>IDEMIA \u2013 R&amp;D Sophia-Antipolis | mai 2022 \xE0 ao\xFBt 2022</strong></p> <ul class="svelte-1wzlex2"><li class="svelte-1wzlex2">Cr\xE9ation et automatisation de tests d&#39;UI.</li> <li class="svelte-1wzlex2">Utilisation d&#39;un framework de test \xAB End to End \xBB (Python, Selenium, Serenity, Behave).</li></ul></article></section>`;
+      attr(img, "class", "my-pic svelte-1wzlex2");
+      if (!src_url_equal(img.src, img_src_value = "./assets/icons8-male-user.svg"))
+        attr(img, "src", img_src_value);
+      attr(img, "alt", "");
+      attr(h1, "class", "h1 svelte-1wzlex2");
+      attr(h20, "class", "h2 svelte-1wzlex2");
       toggle_class(
         h20,
         "fade-out",
         /*isFading*/
         ctx[1]
       );
-      attr(div0, "class", "banner-content svelte-1rual6n");
-      attr(span, "class", "parcours svelte-1rual6n");
-      attr(div1, "class", "scroll-indicator svelte-1rual6n");
-      attr(div2, "class", "banner svelte-1rual6n");
-      attr(div3, "class", "cv-container svelte-1rual6n");
+      attr(div0, "class", "banner-content svelte-1wzlex2");
+      attr(div1, "class", "its-me svelte-1wzlex2");
+      attr(span, "class", "parcours svelte-1wzlex2");
+      attr(div2, "class", "scroll-indicator svelte-1wzlex2");
+      attr(div3, "class", "banner svelte-1wzlex2");
+      attr(div4, "class", "cv-container svelte-1wzlex2");
     },
     m(target, anchor) {
-      insert(target, div2, anchor);
-      append(div2, div0);
-      append(div0, h1);
-      append(div0, t1);
-      append(div0, h20);
-      append(h20, t2);
-      append(div2, t3);
-      append(div2, span);
-      append(div2, t5);
-      append(div2, div1);
-      insert(target, t6, anchor);
       insert(target, div3, anchor);
+      append(div3, div1);
+      append(div1, img);
+      append(div1, t0);
+      append(div1, div0);
+      append(div0, h1);
+      append(div0, t2);
+      append(div0, h20);
+      append(h20, t3);
+      append(div3, t4);
+      append(div3, span);
+      append(div3, t6);
+      append(div3, div2);
+      insert(target, t7, anchor);
+      mount_component(formations, target, anchor);
+      insert(target, t8, anchor);
+      insert(target, div4, anchor);
+      current = true;
     },
     p(ctx2, [dirty]) {
-      if (dirty & /*currentH2Text*/
+      if (!current || dirty & /*currentH2Text*/
       1)
         set_data(
-          t2,
+          t3,
           /*currentH2Text*/
           ctx2[0]
         );
-      if (dirty & /*isFading*/
+      if (!current || dirty & /*isFading*/
       2) {
         toggle_class(
           h20,
@@ -768,14 +1332,24 @@ function create_fragment(ctx) {
         );
       }
     },
-    i: noop,
-    o: noop,
+    i(local) {
+      if (current)
+        return;
+      transition_in(formations.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(formations.$$.fragment, local);
+      current = false;
+    },
     d(detaching) {
       if (detaching) {
-        detach(div2);
-        detach(t6);
         detach(div3);
+        detach(t7);
+        detach(t8);
+        detach(div4);
       }
+      destroy_component(formations, detaching);
     }
   };
 }
@@ -784,7 +1358,7 @@ var inge = "Expert en ing\xE9nierie logicielle";
 var fullstack = "D\xE9veloppeur Fullstack";
 var transitionDuration = 500;
 var displayDuration = 3e3;
-function instance($$self, $$props, $$invalidate) {
+function instance3($$self, $$props, $$invalidate) {
   let currentH2Text = inge;
   let isFading = false;
   onMount(() => {
@@ -808,7 +1382,7 @@ function instance($$self, $$props, $$invalidate) {
 var App = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance, create_fragment, safe_not_equal, {}, add_css);
+    init(this, options, instance3, create_fragment3, safe_not_equal, {}, add_css3);
   }
 };
 customElements.define("index-portfolio", create_custom_element(App, {}, [], [], true));

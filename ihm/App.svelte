@@ -3,6 +3,7 @@
 
 <script>	
 	import { onMount } from 'svelte';
+  import Formations from './formations/formations.svelte';
 
 	let name = "Clément Calia";
 	let inge = "Expert en ingénierie logicielle";
@@ -28,9 +29,12 @@
 </script>
 
 <div class="banner">
-	<div class="banner-content">
-		<h1 class="h1">{name}</h1>
-		<h2 class="h2" class:fade-out={isFading}>{currentH2Text}</h2>
+	<div class="its-me">
+		<img class="my-pic" src="./assets/icons8-male-user.svg" alt="">
+		<div class="banner-content">
+			<h1 class="h1">{name}</h1>
+			<h2 class="h2" class:fade-out={isFading}>{currentH2Text}</h2>
+		</div>
 	</div>
 	<span class="parcours">Mon parcours</span>
 	<div class="scroll-indicator">
@@ -38,7 +42,10 @@
 	</div>
 </div>
 
+
+<Formations/>
 <div class="cv-container">
+
 	<section class="experiences">
 		<h2>Expériences professionnelles</h2>
 		<article>
@@ -65,22 +72,6 @@
 				<li>Création et automatisation de tests d'UI.</li>
 				<li>Utilisation d'un framework de test « End to End » (Python, Selenium, Serenity, Behave).</li>
 			</ul>
-		</article>
-	</section>
-
-	<section class="formations">
-		<h2>Formations</h2>
-		<article>
-			<h3>Mastère Expert en Ingénierie Logicielle</h3>
-			<p><strong>ISCOD | 2023 - 2025</strong></p>
-		</article>
-		<article>
-			<h3>Licence de mathématiques et informatique appliquées</h3>
-			<p><strong>Paul Valéry Montpellier 3 | 2019 - 2022</strong></p>
-		</article>
-		<article>
-			<h3>Baccalauréat Scientifique</h3>
-			<p><strong>Lycée Laetitia Bonaparte | 2013 - 2016</strong></p>
 		</article>
 	</section>
 </div>
@@ -118,8 +109,7 @@
 		text-align: left;
 		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 		min-width: fit-content;
-		padding-left: 20px; /* Adjust as needed */
-		margin: auto auto auto 0;
+		padding-left: 20px;
 	}
 
 	.banner-content h1, .banner-content h2 {
@@ -134,8 +124,8 @@
 	}
 
 	.parcours {
-		align-self: center; /* Center horizontally */
-		margin-top: auto; /* Push to bottom */
+		align-self: center;
+		margin-top: auto;
 		margin-bottom: 0.5em;
 		z-index: 1;
 		color: white;
@@ -209,4 +199,29 @@
             flex-direction: column;
         }
     }
+
+	.its-me {
+		display: flex;
+		z-index: 1;
+		margin: auto auto auto 0;
+	}
+
+	.my-pic {
+		margin-left: 2rem;
+		width: 150px;
+		height: 150px;
+		background-color: whitesmoke;
+		border-radius: 50%; /* Make it circular */
+		border: 3px solid rgba(255, 255, 255, 0.7); /* Softer, slightly transparent border */
+		box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.3), /* Halo effect */
+		            0 4px 10px rgba(0, 0, 0, 0.5); /* Depth shadow */
+		object-fit: cover; /* Ensures image covers the circular area */
+		transition: all 0.3s ease; /* Smooth transitions for hover effects */
+	}
+
+	.my-pic:hover {
+		transform: scale(1.05);
+		box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.4), /* More pronounced halo */
+		            0 6px 15px rgba(0, 0, 0, 0.6); /* More depth */
+	}
 </style>

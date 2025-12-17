@@ -9,6 +9,6 @@ type Projet struct {
 }
 
 type MiniProjet struct {
-	ID   int    `json:"id"`
-	Name string `json:"name"`
+	ID   int
+	Name string
 }

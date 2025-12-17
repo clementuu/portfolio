@@ -31,7 +31,7 @@
         <a href="/projets/projets.html">Projets</a>
         <div class="dropdown-content">
             {#each projets as projet}
-                <a href="/projets/detail.html?id={projet.id}">{projet.name}</a>
+                <a href="/projets/detail.html?id={projet.Id}">{projet.Name}</a>
             {/each}
         </div>
     </div>

@@ -679,7 +679,7 @@ if (typeof window !== "undefined")
 
 // ihm/contacts.svelte
 function add_css(target) {
-  append_styles(target, "svelte-sfg4bj", '@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");.contact-list.svelte-sfg4bj.svelte-sfg4bj{display:flex;flex-direction:column;gap:1em;padding:1em;max-width:600px;margin:auto}.contact-item.svelte-sfg4bj.svelte-sfg4bj{display:flex;align-items:center;gap:1em;padding:0.5em 0;border-bottom:1px solid #eee}.contact-item.svelte-sfg4bj.svelte-sfg4bj:last-child{border-bottom:none}.contact-icon.svelte-sfg4bj.svelte-sfg4bj{width:24px;height:24px}.contact-item.svelte-sfg4bj strong.svelte-sfg4bj{flex-grow:1}.contact-item.svelte-sfg4bj a.svelte-sfg4bj{color:#007bff;text-decoration:none}.contact-item.svelte-sfg4bj a.svelte-sfg4bj:hover{text-decoration:underline}');
+  append_styles(target, "svelte-2p6oxw", '@import "./style/style.css";@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");.contact-list.svelte-2p6oxw.svelte-2p6oxw{display:flex;flex-direction:column;gap:1em;padding:1em;max-width:600px;margin:auto}.contact-item.svelte-2p6oxw.svelte-2p6oxw{display:flex;align-items:center;gap:1em;padding:0.5em 0;border-bottom:1px solid #eee}.contact-item.svelte-2p6oxw.svelte-2p6oxw:last-child{border-bottom:none}.contact-icon.svelte-2p6oxw.svelte-2p6oxw{width:24px;height:24px}.contact-item.svelte-2p6oxw strong.svelte-2p6oxw{flex-grow:1}.contact-item.svelte-2p6oxw a.svelte-2p6oxw{color:#007bff;text-decoration:none}.contact-item.svelte-2p6oxw a.svelte-2p6oxw:hover{text-decoration:underline}');
 }
 function get_each_context(ctx, list, i) {
   const child_ctx = ctx.slice();
@@ -716,15 +716,15 @@ function create_each_block(ctx) {
       t4 = text(t4_value);
       t5 = space();
       attr(i, "class", i_class_value = "bi " + /*contact*/
-      ctx[1].iconClass + " svelte-sfg4bj");
-      attr(div0, "class", "contact-icon svelte-sfg4bj");
-      attr(strong, "class", "svelte-sfg4bj");
+      ctx[1].iconClass + " svelte-2p6oxw");
+      attr(div0, "class", "contact-icon svelte-2p6oxw");
+      attr(strong, "class", "svelte-2p6oxw");
       attr(a, "href", a_href_value = /*contact*/
       ctx[1].link);
       attr(a, "target", "_blank");
       attr(a, "rel", "noopener noreferrer");
-      attr(a, "class", "svelte-sfg4bj");
-      attr(div1, "class", "contact-item svelte-sfg4bj");
+      attr(a, "class", "svelte-2p6oxw");
+      attr(div1, "class", "contact-item svelte-2p6oxw");
     },
     m(target, anchor) {
       insert(target, div1, anchor);
@@ -772,7 +772,7 @@ function create_fragment(ctx) {
       }
       attr(link, "rel", "stylesheet");
       attr(link, "href", "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
-      attr(div, "class", "contact-list svelte-sfg4bj");
+      attr(div, "class", "contact-list svelte-2p6oxw");
     },
     m(target, anchor) {
       append(document.head, link);

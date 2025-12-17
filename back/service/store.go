@@ -10,6 +10,7 @@ type webStore interface {
 	GetProjets() []model.Projet
 	GetProjetsNames() (mps []model.MiniProjet)
 	GetProjet(id int) (model.Projet, error)
+	GetFormations() []model.Formation
 }
 
 var storage webStore

@@ -705,7 +705,7 @@ function create_each_block(ctx) {
   let a;
   let t_value = (
     /*projet*/
-    ctx[2].name + ""
+    ctx[2].Name + ""
   );
   let t;
   let a_href_value;
@@ -714,7 +714,7 @@ function create_each_block(ctx) {
       a = element("a");
       t = text(t_value);
       attr(a, "href", a_href_value = "/projets/detail.html?id=" + /*projet*/
-      ctx[2].id);
+      ctx[2].Id);
       attr(a, "class", "svelte-1yty4ct");
     },
     m(target, anchor) {
@@ -724,11 +724,11 @@ function create_each_block(ctx) {
     p(ctx2, dirty) {
       if (dirty & /*projets*/
       1 && t_value !== (t_value = /*projet*/
-      ctx2[2].name + ""))
+      ctx2[2].Name + ""))
         set_data(t, t_value);
       if (dirty & /*projets*/
       1 && a_href_value !== (a_href_value = "/projets/detail.html?id=" + /*projet*/
-      ctx2[2].id)) {
+      ctx2[2].Id)) {
         attr(a, "href", a_href_value);
       }
     },

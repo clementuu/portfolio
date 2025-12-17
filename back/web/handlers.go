@@ -6,7 +6,7 @@ import (
 	"strconv"
 )
 
-// GetAllCompetences envoie la liste des compétences
+// GetAllCompetences renvoie la liste des compétences
 func GetAllCompetences(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
 	err := encodeJSON(w, service.GetAllCompetences())
@@ -26,7 +26,7 @@ func GetAllProjets(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-// GetProjetsNames retourne les noms et ID des différents projets
+// GetProjetsNames renvoie les noms et ID des différents projets
 func GetProjetsNames(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
 	err := encodeJSON(w, service.GetProjetsNames())
@@ -36,6 +36,7 @@ func GetProjetsNames(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+// GetProjetByID renvoie un projet d'id donné
 func GetProjetByID(w http.ResponseWriter, r *http.Request) {
 	idStr := r.PathValue("id")
 	id, err := strconv.Atoi(idStr)
@@ -52,6 +53,16 @@ func GetProjetByID(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
 
 	err = encodeJSON(w, projet)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+}
+
+// GetFormations renvoie la liste des formations
+func GetFormations(w http.ResponseWriter, r *http.Request) {
+	w.WriteHeader(http.StatusOK)
+	err := encodeJSON(w, service.GetFormations())
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
