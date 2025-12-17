@@ -23,7 +23,7 @@ var (
 	RCompetence              = model.Competence{ID: 15, Name: "R", Image: constants.RLogo, Rating: 2, Desc: constants.DescRStudio, Type: model.Technique}
 	AnsibleCompetence        = model.Competence{ID: 16, Name: "Ansible", Image: constants.AnsibleLogo, Rating: 1, Desc: constants.DescAnsible, Type: model.Technique}
 	PhpCompetence            = model.Competence{ID: 17, Name: "Php", Image: constants.PhpLogo, Rating: 1, Desc: constants.DescPHP, Type: model.Technique}
-	BashCompetence           = model.Competence{ID: 18, Name: "Bash", Image: "", Rating: 3, Desc: "", Type: model.Technique}
+	BashCompetence           = model.Competence{ID: 18, Name: "Bash", Image: constants.BashLogo, Rating: 3, Desc: "", Type: model.Technique}
 	GestionProjetCompetence  = model.Competence{ID: 19, Name: "Gestion de projet", Image: constants.ManageLogo, Rating: 2, Desc: "", Type: model.Humain}
 	RelationClientCompetence = model.Competence{ID: 20, Name: "Relation client", Image: constants.ClientLogo, Rating: 1, Desc: "", Type: model.Humain}
 	FlexibiliteCompetence    = model.Competence{ID: 21, Name: "Flexibilité", Image: constants.FlexLogo, Rating: 4, Desc: "", Type: model.Humain}

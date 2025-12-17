@@ -24,6 +24,7 @@ const (
 	FlexLogo     = "../assets/icons8-flexibility-64.png"
 	CriticalLogo = "../assets/icons8-critical-thinking-64.png"
 	CreativeLogo = "../assets/icons8-creativity-80.png"
+	BashLogo     = "../assets/terminal-svgrepo-com.svg"
 	// logos projets
 	AntiGapsiLogo = "../assets/playerDown1.png"
 	CaisseLogo    = "../assets/Panier.png"
