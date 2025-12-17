@@ -917,7 +917,7 @@ var card_default = Card;
 
 // ihm/competences/competences.svelte
 function add_css2(target) {
-  append_styles(target, "svelte-vqci63", `@import '../style/style.css';@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");.competences-grid.svelte-vqci63{display:grid;grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));gap:1em;justify-items:center;padding:1em}`);
+  append_styles(target, "svelte-5s8ujh", '@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");.competences-grid.svelte-5s8ujh{display:grid;grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));gap:1em;justify-items:center;padding:1em}');
 }
 function get_each_context(ctx, list, i) {
   const child_ctx = ctx.slice();
@@ -968,7 +968,7 @@ function create_if_block_1(ctx) {
       for (let i = 0; i < each_blocks.length; i += 1) {
         each_blocks[i].c();
       }
-      attr(div, "class", "competences-grid svelte-vqci63");
+      attr(div, "class", "competences-grid svelte-5s8ujh");
     },
     m(target, anchor) {
       insert(target, h2, anchor);

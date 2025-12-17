@@ -25,7 +25,7 @@
     })
 </script>
 
-<nav>
+<nav class="header">
     <a href="/">Accueil</a>
     <div class="dropdown">
         <a href="/projets/projets.html">Projets</a>
@@ -46,12 +46,12 @@
 </nav>
 
 <style>
-    @import '/style/style.css';
     @import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");
 
-    nav {
+    nav.header {
         background-color: #333;
         padding: 1em;
+        height: var(--header-height);
         color: white;
         display: flex;
         justify-content: center;

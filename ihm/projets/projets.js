@@ -959,7 +959,7 @@ var card_default = Card;
 
 // ihm/projets/projets.svelte
 function add_css2(target) {
-  append_styles(target, "svelte-1vq6jyx", `@import '../style/style.css';@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");.projets-grid.svelte-1vq6jyx{display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1em;justify-items:center;padding:1em}`);
+  append_styles(target, "svelte-1f2v61j", '@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");.projets-grid.svelte-1f2v61j{display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1em;justify-items:center;padding:1em}');
 }
 function get_each_context2(ctx, list, i) {
   const child_ctx = ctx.slice();
@@ -1031,7 +1031,7 @@ function create_fragment2(ctx) {
       for (let i = 0; i < each_blocks.length; i += 1) {
         each_blocks[i].c();
       }
-      attr(div0, "class", "projets-grid svelte-1vq6jyx");
+      attr(div0, "class", "projets-grid svelte-1f2v61j");
     },
     m(target, anchor) {
       insert(target, div1, anchor);

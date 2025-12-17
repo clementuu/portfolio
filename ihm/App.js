@@ -686,20 +686,24 @@ if (typeof window !== "undefined")
 
 // ihm/app.svelte
 function add_css(target) {
-  append_styles(target, "svelte-xr7e51", `@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");.banner.svelte-xr7e51.svelte-xr7e51{position:relative;height:300px;display:flex;align-items:center;overflow:hidden;background-image:url('../assets/background.webp');background-size:auto;background-position:center}.banner.svelte-xr7e51.svelte-xr7e51::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background-image:inherit;background-size:cover;background-position:center;z-index:0}.banner-content.svelte-xr7e51.svelte-xr7e51{position:absolute;z-index:1;color:white;text-align:left;text-shadow:2px 2px 4px rgba(0, 0, 0, 0.9);min-width:fit-content;padding-left:20px}.banner-content.svelte-xr7e51 h1.svelte-xr7e51,.banner-content.svelte-xr7e51 h2.svelte-xr7e51{margin:0;padding:0.2em 0;text-align:left;transition:opacity 0.5s ease-in-out}.banner-content.svelte-xr7e51 h2.fade-out.svelte-xr7e51{opacity:0}.cv-container.svelte-xr7e51.svelte-xr7e51{display:flex;flex-wrap:wrap;max-width:1200px;margin:2rem auto;overflow:hidden}.cv-container.svelte-xr7e51 h2.svelte-xr7e51,.cv-container.svelte-xr7e51 h3.svelte-xr7e51{padding-bottom:0.5rem;margin-bottom:1rem}.cv-container.svelte-xr7e51 h2.svelte-xr7e51{font-size:1.8rem}.cv-container.svelte-xr7e51 h3.svelte-xr7e51{font-size:1.2rem;border-bottom:none;margin-top:1.5rem}.cv-container.svelte-xr7e51 section.svelte-xr7e51{margin-bottom:2rem}.cv-container.svelte-xr7e51 ul.svelte-xr7e51{padding-left:20px}.cv-container.svelte-xr7e51 li.svelte-xr7e51{margin-bottom:0.5rem}.cv-container.svelte-xr7e51 article.svelte-xr7e51{margin-bottom:1.5rem}@media(max-width: 768px){.cv-container.svelte-xr7e51.svelte-xr7e51{flex-direction:column}}`);
+  append_styles(target, "svelte-1rual6n", `@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");.banner.svelte-1rual6n.svelte-1rual6n{position:relative;height:calc(100vh - var(--header-height));display:flex;flex-direction:column;overflow:hidden;background:url('../assets/background.webp') center/cover no-repeat}.banner.svelte-1rual6n.svelte-1rual6n::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background-image:inherit;background-size:cover;background-position:center;z-index:0}.banner-content.svelte-1rual6n.svelte-1rual6n{position:relative;z-index:1;color:white;text-align:left;text-shadow:2px 2px 4px rgba(0, 0, 0, 0.9);min-width:fit-content;padding-left:20px;margin:auto auto auto 0}.banner-content.svelte-1rual6n h1.svelte-1rual6n,.banner-content.svelte-1rual6n h2.svelte-1rual6n{margin:0;padding:0.2em 0;text-align:left;transition:opacity 0.5s ease-in-out}.banner-content.svelte-1rual6n h2.fade-out.svelte-1rual6n{opacity:0}.parcours.svelte-1rual6n.svelte-1rual6n{align-self:center;margin-top:auto;margin-bottom:0.5em;z-index:1;color:white;font-size:1.5rem;text-shadow:2px 2px 4px rgba(0, 0, 0, 0.9)}.scroll-indicator.svelte-1rual6n.svelte-1rual6n{align-self:center;margin-bottom:1rem;font-size:1.5rem;color:white;text-shadow:2px 2px 4px rgba(0, 0, 0, 0.9);z-index:1;animation:svelte-1rual6n-bounce 2s infinite}@keyframes svelte-1rual6n-bounce{0%,20%,50%,80%,100%{transform:translateY(0)}40%{transform:translateY(-10px)}60%{transform:translateY(-5px)}}.cv-container.svelte-1rual6n.svelte-1rual6n{display:flex;flex-wrap:wrap;max-width:1200px;margin:2rem auto;overflow:hidden}.cv-container.svelte-1rual6n h2.svelte-1rual6n,.cv-container.svelte-1rual6n h3.svelte-1rual6n{padding-bottom:0.5rem;margin-bottom:1rem}.cv-container.svelte-1rual6n h2.svelte-1rual6n{font-size:1.8rem}.cv-container.svelte-1rual6n h3.svelte-1rual6n{font-size:1.2rem;border-bottom:none;margin-top:1.5rem}.cv-container.svelte-1rual6n section.svelte-1rual6n{margin-bottom:2rem}.cv-container.svelte-1rual6n ul.svelte-1rual6n{padding-left:20px}.cv-container.svelte-1rual6n li.svelte-1rual6n{margin-bottom:0.5rem}.cv-container.svelte-1rual6n article.svelte-1rual6n{margin-bottom:1.5rem}@media(max-width: 768px){.cv-container.svelte-1rual6n.svelte-1rual6n{flex-direction:column}}`);
 }
 function create_fragment(ctx) {
-  let div1;
+  let div2;
   let div0;
   let h1;
   let t1;
   let h20;
   let t2;
   let t3;
-  let div2;
+  let span;
+  let t5;
+  let div1;
+  let t6;
+  let div3;
   return {
     c() {
-      div1 = element("div");
+      div2 = element("div");
       div0 = element("div");
       h1 = element("h1");
       h1.textContent = `${name}`;
@@ -710,29 +714,41 @@ function create_fragment(ctx) {
         ctx[0]
       );
       t3 = space();
-      div2 = element("div");
-      div2.innerHTML = `<section class="experiences svelte-xr7e51"><h2 class="svelte-xr7e51">Exp\xE9riences professionnelles</h2> <article class="svelte-xr7e51"><h3 class="svelte-xr7e51">D\xE9veloppeur fullstack [Alternance]</h3> <p><strong>Softinnov | mars 2024 \xE0 mars 2026</strong></p> <ul class="svelte-xr7e51"><li class="svelte-xr7e51">Conception et d\xE9veloppement d&#39;applications et de solutions web pour divers clients.</li> <li class="svelte-xr7e51">Administration de syst\xE8mes, migration de base de donn\xE9es.</li></ul></article> <article class="svelte-xr7e51"><h3 class="svelte-xr7e51">Etude du gaspillage alimentaire [Service Civique]</h3> <p><strong>Mairie de Saint-Jean de V\xE9das | novembre 2022 \xE0 juillet 2023</strong></p> <ul class="svelte-xr7e51"><li class="svelte-xr7e51">Diagnostique du gaspillage alimentaire \xE0 travers la collecte et l&#39;\xE9tude de donn\xE9es.</li> <li class="svelte-xr7e51">R\xE9daction d&#39;un rapport et pr\xE9sentation des r\xE9sultats aux \xE9lus locaux.</li> <li class="svelte-xr7e51">Cr\xE9ation d&#39;un jeu vid\xE9o \xE9ducatif en javascript pour sensibiliser aux \xE9cogestes.</li></ul></article> <article class="svelte-xr7e51"><h3 class="svelte-xr7e51">Support sur un projet d&#39;innovation [Stage]</h3> <p><strong>IDEMIA \u2013 R&amp;D Sophia-Antipolis | mai 2022 \xE0 ao\xFBt 2022</strong></p> <ul class="svelte-xr7e51"><li class="svelte-xr7e51">Cr\xE9ation et automatisation de tests d&#39;UI.</li> <li class="svelte-xr7e51">Utilisation d&#39;un framework de test \xAB End to End \xBB (Python, Selenium, Serenity, Behave).</li></ul></article></section> <section class="formations svelte-xr7e51"><h2 class="svelte-xr7e51">Formations</h2> <article class="svelte-xr7e51"><h3 class="svelte-xr7e51">Mast\xE8re Expert en Ing\xE9nierie Logicielle</h3> <p><strong>ISCOD | 2023 - 2025</strong></p></article> <article class="svelte-xr7e51"><h3 class="svelte-xr7e51">Licence de math\xE9matiques et informatique appliqu\xE9es</h3> <p><strong>Paul Val\xE9ry Montpellier 3 | 2019 - 2022</strong></p></article> <article class="svelte-xr7e51"><h3 class="svelte-xr7e51">Baccalaur\xE9at Scientifique</h3> <p><strong>Lyc\xE9e Laetitia Bonaparte | 2013 - 2016</strong></p></article></section>`;
-      attr(h1, "class", "h1 svelte-xr7e51");
-      attr(h20, "class", "h2 svelte-xr7e51");
+      span = element("span");
+      span.textContent = "Mon parcours";
+      t5 = space();
+      div1 = element("div");
+      div1.innerHTML = `<i class="bi bi-arrow-down-circle"></i>`;
+      t6 = space();
+      div3 = element("div");
+      div3.innerHTML = `<section class="experiences svelte-1rual6n"><h2 class="svelte-1rual6n">Exp\xE9riences professionnelles</h2> <article class="svelte-1rual6n"><h3 class="svelte-1rual6n">D\xE9veloppeur fullstack [Alternance]</h3> <p><strong>Softinnov | mars 2024 \xE0 mars 2026</strong></p> <ul class="svelte-1rual6n"><li class="svelte-1rual6n">Conception et d\xE9veloppement d&#39;applications et de solutions web pour divers clients.</li> <li class="svelte-1rual6n">Administration de syst\xE8mes, migration de base de donn\xE9es.</li></ul></article> <article class="svelte-1rual6n"><h3 class="svelte-1rual6n">Etude du gaspillage alimentaire [Service Civique]</h3> <p><strong>Mairie de Saint-Jean de V\xE9das | novembre 2022 \xE0 juillet 2023</strong></p> <ul class="svelte-1rual6n"><li class="svelte-1rual6n">Diagnostique du gaspillage alimentaire \xE0 travers la collecte et l&#39;\xE9tude de donn\xE9es.</li> <li class="svelte-1rual6n">R\xE9daction d&#39;un rapport et pr\xE9sentation des r\xE9sultats aux \xE9lus locaux.</li> <li class="svelte-1rual6n">Cr\xE9ation d&#39;un jeu vid\xE9o \xE9ducatif en javascript pour sensibiliser aux \xE9cogestes.</li></ul></article> <article class="svelte-1rual6n"><h3 class="svelte-1rual6n">Support sur un projet d&#39;innovation [Stage]</h3> <p><strong>IDEMIA \u2013 R&amp;D Sophia-Antipolis | mai 2022 \xE0 ao\xFBt 2022</strong></p> <ul class="svelte-1rual6n"><li class="svelte-1rual6n">Cr\xE9ation et automatisation de tests d&#39;UI.</li> <li class="svelte-1rual6n">Utilisation d&#39;un framework de test \xAB End to End \xBB (Python, Selenium, Serenity, Behave).</li></ul></article></section> <section class="formations svelte-1rual6n"><h2 class="svelte-1rual6n">Formations</h2> <article class="svelte-1rual6n"><h3 class="svelte-1rual6n">Mast\xE8re Expert en Ing\xE9nierie Logicielle</h3> <p><strong>ISCOD | 2023 - 2025</strong></p></article> <article class="svelte-1rual6n"><h3 class="svelte-1rual6n">Licence de math\xE9matiques et informatique appliqu\xE9es</h3> <p><strong>Paul Val\xE9ry Montpellier 3 | 2019 - 2022</strong></p></article> <article class="svelte-1rual6n"><h3 class="svelte-1rual6n">Baccalaur\xE9at Scientifique</h3> <p><strong>Lyc\xE9e Laetitia Bonaparte | 2013 - 2016</strong></p></article></section>`;
+      attr(h1, "class", "h1 svelte-1rual6n");
+      attr(h20, "class", "h2 svelte-1rual6n");
       toggle_class(
         h20,
         "fade-out",
         /*isFading*/
         ctx[1]
       );
-      attr(div0, "class", "banner-content svelte-xr7e51");
-      attr(div1, "class", "banner svelte-xr7e51");
-      attr(div2, "class", "cv-container svelte-xr7e51");
+      attr(div0, "class", "banner-content svelte-1rual6n");
+      attr(span, "class", "parcours svelte-1rual6n");
+      attr(div1, "class", "scroll-indicator svelte-1rual6n");
+      attr(div2, "class", "banner svelte-1rual6n");
+      attr(div3, "class", "cv-container svelte-1rual6n");
     },
     m(target, anchor) {
-      insert(target, div1, anchor);
-      append(div1, div0);
+      insert(target, div2, anchor);
+      append(div2, div0);
       append(div0, h1);
       append(div0, t1);
       append(div0, h20);
       append(h20, t2);
-      insert(target, t3, anchor);
-      insert(target, div2, anchor);
+      append(div2, t3);
+      append(div2, span);
+      append(div2, t5);
+      append(div2, div1);
+      insert(target, t6, anchor);
+      insert(target, div3, anchor);
     },
     p(ctx2, [dirty]) {
       if (dirty & /*currentH2Text*/
@@ -756,9 +772,9 @@ function create_fragment(ctx) {
     o: noop,
     d(detaching) {
       if (detaching) {
-        detach(div1);
-        detach(t3);
         detach(div2);
+        detach(t6);
+        detach(div3);
       }
     }
   };

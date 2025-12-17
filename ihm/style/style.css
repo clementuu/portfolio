@@ -1,3 +1,7 @@
+:root {
+  --header-height: 80px;
+}
+
 .centered {
     width: 30em;
     margin: auto;

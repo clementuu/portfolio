@@ -32,6 +32,10 @@
 		<h1 class="h1">{name}</h1>
 		<h2 class="h2" class:fade-out={isFading}>{currentH2Text}</h2>
 	</div>
+	<span class="parcours">Mon parcours</span>
+	<div class="scroll-indicator">
+		<i class="bi bi-arrow-down-circle"></i>
+	</div>
 </div>
 
 <div class="cv-container">
@@ -82,17 +86,16 @@
 </div>
 
 <style>
+	@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 	@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");
 
 	.banner {
 		position: relative;
-		height: 300px;
+		height: calc(100vh - var(--header-height));
 		display: flex;
-		align-items: center;
+		flex-direction: column;
 		overflow: hidden;
-		background-image: url('../assets/background.webp');
-		background-size: auto;
-		background-position: center;
+		background: url('../assets/background.webp') center/cover no-repeat;
 	}
 
 	.banner::before {
@@ -109,13 +112,14 @@
 	}
 
 	.banner-content {
-		position: absolute;
+		position: relative; /* Changed from absolute to relative */
 		z-index: 1;
 		color: white;
 		text-align: left;
 		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 		min-width: fit-content;
 		padding-left: 20px; /* Adjust as needed */
+		margin: auto auto auto 0;
 	}
 
 	.banner-content h1, .banner-content h2 {
@@ -127,6 +131,38 @@
 
 	.banner-content h2.fade-out {
 		opacity: 0;
+	}
+
+	.parcours {
+		align-self: center; /* Center horizontally */
+		margin-top: auto; /* Push to bottom */
+		margin-bottom: 0.5em;
+		z-index: 1;
+		color: white;
+		font-size: 1.5rem;
+		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+	}
+
+	.scroll-indicator {
+		align-self: center;
+		margin-bottom: 1rem;
+		font-size: 1.5rem;
+		color: white;
+		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+		z-index: 1;
+		animation: bounce 2s infinite;
+	}
+
+	@keyframes bounce {
+		0%, 20%, 50%, 80%, 100% {
+			transform: translateY(0);
+		}
+		40% {
+			transform: translateY(-10px);
+		}
+		60% {
+			transform: translateY(-5px);
+		}
 	}
 
     .cv-container {
