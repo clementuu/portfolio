@@ -2295,9 +2295,9 @@ var cv_default = Cv;
 
 // ihm/App.svelte
 function add_css4(target) {
-  append_styles(target, "svelte-18wtlvy", `@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");.banner.svelte-18wtlvy.svelte-18wtlvy{position:relative;height:calc(100vh - var(--header-height));display:flex;flex-direction:column;overflow:hidden;background:url('../assets/background.webp') center/cover no-repeat}.banner.svelte-18wtlvy.svelte-18wtlvy::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background-image:inherit;background-size:cover;background-position:center;z-index:0}.banner-content.svelte-18wtlvy.svelte-18wtlvy{position:relative;z-index:1;color:white;text-align:left;text-shadow:2px 2px 4px rgba(0, 0, 0, 0.9);min-width:0;max-width:100%;padding-left:20px}.banner-content.svelte-18wtlvy h1.svelte-18wtlvy,.banner-content.svelte-18wtlvy h2.svelte-18wtlvy{margin:0;padding:0.2em 0;text-align:left;transition:opacity 0.5s ease-in-out}.banner-content.svelte-18wtlvy h2.fade-out.svelte-18wtlvy{opacity:0}.parcours.svelte-18wtlvy.svelte-18wtlvy{align-self:center;margin-top:auto;margin-bottom:0.5em;z-index:1;color:white;font-size:1.5rem;text-shadow:2px 2px 4px rgba(0, 0, 0, 0.9)}.scroll-indicator.svelte-18wtlvy.svelte-18wtlvy{align-self:center;margin-bottom:1rem;font-size:1.5rem;color:white;text-shadow:2px 2px 4px rgba(0, 0, 0, 0.9);z-index:1;animation:svelte-18wtlvy-bounce 2s infinite}@keyframes svelte-18wtlvy-bounce{0%,20%,50%,80%,100%{transform:translateY(0)}40%{transform:translateY(-10px)}60%{transform:translateY(-5px)}}.its-me.svelte-18wtlvy.svelte-18wtlvy{display:flex;z-index:1;margin:calc(20/100 * (100vh - var(--header-height)) + var(--header-height)) auto auto 0}.my-pic.svelte-18wtlvy.svelte-18wtlvy{margin-left:2rem;width:clamp(80px, 15vw, 200px);height:clamp(80px, 15vw, 200px);background-color:whitesmoke;border-radius:50%;border:3px solid rgba(255, 255, 255, 0.7);box-shadow:0 0 0 5px rgba(255, 255, 255, 0.3),
-		            0 4px 10px rgba(0, 0, 0, 0.5);object-fit:cover;transition:all 0.3s ease}.my-pic.svelte-18wtlvy.svelte-18wtlvy:hover{transform:scale(1.05);box-shadow:0 0 0 8px rgba(255, 255, 255, 0.4),
-		            0 6px 15px rgba(0, 0, 0, 0.6)}.metier.svelte-18wtlvy.svelte-18wtlvy,.name.svelte-18wtlvy.svelte-18wtlvy{white-space:normal;word-wrap:break-word}`);
+  append_styles(target, "svelte-b2cj3k", `@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");.banner.svelte-b2cj3k.svelte-b2cj3k{position:relative;height:calc(100vh - var(--header-height));display:flex;flex-direction:column;overflow:hidden;background:url('../assets/background.webp') center/cover no-repeat}.banner.svelte-b2cj3k.svelte-b2cj3k::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background-image:inherit;background-size:cover;background-position:center;z-index:0}.banner-content.svelte-b2cj3k.svelte-b2cj3k{position:relative;z-index:1;color:white;text-align:center;text-shadow:2px 2px 4px rgba(0, 0, 0, 0.9);min-width:0;max-width:100%;padding-left:20px;margin-left:0}.banner-content.svelte-b2cj3k h1.svelte-b2cj3k,.banner-content.svelte-b2cj3k h2.svelte-b2cj3k{margin:0;padding:0.2em 0;transition:opacity 0.5s ease-in-out}.banner-content.svelte-b2cj3k h2.fade-out.svelte-b2cj3k{opacity:0}.parcours.svelte-b2cj3k.svelte-b2cj3k{align-self:center;margin-top:auto;margin-bottom:0.5em;z-index:1;color:white;font-size:1.5rem;text-shadow:2px 2px 4px rgba(0, 0, 0, 0.9)}.scroll-indicator.svelte-b2cj3k.svelte-b2cj3k{align-self:center;margin-bottom:1rem;font-size:1.5rem;color:white;text-shadow:2px 2px 4px rgba(0, 0, 0, 0.9);z-index:1;animation:svelte-b2cj3k-bounce 2s infinite}@keyframes svelte-b2cj3k-bounce{0%,20%,50%,80%,100%{transform:translateY(0)}40%{transform:translateY(-10px)}60%{transform:translateY(-5px)}}.its-me.svelte-b2cj3k.svelte-b2cj3k{display:flex;flex-direction:column;align-items:center;z-index:1;margin-top:calc(15/100 * (100vh - var(--header-height)) + var(--header-height))}@media(min-width: 992px){.its-me.svelte-b2cj3k.svelte-b2cj3k{flex-direction:row}.banner-content.svelte-b2cj3k.svelte-b2cj3k{text-align:left;padding-left:20px}}.my-pic.svelte-b2cj3k.svelte-b2cj3k{margin-left:2rem;width:clamp(150px, 15vw, 250px);height:clamp(150px, 15vw, 250px);background-color:whitesmoke;border-radius:50%;border:3px solid rgba(255, 255, 255, 0.7);box-shadow:0 0 0 5px rgba(255, 255, 255, 0.3),
+		            0 4px 10px rgba(0, 0, 0, 0.5);object-fit:cover;transition:all 0.3s ease}.my-pic.svelte-b2cj3k.svelte-b2cj3k:hover{transform:scale(1.05);box-shadow:0 0 0 8px rgba(255, 255, 255, 0.4),
+		            0 6px 15px rgba(0, 0, 0, 0.6)}.metier.svelte-b2cj3k.svelte-b2cj3k,.name.svelte-b2cj3k.svelte-b2cj3k{white-space:normal;word-wrap:break-word}.name.svelte-b2cj3k.svelte-b2cj3k{font-size:60px}.metier.svelte-b2cj3k.svelte-b2cj3k{font-size:40px}`);
 }
 function create_fragment6(ctx) {
   let div3;
@@ -2307,8 +2307,10 @@ function create_fragment6(ctx) {
   let t0;
   let div0;
   let h1;
+  let strong0;
   let t2;
   let h2;
+  let strong1;
   let t3;
   let t4;
   let span;
@@ -2326,9 +2328,11 @@ function create_fragment6(ctx) {
       t0 = space();
       div0 = element("div");
       h1 = element("h1");
-      h1.textContent = `${name}`;
+      strong0 = element("strong");
+      strong0.textContent = `${name}`;
       t2 = space();
       h2 = element("h2");
+      strong1 = element("strong");
       t3 = text(
         /*currentH2Text*/
         ctx[0]
@@ -2341,23 +2345,23 @@ function create_fragment6(ctx) {
       div2.innerHTML = `<i class="bi bi-arrow-down-circle"></i>`;
       t7 = space();
       create_component(cv.$$.fragment);
-      attr(img, "class", "my-pic svelte-18wtlvy");
+      attr(img, "class", "my-pic svelte-b2cj3k");
       if (!src_url_equal(img.src, img_src_value = "./assets/icons8-male-user.svg"))
         attr(img, "src", img_src_value);
       attr(img, "alt", "");
-      attr(h1, "class", "name svelte-18wtlvy");
-      attr(h2, "class", "metier svelte-18wtlvy");
+      attr(h1, "class", "name svelte-b2cj3k");
+      attr(h2, "class", "metier svelte-b2cj3k");
       toggle_class(
         h2,
         "fade-out",
         /*isFading*/
         ctx[1]
       );
-      attr(div0, "class", "banner-content svelte-18wtlvy");
-      attr(div1, "class", "its-me svelte-18wtlvy");
-      attr(span, "class", "parcours svelte-18wtlvy");
-      attr(div2, "class", "scroll-indicator svelte-18wtlvy");
-      attr(div3, "class", "banner svelte-18wtlvy");
+      attr(div0, "class", "banner-content svelte-b2cj3k");
+      attr(div1, "class", "its-me svelte-b2cj3k");
+      attr(span, "class", "parcours svelte-b2cj3k");
+      attr(div2, "class", "scroll-indicator svelte-b2cj3k");
+      attr(div3, "class", "banner svelte-b2cj3k");
     },
     m(target, anchor) {
       insert(target, div3, anchor);
@@ -2366,9 +2370,11 @@ function create_fragment6(ctx) {
       append(div1, t0);
       append(div1, div0);
       append(div0, h1);
+      append(h1, strong0);
       append(div0, t2);
       append(div0, h2);
-      append(h2, t3);
+      append(h2, strong1);
+      append(strong1, t3);
       append(div3, t4);
       append(div3, span);
       append(div3, t6);

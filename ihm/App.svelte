@@ -31,8 +31,8 @@
 	<div class="its-me">
 		<img class="my-pic" src="./assets/icons8-male-user.svg" alt="">
 		<div class="banner-content">
-			<h1 class="name">{name}</h1>
-			<h2 class="metier" class:fade-out={isFading}>{currentH2Text}</h2>
+			<h1 class="name"><strong>{name}</strong></h1>
+			<h2 class="metier" class:fade-out={isFading}><strong>{currentH2Text}</strong></h2>
 		</div>
 	</div>
 	<span class="parcours">Mon parcours</span>
@@ -73,17 +73,17 @@
 		position: relative; /* Changed from absolute to relative */
 		z-index: 1;
 		color: white;
-		text-align: left;
+		text-align: center;
 		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 		min-width: 0;
 		max-width: 100%;
 		padding-left: 20px;
+		margin-left: 0;
 	}
 
 	.banner-content h1, .banner-content h2 {
 		margin: 0;
 		padding: 0.2em 0;
-		text-align: left;
 		transition: opacity 0.5s ease-in-out;
 	}
 
@@ -125,14 +125,27 @@
 
 	.its-me {
 		display: flex;
+		flex-direction: column;
+		align-items: center;
 		z-index: 1;
-		margin: calc(20/100 * (100vh - var(--header-height)) + var(--header-height)) auto auto 0;
+		margin-top: calc(15/100 * (100vh - var(--header-height)) + var(--header-height));
+	}
+
+	@media (min-width: 992px) {
+		.its-me {
+			flex-direction: row;
+		}
+
+		.banner-content {
+			text-align: left;
+			padding-left: 20px;
+		}
 	}
 
 	.my-pic {
 		margin-left: 2rem;
-		width: clamp(80px, 15vw, 200px);
-		height: clamp(80px, 15vw, 200px);
+		width: clamp(150px, 15vw, 250px);
+		height: clamp(150px, 15vw, 250px);
 		background-color: whitesmoke;
 		border-radius: 50%;
 		border: 3px solid rgba(255, 255, 255, 0.7);
@@ -151,5 +164,13 @@
 	.metier, .name {
 		white-space: normal;
 		word-wrap: break-word;
+	}
+
+	.name {
+		font-size: 60px;
+	}
+
+	.metier {
+		font-size: 40px;
 	}
 </style>
