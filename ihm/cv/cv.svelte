@@ -1,6 +1,7 @@
 <script>
     import { onMount } from 'svelte';
-    import Card from './card.svelte';
+    import FormationCard from './formationCard.svelte';
+    import ExperienceCard from './experienceCard.svelte';
 
     let formations = [];
     let error = '';
@@ -19,24 +20,56 @@
         }
     }
 
-    onMount(getFormations);
+    let experiences = [];
+
+    async function getExperiences() {
+        try {
+            const response = await fetch('/experiences');
+            if (!response.ok) {
+                throw new Error(`Erreur HTTP ${response.status}: ${response.statusText}`);
+            }
+            const data = await response.json();
+            experiences = data;
+        } catch (e) {
+            console.error("Échec de la récupération des expériences :", e.message || e);
+            error = "Impossible de charger les expériences. Veuillez réessayer plus tard.";
+        }
+    }
+
+    onMount(()=>{
+        getFormations();
+        getExperiences();
+    });
 </script>
 
-<section class="formations">
+<section>
     <h2>Formations</h2>
     {#if error}
         <p class="error">{error}</p>
     {:else if formations.length > 0}
         {#each formations as formation, index}
-            <Card {formation} {index} />
+            <FormationCard {formation} {index} />
         {/each}
     {:else}
         <p>Chargement des formations...</p>
     {/if}
 </section>
 
+<section>
+    <h2>Expériences professionnelles</h2>
+    {#if error}
+        <p class="error">{error}</p>
+    {:else if experiences.length > 0}
+        {#each experiences as experience, index}
+            <ExperienceCard {experience} {index} />
+        {/each}
+    {:else}
+        <p>Chargement des expériences...</p>
+    {/if}
+</section>
+
 <style>
-    .formations {
+    section {
         margin: 2rem;
     }
     h2 {

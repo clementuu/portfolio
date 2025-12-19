@@ -1,10 +1,8 @@
-<!--permet d'acaller le composant svelte dans le fichier html avec une simple balise-->
 <svelte:options customElement="index-portfolio" />
 
 <script>	
 	import { onMount } from 'svelte';
-  	import Formations from './formations/formations.svelte';
-  	import Experiences from './experiences/experiences.svelte';
+    import Cv from './cv/cv.svelte';
 
 	let name = "Clément Calia";
 	let inge = "Expert en ingénierie logicielle";
@@ -43,8 +41,7 @@
 	</div>
 </div>
 
-<Formations/>
-<Experiences/>
+<Cv/>
 
 <style>
 	@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");

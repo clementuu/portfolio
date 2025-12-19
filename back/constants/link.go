@@ -18,7 +18,6 @@ const (
 	AngularLogo  = "../assets/icons8-angularjs.svg"
 	TScriptLogo  = "../assets/icons8-manuscrit.svg"
 	AnsibleLogo  = "../assets/icons8-ansible.svg"
-	PhpLogo      = "../assets/php-svgrepo-com.svg"
 	ManageLogo   = "../assets/icons8-project-management-48.png"
 	ClientLogo   = "../assets/icons8-relation-48.png"
 	FlexLogo     = "../assets/icons8-flexibility-64.png"
