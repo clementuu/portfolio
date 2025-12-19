@@ -31,8 +31,8 @@
 	<div class="its-me">
 		<img class="my-pic" src="./assets/icons8-male-user.svg" alt="">
 		<div class="banner-content">
-			<h1 class="h1">{name}</h1>
-			<h2 class="h2" class:fade-out={isFading}>{currentH2Text}</h2>
+			<h1 class="name">{name}</h1>
+			<h2 class="metier" class:fade-out={isFading}>{currentH2Text}</h2>
 		</div>
 	</div>
 	<span class="parcours">Mon parcours</span>
@@ -75,7 +75,8 @@
 		color: white;
 		text-align: left;
 		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
-		min-width: fit-content;
+		min-width: 0;
+		max-width: 100%;
 		padding-left: 20px;
 	}
 
@@ -125,13 +126,13 @@
 	.its-me {
 		display: flex;
 		z-index: 1;
-		margin: auto auto auto 0;
+		margin: calc(20/100 * (100vh - var(--header-height)) + var(--header-height)) auto auto 0;
 	}
 
 	.my-pic {
 		margin-left: 2rem;
-		width: 150px;
-		height: 150px;
+		width: clamp(80px, 15vw, 200px);
+		height: clamp(80px, 15vw, 200px);
 		background-color: whitesmoke;
 		border-radius: 50%;
 		border: 3px solid rgba(255, 255, 255, 0.7);
@@ -145,5 +146,10 @@
 		transform: scale(1.05);
 		box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.4),
 		            0 6px 15px rgba(0, 0, 0, 0.6);
+	}
+
+	.metier, .name {
+		white-space: normal;
+		word-wrap: break-word;
 	}
 </style>
