@@ -2,6 +2,7 @@
     import { onMount } from 'svelte';
     import FormationCard from './formationCard.svelte';
     import ExperienceCard from './experienceCard.svelte';
+    import OnScrollAppear from '../components/OnScrollAppear.svelte';
 
     let formations = [];
     let error = '';
@@ -43,12 +44,16 @@
 </script>
 
 <section>
-    <h2>Formations</h2>
+    <OnScrollAppear>
+        <h2>Formations</h2>
+    </OnScrollAppear>
     {#if error}
         <p class="error">{error}</p>
     {:else if formations.length > 0}
         {#each formations as formation, index}
-            <FormationCard {formation} {index} />
+            <OnScrollAppear {index}>
+                <FormationCard {formation} />
+            </OnScrollAppear>
         {/each}
     {:else}
         <p>Chargement des formations...</p>
@@ -56,12 +61,16 @@
 </section>
 
 <section>
-    <h2>Expériences professionnelles</h2>
+    <OnScrollAppear>
+        <h2>Expériences professionnelles</h2>
+    </OnScrollAppear>
     {#if error}
         <p class="error">{error}</p>
     {:else if experiences.length > 0}
         {#each experiences as experience, index}
-            <ExperienceCard {experience} {index} />
+            <OnScrollAppear {index}>
+                <ExperienceCard {experience} />
+            </OnScrollAppear>
         {/each}
     {:else}
         <p>Chargement des expériences...</p>

@@ -1,0 +1,51 @@
+<article>
+    <h3>
+        <slot name="title" />
+    </h3>
+    <p>
+        <strong>
+            <slot name="subtitle" />
+        </strong>
+    </p>
+    <slot />
+</article>
+
+<style>
+    article {
+        background-color: #f9f9f9;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.2s ease-in-out;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+        color: #333;
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+        border-bottom: none;
+    }
+
+    p {
+        font-size: 1rem;
+        color: #555;
+        line-height: 1.5;
+    }
+
+    strong {
+        color: #007bff;
+    }
+
+    /* Styles for slotted content */
+    :global(article ul) {
+        padding-left: 20px;
+        margin-top: 1rem;
+        color: #666;
+    }
+
+    :global(article li) {
+        margin-bottom: 0.5rem;
+    }
+</style>
