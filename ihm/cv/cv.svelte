@@ -2,7 +2,7 @@
     import { onMount } from 'svelte';
     import FormationCard from './formationCard.svelte';
     import ExperienceCard from './experienceCard.svelte';
-    import OnScrollAppear from '../components/OnScrollAppear.svelte';
+    import OnScrollAppear from '../elements/OnScrollAppear.svelte';
 
     let formations = [];
     let error = '';
