@@ -2,6 +2,17 @@
   --header-height: 60px;
 }
 
+html, body {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-bottom: var(--header-height);
+        box-sizing: border-box;
+    }
+}
+
 .centered {
     width: 30em;
     margin: auto;

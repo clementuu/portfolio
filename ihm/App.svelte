@@ -128,10 +128,10 @@
 		flex-direction: column;
 		align-items: center;
 		z-index: 1;
-		margin-top: calc(15/100 * (100vh - var(--header-height)) + var(--header-height));
+		margin-top: 15%;
 	}
 
-	@media (min-width: 992px) {
+	@media (min-width: 768px) {
 		.its-me {
 			flex-direction: row;
 		}
@@ -167,10 +167,10 @@
 	}
 
 	.name {
-		font-size: 60px;
+		font-size: clamp(30px, 15vw, 60px);
 	}
 
 	.metier {
-		font-size: 40px;
+		font-size: clamp(20px, 15vw, 40px);
 	}
 </style>
