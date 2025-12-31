@@ -10,8 +10,8 @@ import (
 const ErrNoProjet = "aucun projet trouvé pour l'id %d"
 
 var (
-	ProjetEscarcelle = model.Projet{ID: 1, Name: "Escarcelle", Image: "", Competences: []model.Competence{GoCompetence, RebolCompetence, SvelteCompetence, GestionProjetCompetence}, Resume: constants.ResumEscarcelle, Template: tmpl.EscarcelleHTML}
-	ProjetCaisse     = model.Projet{ID: 2, Name: "Escarcelle Caisse", Image: constants.CaisseLogo, Competences: []model.Competence{GoCompetence}, Resume: constants.ResumCaisse, Template: tmpl.CaisseHTML}
+	ProjetEscarcelle = model.Projet{ID: 1, Name: "Escarcelle", Sujet: "Gestion d'épicerie solidaire", Image: "", Competences: []model.Competence{GoCompetence, RebolCompetence, SvelteCompetence, SQLCompetence, GestionProjetCompetence}, Resume: constants.ResumEscarcelle, Template: tmpl.EscarcelleProject}
+	ProjetCaisse     = model.Projet{ID: 2, Name: "Caisse", Sujet: "Refonte de la caisse Escarcelle", Image: constants.CaisseLogo, Competences: []model.Competence{GoCompetence, SQLCompetence}, Resume: constants.ResumCaisse, Template: tmpl.CaisseProject}
 	ProjetStats      = model.Projet{ID: 3, Name: "Mission Anti-Gaspi", Image: constants.SaintJeanLogo, Competences: []model.Competence{RCompetence, PythonCompetence}, Resume: constants.ResumMissionAntiGaspi, Template: tmpl.MissionAntiGaspiHTML}
 	ProjetAntiGaspi  = model.Projet{ID: 4, Name: "Jeu Anti-Gaspi", Image: constants.AntiGapsiLogo, Competences: []model.Competence{JavaScriptCompetence, HTMLCompetence, CSSCompetence}, Resume: constants.ResumJeuAntiGaspi, Template: tmpl.JeuAntiGaspiHTML}
 	ProjetRGC        = model.Projet{ID: 5, Name: "RGC", Image: "", Competences: []model.Competence{AngularCompetence, SQLCompetence, GoCompetence}, Resume: constants.ResumRGC, Template: tmpl.RGCHTML}

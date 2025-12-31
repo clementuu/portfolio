@@ -5,18 +5,22 @@ import "back/model"
 type Projet struct {
 	ID          int          `json:"id"`
 	Name        string       `json:"name"`
+	Sujet       string       `json:"sujet"`
 	Image       string       `json:"image"`
 	Competences []Competence `json:"competences"`
-	Desc        string       `json:"desc"`
+	Resume      string       `json:"resume"`
+	Template    string       `json:"tmpl"`
 }
 
 func mapProjet(p model.Projet) Projet {
 	var projet Projet
 	projet.ID = p.ID
 	projet.Name = p.Name
+	projet.Sujet = p.Sujet
 	projet.Image = p.Image
 	projet.Competences = getCompetences(p.Competences)
-	projet.Desc = p.Resume
+	projet.Resume = p.Resume
+	projet.Template = p.Template
 	return projet
 }
 

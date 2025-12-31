@@ -27,6 +27,17 @@
     });
 </script>
 
+<div class="projet-detail-container">
+    {#if error}
+        <p class="error">{error}</p>
+    {:else if projet}
+        <h1>{projet.name} - {projet.sujet}</h1>
+        {@html projet.tmpl}
+    {:else}
+        <p>Chargement du projet...</p>
+    {/if}
+</div>
+
 <style>
     .projet-detail-container {
         padding: 2rem;
@@ -46,16 +57,60 @@
         color: #555;
         line-height: 1.6;
     }
-</style>
 
-<div class="projet-detail-container">
-    {#if error}
-        <p class="error">{error}</p>
-    {:else if projet}
-        <h1>{projet.name}</h1>
-        <p>{projet.description}</p>
-        <!-- Vous pouvez ajouter d'autres détails du projet ici -->
-    {:else}
-        <p>Chargement du projet...</p>
-    {/if}
-</div>
+    /* 
+     * Les styles ci-dessous utilisent :global() pour pouvoir s'appliquer 
+     * au contenu HTML injecté via la directive {@html}.
+    */
+
+    :global(.project-section) {
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    :global(.project-section:last-of-type) {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    :global(.project-section h2) {
+        font-size: 1.8em;
+        margin-bottom: 1rem;
+    }
+
+    :global(.project-section h3) {
+        font-size: 1.4em;
+        margin-bottom: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    :global(.skills-grid) {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+
+    :global(.skill-item) {
+        background-color: #f8f9fa;
+        padding: 1.5rem;
+        border-radius: 8px;
+        border: 1px solid #e9ecef;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    :global(.skill-item strong) {
+        display: block;
+        font-size: 1.1em;
+        color: #343a40;
+        margin-bottom: 0.5rem;
+    }
+
+    /* On redéfinit le style des paragraphes à l'intérieur d'un skill-item */
+    :global(.skill-item p) {
+        font-size: 0.95em;
+        color: #6c757d;
+        line-height: 1.5;
+        margin: 0; /* Annule la marge globale des 'p' */
+    }
+</style>

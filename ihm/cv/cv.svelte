@@ -82,7 +82,7 @@
         margin: 2rem;
     }
     h2 {
-        font-size: 2.5rem; /* Larger font size */
+        font-size: clamp(1rem, 8vw, 2.5rem); /* Larger font size */
         font-weight: 700; /* Bolder */
         text-align: center; /* Center the title */
         padding-bottom: 0.5rem;

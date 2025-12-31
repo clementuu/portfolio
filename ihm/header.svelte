@@ -64,7 +64,6 @@
         color: white;
         text-decoration: none;
         font-size: 1.2em;
-        font-weight: bold;
         padding: 0.5em 1em;
         border-radius: 5px;
         display: inline-flex;

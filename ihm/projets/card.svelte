@@ -7,7 +7,7 @@
         <img src={projet.image} alt={projet.name} />
     </div>
     <h3>{projet.name}</h3>
-    <p>{projet.desc}</p>
+    <p>{projet.resume}</p>
     <div class="competences">
         {#each projet.competences as competence}
             <span class={`card-span ${competence.type === 'Technique' ? 'technique' : 'humain'}`}>{competence.name}</span>

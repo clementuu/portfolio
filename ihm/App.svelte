@@ -77,7 +77,6 @@
 		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 		min-width: 0;
 		max-width: 100%;
-		padding-left: 20px;
 		margin-left: 0;
 	}
 
@@ -128,12 +127,16 @@
 		flex-direction: column;
 		align-items: center;
 		z-index: 1;
-		margin-top: 15%;
+		margin: 10% 15% 0 15%;
 	}
 
 	@media (min-width: 768px) {
 		.its-me {
 			flex-direction: row;
+		}
+
+		.my-pic {
+			margin-left: 2.5rem;
 		}
 
 		.banner-content {
@@ -143,7 +146,6 @@
 	}
 
 	.my-pic {
-		margin-left: 2rem;
 		width: clamp(150px, 15vw, 250px);
 		height: clamp(150px, 15vw, 250px);
 		background-color: whitesmoke;

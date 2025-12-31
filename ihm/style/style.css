@@ -25,9 +25,10 @@ h2 {
 
 .card-span {
     font-size: 12px;
-    margin: 1em 5px 5px 5px;
-    padding: 2px;
-    border-radius: 5%;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10%;
+    display: inline-block;
 }
 
 .technique {
