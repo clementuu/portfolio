@@ -42,7 +42,7 @@
     .projet-detail-container {
         padding: 2rem;
         max-width: 900px;
-        margin: 2rem auto;
+        margin: 0 auto;
         background-color: #fff;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -62,7 +62,6 @@
      * Les styles ci-dessous utilisent :global() pour pouvoir s'appliquer 
      * au contenu HTML injecté via la directive {@html}.
     */
-
     :global(.project-section) {
         margin-bottom: 2rem;
         padding-bottom: 2rem;
