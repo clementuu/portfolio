@@ -5,7 +5,8 @@ type Projet struct {
 	Name        string
 	Image       string
 	Competences []Competence
-	Desc        string
+	Resume      string
+	Template    string
 }
 
 type MiniProjet struct {

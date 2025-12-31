@@ -31,7 +31,7 @@
         <a href="/projets/projets.html"><i class="bi bi-kanban-fill"></i><span class="link-text">Projets</span></a>
         <div class="dropdown-content">
             {#each projets as projet}
-                <a href="/projets/detail.html?id={projet.Id}">{projet.Name}</a>
+                <a href="/projets/detail.html?id={projet.ID}">{projet.Name}</a>
             {/each}
         </div>
     </div>

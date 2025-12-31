@@ -16,7 +16,7 @@ func mapProjet(p model.Projet) Projet {
 	projet.Name = p.Name
 	projet.Image = p.Image
 	projet.Competences = getCompetences(p.Competences)
-	projet.Desc = p.Desc
+	projet.Desc = p.Resume
 	return projet
 }
 
