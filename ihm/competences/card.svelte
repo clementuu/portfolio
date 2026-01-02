@@ -26,7 +26,7 @@
     </div>
     <h4>{competence.name}</h4>
     <div class="stars">{getStars(competence.rating)}</div>
-    <span class={`card-span ${competence.type === 'Technique' ? 'technique' : 'humain'}`}>#{competence.type}</span>
+    <span class={`card-span ${competence.type === 'Dev' ? 'technique' : competence.type === 'DevOps' ? 'devops' : 'humain'}`}>#{competence.type}</span>
 </button>
 
 <style>

@@ -10,7 +10,7 @@
     <p>{projet.resume}</p>
     <div class="competences">
         {#each projet.competences as competence}
-            <span class={`card-span ${competence.type === 'Technique' ? 'technique' : 'humain'}`}>{competence.name}</span>
+            <span class={`card-span ${competence.type === 'Dev' ? 'technique' : competence.type === 'DevOps' ? 'devops' : 'humain'}`}>{competence.name}</span>
         {/each}
     </div>
 </button>

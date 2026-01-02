@@ -43,6 +43,10 @@ h2 {
     background-color: darkturquoise;
 }
 
+.devops {
+    background-color: orchid;
+}
+
 .error {
     color: red;
     text-align: center;

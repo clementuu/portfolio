@@ -3,8 +3,9 @@ package model
 type CompetenceType int
 
 const (
-	Technique CompetenceType = 1
-	Humain    CompetenceType = 2
+	Dev    CompetenceType = 1
+	DevOps CompetenceType = 2
+	Human  CompetenceType = 3
 )
 
 type Competence struct {
@@ -19,9 +20,11 @@ type Competence struct {
 
 func (ct CompetenceType) String() string {
 	switch ct {
-	case Technique:
-		return "Technique"
-	case Humain:
+	case Dev:
+		return "Dev"
+	case DevOps:
+		return "DevOps"
+	case Human:
 		return "Humain"
 	default:
 		return "Type inconnu"

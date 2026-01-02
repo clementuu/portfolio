@@ -38,7 +38,8 @@
     <div class="dropdown">
         <a href="/competences/competences.html"><i class="bi bi-person-badge"></i><span class="link-text">Compétences</span></a>
         <div class="dropdown-content">
-            <a href="/competences/competences.html?type=technique">Hard skills</a>
+            <a href="/competences/competences.html?type=dev">Développement</a>
+            <a href="/competences/competences.html?type=devops">DevOps</a>
             <a href="/competences/competences.html?type=humain">Soft skills</a>
         </div>
     </div>
