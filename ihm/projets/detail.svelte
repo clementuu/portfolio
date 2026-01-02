@@ -50,8 +50,8 @@
     h1 {
         color: #333;
         border-bottom: 2px solid #eee;
-        padding-bottom: 0.5rem;
-        margin-bottom: 1rem;
+        padding-bottom: 2rem;
+        margin-bottom: 2rem;
     }
     p {
         color: #555;

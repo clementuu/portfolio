@@ -14,7 +14,6 @@ var (
 	ProjetCaisse     = model.Projet{ID: 2, Name: "Caisse", Sujet: "Refonte de la caisse Escarcelle", Image: constants.CaisseLogo, Competences: []model.Competence{GoCompetence, SQLCompetence}, Resume: constants.ResumCaisse, Template: tmpl.CaisseProject}
 	ProjetStats      = model.Projet{ID: 3, Name: "Mission Anti-Gaspi", Sujet: "Analyse statistique du gaspillage alimentaire", Image: constants.SaintJeanLogo, Competences: []model.Competence{RCompetence, PythonCompetence}, Resume: constants.ResumMissionAntiGaspi, Template: tmpl.MissionAntiGaspiHTML}
 	ProjetAntiGaspi  = model.Projet{ID: 4, Name: "Jeu Anti-Gaspi", Sujet: "Jeu éducatif en 2D", Image: constants.AntiGapsiLogo, Competences: []model.Competence{JavaScriptCompetence, HTMLCompetence, CSSCompetence}, Resume: constants.ResumJeuAntiGaspi, Template: tmpl.JeuAntiGaspiHTML}
-	ProjetRGC        = model.Projet{ID: 5, Name: "RGC", Image: "", Competences: []model.Competence{AngularCompetence, SQLCompetence, GoCompetence}, Resume: constants.ResumRGC, Template: tmpl.RGCHTML}
 	ProjetPMT        = model.Projet{ID: 6, Name: "Project Management Tool", Image: "", Competences: []model.Competence{SpringCompetence, JavaCompetence, AngularCompetence, SQLCompetence}, Resume: constants.ResumPMT, Template: tmpl.PMTHTML}
 )
 
@@ -23,7 +22,6 @@ var projetsData = []model.Projet{
 	ProjetCaisse,
 	ProjetStats,
 	ProjetAntiGaspi,
-	ProjetRGC,
 	ProjetPMT,
 }
 
