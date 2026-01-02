@@ -25,6 +25,7 @@ const (
 	CreativeLogo = "../assets/icons8-creativity-80.png"
 	BashLogo     = "../assets/terminal-svgrepo-com.svg"
 	// logos projets
+	SiLogo        = "../assets/logo-si.png"
 	AntiGapsiLogo = "../assets/playerDown1.png"
 	CaisseLogo    = "../assets/Panier.png"
 	SaintJeanLogo = "../assets/Logo_de_saint-jean_de_vedas.jpg"
