@@ -43,7 +43,7 @@
             <h1>{competence.name}</h1>
             <img src={competence.image} alt={`Logo de ${competence.name}`} />
             <div class="stars">{getStars(competence.rating)}</div>
-            <p class="detail-text">{competence.desc}</p>
+            <div class="detail-text">{@html competence.desc}</div>
         </div>
     {:else}
         <p>Chargement des détails de la compétence...</p>

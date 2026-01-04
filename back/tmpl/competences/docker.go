@@ -1,4 +1,4 @@
-package competences
+package tmpl
 
 // DockerComp contient la description HTML de la compétence Docker.
 const DockerComp = `

@@ -1,4 +1,4 @@
-package competences
+package tmpl
 
 // PenseeCritiqueComp contient la description HTML de la compétence Pensée Critique.
 const PenseeCritiqueComp = `

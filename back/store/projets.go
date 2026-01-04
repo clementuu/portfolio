@@ -3,7 +3,7 @@ package store
 import (
 	"back/constants"
 	"back/model"
-	"back/tmpl"
+	tmpl "back/tmpl/projets"
 	"fmt"
 )
 

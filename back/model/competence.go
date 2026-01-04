@@ -13,7 +13,7 @@ type Competence struct {
 	Name   string
 	Image  string
 	Rating int
-	Desc   string
+	Template   string
 	Exp    string
 	Type   CompetenceType
 }

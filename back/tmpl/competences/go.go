@@ -1,4 +1,4 @@
-package competences
+package tmpl
 
 // GoComp contient la description HTML de la compétence Go.
 const GoComp = `

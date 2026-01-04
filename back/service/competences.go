@@ -19,7 +19,7 @@ func getCompetences(cs []model.Competence) (competences []Competence) {
 		competence.Name = c.Name
 		competence.Image = c.Image
 		competence.Rating = c.Rating
-		competence.Desc = c.Desc
+		competence.Desc = c.Template
 		competence.Exp = c.Exp
 		competence.Type = c.Type.String()
 		competences = append(competences, competence)

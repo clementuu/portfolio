@@ -1,4 +1,4 @@
-package competences
+package tmpl
 
 // GestionProjetComp contient la description HTML de la compétence en gestion de projet.
 const GestionProjetComp = `

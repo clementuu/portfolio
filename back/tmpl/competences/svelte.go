@@ -1,4 +1,4 @@
-package competences
+package tmpl
 
 // SvelteComp contient la description HTML de la compétence Svelte.
 const SvelteComp = `

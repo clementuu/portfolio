@@ -1,4 +1,4 @@
-package competences
+package tmpl
 
 // SQLComp contient la description HTML de la compétence SQL.
 const SQLComp = `

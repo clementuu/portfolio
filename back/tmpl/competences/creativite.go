@@ -1,4 +1,4 @@
-package competences
+package tmpl
 
 // CreativiteComp contient la description HTML de la compétence Créativité.
 const CreativiteComp = `
