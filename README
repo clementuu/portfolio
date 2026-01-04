@@ -1,7 +1,20 @@
 # portfolio
 
-# back
+# back go
 Runs server and manage in memory data
 
-# ihm
+Api endpoints :
+- /commpetences
+- /projets
+- /projets/names
+- /projet/{id}
+- /formations
+- /experiences
+
+# ihm svelte
 Front pages
+
+- Accueil
+- Projets
+- Compétences
+- Contacts
