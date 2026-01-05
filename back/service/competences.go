@@ -14,20 +14,33 @@ type Competence struct {
 
 func getCompetences(cs []model.Competence) (competences []Competence) {
 	for _, c := range cs {
-		var competence Competence
-		competence.ID = c.ID
-		competence.Name = c.Name
-		competence.Image = c.Image
-		competence.Rating = c.Rating
-		competence.Desc = c.Template
-		competence.Exp = c.Exp
-		competence.Type = c.Type.String()
+		competence := getCompetence(c)
 		competences = append(competences, competence)
 	}
 	return competences
 }
 
+func getCompetence(c model.Competence) (competence Competence) {
+	competence.ID = c.ID
+	competence.Name = c.Name
+	competence.Image = c.Image
+	competence.Rating = c.Rating
+	competence.Desc = c.Template
+	competence.Exp = c.Exp
+	competence.Type = c.Type.String()
+
+	return competence
+}
+
 func GetAllCompetences() (competences []Competence) {
 	cs := storage.GetCompetences()
 	return getCompetences(cs)
+}
+
+func GetCompetence(id int) (Competence, error) {
+	c, err := storage.GetCompetence(id)
+	if err != nil {
+		return Competence{}, err
+	}
+	return getCompetence(c), nil
 }

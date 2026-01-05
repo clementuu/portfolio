@@ -8,6 +8,7 @@ func MakeRoutes() {
 		handler http.HandlerFunc
 	}{
 		{"GET /competences", GetAllCompetences},
+		{"GET /competence/{id}", GetCompetenceByID},
 		{"GET /projets", GetAllProjets},
 		{"GET /projets/names", GetProjetsNames},
 		{"GET /projet/{id}", GetProjetByID},

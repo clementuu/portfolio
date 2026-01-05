@@ -6,6 +6,7 @@ import (
 )
 
 type webStore interface {
+	GetCompetence(id int) (model.Competence, error)
 	GetCompetences() []model.Competence
 	GetProjets() []model.Projet
 	GetProjetsNames() (mps []model.MiniProjet)

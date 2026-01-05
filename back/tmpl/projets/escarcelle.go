@@ -113,4 +113,21 @@ const EscarcelleHTML = `
         au sein d'un écosystème cohérent, évolutif et durable.
     </p>
 </section>
+<!-- =================================================================== -->
+<!-- SECTION : COMPÉTENCES ASSOCIÉES                                     -->
+<!-- =================================================================== -->
+<section class="project-section">
+    <h3>Compétences Associées</h3>
+    <div class="competences-list">
+        <a href="/competences/detail.html?id=1" class="competence-tag">Go</a>
+        <a href="/competences/detail.html?id=10" class="competence-tag">Rebol</a>
+        <a href="/competences/detail.html?id=2" class="competence-tag">HTML/CSS</a>
+        <a href="/competences/detail.html?id=4" class="competence-tag">Svelte</a>
+        <a href="/competences/detail.html?id=6" class="competence-tag">SQL</a>
+        <a href="/competences/detail.html?id=14" class="competence-tag">Bash</a>
+        <a href="/competences/detail.html?id=12" class="competence-tag">Docker</a>
+        <a href="/competences/detail.html?id=15" class="competence-tag">Gestion de projet</a>
+        <a href="/competences/detail.html?id=16" class="competence-tag">Flexibilité</a>
+    </div>
+</section>
 `

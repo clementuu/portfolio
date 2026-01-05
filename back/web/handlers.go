@@ -16,6 +16,29 @@ func GetAllCompetences(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+// GetCompetenceByID renvoie une compétence d'id donné
+func GetCompetenceByID(w http.ResponseWriter, r *http.Request) {
+	idStr := r.PathValue("id")
+	id, err := strconv.Atoi(idStr)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusBadRequest)
+		return
+	}
+	var compentence service.Competence
+	compentence, err = service.GetCompetence(id)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	w.WriteHeader(http.StatusOK)
+
+	err = encodeJSON(w, compentence)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+}
+
 // GetAllProjets renvoie la liste des projets
 func GetAllProjets(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)

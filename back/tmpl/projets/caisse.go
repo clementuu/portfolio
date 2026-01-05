@@ -138,4 +138,18 @@ const CaisseHTML = `
         Il constitue aujourd'hui un socle robuste pour les futures évolutions de l'écosystème Escarcelle.
     </p>
 </section>
+<!-- =================================================================== -->
+<!-- SECTION : COMPÉTENCES ASSOCIÉES                                     -->
+<!-- =================================================================== -->
+<section class="project-section">
+    <h3>Compétences Associées</h3>
+    <div class="competences-list">
+        <a href="/competences/detail.html?id=1" class="competence-tag">Go</a>
+        <a href="/competences/detail.html?id=6" class="competence-tag">SQL</a>
+        <a href="/competences/detail.html?id=12" class="competence-tag">Docker</a>
+        <a href="/competences/detail.html?id=17" class="competence-tag">Créativité</a>
+        <a href="/competences/detail.html?id=16" class="competence-tag">Flexibilité</a>
+        <a href="/competences/detail.html?id=18" class="competence-tag">Esprit critique</a>
+    </div>
+</section>
 `

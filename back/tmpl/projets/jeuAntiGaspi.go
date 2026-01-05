@@ -106,4 +106,15 @@ const JeuAntiGaspiHTML = `
         pédagogique, ce qui en fait une réussite autant technique qu'humaine.
     </p>
 </section>
+<!-- =================================================================== -->
+<!-- SECTION : COMPÉTENCES ASSOCIÉES                                     -->
+<!-- =================================================================== -->
+<section class="project-section">
+    <h3>Compétences Associées</h3>
+    <div class="competences-list">
+        <a href="/competences/detail.html?id=4" class="competence-tag">JavaScript</a>
+        <a href="/competences/detail.html?id=2" class="competence-tag">HTML/CSS</a>
+        <a href="/competences/detail.html?id=22" class="competence-tag">Créativité</a>
+    </div>
+</section>
 `

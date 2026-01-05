@@ -99,4 +99,15 @@ const MissionAntiGaspiHTML = `
         et utiles pour l'action publique.
     </p>
 </section>
+<!-- =================================================================== -->
+<!-- SECTION : COMPÉTENCES ASSOCIÉES                                     -->
+<!-- =================================================================== -->
+<section class="project-section">
+    <h3>Compétences Associées</h3>
+    <div class="competences-list">
+        <a href="/competences/detail.html?id=15" class="competence-tag">R</a>
+        <a href="/competences/detail.html?id=11" class="competence-tag">Python</a>
+        <a href="/competences/detail.html?id=23" class="competence-tag">Esprit critique</a>
+    </div>
+</section>
 `
