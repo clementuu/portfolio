@@ -15,8 +15,7 @@
   }
 
   function handleClick() {
-    sessionStorage.setItem('selectedCompetence', JSON.stringify(competence));
-    window.location.href = 'detail.html';
+    window.location.href = `detail.html?id=${competence.id}`;
   }
 </script>
 

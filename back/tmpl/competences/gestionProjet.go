@@ -28,8 +28,10 @@ const GestionProjetComp = `
         Cette compétence a été essentielle dans la conduite des projets suivants et tout au long de mon 
         expérience professionnelle.
     </p>
+</section>
+<section class="comp-section">
+    <h3>Projets Associés</h3>
     <div class="project-list">
-        <strong>Projets Associés</strong>
         <ul>
             <li><a class="project-link" href="/projets/detail.html?id=4">Jeu Anti-Gaspi</a></li>
             <li><a class="project-link" href="/projets/detail.html?id=3">Mission TousAntiGaspi</a></li>

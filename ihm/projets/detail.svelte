@@ -1,30 +1,32 @@
 <svelte:options customElement="projet-detail" />
 
 <script>
-    import { onMount } from 'svelte';
-
     let projet = null;
     let error = null;
 
-    onMount(async () => {
-        const urlParams = new URLSearchParams(window.location.search);
-        const id = urlParams.get('id');
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get('id');
 
-        if (!id) {
-            error = "Aucun ID de projet n'a été fourni.";
-            return;
-        }
-
-        try {
-            const response = await fetch(`/projet/${id}`);
-            if (!response.ok) {
-                throw new Error('La requête a échoué.');
-            }
-            projet = await response.json();
-        } catch (e) {
-            error = e.message;
-        }
-    });
+    if (id) {
+        fetch(`/projet/${id}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                projet = data;
+                error = null;
+            })
+            .catch(e => {
+                console.error("Error fetching projet:", e);
+                error = "Erreur lors du chargement des détails du projet.";
+                competence = null;
+            })
+    } else {
+        error = "Aucun ID de projet n'a été fourni.";
+    }
 </script>
 
 <div class="projet-detail-container">
@@ -105,11 +107,37 @@
         margin-bottom: 0.5rem;
     }
 
-    /* On redéfinit le style des paragraphes à l'intérieur d'un skill-item */
-    :global(.skill-item p) {
-        font-size: 0.95em;
-        color: #6c757d;
-        line-height: 1.5;
-        margin: 0; /* Annule la marge globale des 'p' */
+    :global(.competences-list) {
+        display: flex;
+        justify-content: center;
+    }
+
+    /*
+        * Styles for competence tags within injected HTML
+    */
+    :global(.competence-tag) {
+        display: inline-block;
+        padding: 0.2em 0.6em; /* Similar to card-span */
+        margin: 0.25em;
+        border-radius: 4px; /* Similar to card-span */
+        color: white;
+        text-decoration: none;
+        transition: background-color 0.2s ease;
+    }
+
+    :global(.competence-tag.technique) {
+        background-color: darkgrey;
+    }
+
+    :global(.competence-tag.humain) {
+        background-color: darkturquoise;
+    }
+
+    :global(.competence-tag.devops) {
+        background-color: orchid;
+    }
+
+    :global(.competence-tag:hover) {
+        filter: brightness(1.1); /* Slightly brighter on hover */
     }
 </style>

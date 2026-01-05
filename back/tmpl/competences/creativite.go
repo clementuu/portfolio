@@ -28,8 +28,10 @@ const CreativiteComp = `
         La créativité a été un moteur dans la conception de projets originaux et dans mon rôle de 
         développeur décisionnel.
     </p>
+</section>
+<section class="comp-section">
+    <h3>Projets Associés</h3>
     <div class="project-list">
-        <strong>Projets Associés</strong>
         <ul>
             <li><a class="project-link" href="/projets/detail.html?id=2">Caisse Escarcelle</a></li>
             <li><a class="project-link" href="/projets/detail.html?id=4">Jeu Anti-Gaspi</a></li>

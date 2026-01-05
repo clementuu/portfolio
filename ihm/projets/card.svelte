@@ -7,6 +7,7 @@
         <img src={projet.image} alt={projet.name} />
     </div>
     <h3>{projet.name}</h3>
+    <br>
     <p>{projet.resume}</p>
     <div class="competences">
         {#each projet.competences as competence}

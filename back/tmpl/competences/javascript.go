@@ -27,8 +27,10 @@ const JavaScriptComp = `
         J'ai utilisé JavaScript pour développer un jeu 2D éducatif, en gérant la logique du jeu, 
         les interactions de l'utilisateur et les animations.
     </p>
+</section>
+<section class="comp-section">
+    <h3>Projets Associés</h3>
     <div class="project-list">
-        <strong>Projets Associés</strong>
         <ul>
             <li><a class="project-link" href="/projets/detail.html?id=4">Jeu Anti-Gaspi</a></li>
         </ul>

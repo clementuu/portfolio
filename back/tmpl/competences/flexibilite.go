@@ -27,8 +27,10 @@ const FlexibiliteComp = `
         Ma flexibilité a été mise à l'épreuve dans plusieurs projets où les exigences ont évolué, 
         nécessitant une adaptation rapide et l'apprentissage de nouvelles technologies.
     </p>
+</section>
+<section class="comp-section">
+    <h3>Projets Associés</h3>
     <div class="project-list">
-        <strong>Projets Associés</strong>
         <ul>
             <li><a class="project-link" href="/projets/detail.html?id=1">Escarcelle</a></li>
             <li><a class="project-link" href="/projets/detail.html?id=2">Caisse Escarcelle</a></li>

@@ -25,8 +25,10 @@ const RebolComp = `
         J'ai travaillé sur un projet où le backend était initialement développé en REBOL. 
         Mes tâches comprenaient la compréhension du code existant, la correction de bugs et la planification de la migration vers Go.
     </p>
+</section>
+<section class="comp-section">
+    <h3>Projets Associés</h3>
     <div class="project-list">
-        <strong>Projets Associés</strong>
         <ul>
             <li><a class="project-link" href="/projets/detail.html?id=1">Escarcelle</a></li>
         </ul>

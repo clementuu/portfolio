@@ -28,8 +28,10 @@ const SvelteComp = `
     <p>
         Cette compétence a été mise en œuvre sur le projet suivant et durant mon parcours professionnel.
     </p>
+</section>
+<section class="comp-section">
+    <h3>Projets Associés</h3>
     <div class="project-list">
-        <strong>Projets Associés</strong>
         <ul>
 			<li><a class="project-link" href="/projets/detail.html?id=1">Escarcelle</a></li>       
         </ul>

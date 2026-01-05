@@ -2,28 +2,28 @@
 
 <script>
     import Card from './card.svelte';
-    import { onMount } from 'svelte';
 
     let error = null;
     let allCompetences = [];
     let displayedCompetences = null; // compétences à afficher après filtrage
 
-    async function getCompetences() {
-        try {
-            const response = await fetch('/competences');
-
+    fetch('/competences')
+        .then(response => {
             if (!response.ok) {
-                error = response.statusText
-                throw new Error(`Erreur HTTP ${response.status}: ${error}`);
+                throw new Error(`Erreur HTTP ${response.status}`);
             }
-
-            const data = await response.json();
+            return response.json();
+        })
+        .then(data => {
             allCompetences = data;
-        } catch (e) {
-            error = e;
-            console.error("Échec de la récupération des compétences :", error.message || error);
-        }
-    }
+            filterCompetences(); // filtre les données après le fetch
+        })
+        .catch(e => {
+            console.error("Error fetching competences:",e);
+            error = "Erreur lors du chargement des compétences."
+            allCompetences = [];
+            displayedCompetences = null;
+        });
 
     function filterCompetences() {
         const urlParams = new URLSearchParams(window.location.search);
@@ -35,11 +35,6 @@
             displayedCompetences = allCompetences;
         }
     }
-    
-    onMount(async () => {
-        await getCompetences();
-        filterCompetences(); // filtre les données après le fetch
-    });
 </script>
 
 <div>

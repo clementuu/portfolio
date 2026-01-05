@@ -29,21 +29,14 @@ const PenseeCritiqueComp = `
         Cette compétence a été déterminante dans la phase de conception de projets complexes et dans 
         mon rôle de développeur.
     </p>
-        <div class="project-list">
-            <strong>Projets Associés</strong>
-            <ul>
-                <li><a class="project-link" href="/projets/detail.html?id=2">Caisse Escarcelle</a></li>
-                <li><a class="project-link" href="/projets/detail.html?id=3">Mission TousAntiGaspi</a></li>
-            </ul>
-        </div>
-
-        <div class="skill-item">
-            <strong>Expériences Associées</strong>
-            <ul>
-                <li>Développeur backend</li>
-            </ul>
-        </div>
-
+</section>
+<section class="comp-section">
+    <h3>Projets Associés</h3>
+    <div class="project-list">
+        <ul>
+            <li><a class="project-link" href="/projets/detail.html?id=2">Caisse Escarcelle</a></li>
+            <li><a class="project-link" href="/projets/detail.html?id=3">Mission TousAntiGaspi</a></li>
+        </ul>
     </div>
 </section>
 `

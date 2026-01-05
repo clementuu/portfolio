@@ -2,38 +2,38 @@
 
 <script>
     import Card from './card.svelte';
-    import { onMount } from 'svelte';
 
     let projets = [];
-
-    async function getProjets() {
-        try {
-            const response = await fetch('/projets');
-
+    let error = null;
+    
+    fetch('/projets')
+        .then(response => {
             if (!response.ok) {
-                throw new Error(`Erreur HTTP ${response.status}: ${response.statusText}`);
-            }
-
-            const data = await response.json();
-            projets = data; 
-        } catch (error) {
-            console.error("Échec de la récupération des compétences :", error.message || error);
-        }
-    }
-
-    onMount(async () => {
-        await getProjets();
-        console.log(projets);
-    });
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+            return response.json();
+        })
+        .then(data => {
+            projets = data;
+        })
+        .catch(err => {
+            console.error('Fetch error:', err);
+            error = "Erreur de la récupération des compétences.";
+            projets = [];
+        });
 </script>
 
 <div>
-    <h2>Mes Projets</h2>
-    <div class="projets-grid">
-        {#each projets as projet}
-            <Card {projet} />
-        {/each}
-    </div>
+    {#if error}
+        <p class="error">{error}</p>
+    {:else}
+        <h2>Mes Projets</h2>
+        <div class="projets-grid">
+            {#each projets as projet}
+                <Card {projet} />
+            {/each}
+        </div>
+    {/if}
 </div>
 
 <style>

@@ -26,8 +26,10 @@ const PythonComp = `
         J'ai appliqué mes compétences en Python dans le cadre d'un projet d'analyse statistique, 
         où j'ai utilisé Python pour nettoyer, transformer et analyser des ensembles de données.
     </p>
+</section>
+<section class="comp-section">
+    <h3>Projets Associés</h3>
     <div class="project-list">
-        <strong>Projets Associés</strong>
         <ul>
             <li><a class="project-link" href="/projets/detail.html?id=3">Mission TousAntiGaspi</a></li>
         </ul>

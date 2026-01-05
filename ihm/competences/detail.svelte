@@ -1,25 +1,37 @@
 <svelte:options customElement="competence-detail" />
 
 <script>
-    import { onMount } from 'svelte';
-
     let competence = null;
     let error = null;
+    let loading = true;
 
-    onMount(() => {
-        const storedCompetence = sessionStorage.getItem('selectedCompetence');
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get('id');
 
-        if (storedCompetence) {
-            try {
-                const competenceData = JSON.parse(storedCompetence);
-                competence = competenceData;
-            } catch (e) {
-                error = "Erreur lors de la lecture des données de la compétence.";
-            }
-        } else {
-            error = "Aucune donnée de compétence trouvée. Veuillez retourner à la page des compétences et en sélectionner une.";
-        }
-    });
+    if (id) {
+        loading = true;
+        fetch(`/competence/${id}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                competence = data;
+                error = null;
+            })
+            .catch(e => {
+                console.error("Error fetching competence:", e);
+                error = "Erreur lors du chargement des détails de la compétence.";
+                competence = null;
+            })
+            .finally(() => {
+                loading = false;
+            });
+    } else {
+        error = "Aucun ID de compétence n'a été fourni.";
+    }
 
     function getStars(rating) {
         if (rating === null || rating === undefined) return '';
@@ -38,15 +50,17 @@
 <div class="container">
     {#if error}
         <p class="error">{error}</p>
+    {:else if loading}
+        <p>Chargement des détails de la compétence...</p>
     {:else if competence}
         <div class="detail-container">
             <h1>{competence.name}</h1>
             <img src={competence.image} alt={`Logo de ${competence.name}`} />
             <div class="stars">{getStars(competence.rating)}</div>
-            <div class="detail-text">{@html competence.desc}</div>
+            <div class="detail-text">{@html competence.template}</div>
         </div>
     {:else}
-        <p>Chargement des détails de la compétence...</p>
+        <p>Aucune donnée de compétence trouvée. Veuillez retourner à la page des compétences et en sélectionner une.</p>
     {/if}
 </div>
 
@@ -79,8 +93,8 @@
     }
 
 
-    /* 
-        * Les styles ci-dessous utilisent :global() pour pouvoir s'appliquer 
+    /*
+        * Les styles ci-dessous utilisent :global() pour pouvoir s'appliquer
         * au contenu HTML injecté via la directive {@html}.
     */
     :global(.comp-section) {
@@ -106,14 +120,12 @@
     }
 
     :global(.project-list) {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        display: flex;
         gap: 1.5rem;
         background-color: #f8f9fa;
         padding: 1.5rem;
-        border-radius: 8px;
-        border: 1px solid #e9ecef;
         transition: transform 0.2s ease, box-shadow 0.2s ease;
+        justify-content: center;
     }
 
     :global(.project-list strong) {
@@ -134,14 +146,19 @@
     }
 
     :global(a.project-link) {
+        display: inline-block;
+        padding: 0.2em 0.6em; /* Similar to card-span */
+        margin: 0.25em;
+        border-radius: 4px; /* Similar to card-span */
+        color: white;
         text-decoration: none;
-        color: #007bff;
+        transition: background-color 0.2s ease;
+        text-decoration: none;
+        background-color: #007bff;
         font-weight: 500;
-        transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out;
     }
 
     :global(a.project-link:hover) {
-        color: #0056b3;
-        text-decoration: underline;
+        filter: brightness(1.1); /* Slightly brighter on hover */
     }
 </style>

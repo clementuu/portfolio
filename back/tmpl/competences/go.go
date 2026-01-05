@@ -32,8 +32,10 @@ const GoComp = `
         d'événements, le développement de widgets personnalisés et la prise en charge des spécificités 
         liées aux environnements de bureau (comme la gestion des fenêtres et des notifications).
     </p>
+</section>
+<section class="comp-section">
+    <h3>Projets Associés</h3>
     <div class="project-list">
-        <strong>Projets Associés</strong>
         <ul>
             <li><a class="project-link" href="/projets/detail.html?id=1">Escarcelle</a></li>
             <li><a class="project-link" href="/projets/detail.html?id=2">Caisse Escarcelle</a></li>

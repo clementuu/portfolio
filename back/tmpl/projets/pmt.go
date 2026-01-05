@@ -111,15 +111,15 @@ const PmtHTML = `
 <section class="project-section">
     <h3>Compétences Associées</h3>
     <div class="competences-list">
-        <a href="/competences/detail.html?id=10" class="competence-tag">Spring</a>
-        <a href="/competences/detail.html?id=9" class="competence-tag">Java</a>
-        <a href="/competences/detail.html?id=7" class="competence-tag">Angular</a>
-        <a href="/competences/detail.html?id=2" class="competence-tag">HTML/CSS</a>
-        <a href="/competences/detail.html?id=8" class="competence-tag">SQL</a>
-        <a href="/competences/detail.html?id=12" class="competence-tag">Docker</a>
-        <a href="/competences/detail.html?id=13" class="competence-tag">Kubernetes</a>
-        <a href="/competences/detail.html?id=23" class="competence-tag">Esprit critique</a>
-        <a href="/competences/detail.html?id=22" class="competence-tag">Créativité</a>
+        <a href="/competences/detail.html?id=8" class="competence-tag technique">Spring</a>
+        <a href="/competences/detail.html?id=7" class="competence-tag technique">Java</a>
+        <a href="/competences/detail.html?id=5" class="competence-tag technique">Angular</a>
+        <a href="/competences/detail.html?id=2" class="competence-tag technique">HTML/CSS</a>
+        <a href="/competences/detail.html?id=6" class="competence-tag technique">SQL</a>
+        <a href="/competences/detail.html?id=12" class="competence-tag devops">Docker</a>
+        <a href="/competences/detail.html?id=13" class="competence-tag devops">Kubernetes</a>
+        <a href="/competences/detail.html?id=18" class="competence-tag humain">Esprit critique</a>
+        <a href="/competences/detail.html?id=17" class="competence-tag humain">Créativité</a>
     </div>
 </section>
 `

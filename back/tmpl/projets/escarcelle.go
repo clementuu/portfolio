@@ -119,15 +119,15 @@ const EscarcelleHTML = `
 <section class="project-section">
     <h3>Compétences Associées</h3>
     <div class="competences-list">
-        <a href="/competences/detail.html?id=1" class="competence-tag">Go</a>
-        <a href="/competences/detail.html?id=10" class="competence-tag">Rebol</a>
-        <a href="/competences/detail.html?id=2" class="competence-tag">HTML/CSS</a>
-        <a href="/competences/detail.html?id=4" class="competence-tag">Svelte</a>
-        <a href="/competences/detail.html?id=6" class="competence-tag">SQL</a>
-        <a href="/competences/detail.html?id=14" class="competence-tag">Bash</a>
-        <a href="/competences/detail.html?id=12" class="competence-tag">Docker</a>
-        <a href="/competences/detail.html?id=15" class="competence-tag">Gestion de projet</a>
-        <a href="/competences/detail.html?id=16" class="competence-tag">Flexibilité</a>
+        <a href="/competences/detail.html?id=1" class="competence-tag technique">Go</a>
+        <a href="/competences/detail.html?id=10" class="competence-tag technique">Rebol</a>
+        <a href="/competences/detail.html?id=2" class="competence-tag technique">HTML/CSS</a>
+        <a href="/competences/detail.html?id=4" class="competence-tag technique">Svelte</a>
+        <a href="/competences/detail.html?id=6" class="competence-tag technique">SQL</a>
+        <a href="/competences/detail.html?id=14" class="competence-tag devops">Bash</a>
+        <a href="/competences/detail.html?id=12" class="competence-tag devops">Docker</a>
+        <a href="/competences/detail.html?id=15" class="competence-tag humain">Gestion de projet</a>
+        <a href="/competences/detail.html?id=16" class="competence-tag humain">Flexibilité</a>
     </div>
 </section>
 `

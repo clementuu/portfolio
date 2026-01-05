@@ -25,8 +25,10 @@ const RComp = `
         J'ai utilisé R pour analyser des données sur le gaspillage alimentaire dans les cantines scolaires, 
         produire des visualisations et présenter les résultats.
     </p>
+</section>
+<section class="comp-section">
+    <h3>Projets Associés</h3>
     <div class="project-list">
-        <strong>Projets Associés</strong>
         <ul>
             <li><a class="project-link" href="/projets/detail.html?id=3">Mission TousAntiGaspi</a></li>
         </ul>

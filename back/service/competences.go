@@ -3,13 +3,13 @@ package service
 import "back/model"
 
 type Competence struct {
-	ID     int    `json:"id"`
-	Name   string `json:"name"`
-	Image  string `json:"image"`
-	Rating int    `json:"rating"`
-	Desc   string `json:"desc"`
-	Exp    string `json:"exp"`
-	Type   string `json:"type"`
+	ID       int    `json:"id"`
+	Name     string `json:"name"`
+	Image    string `json:"image"`
+	Rating   int    `json:"rating"`
+	Template string `json:"template"`
+	Exp      string `json:"exp"`
+	Type     string `json:"type"`
 }
 
 func getCompetences(cs []model.Competence) (competences []Competence) {
@@ -25,7 +25,7 @@ func getCompetence(c model.Competence) (competence Competence) {
 	competence.Name = c.Name
 	competence.Image = c.Image
 	competence.Rating = c.Rating
-	competence.Desc = c.Template
+	competence.Template = c.Template
 	competence.Exp = c.Exp
 	competence.Type = c.Type.String()
 

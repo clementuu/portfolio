@@ -26,8 +26,10 @@ const KubernetesComp = `
         J'ai utilisé Kubernetes pour le déploiement d'une application de gestion de projet, 
         en apprenant à gérer les déploiements et les services dans un environnement de cluster.
     </p>
+</section>
+<section class="comp-section">
+    <h3>Projets Associés</h3>
     <div class="project-list">
-        <strong>Projets Associés</strong>
         <ul>
             <li><a class="project-link" href="/projets/detail.html?id=6">Project Management Tool</a></li>
         </ul>

@@ -29,8 +29,10 @@ const WebComp = `
         des sites web statiques, des applications web dynamiques avec des frameworks frontend, ou pour styliser 
         des composants d'interface utilisateur.
     </p>
+</section>
+<section class="comp-section">
+    <h3>Projets Associés</h3>
     <div class="project-list">
-        <strong>Projets Associés</strong>
         <ul>
             <li><a class="project-link" href="/projets/detail.html?id=1">Escarcelle</a></li>
             <li><a class="project-link" href="/projets/detail.html?id=4">Jeu Anti-Gaspi</a></li>
