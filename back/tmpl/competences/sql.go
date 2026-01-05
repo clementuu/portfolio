@@ -5,7 +5,7 @@ const SQLComp = `
 <!-- =================================================================== -->
 <!-- SECTION : TITRE ET INTRODUCTION DE LA COMPÉTENCE                    -->
 <!-- =================================================================== -->
-<section class="project-section">
+<section class="comp-section">
     <p>
         SQL (Structured Query Language) est le langage standard pour la gestion et la manipulation des 
         bases de données relationnelles. Sa maîtrise est fondamentale pour interagir avec les données, 
@@ -22,31 +22,19 @@ const SQLComp = `
 <!-- =================================================================== -->
 <!-- SECTION : MISE EN PRATIQUE                                          -->
 <!-- =================================================================== -->
-<section class="project-section">
+<section class="comp-section">
     <h3>Mise en pratique</h3>
     <p>
         La compétence SQL a été un pilier dans plusieurs projets et expériences, notamment pour la 
         persistance des données et l'informatique décisionnelle.
     </p>
-
-    <div class="skills-grid">
-
-        <div class="skill-item">
-            <strong>Projets Associés</strong>
-            <ul>
-                <li>Refonte caisse Escarcelle</li>
-                <li>PMT</li>
-            </ul>
-        </div>
-
-        <div class="skill-item">
-            <strong>Expériences Associées</strong>
-            <ul>
-                <li>Développeur backend</li>
-                <li>Développeur BI</li>
-            </ul>
-        </div>
-
+    <div class="project-list">
+        <strong>Projets Associés</strong>
+        <ul>
+            <li><a class="project-link" href="/projets/detail.html?id=1">Escarcelle</a></li>
+            <li><a class="project-link" href="/projets/detail.html?id=2">Caisse Escarcelle</a></li>
+            <li><a class="project-link" href="/projets/detail.html?id=6">PMT</a></li>
+        </ul>
     </div>
 </section>
 `

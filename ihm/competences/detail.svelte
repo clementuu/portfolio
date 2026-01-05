@@ -77,4 +77,71 @@
         margin-top: 1.5em;
         line-height: 1.6;
     }
+
+
+    /* 
+        * Les styles ci-dessous utilisent :global() pour pouvoir s'appliquer 
+        * au contenu HTML injecté via la directive {@html}.
+    */
+    :global(.comp-section) {
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    :global(.comp-section:last-of-type) {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    :global(.comp-section h2) {
+        font-size: 1.8em;
+        margin-bottom: 1rem;
+    }
+
+    :global(.comp-section h3) {
+        font-size: 1.4em;
+        margin-bottom: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    :global(.project-list) {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        background-color: #f8f9fa;
+        padding: 1.5rem;
+        border-radius: 8px;
+        border: 1px solid #e9ecef;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    :global(.project-list strong) {
+        display: block;
+        font-size: 1.1em;
+        color: #343a40;
+        margin-bottom: 0.5rem;
+    }
+
+    :global(.project-list ul) {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    :global(.project-list li) {
+        margin-bottom: 0.5rem;
+    }
+
+    :global(a.project-link) {
+        text-decoration: none;
+        color: #007bff;
+        font-weight: 500;
+        transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out;
+    }
+
+    :global(a.project-link:hover) {
+        color: #0056b3;
+        text-decoration: underline;
+    }
 </style>

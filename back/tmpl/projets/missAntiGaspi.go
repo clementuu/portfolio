@@ -6,7 +6,7 @@ const MissionAntiGaspiHTML = `
 <!-- =================================================================== -->
 <section class="project-section">
     <p>
-        La Mission Anti-Gaspi est une action menée dans le cadre d'un service civique pour la mairie de 
+        TousAntiGaspi est une action menée dans le cadre d'un service civique pour la mairie de 
         Saint-Jean-de-Védas, au sein de la métropole de Montpellier. L'objectif était de réaliser une étude 
         approfondie du gaspillage alimentaire dans les écoles de la commune afin d'identifier les leviers 
         d'amélioration et de proposer des pistes d'action concrètes aux élus locaux.
@@ -92,7 +92,7 @@ const MissionAntiGaspiHTML = `
 <section class="project-section">
     <h3>Conclusion</h3>
     <p>
-        La Mission Anti-Gaspi a été une expérience marquante, mêlant engagement citoyen, travail de 
+        La Mission TousAntiGaspi a été une expérience marquante, mêlant engagement citoyen, travail de 
         terrain et analyse scientifique. Elle m'a permis de développer des compétences solides en 
         statistiques, en manipulation de données et en communication auprès de décideurs publics.  
         Ce projet a renforcé ma capacité à transformer des données brutes en recommandations concrètes 

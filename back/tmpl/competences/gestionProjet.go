@@ -5,7 +5,7 @@ const GestionProjetComp = `
 <!-- =================================================================== -->
 <!-- SECTION : TITRE ET INTRODUCTION DE LA COMPÉTENCE                    -->
 <!-- =================================================================== -->
-<section class="project-section">
+<section class="comp-section">
     <p>
         La gestion de projet est l'art de planifier, d'organiser, de sécuriser et de gérer les ressources 
         pour atteindre des objectifs spécifiques dans des délais définis. Cela inclut la définition des 
@@ -22,30 +22,18 @@ const GestionProjetComp = `
 <!-- =================================================================== -->
 <!-- SECTION : MISE EN PRATIQUE                                          -->
 <!-- =================================================================== -->
-<section class="project-section">
+<section class="comp-section">
     <h3>Mise en pratique</h3>
     <p>
         Cette compétence a été essentielle dans la conduite des projets suivants et tout au long de mon 
         expérience professionnelle.
     </p>
-
-    <div class="skills-grid">
-
-        <div class="skill-item">
-            <strong>Projets Associés</strong>
-            <ul>
-                <li>Jeu anti-gaspi</li>
-                <li>Miss anti-gaspi</li>
-            </ul>
-        </div>
-
-        <div class="skill-item">
-            <strong>Expériences Associées</strong>
-            <ul>
-                <li>Développeur backend</li>
-            </ul>
-        </div>
-
+    <div class="project-list">
+        <strong>Projets Associés</strong>
+        <ul>
+            <li><a class="project-link" href="/projets/detail.html?id=4">Jeu Anti-Gaspi</a></li>
+            <li><a class="project-link" href="/projets/detail.html?id=3">Mission TousAntiGaspi</a></li>
+        </ul>
     </div>
 </section>
 `

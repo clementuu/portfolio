@@ -5,7 +5,7 @@ const PenseeCritiqueComp = `
 <!-- =================================================================== -->
 <!-- SECTION : TITRE ET INTRODUCTION DE LA COMPÉTENCE                    -->
 <!-- =================================================================== -->
-<section class="project-section">
+<section class="comp-section">
     <p>
         La pensée critique est la capacité d'analyser objectivement une information ou une situation pour 
         se forger un jugement. En développement logiciel, cela se traduit par l'aptitude à évaluer 
@@ -23,19 +23,17 @@ const PenseeCritiqueComp = `
 <!-- =================================================================== -->
 <!-- SECTION : MISE EN PRATIQUE                                          -->
 <!-- =================================================================== -->
-<section class="project-section">
+<section class="comp-section">
     <h3>Mise en pratique</h3>
     <p>
         Cette compétence a été déterminante dans la phase de conception de projets complexes et dans 
         mon rôle de développeur.
     </p>
-
-    <div class="skills-grid">
-
-        <div class="skill-item">
+        <div class="project-list">
             <strong>Projets Associés</strong>
             <ul>
-                <li>Refonte caisse Escarcelle</li>
+                <li><a class="project-link" href="/projets/detail.html?id=2">Caisse Escarcelle</a></li>
+                <li><a class="project-link" href="/projets/detail.html?id=3">Mission TousAntiGaspi</a></li>
             </ul>
         </div>
 

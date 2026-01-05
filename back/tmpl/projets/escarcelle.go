@@ -1,7 +1,7 @@
 package tmpl
 
-// EscarcelleProject contient la description HTML du projet Escarcelle.
-const EscarcelleProject = `
+// EscarcelleHTML contient la description HTML du projet Escarcelle.
+const EscarcelleHTML = `
 <!-- =================================================================== -->
 <!-- SECTION : TITRE ET INTRODUCTION DU PROJET                           -->
 <!-- =================================================================== -->

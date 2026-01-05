@@ -5,7 +5,7 @@ const DockerComp = `
 <!-- =================================================================== -->
 <!-- SECTION : TITRE ET INTRODUCTION DE LA COMPÉTENCE                    -->
 <!-- =================================================================== -->
-<section class="project-section">
+<section class="comp-section">
     <p>
         Docker est une plateforme de conteneurisation qui permet d'empaqueter une application et ses 
         dépendances dans un conteneur logiciel isolé. Cette approche garantit que l'application 
@@ -23,29 +23,19 @@ const DockerComp = `
 <!-- =================================================================== -->
 <!-- SECTION : MISE EN PRATIQUE                                          -->
 <!-- =================================================================== -->
-<section class="project-section">
+<section class="comp-section">
     <h3>Mise en pratique</h3>
     <p>
         Cette compétence a été utilisée pour assurer la portabilité et le déploiement d'un projet majeur, 
         et fait partie de mes pratiques courantes en développement.
     </p>
-
-    <div class="skills-grid">
-
-        <div class="skill-item">
-            <strong>Projets Associés</strong>
-            <ul>
-                <li>Refonte caisse Escarcelle</li>
-            </ul>
-        </div>
-
-        <div class="skill-item">
-            <strong>Expériences Associées</strong>
-            <ul>
-                <li>Développeur backend</li>
-            </ul>
-        </div>
-
+    <div class="project-list">
+        <strong>Projets Associés</strong>
+        <ul>
+            <li><a class="project-link" href="/projets/detail.html?id=1">Escarcelle</a></li>
+            <li><a class="project-link" href="/projets/detail.html?id=2">Caisse Escarcelle</a></li>
+            <li><a class="project-link" href="/projets/detail.html?id=6">PMT</a></li>
+        </ul>
     </div>
 </section>
 `

@@ -1,7 +1,7 @@
 package tmpl
 
-// CaisseProject contient la description HTML du projet de refonte de la caisse Escarcelle.
-const CaisseProject = `
+// CaisseHTML contient la description HTML du projet de refonte de la caisse Escarcelle.
+const CaisseHTML = `
 <!-- =================================================================== -->
 <!-- SECTION : TITRE ET INTRODUCTION DU PROJET                           -->
 <!-- =================================================================== -->

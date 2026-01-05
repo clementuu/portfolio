@@ -5,7 +5,7 @@ const SvelteComp = `
 <!-- =================================================================== -->
 <!-- SECTION : TITRE ET INTRODUCTION DE LA COMPÉTENCE                    -->
 <!-- =================================================================== -->
-<section class="project-section">
+<section class="comp-section">
     <p>
         Svelte est un framework JavaScript moderne qui déplace le travail de l'exécution (runtime) 
         vers la compilation. Contrairement aux frameworks traditionnels comme React ou Vue, Svelte 
@@ -23,28 +23,16 @@ const SvelteComp = `
 <!-- =================================================================== -->
 <!-- SECTION : MISE EN PRATIQUE                                          -->
 <!-- =================================================================== -->
-<section class="project-section">
+<section class="comp-section">
     <h3>Mise en pratique</h3>
     <p>
         Cette compétence a été mise en œuvre sur le projet suivant et durant mon parcours professionnel.
     </p>
-
-    <div class="skills-grid">
-
-        <div class="skill-item">
-            <strong>Projets Associés</strong>
-            <ul>
-                <li>Portfolio</li>
-            </ul>
-        </div>
-
-        <div class="skill-item">
-            <strong>Expériences Associées</strong>
-            <ul>
-                <li>Développeur backend</li>
-            </ul>
-        </div>
-
+    <div class="project-list">
+        <strong>Projets Associés</strong>
+        <ul>
+			<li><a class="project-link" href="/projets/detail.html?id=1">Escarcelle</a></li>       
+        </ul>
     </div>
 </section>
 `

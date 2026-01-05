@@ -5,7 +5,7 @@ const CreativiteComp = `
 <!-- =================================================================== -->
 <!-- SECTION : TITRE ET INTRODUCTION DE LA COMPÉTENCE                    -->
 <!-- =================================================================== -->
-<section class="project-section">
+<section class="comp-section">
     <p>
         La créativité est la capacité à générer des idées nouvelles et originales pour résoudre des 
         problèmes ou concevoir des solutions innovantes. En développement, elle ne se limite pas au 
@@ -22,29 +22,18 @@ const CreativiteComp = `
 <!-- =================================================================== -->
 <!-- SECTION : MISE EN PRATIQUE                                          -->
 <!-- =================================================================== -->
-<section class="project-section">
+<section class="comp-section">
     <h3>Mise en pratique</h3>
     <p>
         La créativité a été un moteur dans la conception de projets originaux et dans mon rôle de 
         développeur décisionnel.
     </p>
-
-    <div class="skills-grid">
-
-        <div class="skill-item">
-            <strong>Projets Associés</strong>
-            <ul>
-                <li>Jeu anti-gaspi</li>
-            </ul>
-        </div>
-
-        <div class="skill-item">
-            <strong>Expériences Associées</strong>
-            <ul>
-                <li>Développeur BI</li>
-            </ul>
-        </div>
-
+    <div class="project-list">
+        <strong>Projets Associés</strong>
+        <ul>
+            <li><a class="project-link" href="/projets/detail.html?id=2">Caisse Escarcelle</a></li>
+            <li><a class="project-link" href="/projets/detail.html?id=4">Jeu Anti-Gaspi</a></li>
+        </ul>
     </div>
 </section>
 `

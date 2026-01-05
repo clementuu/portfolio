@@ -8,8 +8,7 @@ import (
 
 var (
 	GoCompetence             = model.Competence{ID: 1, Name: "Go", Image: constants.GolangLogo, Rating: 4, Template: tmpl.GoComp, Type: model.Dev}
-	HTMLCompetence           = model.Competence{ID: 2, Name: "HTML", Image: constants.HtmlLogo, Rating: 4, Template: constants.DescHTML, Type: model.Dev}
-	CSSCompetence            = model.Competence{ID: 3, Name: "CSS", Image: constants.CssLogo, Rating: 4, Template: constants.DescCSS, Type: model.Dev}
+	WebCompetence            = model.Competence{ID: 2, Name: "HTML/CSS", Image: constants.WebLogo, Rating: 4, Template: constants.DescHTML, Type: model.Dev}
 	JavaScriptCompetence     = model.Competence{ID: 4, Name: "JavaScript", Image: constants.JsLogo, Rating: 3, Template: constants.DescJS, Type: model.Dev}
 	SvelteCompetence         = model.Competence{ID: 5, Name: "Svelte", Image: constants.SvelteLogo, Rating: 4, Template: tmpl.SvelteComp, Type: model.Dev}
 	TypeScriptCompetence     = model.Competence{ID: 6, Name: "TypeScript", Image: constants.TScriptLogo, Rating: 2, Template: constants.DescTS, Type: model.Dev}
@@ -31,8 +30,7 @@ var (
 
 var competencesList = []model.Competence{
 	GoCompetence,
-	HTMLCompetence,
-	CSSCompetence,
+	WebCompetence,
 	JavaScriptCompetence,
 	SvelteCompetence,
 	TypeScriptCompetence,
