@@ -1,6 +1,6 @@
 .PHONY: webdev
 webdev:
-	npm install && node esbuild.js --dev
+	cd ihm && npm install && node esbuild.js --dev
 
 .PHONY: srvdev
 srvdev:

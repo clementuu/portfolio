@@ -4,7 +4,7 @@ import sveltePlugin from 'esbuild-svelte';
 const isDev = process.argv.includes('--dev')
 
 let commonOptions = {
-	entryPoints: ['./ihm/App.svelte', './ihm/header.svelte', './ihm/projets/projets.svelte', './ihm/projets/detail.svelte', './ihm/competences/competences.svelte', './ihm/competences/detail.svelte', './ihm/contacts.svelte'],
+	entryPoints: ['./App.svelte', './header.svelte', './projets/projets.svelte', './projets/detail.svelte', './competences/competences.svelte', './competences/detail.svelte', './contacts.svelte'],
 	bundle: true,
 	format: 'esm',
 	plugins: [
@@ -15,7 +15,7 @@ let commonOptions = {
 }
 let devOptions = {
 	...commonOptions,
-	outdir: './ihm/build',
+	outdir: './build',
 	banner: {
         //crée un eventlistener qui détecte les modifications du code et actualise la page pour afficher les modifs en direct
 		js: "new EventSource('http://127.0.0.1:8088/esbuild').addEventListener('change', () => location.reload())"
