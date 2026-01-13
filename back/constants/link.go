@@ -26,4 +26,5 @@ const (
 	AntiGapsiLogo = "../assets/playerDown1.png"
 	CaisseLogo    = "../assets/Panier.png"
 	SaintJeanLogo = "../assets/Logo_de_saint-jean_de_vedas.jpg"
+	PMTLogo       = "../assets/logo-pmt.png"
 )
