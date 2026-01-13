@@ -1,19 +1,23 @@
-FROM golang:tip-alpine3.22
+FROM golang:tip-alpine3.22 AS builder
 
 WORKDIR /app
 
-# Copie les fichiers de modules et téléchargez les dépendances
 COPY back/go.mod ./
 RUN go mod tidy
 
-# Copie les pages du front
+COPY back/ ./back
 COPY ihm/ ./ihm
 
-# Copie le reste du code source
-COPY back .
+WORKDIR /app/back
+RUN go build -o /usr/local/bin/server main.go
 
-# Expose le port sur lequel votre application Go s'exécute
+FROM alpine:latest
+
+WORKDIR /app
+
+COPY --from=builder /usr/local/bin/server .
+COPY --from=builder /app/ihm ./ihm
+
 EXPOSE 8080
 
-# Commande pour lancer l'application
-CMD ["go", "run", "cmd/main.go"]
+CMD ["./server"]
