@@ -77,21 +77,23 @@
         box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         text-align: center;
     }
+
     .detail-container img {
         max-width: 100px;
         margin-bottom: 1em;
     }
+
     .stars {
         font-size: 1.5em;
         color: gold;
         margin-bottom: 1em;
     }
+
     .detail-text {
         text-align: justify;
         margin-top: 1.5em;
         line-height: 1.6;
     }
-
 
     /*
         * Les styles ci-dessous utilisent :global() pour pouvoir s'appliquer
@@ -137,6 +139,7 @@
 
     :global(.project-list ul) {
         list-style: none;
+        display: flex;
         padding: 0;
         margin: 0;
     }

@@ -29,7 +29,7 @@
 
 <div class="banner">
 	<div class="its-me">
-		<img class="my-pic" src="./assets/icons8-male-user.svg" alt="">
+		<img class="my-pic" src="./assets/photo_cv.png" alt="">
 		<div class="banner-content">
 			<h1 class="name"><strong>{name}</strong></h1>
 			<h2 class="metier" class:fade-out={isFading}><strong>{currentH2Text}</strong></h2>
@@ -154,11 +154,11 @@
 		box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.3),
 		            0 4px 10px rgba(0, 0, 0, 0.5);
 		object-fit: cover;
+		object-position: center -20px;
 		transition: all 0.3s ease;
 	}
 
 	.my-pic:hover {
-		transform: scale(1.05);
 		box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.4),
 		            0 6px 15px rgba(0, 0, 0, 0.6);
 	}
