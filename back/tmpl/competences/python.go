@@ -23,9 +23,16 @@ const PythonComp = `
 <section class="comp-section">
     <h3>Mise en pratique</h3>
     <p>
-        J'ai appliqué mes compétences en Python dans le cadre d'un projet d'analyse statistique, 
-        où j'ai utilisé Python pour nettoyer, transformer et analyser des ensembles de données.
+        J'ai eu l'opportunité d'appliquer la polyvalence de Python dans deux domaines très distincts : l'automatisation des tests logiciels et l'analyse de données.
     </p>
+    <ul>
+        <li>
+            <strong>Automatisation des tests End-to-End :</strong> Au cours d'un stage en R&D, j'ai mis en place une solution complète d'automatisation des tests pour un projet d'innovation. J'ai utilisé <strong>Selenium WebDriver</strong> pour piloter les navigateurs web et simuler les interactions utilisateur, tandis que le framework de BDD (Behavior-Driven Development) <strong>Behave</strong> servait à interpréter les scénarios de test écrits en langage <strong>Gherkin</strong>. Cette expérience m'a permis de construire un pipeline de tests fiable et maintenable.
+        </li>
+        <li>
+            <strong>Analyse de données statistiques :</strong> Dans le cadre de la <strong>Mission TousAntiGaspi</strong>, j'ai utilisé Python et ses bibliothèques scientifiques (comme Pandas) pour mener une étude approfondie sur le gaspillage alimentaire. Mon travail a consisté à nettoyer et consolider les données collectées sur le terrain, à réaliser des analyses statistiques exploratoires et multifactorielles (notamment des Analyses en Composantes Principales) et à produire des visualisations pour un rapport final destiné aux élus locaux.
+        </li>
+    </ul>
 </section>
 <section class="comp-section">
     <h3>Projets Associés</h3>

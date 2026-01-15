@@ -122,6 +122,7 @@ const EscarcelleHTML = `
         <a href="/competences/detail.html?id=1" class="competence-tag technique">Go</a>
         <a href="/competences/detail.html?id=10" class="competence-tag technique">Rebol</a>
         <a href="/competences/detail.html?id=2" class="competence-tag technique">HTML/CSS</a>
+        <a href="/competences/detail.html?id=3" class="competence-tag technique">JavaScript</a>
         <a href="/competences/detail.html?id=4" class="competence-tag technique">Svelte</a>
         <a href="/competences/detail.html?id=6" class="competence-tag technique">SQL</a>
         <a href="/competences/detail.html?id=14" class="competence-tag devops">Bash</a>

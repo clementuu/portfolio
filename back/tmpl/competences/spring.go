@@ -25,14 +25,28 @@ const SpringComp = `
 <section class="comp-section">
     <h3>Mise en pratique</h3>
     <p>
-        J'ai utilisé le framework Spring pour développer le backend d'une application de gestion de projet.
+        Spring, et plus particulièrement <strong>Spring Boot</strong>, est mon framework de prédilection pour le développement d'applications backend Java robustes et performantes. Le projet <strong>Project Management Tool (PMT)</strong> en est une illustration parfaite.
     </p>
+    <ul>
+        <li>
+            <strong>Développement rapide d'API RESTful :</strong> Grâce à Spring Boot, j'ai pu construire efficacement une API RESTful complète et sécurisée pour le PMT. Le framework a grandement facilité la création des endpoints, la gestion des requêtes HTTP et des réponses JSON, accélérant ainsi le développement du backend.
+        </li>
+        <li>
+            <strong>Architecture modulaire et maintenable :</strong> Spring a permis de structurer le code du backend selon une <strong>architecture en couches</strong> (Contrôleur, Service, Repository) en s'appuyant sur les principes d'Inversion de Contrôle (IoC) et d'Injection de Dépendances (DI). Cela garantit une forte cohésion et un faible couplage, essentiels pour la maintenabilité et l'évolutivité.
+        </li>
+        <li>
+            <strong>Gestion de la persistance des données :</strong> J'ai utilisé l'écosystème Spring (notamment <strong>Spring Data JPA</strong>) pour interagir de manière fluide avec la base de données SQL. Cela a simplifié la gestion des entités, l'exécution des requêtes et la manipulation des données, tout en bénéficiant des fonctionnalités avancées de gestion des transactions.
+        </li>
+        <li>
+            <strong>Intégration dans un écosystème Full-Stack :</strong> Spring Boot a joué un rôle clé dans l'intégration harmonieuse du backend Java au sein de l'architecture full-stack du PMT, facilitant sa communication avec le frontend Angular et son déploiement conteneurisé via Docker.
+        </li>
+    </ul>
 </section>
 <section class="comp-section">
     <h3>Projets Associés</h3>
     <div class="project-list">
         <ul>
-            <li><a class="project-link" href="/projets/detail.html?id=6">Project Management Tool</a></li>
+            <li><a class="project-link" href="/projets/detail.html?id=6">PMT</a></li>
         </ul>
     </div>
 </section>

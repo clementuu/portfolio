@@ -25,10 +25,19 @@ const WebComp = `
 <section class="comp-section">
     <h3>Mise en pratique</h3>
     <p>
-        J'ai appliqué mes compétences en HTML et CSS dans la plupart de mes projets web, que ce soit pour construire 
-        des sites web statiques, des applications web dynamiques avec des frameworks frontend, ou pour styliser 
-        des composants d'interface utilisateur.
+        Mes compétences en développement web ont été mises en œuvre sur des projets variés, démontrant ma capacité à concevoir et réaliser des expériences utilisateur riches et fonctionnelles, allant de l'application de gestion à l'outil ludo-éducatif.
     </p>
+    <ul>
+        <li>
+            <strong>Développement d'applications web dynamiques :</strong> Conception et réalisation d'interfaces complexes et modulaires avec des frameworks modernes comme <strong>Svelte</strong> (pour l'application de gestion Escarcelle) et <strong>Angular</strong> (pour l'outil de gestion de projet PMT). Cela inclut la création d'architectures à base de composants, la gestion de l'état applicatif et la communication asynchrone avec des API REST.
+        </li>
+        <li>
+            <strong>Développement interactif en JavaScript natif :</strong> Création d'une expérience ludo-éducative (Jeu Anti-Gaspi) entièrement en <strong>HTML, CSS et JavaScript "vanilla"</strong>. Ce projet a nécessité la manipulation directe du <strong>Canvas HTML5</strong>, la mise en place d'une boucle de jeu, la gestion des animations et la détection de collisions.
+        </li>
+        <li>
+            <strong>Ergonomie et expérience utilisateur (UI/UX) :</strong> Un accent particulier a été mis sur la conception d'interfaces claires, ergonomiques et responsives. Que ce soit pour définir des workflows utilisateurs fluides dans <strong>Escarcelle</strong> ou pour créer une navigation intuitive dans <strong>PMT</strong>, l'objectif est toujours de fournir une expérience utilisateur de qualité.
+        </li>
+    </ul>
 </section>
 <section class="comp-section">
     <h3>Projets Associés</h3>

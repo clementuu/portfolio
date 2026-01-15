@@ -24,14 +24,25 @@ const JavaComp = `
 <section class="comp-section">
     <h3>Mise en pratique</h3>
     <p>
-        Ma compétence en Java a été principalement mise en œuvre dans le développement de l'API backend pour une application de gestion de projet.
+        Ma compétence en Java a été principalement mise en œuvre dans le cadre du développement du <strong>Project Management Tool (PMT)</strong>, où j'ai construit le backend de l'application en utilisant l'écosystème <strong>Spring Boot</strong>.
     </p>
+    <ul>
+        <li>
+            <strong>Développement d'une API RESTful :</strong> J'ai développé une API REST complète et robuste pour gérer toutes les ressources de l'application (projets, tâches, utilisateurs). Cette API sert de point d'entrée pour l'application front-end Angular, lui fournissant les données nécessaires de manière structurée et sécurisée.
+        </li>
+        <li>
+            <strong>Architecture logicielle en couches :</strong> Le backend a été conçu selon une <strong>architecture en couches</strong> classique (Controller, Service, Repository/Store). Cette approche garantit une séparation claire des responsabilités, rendant le code plus facile à maintenir, à tester et à faire évoluer.
+        </li>
+        <li>
+            <strong>Intégration dans un environnement Full-Stack :</strong> Le service Java/Spring s'intégrait parfaitement dans un écosystème moderne : il dialoguait avec une base de données <strong>SQL</strong> pour la persistance des données, servait de socle pour le front-end <strong>Angular</strong>, et l'ensemble était orchestré et déployé dans un environnement conteneurisé avec <strong>Docker</strong>.
+        </li>
+    </ul>
 </section>
 <section class="comp-section">
     <h3>Projets Associés</h3>
     <div class="project-list">
         <ul>
-            <li><a class="project-link" href="/projets/detail.html?id=6">Project Management Tool</a></li>
+            <li><a class="project-link" href="/projets/detail.html?id=6">PMT</a></li>
         </ul>
     </div>
 </section>

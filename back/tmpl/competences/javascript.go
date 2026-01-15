@@ -24,15 +24,26 @@ const JavaScriptComp = `
 <section class="comp-section">
     <h3>Mise en pratique</h3>
     <p>
-        J'ai utilisé JavaScript pour développer un jeu 2D éducatif, en gérant la logique du jeu, 
-        les interactions de l'utilisateur et les animations.
+        Ma maîtrise de JavaScript s'étend du développement "vanilla" (sans framework) pour des expériences interactives sur-mesure, à son utilisation au cœur d'applications web modernes via des frameworks réactifs.
     </p>
+    <ul>
+        <li>
+            <strong>Développement de jeu 2D en JavaScript natif :</strong> Le projet <strong>Jeu Anti-Gaspi</strong> est l'illustration la plus parlante de cette compétence. Développé sans aucun framework, il m'a permis de mettre en œuvre des mécaniques de jeu complexes : manipulation du <strong>Canvas HTML5</strong> pour le rendu, création d'une boucle de jeu avec <code>requestAnimationFrame</code>, gestion des animations, détection de collisions et gestion des entrées utilisateur.
+        </li>
+        <li>
+            <strong>Socle des applications web modernes :</strong> JavaScript est le langage fondamental sur lequel reposent les frameworks que j'utilise. Dans des projets comme <strong>Escarcelle</strong> ou ce même <strong>portfolio</strong>, mes compétences en JavaScript sont appliquées à travers <strong>Svelte</strong> pour créer des composants d'interface réactifs, gérer l'état de l'application et interagir de manière asynchrone avec les APIs backend.
+        </li>
+        <li>
+            <strong>Manipulation du DOM et interactivité :</strong> Au-delà des frameworks, j'utilise JavaScript pour enrichir les pages web en manipulant directement le DOM, en validant des formulaires côté client et en ajoutant toutes sortes d'interactions pour améliorer l'expérience utilisateur.
+        </li>
+    </ul>
 </section>
 <section class="comp-section">
     <h3>Projets Associés</h3>
     <div class="project-list">
         <ul>
             <li><a class="project-link" href="/projets/detail.html?id=4">Jeu Anti-Gaspi</a></li>
+            <li><a class="project-link" href="/projets/detail.html?id=1">Escarcelle</a></li>
         </ul>
     </div>
 </section>

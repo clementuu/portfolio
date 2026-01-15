@@ -79,7 +79,7 @@
     }
 
     .detail-container img {
-        max-width: 100px;
+        max-width: 50px;
         margin-bottom: 1em;
     }
 
