@@ -108,7 +108,8 @@
     }
 
     :global(.competences-list) {
-        display: flex;
+        display: inline-block;
+        margin: auto;
         justify-content: center;
     }
 

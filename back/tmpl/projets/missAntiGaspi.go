@@ -107,7 +107,7 @@ const MissionAntiGaspiHTML = `
     <div class="competences-list">
         <a href="/competences/detail.html?id=11" class="competence-tag technique">R</a>
         <a href="/competences/detail.html?id=9" class="competence-tag technique">Python</a>
-        <a href="/competences/detail.html?id=18" class="competence-tag humain">Esprit critique</a>
+        <a href="/competences/detail.html?id=17" class="competence-tag humain">Esprit critique</a>
     </div>
 </section>
 `

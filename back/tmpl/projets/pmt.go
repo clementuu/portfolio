@@ -117,9 +117,8 @@ const PmtHTML = `
         <a href="/competences/detail.html?id=2" class="competence-tag technique">HTML/CSS</a>
         <a href="/competences/detail.html?id=6" class="competence-tag technique">SQL</a>
         <a href="/competences/detail.html?id=12" class="competence-tag devops">Docker</a>
-        <a href="/competences/detail.html?id=13" class="competence-tag devops">Kubernetes</a>
-        <a href="/competences/detail.html?id=18" class="competence-tag humain">Esprit critique</a>
-        <a href="/competences/detail.html?id=17" class="competence-tag humain">Créativité</a>
+        <a href="/competences/detail.html?id=16" class="competence-tag humain">Créativité</a>
+        <a href="/competences/detail.html?id=17" class="competence-tag humain">Esprit critique</a>
     </div>
 </section>
 `

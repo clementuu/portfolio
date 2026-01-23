@@ -45,7 +45,7 @@ const WebComp = `
         <ul>
             <li><a class="project-link" href="/projets/detail.html?id=1">Escarcelle</a></li>
             <li><a class="project-link" href="/projets/detail.html?id=4">Jeu Anti-Gaspi</a></li>
-            <li><a class="project-link" href="/projets/detail.html?id=6">Project Management Tool</a></li>
+            <li><a class="project-link" href="/projets/detail.html?id=6">PMT/a></li>
         </ul>
     </div>
 </section>

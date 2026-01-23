@@ -125,10 +125,10 @@ const EscarcelleHTML = `
         <a href="/competences/detail.html?id=3" class="competence-tag technique">JavaScript</a>
         <a href="/competences/detail.html?id=4" class="competence-tag technique">Svelte</a>
         <a href="/competences/detail.html?id=6" class="competence-tag technique">SQL</a>
-        <a href="/competences/detail.html?id=14" class="competence-tag devops">Bash</a>
+        <a href="/competences/detail.html?id=13" class="competence-tag devops">Bash</a>
         <a href="/competences/detail.html?id=12" class="competence-tag devops">Docker</a>
-        <a href="/competences/detail.html?id=15" class="competence-tag humain">Gestion de projet</a>
-        <a href="/competences/detail.html?id=16" class="competence-tag humain">Flexibilité</a>
+        <a href="/competences/detail.html?id=14" class="competence-tag humain">Gestion de projet</a>
+        <a href="/competences/detail.html?id=15" class="competence-tag humain">Flexibilité</a>
     </div>
 </section>
 `

@@ -22,12 +22,11 @@ var (
 	RebolCompetence          = model.Competence{ID: 10, Name: "Rebol", Image: constants.RebolLogo, Rating: 2, Template: tmpl.RebolComp, Type: model.Dev}
 	RCompetence              = model.Competence{ID: 11, Name: "R", Image: constants.RLogo, Rating: 2, Template: tmpl.RComp, Type: model.Dev}
 	DockerCompetence         = model.Competence{ID: 12, Name: "Docker", Image: constants.DockerLogo, Rating: 4, Template: tmpl.DockerComp, Type: model.DevOps}
-	KubernetesCompetence     = model.Competence{ID: 13, Name: "Kubernetes", Image: constants.KubeLogo, Rating: 1, Template: tmpl.KubernetesComp, Type: model.DevOps}
-	BashCompetence           = model.Competence{ID: 14, Name: "Bash", Image: constants.BashLogo, Rating: 2, Template: tmpl.BashComp, Type: model.DevOps}
-	GestionProjetCompetence  = model.Competence{ID: 15, Name: "Gestion de projet", Image: constants.ManageLogo, Rating: 2, Template: tmpl.GestionProjetComp, Type: model.Human}
-	FlexibiliteCompetence    = model.Competence{ID: 16, Name: "Flexibilité", Image: constants.FlexLogo, Rating: 4, Template: tmpl.FlexibiliteComp, Type: model.Human}
-	CreativiteCompetence     = model.Competence{ID: 17, Name: "Créativité", Image: constants.CreativeLogo, Rating: 3, Template: tmpl.CreativiteComp, Type: model.Human}
-	EspritCritiqueCompetence = model.Competence{ID: 18, Name: "Esprit critique", Image: constants.CriticalLogo, Rating: 4, Template: tmpl.PenseeCritiqueComp, Type: model.Human}
+	BashCompetence           = model.Competence{ID: 13, Name: "Bash", Image: constants.BashLogo, Rating: 2, Template: tmpl.BashComp, Type: model.DevOps}
+	GestionProjetCompetence  = model.Competence{ID: 14, Name: "Gestion de projet", Image: constants.ManageLogo, Rating: 2, Template: tmpl.GestionProjetComp, Type: model.Human}
+	FlexibiliteCompetence    = model.Competence{ID: 15, Name: "Flexibilité", Image: constants.FlexLogo, Rating: 4, Template: tmpl.FlexibiliteComp, Type: model.Human}
+	CreativiteCompetence     = model.Competence{ID: 16, Name: "Créativité", Image: constants.CreativeLogo, Rating: 3, Template: tmpl.CreativiteComp, Type: model.Human}
+	EspritCritiqueCompetence = model.Competence{ID: 17, Name: "Esprit critique", Image: constants.CriticalLogo, Rating: 4, Template: tmpl.PenseeCritiqueComp, Type: model.Human}
 )
 
 var competencesList = []model.Competence{
@@ -43,7 +42,6 @@ var competencesList = []model.Competence{
 	RebolCompetence,
 	RCompetence,
 	DockerCompetence,
-	KubernetesCompetence,
 	BashCompetence,
 	GestionProjetCompetence,
 	FlexibiliteCompetence,
