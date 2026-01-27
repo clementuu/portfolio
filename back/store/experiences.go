@@ -11,5 +11,5 @@ var (
 var experiencesList = []model.Experience{Softinnov, AntiGaspi, Idemia}
 
 func (r *RAMStore) GetExperiences() []model.Experience {
-	return experiencesList
+	return r.Experiences
 }

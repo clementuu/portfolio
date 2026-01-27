@@ -2,7 +2,6 @@ package service
 
 import (
 	"back/model"
-	"back/store"
 )
 
 type webStore interface {
@@ -17,6 +16,6 @@ type webStore interface {
 
 var storage webStore
 
-func Init() {
-	storage = store.NewRAMStore()
+func Init(store webStore) {
+	storage = store
 }

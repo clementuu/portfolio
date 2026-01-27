@@ -49,12 +49,12 @@ var competencesList = []model.Competence{
 	EspritCritiqueCompetence,
 }
 
-func (s *RAMStore) GetCompetences() []model.Competence {
-	return competencesList
+func (r *RAMStore) GetCompetences() []model.Competence {
+	return r.Competences
 }
 
-func (s *RAMStore) GetCompetence(id int) (model.Competence, error) {
-	for _, c := range competencesList {
+func (r *RAMStore) GetCompetence(id int) (model.Competence, error) {
+	for _, c := range r.Competences {
 		if c.ID == id {
 			return c, nil
 		}

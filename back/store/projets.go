@@ -25,12 +25,12 @@ var projetsList = []model.Projet{
 	ProjetPMT,
 }
 
-func (s *RAMStore) GetProjets() []model.Projet {
-	return projetsList
+func (r *RAMStore) GetProjets() []model.Projet {
+	return r.Projets
 }
 
-func (s *RAMStore) GetProjetsNames() (mps []model.MiniProjet) {
-	for _, p := range projetsList {
+func (r *RAMStore) GetProjetsNames() (mps []model.MiniProjet) {
+	for _, p := range r.Projets {
 		var mp model.MiniProjet
 		mp.ID = p.ID
 		mp.Name = p.Name
@@ -39,8 +39,8 @@ func (s *RAMStore) GetProjetsNames() (mps []model.MiniProjet) {
 	return mps
 }
 
-func (s *RAMStore) GetProjet(id int) (model.Projet, error) {
-	for _, p := range projetsList {
+func (r *RAMStore) GetProjet(id int) (model.Projet, error) {
+	for _, p := range r.Projets {
 		if p.ID == id {
 			return p, nil
 		}

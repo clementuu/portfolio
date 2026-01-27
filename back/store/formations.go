@@ -10,6 +10,6 @@ var (
 
 var formationsList = []model.Formation{Master, Licence, Lycee}
 
-func (s *RAMStore) GetFormations() []model.Formation {
-	return formationsList
+func (r *RAMStore) GetFormations() []model.Formation {
+	return r.Formations
 }

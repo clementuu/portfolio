@@ -3,6 +3,7 @@ package main
 import (
 	"back/cfg"
 	"back/service"
+	"back/store"
 	"back/web"
 	"log"
 	"net/http"
@@ -14,7 +15,9 @@ func main() {
 		log.Fatal(err)
 	}
 
-	service.Init()
+	ramStore := store.NewRAMStore()
+
+	service.Init(ramStore)
 
 	fs := http.FileServer(http.Dir(config.StaticDir))
 	http.Handle("/", fs)
