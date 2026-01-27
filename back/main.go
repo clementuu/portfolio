@@ -17,7 +17,7 @@ func main() {
 
 	ramStore := store.NewRAMStore()
 
-	service.Init(ramStore)
+	service.Setup(ramStore)
 
 	fs := http.FileServer(http.Dir(config.StaticDir))
 	http.Handle("/", fs)

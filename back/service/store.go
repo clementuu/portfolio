@@ -16,6 +16,6 @@ type webStore interface {
 
 var storage webStore
 
-func Init(store webStore) {
+func Setup(store webStore) {
 	storage = store
 }
