@@ -128,6 +128,27 @@ func TestGetProjetByID(t *testing.T) {
 	}
 }
 
+func TestGetProjetsNames(t *testing.T) {
+	req := httptest.NewRequest(http.MethodGet, "/projets/names", nil)
+	rr := httptest.NewRecorder()
+
+	GetProjetsNames(rr, req)
+
+	if rr.Code != http.StatusOK {
+		t.Fatalf("expected status %d, got %d", http.StatusOK, rr.Code)
+	}
+
+	var got []model.MiniProjet
+	if err := json.NewDecoder(rr.Body).Decode(&got); err != nil {
+		t.Fatalf("could not decode response body: %v", err)
+	}
+
+	// We have 2 competences in our mock data
+	if len(got) != 2 {
+		t.Errorf("expected 2 competences, got %d", len(got))
+	}
+}
+
 func TestGetFormations(t *testing.T) {
 	req := httptest.NewRequest(http.MethodGet, "/formations", nil)
 	rr := httptest.NewRecorder()
