@@ -22,7 +22,7 @@
             .catch(e => {
                 console.error("Error fetching projet:", e);
                 error = "Erreur lors du chargement des détails du projet.";
-                competence = null;
+                projet = null;
             })
     } else {
         error = "Aucun ID de projet n'a été fourni.";

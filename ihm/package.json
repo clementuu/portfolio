@@ -6,14 +6,16 @@
         "esbuild-svelte": "^0.8.0",
         "svelte": "^4.2.20"
     },
-    "scripts": {
-        "test": "vitest"
-    },
     "devDependencies": {
         "@sveltejs/vite-plugin-svelte": "^2.5.3",
         "@testing-library/jest-dom": "^6.9.1",
         "@testing-library/svelte": "^5.3.1",
+        "@vitest/coverage-v8": "^4.0.18",
         "jsdom": "^27.4.0",
         "vitest": "^4.0.18"
+    },
+    "scripts": {
+        "test": "vitest",
+        "test:coverage": "vitest --coverage"
     }
 }

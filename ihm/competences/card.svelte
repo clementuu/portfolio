@@ -42,7 +42,7 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
-        width: 220px;
+        width: 180px;
         transition: transform 0.2s;
         cursor: pointer;
     }
