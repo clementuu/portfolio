@@ -127,10 +127,10 @@
 		flex-direction: column;
 		align-items: center;
 		z-index: 1;
-		margin: 10% 15% 0 15%;
+		margin: 10% 10% 0 10%;
 	}
 
-	@media (min-width: 768px) {
+	@media (min-width: 1000px) {
 		.its-me {
 			flex-direction: row;
 		}
@@ -173,6 +173,6 @@
 	}
 
 	.metier {
-		font-size: clamp(20px, 15vw, 40px);
+		font-size: clamp(15px, 8vw, 40px);
 	}
 </style>

@@ -26,7 +26,7 @@
 <div>
     {#if error}
         <p class="error">{error}</p>
-    {:else}
+    {:else if projets.length > 0}
         <h2>Mes Projets</h2>
         <div class="projets-grid">
             {#each projets as projet}
@@ -44,6 +44,6 @@
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 1em;
         justify-items: center;
-        padding: 1em;
+        padding: 1em 2em;
     }
 </style>

@@ -1,8 +1,8 @@
 <script>
     import { onMount } from 'svelte';
     export let index = 0;
-    export let delay = 150;
-    export let threshold = 0.1;
+    export let delay = 50;
+    export let threshold = 0.2;
 
     let visible = false;
     let element;

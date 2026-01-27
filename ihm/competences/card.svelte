@@ -23,7 +23,7 @@
     <div class="image-container">
         <img src={competence.image} alt={competence.name} />
     </div>
-    <h4>{competence.name}</h4>
+    <h5>{competence.name}</h5>
     <div class="stars">{getStars(competence.rating)}</div>
     <span class={`card-span ${competence.type === 'Dev' ? 'technique' : competence.type === 'DevOps' ? 'devops' : 'humain'}`}>#{competence.type}</span>
 </button>
@@ -35,14 +35,14 @@
     .competence-card {
         border: 1px solid #eee;
         border-radius: 8px;
-        padding: 1em;
+        padding: 2em 0;
         margin: 1em;
         box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
-        width: 180px;
+        width: 220px;
         transition: transform 0.2s;
         cursor: pointer;
     }
@@ -52,7 +52,7 @@
     }
 
     .competence-card img {
-        max-width: 100%;
+        max-width: 100px;
         max-height: 100%;
         object-fit: contain;
         border-radius: 4px;
@@ -67,13 +67,13 @@
         margin-bottom: 1em;
     }
 
-    .competence-card h4 {
+    .competence-card h5 {
         margin-top: 0;
         color: #333;
     }
 
     .competence-card .stars {
         font-size: 1.2em;
-        color: gold; /* Or any other color for stars */
+        color: gold;
     }
 </style>

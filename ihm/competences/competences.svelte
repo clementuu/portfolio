@@ -49,8 +49,6 @@
                 />
             {/each}
         </div>
-    {:else}
-        Chargement des compétences...
     {/if}
 </div>
 
@@ -58,10 +56,9 @@
     @import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");
 
     .competences-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-        gap: 1em;
-        justify-items: center;
+        display: inline-flex;
+        flex-wrap: wrap;
+        justify-content: center;
         padding: 1em;
     }
 </style>

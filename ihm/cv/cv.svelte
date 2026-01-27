@@ -6,6 +6,7 @@
 
     let formations = [];
     let error = '';
+    let loaded = false;
 
     async function getFormations() {
         try {
@@ -40,18 +41,25 @@
     onMount(()=>{
         getFormations();
         getExperiences();
+        loaded = true;
     });
+
+    // calculs d'offset
+    let formationTitleIndex = 0;
+    let formationStartIndex = formationTitleIndex + 1;
+    $: experienceTitleIndex = formationStartIndex + formations.length;
+    $: experienceStartIndex = experienceTitleIndex + 1;
 </script>
 
 <section>
-    <OnScrollAppear>
+    <OnScrollAppear index={formationTitleIndex}>
         <h2>Formations</h2>
     </OnScrollAppear>
     {#if error}
         <p class="error">{error}</p>
     {:else if formations.length > 0}
-        {#each formations as formation, index}
-            <OnScrollAppear {index}>
+        {#each formations as formation, i}
+            <OnScrollAppear index={formationStartIndex + i}>
                 <FormationCard {formation} />
             </OnScrollAppear>
         {/each}
@@ -61,14 +69,14 @@
 </section>
 
 <section>
-    <OnScrollAppear>
+    <OnScrollAppear index={experienceTitleIndex}>
         <h2>Expériences professionnelles</h2>
     </OnScrollAppear>
     {#if error}
         <p class="error">{error}</p>
     {:else if experiences.length > 0}
-        {#each experiences as experience, index}
-            <OnScrollAppear {index}>
+        {#each experiences as experience, i}
+            <OnScrollAppear index={experienceStartIndex + i}>
                 <ExperienceCard {experience} />
             </OnScrollAppear>
         {/each}
