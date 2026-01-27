@@ -2,7 +2,9 @@ package web
 
 import (
 	"back/model"
-	"back/service"
+	"back/service/competence"
+	"back/service/cv"
+	"back/service/projet"
 	"back/store"
 	"testing"
 )
@@ -31,7 +33,9 @@ func TestMain(m *testing.M) {
 		{Intitule: "Rockstar", Taches: []string{"Fumer un max de clopes", "Crier très fort dans un micro", "Faire coucou aux fans"}},
 	}
 
-	service.Setup(ramStore)
+	competence.Setup(ramStore)
+	projet.Setup(ramStore)
+	cv.Setup(ramStore)
 
 	m.Run()
 }

@@ -1,7 +1,9 @@
 package web
 
 import (
-	"back/service"
+	"back/model"
+	"back/service/competence"
+	"back/service/projet"
 	"encoding/json"
 	"fmt"
 	"net/http"
@@ -14,9 +16,9 @@ func TestGetCompetenceByID(t *testing.T) {
 		name       string
 		id         string
 		wantStatus int
-		wantBody   *service.Competence
+		wantBody   *competence.Model
 	}{
-		{name: "OK", id: "1", wantStatus: http.StatusOK, wantBody: &service.Competence{ID: 1, Name: "Go", Rating: 4}},
+		{name: "OK", id: "1", wantStatus: http.StatusOK, wantBody: &competence.Model{ID: 1, Name: "Go", Rating: 4}},
 		{name: "Bad request", id: "abc", wantStatus: http.StatusBadRequest, wantBody: nil},
 		{name: "Not Found", id: "999", wantStatus: http.StatusInternalServerError, wantBody: nil},
 	}
@@ -35,7 +37,7 @@ func TestGetCompetenceByID(t *testing.T) {
 			}
 
 			if tc.wantBody != nil {
-				var got service.Competence
+				var got competence.Model
 				if err := json.NewDecoder(rr.Body).Decode(&got); err != nil {
 					t.Fatalf("could not decode response body: %v", err)
 				}
@@ -57,7 +59,7 @@ func TestGetAllCompetences(t *testing.T) {
 		t.Fatalf("expected status %d, got %d", http.StatusOK, rr.Code)
 	}
 
-	var got []service.Competence
+	var got []competence.Model
 	if err := json.NewDecoder(rr.Body).Decode(&got); err != nil {
 		t.Fatalf("could not decode response body: %v", err)
 	}
@@ -78,7 +80,7 @@ func TestGetAllProjets(t *testing.T) {
 		t.Fatalf("expected status %d, got %d", http.StatusOK, rr.Code)
 	}
 
-	var got []service.Projet
+	var got []projet.Model
 	if err := json.NewDecoder(rr.Body).Decode(&got); err != nil {
 		t.Fatalf("could not decode response body: %v", err)
 	}
@@ -93,9 +95,9 @@ func TestGetProjetByID(t *testing.T) {
 		name       string
 		id         string
 		wantStatus int
-		wantBody   *service.Projet
+		wantBody   *projet.Model
 	}{
-		{name: "OK", id: "1", wantStatus: http.StatusOK, wantBody: &service.Projet{ID: 1, Name: "Maquette 2cv", Sujet: "Monter une maquette de 2cv avec le padre"}},
+		{name: "OK", id: "1", wantStatus: http.StatusOK, wantBody: &projet.Model{ID: 1, Name: "Maquette 2cv", Sujet: "Monter une maquette de 2cv avec le padre"}},
 		{name: "Bad request", id: "abc", wantStatus: http.StatusBadRequest, wantBody: nil},
 		{name: "Not Found", id: "999", wantStatus: http.StatusInternalServerError, wantBody: nil},
 	}
@@ -114,7 +116,7 @@ func TestGetProjetByID(t *testing.T) {
 			}
 
 			if tc.wantBody != nil {
-				var got service.Projet
+				var got projet.Model
 				if err := json.NewDecoder(rr.Body).Decode(&got); err != nil {
 					t.Fatalf("could not decode response body: %v", err)
 				}
@@ -123,5 +125,45 @@ func TestGetProjetByID(t *testing.T) {
 				}
 			}
 		})
+	}
+}
+
+func TestGetFormations(t *testing.T) {
+	req := httptest.NewRequest(http.MethodGet, "/formations", nil)
+	rr := httptest.NewRecorder()
+
+	GetFormations(rr, req)
+
+	if rr.Code != http.StatusOK {
+		t.Fatalf("expected status %d, got %d", http.StatusOK, rr.Code)
+	}
+
+	var got []model.Formation
+	if err := json.NewDecoder(rr.Body).Decode(&got); err != nil {
+		t.Fatalf("could not decode response body: %v", err)
+	}
+
+	if len(got) != 3 {
+		t.Errorf("expected 3 formations, got %d", len(got))
+	}
+}
+
+func TestGetExperiences(t *testing.T) {
+	req := httptest.NewRequest(http.MethodGet, "/experiences", nil)
+	rr := httptest.NewRecorder()
+
+	GetExperiences(rr, req)
+
+	if rr.Code != http.StatusOK {
+		t.Fatalf("expected status %d, got %d", http.StatusOK, rr.Code)
+	}
+
+	var got []model.Experience
+	if err := json.NewDecoder(rr.Body).Decode(&got); err != nil {
+		t.Fatalf("could not decode response body: %v", err)
+	}
+
+	if len(got) != 2 {
+		t.Errorf("expected 2 experiences, got %d", len(got))
 	}
 }

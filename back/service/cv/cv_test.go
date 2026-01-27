@@ -1,12 +1,11 @@
-package service_test
+package cv
 
 import (
-	"back/service"
 	"testing"
 )
 
 func TestGetFormations(t *testing.T) {
-	formations := service.GetFormations()
+	formations := GetFormations()
 
 	if formations == nil {
 		t.Errorf("GetFormations() returned nil; expected a slice of formations")
@@ -30,7 +29,7 @@ func TestGetFormations(t *testing.T) {
 }
 
 func TestGetExperiences(t *testing.T) {
-	experiences := service.GetExperiences()
+	experiences := GetExperiences()
 
 	if experiences == nil {
 		t.Errorf("GetExperiences() returned nil; expected a slice of experiences")

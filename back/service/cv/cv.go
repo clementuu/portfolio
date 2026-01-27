@@ -1,4 +1,4 @@
-package service
+package cv
 
 import "back/model"
 

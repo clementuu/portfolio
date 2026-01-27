@@ -1,13 +1,12 @@
-package service_test
+package projet
 
 import (
-	"back/service"
 	"strings"
 	"testing"
 )
 
 func TestGetAllProjets(t *testing.T) {
-	projets := service.GetAllProjets()
+	projets := GetAll()
 
 	if projets == nil {
 		t.Errorf("GetAllProjets() returned nil; expected a slice of projets")
@@ -27,7 +26,7 @@ func TestGetAllProjets(t *testing.T) {
 }
 
 func TestGetProjetsNames(t *testing.T) {
-	miniProjets := service.GetProjetsNames()
+	miniProjets := GetNames()
 
 	if miniProjets == nil {
 		t.Errorf("GetProjetsNames() returned nil; expected a slice of mini projets")
@@ -72,7 +71,7 @@ func TestGetProjet(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			projet, err := service.GetProjet(tt.projetID)
+			projet, err := Get(tt.projetID)
 
 			if (err != nil) != tt.expectError {
 				t.Errorf("GetProjet() error = %v, expectError %v", err, tt.expectError)

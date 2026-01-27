@@ -2,7 +2,9 @@ package main
 
 import (
 	"back/cfg"
-	"back/service"
+	"back/service/competence"
+	"back/service/cv"
+	"back/service/projet"
 	"back/store"
 	"back/web"
 	"log"
@@ -17,7 +19,9 @@ func main() {
 
 	ramStore := store.NewRAMStore()
 
-	service.Setup(ramStore)
+	competence.Setup(ramStore)
+	projet.Setup(ramStore)
+	cv.Setup(ramStore)
 
 	fs := http.FileServer(http.Dir(config.StaticDir))
 	http.Handle("/", fs)

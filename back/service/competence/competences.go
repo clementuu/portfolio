@@ -1,8 +1,8 @@
-package service
+package competence
 
 import "back/model"
 
-type Competence struct {
+type Model struct {
 	ID       int    `json:"id"`
 	Name     string `json:"name"`
 	Image    string `json:"image"`
@@ -12,15 +12,15 @@ type Competence struct {
 	Type     string `json:"type"`
 }
 
-func getCompetences(cs []model.Competence) (competences []Competence) {
+func ToModels(cs []model.Competence) (competences []Model) {
 	for _, c := range cs {
-		competence := getCompetence(c)
+		competence := toModel(c)
 		competences = append(competences, competence)
 	}
 	return competences
 }
 
-func getCompetence(c model.Competence) (competence Competence) {
+func toModel(c model.Competence) (competence Model) {
 	competence.ID = c.ID
 	competence.Name = c.Name
 	competence.Image = c.Image
@@ -32,15 +32,15 @@ func getCompetence(c model.Competence) (competence Competence) {
 	return competence
 }
 
-func GetAllCompetences() (competences []Competence) {
+func GetAll() (competences []Model) {
 	cs := storage.GetCompetences()
-	return getCompetences(cs)
+	return ToModels(cs)
 }
 
-func GetCompetence(id int) (Competence, error) {
+func Get(id int) (Model, error) {
 	c, err := storage.GetCompetence(id)
 	if err != nil {
-		return Competence{}, err
+		return Model{}, err
 	}
-	return getCompetence(c), nil
+	return toModel(c), nil
 }

@@ -1,12 +1,11 @@
-package service_test
+package competence
 
 import (
-	"back/service" // Assuming direct use of the store
 	"testing"
 )
 
 func TestGetAllCompetences(t *testing.T) {
-	competences := service.GetAllCompetences()
+	competences := GetAll()
 
 	if competences == nil {
 		t.Errorf("GetAllCompetences() returned nil; expected a slice of competences")
@@ -49,7 +48,7 @@ func TestGetCompetence(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			comp, err := service.GetCompetence(tt.competenceID)
+			comp, err := Get(tt.competenceID)
 
 			if (err != nil) != tt.expectError {
 				t.Errorf("GetCompetence() error = %v, expectError %v", err, tt.expectError)
