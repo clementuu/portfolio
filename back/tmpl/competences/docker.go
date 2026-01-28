@@ -2,50 +2,100 @@ package tmpl
 
 // DockerComp contient la description HTML de la compétence Docker.
 const DockerComp = `
-<!-- =================================================================== -->
-<!-- SECTION : TITRE ET INTRODUCTION DE LA COMPÉTENCE                    -->
-<!-- =================================================================== -->
 <section class="comp-section">
+    <h3>Définition</h3>
     <p>
-        Docker est une plateforme de conteneurisation qui permet d'empaqueter une application et ses 
-        dépendances dans un conteneur logiciel isolé. Cette approche garantit que l'application 
-        fonctionnera de manière uniforme et prévisible, quel que soit l'environnement sur lequel 
-        elle est déployée.
+        Docker est une plateforme de conteneurisation permettant d'empaqueter une application et ses 
+        dépendances dans un conteneur isolé, garantissant un comportement identique quel que soit 
+        l'environnement d'exécution. Cette approche élimine les écarts entre postes de développement, 
+        environnements de test et serveurs de production.
     </p>
     <p>
-        J'utilise Docker pour standardiser mes environnements de développement, de test et de production. 
-        Cela simplifie la configuration, élimine les conflits de dépendances ("ça marche sur ma machine") 
-        et facilite le déploiement continu. J'ai notamment utilisé Docker Compose pour orchestrer des 
-        applications multi-conteneurs, en définissant des services, des réseaux et des volumes de manière déclarative.
+        J'utilise Docker pour standardiser mes environnements et fiabiliser mes déploiements. Grâce à 
+        Docker Compose, je peux orchestrer des architectures multi-conteneurs complexes en définissant 
+        les services, réseaux et volumes de manière déclarative. Cette pratique est devenue essentielle 
+        dans la gestion d'applications modernes, qu'il s'agisse de microservices, de plateformes 
+        full-stack ou d'écosystèmes applicatifs plus vastes comme Escarcelle.
     </p>
 </section>
 
-<!-- =================================================================== -->
-<!-- SECTION : MISE EN PRATIQUE                                          -->
-<!-- =================================================================== -->
 <section class="comp-section">
-    <h3>Mise en pratique</h3>
+    <h3>Éléments de preuve</h3>
     <p>
-        Mon expérience avec Docker s'étend de la conteneurisation d'applications complètes à l'optimisation des flux CI/CD, garantissant des environnements de développement et de production cohérents et reproductibles.
+        Mon expérience avec Docker couvre aussi bien la conteneurisation d'applications simples que 
+        l'orchestration de plateformes complètes impliquant plusieurs services interdépendants. 
+        J'ai utilisé Docker pour fiabiliser mes environnements, optimiser mes pipelines CI/CD et 
+        faciliter la collaboration entre développeurs.
     </p>
-    <ul>
-        <li>
-            <strong>Conteneurisation d'applications Full-Stack :</strong> Pour des projets comme mon <strong>Portfolio</strong> ou <strong>PMT</strong>, j'ai mis en œuvre des architectures conteneurisées encapsulant à la fois le frontend (Svelte, Angular) et le backend (Go, Spring Boot). Cela inclut la gestion des dépendances spécifiques à chaque couche et leur compilation au sein d'une image Docker finale.
-        </li>
-        <li>
-            <strong>Builds multi-étapes optimisés :</strong> J'utilise des <code>Dockerfile</code> multi-étapes pour réduire la taille des images finales et améliorer la sécurité. Par exemple, pour mon portfolio, une première étape compile le frontend avec Node.js, puis la seconde compile le backend Go, intégrant les assets frontaux générés, avant de produire une image finale minimale basée sur Alpine.
-        </li>
-        <li>
-            <strong>Orchestration avec Docker Compose :</strong> Pour le développement local et les environnements de test, <strong>Docker Compose</strong> est un outil essentiel. Il me permet de définir et de lancer des applications multi-conteneurs (base de données, backend, frontend, services tiers) de manière déclarative, simplifiant ainsi la configuration et la mise en place de projets complexes.
-        </li>
-        <li>
-            <strong>Intégration CI/CD :</strong> Docker est un pilier de mes pipelines d'intégration continue. Les conteneurs offrent un environnement de build isolé et stable, où les tests s'exécutent de manière fiable. Cela a été essentiel pour des projets comme <strong>Escarcelle</strong> et <strong>Caisse</strong>, où la portabilité de l'environnement est cruciale.
-        </li>
-    </ul>
+
     <p>
-        Cette approche me permet de déployer des applications robustes et scalables, en m'assurant que l'environnement de production est une réplique fidèle de l'environnement de développement.
+        <strong>Conteneurisation d'applications Full-Stack (Portfolio, PMT).</strong>
+        Pour mon <strong>Portfolio</strong> et le projet <strong>PMT</strong>, j'ai conçu des images Docker 
+        capables d'embarquer à la fois le frontend (Svelte/Angular) et le backend (Go/Spring Boot). 
+        Cette approche a permis de garantir une reproductibilité totale entre les environnements et 
+        d'accélérer les cycles de développement et de déploiement.
+    </p>
+
+    <p>
+        <strong>Optimisation des builds avec Docker multi-étapes.</strong>
+        J'ai systématiquement recours aux <code>Dockerfile</code> multi-étapes pour réduire la taille 
+        des images finales, améliorer la sécurité et accélérer les déploiements. Par exemple, pour 
+        mon portfolio, une première étape compile le frontend, une seconde compile le backend Go en 
+        intégrant les assets générés, et une dernière produit une image Alpine minimale.
+    </p>
+
+    <p>
+        <strong>Orchestration multi-conteneurs avancée avec Docker Compose (Escarcelle).</strong>
+        Sur le projet <strong>Escarcelle</strong>, j'ai orchestré une architecture complète composée de 
+        plusieurs services indépendants : frontend Svelte, backend Go, base de données MySQL, serveur SMTP, 
+        services internes et API partenaire. Contrairement à mes projets personnels où une seule image 
+        regroupait frontend et backend, chaque composant d'Escarcelle possède sa propre image Docker, 
+        permettant une modularité accrue, un déploiement granulaire et une meilleure isolation.
+        <br><br>
+        J'ai structuré l'ensemble via Docker Compose afin de :
+        <ul>
+            <li>définir des réseaux internes pour sécuriser les échanges entre services,</li>
+            <li>gérer les volumes persistants (données MySQL, logs, configurations),</li>
+            <li>standardiser l'environnement de développement pour toute l'équipe,</li>
+            <li>faciliter les tests d'intégration en local grâce à un écosystème complet reproductible.</li>
+        </ul>
+        Cette orchestration a été un élément clé pour moderniser la plateforme et accompagner la transition 
+        vers un système modulaire et interopérable.
     </p>
 </section>
+
+<section class="comp-section">
+    <h3>Autocritique</h3>
+    <p>
+        Ma maîtrise de Docker est <strong>solide</strong>. Je suis à l'aise avec la création d'images 
+        optimisées, la gestion de réseaux et de volumes, l'orchestration multi-services avec Docker Compose 
+        et l'intégration de Docker dans des pipelines CI/CD. Escarcelle m'a permis d'aller plus loin en 
+        orchestrant un véritable écosystème applicatif composé de services hétérogènes et interdépendants.
+    </p>
+    <p>
+        Si je devais donner un conseil à ceux qui débutent : comprendre les fondamentaux (images, 
+        conteneurs, volumes, réseaux) est indispensable avant de se lancer dans des orchestrateurs plus 
+        avancés comme Kubernetes. Un <code>Dockerfile</code> propre et une architecture Compose bien pensée 
+        sont les bases d'un système conteneurisé robuste.
+    </p>
+</section>
+
+<section class="comp-section">
+    <h3>Évolution</h3>
+    <p>
+        À moyen terme, je souhaite approfondir l'orchestration avancée avec <strong>Kubernetes</strong>. 
+        Après avoir géré des architectures multi-conteneurs complexes via Docker Compose, la prochaine étape 
+        naturelle est la gestion d'applications distribuées à grande échelle : Helm, Operators, stratégies 
+        de déploiement, observabilité, scalabilité automatique.
+    </p>
+    <p>
+        Je suis actuellement des formations sur Kubernetes et prévois de mettre en place un cluster de 
+        démonstration pour expérimenter des déploiements plus avancés, notamment en m'appuyant sur les 
+        concepts déjà acquis grâce à Docker et Docker Compose.
+    </p>
+</section>
+
+
 <section class="comp-section">
     <h3>Projets Associés</h3>
     <div class="project-list">
