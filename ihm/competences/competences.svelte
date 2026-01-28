@@ -37,7 +37,7 @@
     }
 </script>
 
-<div>
+<div class="competences-div">
     {#if error}
         <p class="error">{error}</p>
     {:else if displayedCompetences}
@@ -61,4 +61,15 @@
         justify-content: center;
         padding: 1em;
     }
+
+    .competences-div {
+        position: relative;
+        top: 0;
+    }
+
+    @media (min-width: 768px) {
+		.competences-div {
+			top: var(--header-height);
+		}
+	}
 </style>

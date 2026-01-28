@@ -47,18 +47,16 @@
     }
 </script>
 
-<div class="container">
+<div class="container competence-detail">
     {#if error}
         <p class="error">{error}</p>
     {:else if loading}
         <p>Chargement des détails de la compétence...</p>
     {:else if competence}
-        <div class="detail-container">
-            <h1>{competence.name}</h1>
-            <img src={competence.image} alt={`Logo de ${competence.name}`} />
-            <div class="stars">{getStars(competence.rating)}</div>
-            <div class="detail-text">{@html competence.template}</div>
-        </div>
+        <h1>{competence.name}</h1>
+        <img src={competence.image} alt={`Logo de ${competence.name}`} />
+        <div class="stars">{getStars(competence.rating)}</div>
+        <div class="detail-text">{@html competence.template}</div>
     {:else}
         <p>Aucune donnée de compétence trouvée. Veuillez retourner à la page des compétences et en sélectionner une.</p>
     {/if}
@@ -68,17 +66,16 @@
     @import "../style/style.css";
     @import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");
 
-    .detail-container {
+    .competence-detail {
+        position: relative;
+        top: 0;
+        margin: auto;
         padding: 2em;
         max-width: 800px;
-        margin: 2em auto;
-        background: #f9f9f9;
-        border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         text-align: center;
     }
 
-    .detail-container img {
+    .competence-detail img {
         max-width: 50px;
         margin-bottom: 1em;
     }
@@ -94,6 +91,13 @@
         margin-top: 1.5em;
         line-height: 1.6;
     }
+
+    @media (min-width: 768px) {
+		.competence-detail {
+			top: var(--header-height);
+            margin: 1em auto 5em auto;
+		}
+	}
 
     /*
         * Les styles ci-dessous utilisent :global() pour pouvoir s'appliquer

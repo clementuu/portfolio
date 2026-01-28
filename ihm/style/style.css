@@ -17,6 +17,12 @@ html, body {
     }
 }
 
+.container {
+    background: #f9f9f9;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    border-radius: 8px;
+}
+
 .centered {
     width: 30em;
     margin: auto;

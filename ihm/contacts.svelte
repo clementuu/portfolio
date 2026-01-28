@@ -33,17 +33,19 @@
     ];
 </script>
 
-<h2>Me Contacter</h2>
-<div class="contact-list">
-    {#each contacts as contact}
-        <div class="contact-item">
-            <div class="contact-icon">
-                <i class="bi {contact.iconClass}"></i>
+<div class="contact-div">
+    <h2>Me Contacter</h2>
+    <div class="contact-list">
+        {#each contacts as contact}
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <i class="bi {contact.iconClass}"></i>
+                </div>
+                <strong>{contact.type}:</strong>
+                <a href={contact.link} target="_blank" rel="noopener noreferrer">{contact.value}</a>
             </div>
-            <strong>{contact.type}:</strong>
-            <a href={contact.link} target="_blank" rel="noopener noreferrer">{contact.value}</a>
-        </div>
-    {/each}
+        {/each}
+    </div>
 </div>
 
 <style>
@@ -89,4 +91,15 @@
     .contact-item a:hover {
         text-decoration: underline;
     }
+
+    .contact-div {
+        position: relative;
+        top: 0;
+    }
+
+    @media (min-width: 768px) {
+		.contact-div {
+			top: var(--header-height);
+		}
+	}
 </style>

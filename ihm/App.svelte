@@ -41,14 +41,21 @@
 	</div>
 </div>
 
-<Cv/>
+<div class="cv-container">
+	<Cv/>
+</div>
 
 <style>
 	@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 	@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");
 
+	.cv-container {
+		padding-top: var(--header-height);
+	}
+
 	.banner {
 		position: relative;
+		top: var(--header-height);
 		height: calc(100vh - var(--header-height));
 		display: flex;
 		flex-direction: column;
@@ -108,6 +115,16 @@
 		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 		z-index: 1;
 		animation: bounce 2s infinite;
+	}
+
+	@media (max-width: 768px) {
+		.banner {
+			top:0
+		}
+
+		.cv-container {
+			padding-top: 0;
+		}
 	}
 
 	@keyframes bounce {

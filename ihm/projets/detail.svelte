@@ -29,7 +29,7 @@
     }
 </script>
 
-<div class="projet-detail-container">
+<div class="container projet-detail">
     {#if error}
         <p class="error">{error}</p>
     {:else if projet}
@@ -41,13 +41,15 @@
 </div>
 
 <style>
-    .projet-detail-container {
+    @import "../style/style.css";
+    
+    .projet-detail {
+        position: relative;
+        top: 0;
+        margin: auto;
         padding: 2rem;
         max-width: 900px;
-        margin: 0 auto;
         background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
     h1 {
         color: #333;
@@ -60,6 +62,13 @@
         line-height: 1.6;
     }
 
+    @media (min-width: 768px) {
+		.projet-detail {
+			top: var(--header-height);
+            margin: 1em auto 5em auto;
+		}
+	}
+
     /* 
      * Les styles ci-dessous utilisent :global() pour pouvoir s'appliquer 
      * au contenu HTML injecté via la directive {@html}.
@@ -69,6 +78,7 @@
         padding-bottom: 2rem;
         border-bottom: 1px solid #f0f0f0;
     }
+
     :global(.project-section:last-of-type) {
         border-bottom: none;
         margin-bottom: 0;
@@ -113,9 +123,6 @@
         justify-content: center;
     }
 
-    /*
-        * Styles for competence tags within injected HTML
-    */
     :global(.competence-tag) {
         display: inline-block;
         padding: 0.2em 0.6em; /* Similar to card-span */

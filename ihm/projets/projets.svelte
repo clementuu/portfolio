@@ -23,7 +23,7 @@
         });
 </script>
 
-<div>
+<div class="projets-div">
     {#if error}
         <p class="error">{error}</p>
     {:else if projets.length > 0}
@@ -46,4 +46,15 @@
         justify-items: center;
         padding: 1em 2em;
     }
+
+    .projets-div {
+        position: relative;
+        top: 0;
+    }
+
+    @media (min-width: 768px) {
+		.projets-div {
+			top: var(--header-height);
+		}
+	}
 </style>

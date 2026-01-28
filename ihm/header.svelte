@@ -51,6 +51,12 @@
     @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
     nav.header {
+        position: fixed;
+        top: 0;
+        bottom: auto;
+        left: 0;
+        right: 0;
+        z-index: 1001;
         background-color: #333;
         padding: 1em;
         height: var(--header-height);
@@ -111,6 +117,7 @@
     @media (max-width: 768px) {
         nav.header {
             position: fixed;
+            top: auto;
             bottom: 0;
             left: 0;
             right: 0;
