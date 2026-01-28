@@ -147,6 +147,7 @@ const CaisseHTML = `
         <a href="/competences/detail.html?id=1" class="competence-tag technique">Go</a>
         <a href="/competences/detail.html?id=6" class="competence-tag technique">SQL</a>
         <a href="/competences/detail.html?id=12" class="competence-tag devops">Docker</a>
+        <a href="/competences/detail.html?id=14" class="competence-tag humain">Gestion de projet</a>
         <a href="/competences/detail.html?id=16" class="competence-tag humain">Créativité</a>
         <a href="/competences/detail.html?id=15" class="competence-tag humain">Flexibilité</a>
         <a href="/competences/detail.html?id=17" class="competence-tag humain">Esprit critique</a>

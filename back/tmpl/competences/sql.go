@@ -35,7 +35,7 @@ const SQLComp = `
             <strong>Migration de base de données :</strong> J'ai mené à bien une migration complète de <strong>MySQL 5 à MySQL 8</strong> pour le projet Escarcelle. Cette mission critique a inclus une analyse d'impact, la réécriture de requêtes dépréciées et l'adaptation du code applicatif pour assurer une transition sans perte de données.
         </li>
         <li>
-            <strong>Gestion de base de données locale et synchronisation :</strong> Pour l'application de <strong>Caisse Escarcelle</strong>, j'ai mis en place et géré une base de données <strong>SQLite</strong> locale, incluant la gestion des migrations, l'indexation pour la performance, et un mécanisme de synchronisation bidirectionnelle avec l'API centrale.
+            <strong>Gestion de base de données locale et synchronisation :</strong> Pour l'application de <strong>Caisse</strong>, j'ai mis en place et géré une base de données <strong>SQLite</strong> locale, incluant la gestion des migrations, l'indexation pour la performance, et un mécanisme de synchronisation bidirectionnelle avec l'API centrale.
         </li>
     </ul>
 </section>

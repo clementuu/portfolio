@@ -25,16 +25,32 @@ const GestionProjetComp = `
 <section class="comp-section">
     <h3>Mise en pratique</h3>
     <p>
-        Cette compétence a été essentielle dans la conduite des projets suivants et tout au long de mon 
-        expérience professionnelle.
+        J'ai appliqué les principes de la gestion de projet sur des initiatives complexes, où ma capacité à naviguer entre les contraintes techniques, les besoins fonctionnels et les attentes des parties prenantes a été déterminante.
+    </p>
+    <ul>
+        <li>
+            <strong>Pilotage de Projets de Transformation (Escarcelle) :</strong> Sur le projet <strong>Escarcelle</strong>, j'ai géré la modernisation d'un socle historique, impliquant des migrations de bases de données, des refontes architecturales et l'intégration de nouvelles technologies. Cela a nécessité une planification rigoureuse, une gestion proactive des risques liés au legacy et une coordination étroite avec les équipes pour assurer une transition fluide et une évolution durable de l'écosystème.
+        </li>
+        <li>
+            <strong>Gestion du Cycle de Développement Complet (Caisse) :</strong> Pour la refonte de la <strong>Caisse</strong>, j'ai pris en charge le projet de bout en bout, de la phase de conception à la livraison. Cela a inclus la définition des spécifications techniques et fonctionnelles, la modélisation des workflows utilisateurs, la planification des itérations de développement et la supervision des tests pour garantir la conformité aux exigences et la qualité du produit final.
+        </li>
+        <li>
+            <strong>Coordination et Communication Multifonctionnelle :</strong> J'ai régulièrement servi de pont entre les équipes techniques, les utilisateurs finaux et les partenaires externes. Cela a impliqué la traduction des besoins métier en tâches techniques claires, la gestion des attentes, et l'établissement d'une communication transparente pour anticiper les blocages et assurer l'alignement de tous les intervenants.
+        </li>
+        <li>
+            <strong>Adaptation et Résolution de Problèmes :</strong> Face aux défis imprévus, j'ai démontré une capacité à adapter les plans, à identifier rapidement les solutions et à mobiliser les ressources nécessaires pour maintenir l'avancement du projet. Ma veille technologique constante me permet également de proposer des approches innovantes pour résoudre les problèmes complexes.
+        </li>
+    </ul>
+    <p>
+        Ces expériences ont renforcé ma conviction que la gestion de projet efficace est une combinaison d'organisation, de communication et de capacité à anticiper pour transformer une vision en une réalisation concrète et réussie.
     </p>
 </section>
 <section class="comp-section">
     <h3>Projets Associés</h3>
     <div class="project-list">
         <ul>
-            <li><a class="project-link" href="/projets/detail.html?id=4">Jeu Anti-Gaspi</a></li>
-            <li><a class="project-link" href="/projets/detail.html?id=3">Mission TousAntiGaspi</a></li>
+            <li><a class="project-link" href="/projets/detail.html?id=1">Escarcelle</a></li>
+            <li><a class="project-link" href="/projets/detail.html?id=2">Caisse</a></li>
         </ul>
     </div>
 </section>

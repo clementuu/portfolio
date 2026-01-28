@@ -24,8 +24,24 @@ const FlexibiliteComp = `
 <section class="comp-section">
     <h3>Mise en pratique</h3>
     <p>
-        Ma flexibilité a été mise à l'épreuve dans plusieurs projets où les exigences ont évolué, 
-        nécessitant une adaptation rapide et l'apprentissage de nouvelles technologies.
+        Ma flexibilité s'est manifestée concrètement dans divers contextes, me permettant de m'adapter rapidement aux évolutions technologiques et aux besoins changeants des projets.
+    </p>
+    <ul>
+        <li>
+            <strong>Adaptation technologique et modernisation (Escarcelle) :</strong> Sur le projet <strong>Escarcelle</strong>, j'ai activement participé à la modernisation d'un système historique. Cela a impliqué l'intégration de nouvelles technologies (Go, Svelte) avec un socle existant (Rebol), nécessitant une grande capacité d'adaptation pour assurer la coexistence et l'interopérabilité des différentes briques technologiques, tout en repensant des modules clés.
+        </li>
+        <li>
+            <strong>Refonte complète et apprentissage rapide (Caisse) :</strong> La refonte de la <strong>Caisse</strong> a été un excellent exemple de ma capacité à embrasser un changement technologique radical. Passant d'une solution obsolète à une application de bureau moderne en Go avec Fyne, j'ai dû rapidement acquérir une expertise sur un nouvel écosystème de développement, des paradigmes d'interface utilisateur et des méthodes de gestion de données locales et synchronisées.
+        </li>
+        <li>
+            <strong>Évolution des exigences et intégration de fonctionnalités :</strong> Dans ces deux projets, j'ai fait face à des exigences métiers en constante évolution. Ma flexibilité m'a permis d'intégrer de nouvelles fonctionnalités (comme le support multi-code-barres ou de nouveaux workflows utilisateurs), d'adapter l'architecture et le code existants sans compromettre la stabilité, et de proposer des solutions créatives pour répondre aux besoins émergents.
+        </li>
+        <li>
+            <strong>Gestion de l'incertitude et proactivité :</strong> J'ai appris à gérer l'incertitude inhérente aux projets complexes, en adoptant une approche proactive pour anticiper les problèmes potentiels et ajuster les plans en conséquence. Cette adaptabilité est cruciale pour naviguer dans des environnements de développement rapides et exigeants.
+        </li>
+    </ul>
+    <p>
+        Cette capacité à évoluer avec les projets et les technologies est, à mon sens, un atout majeur pour livrer des solutions pertinentes et durables dans un secteur en perpétuel mouvement.
     </p>
 </section>
 <section class="comp-section">
@@ -33,7 +49,7 @@ const FlexibiliteComp = `
     <div class="project-list">
         <ul>
             <li><a class="project-link" href="/projets/detail.html?id=1">Escarcelle</a></li>
-            <li><a class="project-link" href="/projets/detail.html?id=2">Caisse Escarcelle</a></li>
+            <li><a class="project-link" href="/projets/detail.html?id=2">Caisse</a></li>
         </ul>
     </div>
 </section>

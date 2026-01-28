@@ -25,7 +25,7 @@ const GoComp = `
 <section class="comp-section">
     <h3>Mise en pratique</h3>
     <p>
-        Mon expertise en Go s'est concrétisée à travers des projets d'envergure où j'ai pu mettre en œuvre un large éventail de fonctionnalités, notamment dans le cadre des projets <strong>Escarcelle</strong> et <strong>Caisse Escarcelle</strong> :
+        Mon expertise en Go s'est concrétisée à travers des projets d'envergure où j'ai pu mettre en œuvre un large éventail de fonctionnalités, notamment dans le cadre des projets <strong>Escarcelle</strong> et <strong>Caisse</strong> :
     </p>
     <ul>
         <li>
