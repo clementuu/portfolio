@@ -25,33 +25,44 @@ const SvelteComp = `
     </p>
     
     <p>
-        <strong>Refonte de modules métier complexes (Escarcelle).</strong>
-        Dans le cadre du projet <strong>Escarcelle</strong>, j'ai utilisé Svelte pour refondre des modules historiques de l'application de gestion métier. J'ai développé une <strong>architecture front-end modulaire</strong> basée sur des composants, permettant de gérer des données complexes (produits, stocks) et de communiquer de manière asynchrone avec une API REST. Le résultat a été une amélioration drastique de la maintenabilité du code et une interface utilisateur plus réactive. Ma valeur ajoutée a été de moderniser une partie critique du système, rendant l'application plus performante et plus facile à faire évoluer. (Voir <a href="/projets/detail.html?id=1">Escarcelle</a>)
+        <strong>Refonte de modules métier complexes (<a class="link" href="/projets/detail.html?id=1">Escarcelle</a>).</strong>
+        <br>Dans le cadre du projet Escarcelle, j'ai utilisé Svelte pour refondre des modules historiques de l'application de gestion métier. 
+        J'ai développé une architecture front-end modulaire basée sur des composants, permettant de gérer des données complexes (produits, stocks) et de 
+        communiquer de manière asynchrone avec une API REST. Cela a mené à une amélioration drastique de la maintenabilité du code et une interface utilisateur plus réactive. 
+        Ma valeur ajoutée a été de moderniser une partie critique du système, rendant l'application plus performante et plus facile à faire évoluer.
     </p>
 
     <p>
         <strong>Construction d'un portfolio web complet et performant.</strong>
-        L'intégralité de ce <strong>portfolio personnel</strong> a été construite avec Svelte. Ce projet sert de démonstration concrète de ma capacité à structurer une application web complète, à créer des <strong>composants réutilisables</strong> (comme les cartes de projet ou de compétence), à gérer la navigation et à assurer une expérience utilisateur fluide et performante. Le résultat est un site web rapide, léger et interactif. Ma valeur ajoutée a été de concevoir et de réaliser une vitrine professionnelle qui met en lumière mes compétences techniques avec un outil de pointe.
+        <br>L'intégralité de ce portfolio a été construite avec Svelte. Ce projet sert de démonstration concrète de ma capacité à structurer une application web complète, 
+        à créer des composants réutilisables (comme les cartes de projet ou de compétence), à gérer la navigation et à assurer une expérience utilisateur fluide et performante. 
+        Le résultat est un site web rapide, léger et interactif. Ma valeur ajoutée a été de concevoir et de réaliser une vitrine professionnelle qui met en lumière mes compétences techniques avec un outil de pointe.
     </p>
 </section>
 
 <section class="comp-section">
     <h3>Autocritique</h3>
     <p>
-        Maîtrise de Svelte : <strong>Avancée</strong>. Je suis très à l'aise avec la réactivité, le système de composants, les stores et les transitions de Svelte. J'apprécie particulièrement sa philosophie "compiler-first" qui offre des performances natives sans le poids d'un runtime. C'est une compétence que j'ai acquise de manière autodidacte et que j'ai rapidement approfondie grâce à des projets concrets.
+        Svelte est un des framework frontend que je maîtrise le mieux. Je suis à l'aise avec la réactivité, le système de composants, les stores et les transitions. 
+        J'apprécie particulièrement sa philosophie «compiler-first», qui permet des performances proches du natif tout en gardant un framework léger et simple à utiliser. 
+        J'ai acquis cette compétence de manière autodidacte et je l'ai approfondie grâce à des projets concrets, mais je sais qu'il me reste encore beaucoup à apprendre pour atteindre un niveau expert.
     </p>
     <p>
-        Je conseillerais aux nouveaux venus de se concentrer sur la compréhension de la réactivité de Svelte et de ne pas hésiter à exploiter les fonctionnalités de compilation pour optimiser leurs applications. Svelte est un excellent choix pour quiconque souhaite développer des interfaces utilisateur performantes avec une courbe d'apprentissage douce.
+        Pour ceux qui découvrent Svelte, je conseillerais de bien comprendre la réactivité et le fonctionnement des stores, 
+        et d'expérimenter avec la compilation pour optimiser le rendu. Svelte offre une approche agréable et efficace pour créer des interfaces réactives, 
+        et c’est un framework que je trouve particulièrement stimulant.
     </p>
 </section>
 
 <section class="comp-section">
     <h3>Évolution</h3>
     <p>
-        À moyen terme, je souhaite explorer les possibilités offertes par SvelteKit pour la construction d'applications full-stack et approfondir mes connaissances en Server-Side Rendering (SSR) et Static Site Generation (SSG) avec Svelte. Je prévois également de m'intéresser davantage aux écosystèmes autour de Svelte pour l'intégration avec des outils de gestion d d'état plus complexes et des bibliothèques d'UI avancées.
+        À moyen terme, je souhaite approfondir mon usage de SvelteKit pour construire des applications full-stack et mieux maîtriser le Server-Side Rendering (SSR) ainsi que le Static Site Generation (SSG). 
+        Je veux également explorer davantage l’écosystème Svelte, notamment les solutions avancées de gestion d’état et les bibliothèques d’UI, 
+        afin de créer des interfaces toujours plus performantes et modulaires.
     </p>
     <p>
-        Je suis actuellement des tutoriels sur SvelteKit et je compte développer de petits projets personnels pour expérimenter ces nouvelles facettes.
+        Je continue à suivre des tutoriels et à expérimenter avec des projets personnels pour progresser concrètement et, pourquoi pas, me spécialiser dans ce framework à l’avenir.
     </p>
 </section>
 

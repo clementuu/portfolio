@@ -23,33 +23,33 @@ const JavaScriptComp = `
     </p>
     
     <p>
-        <strong>Développement d'un jeu 2D interactif en JavaScript natif (Jeu Anti-Gaspi).</strong>
-        Le projet <strong>Jeu Anti-Gaspi</strong> est l'illustration la plus parlante de ma compétence en JavaScript natif. Développé sans aucun framework, il m'a permis de mettre en œuvre des mécaniques de jeu complexes : manipulation du <strong>Canvas HTML5</strong> pour le rendu, création d'une boucle de jeu, gestion des animations, détection de collisions et gestion des entrées utilisateur. Le résultat a été un jeu 2D fonctionnel et engageant, démontrant une compréhension approfondie des mécanismes fondamentaux de JavaScript pour le développement interactif. Ma valeur ajoutée a été de créer une expérience interactive complète en exploitant les capacités pures du langage.
-    </p>
-
-    <p>
-        <strong>Socle des applications web modernes avec Svelte (Portfolio, Escarcelle).</strong>
-        JavaScript est le langage fondamental sur lequel reposent les frameworks que j'utilise. Dans des projets comme <strong>Escarcelle</strong> ou ce même <strong>portfolio</strong>, mes compétences en JavaScript sont appliquées à travers <strong>Svelte</strong> pour créer des composants d'interface réactifs, gérer l'état de l'application et interagir de manière asynchrone avec les APIs backend. Le résultat est une application web moderne, performante et maintenable. Ma valeur ajoutée a été d'utiliser efficacement JavaScript dans un écosystème de développement moderne pour construire des interfaces utilisateur complexes et réactives.
+        <strong>Développement d'un jeu 2D interactif en JavaScript natif (<a class="link" href="/projets/detail.html?id=4">Jeu Anti-Gaspi</a>).</strong>
+        <br>Le projet Jeu Anti-Gaspi est l'illustration la plus parlante de ma compétence en JavaScript natif. Développé sans aucun framework, il m'a permis de mettre en œuvre des mécaniques de jeu complexes : 
+        manipulation du Canvas HTML5 pour le rendu, création d'une boucle de jeu, gestion des animations, détection de collisions et gestion des entrées utilisateur. 
+        Le résultat a été un jeu 2D fonctionnel et engageant, démontrant une compréhension approfondie des mécanismes fondamentaux de JavaScript pour le développement interactif. 
+        Mon but était de créer une expérience interactive complète en exploitant les capacités pures du langage, et je pense qu'il est atteint.
     </p>
 </section>
 
 <section class="comp-section">
     <h3>Autocritique</h3>
     <p>
-        Ma maîtrise de JavaScript est <strong>solide</strong>. Je suis à l'aise avec les concepts avancés du langage (closures, prototypage, async/await) et son utilisation dans des environnements front-end modernes. J'ai une bonne compréhension des spécifications ECMAScript et de la manipulation du DOM. Mon apprentissage a été progressif, du JavaScript "vanilla" aux frameworks, ce qui m'a donné une vision complète de ses capacités.
+        Je me considère comme un développeur JavaScript de niveau <strong>intermédiaire</strong>. J'ai de bonnes bases dans le langage et je suis à l'aise avec des concepts comme les closures, le prototypage ou async/await. J'ai également une expérience concrète sur le front-end moderne et la manipulation du DOM.  
+        Cela dit, il me reste encore beaucoup à apprendre, notamment sur des sujets plus pointus liés à la manipulation avancée du DOM et à l'optimisation du code.
     </p>
     <p>
-        Un conseil pour les développeurs : ne négligez jamais les fondamentaux de JavaScript avant de vous plonger dans les frameworks. Une solide compréhension du langage lui-même rendra l'apprentissage de n'importe quel framework beaucoup plus facile et vous permettra d'écrire un code plus efficace et performant.
+        Mon conseil pour les développeurs : avant de se jeter dans les frameworks, il est important de consolider les fondamentaux de JavaScript. Une bonne maîtrise du langage rend l'apprentissage de Node.js, React ou d'autres frameworks beaucoup plus fluide et efficace.
     </p>
 </section>
 
 <section class="comp-section">
     <h3>Évolution</h3>
     <p>
-        À moyen terme, je souhaite approfondir ma connaissance de l'écosystème Node.js pour le développement backend et les outils CLI. Je prévois également d'explorer des patterns de conception avancés en JavaScript, ainsi que les performances runtime et les optimisations du moteur V8. Mon objectif est de devenir un développeur JavaScript polyvalent, capable de travailler efficacement sur toutes les couches d'une application web.
+        À moyen terme, j'aimerais approfondir mes connaissances de l'écosystème JavaScript, en particulier Node.js pour le backend et les outils CLI. Je suis également curieux d'explorer React, même si je ne m'y suis pas encore vraiment mis : c’est un framework incontournable qui vaut la peine d’être appréhendé.  
+        L'objectif est de devenir plus polyvalent et capable de travailler sur toutes les couches d'une application web, du front-end au back-end.
     </p>
     <p>
-        Je suis actuellement des tutoriels sur Node.js et je compte développer des outils en ligne de commande en JavaScript.
+        Pour progresser, je suis actuellement des tutoriels sur Node.js et je prévois de réaliser des projets pratiques, ce qui me permettra de consolider mes bases et d’expérimenter de nouvelles approches.
     </p>
 </section>
 

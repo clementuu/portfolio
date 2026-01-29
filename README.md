@@ -52,13 +52,12 @@ Avant de commencer, assurez-vous d'avoir installé les outils suivants :
 
 ## Démarrage rapide avec Docker
 
-1.  **Clonez le dépôt :**
+1.  **Buildez le conteneur :**
     ```sh
-    git clone <URL_DU_REPO>
-    cd portfolio
+    make build
     ```
 
-2.  **Démarrez le conteneur du backend :**
+2.  **Démarrez le conteneur :**
     ```sh
     make start
     ```

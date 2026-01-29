@@ -168,4 +168,13 @@
     :global(a.project-link:hover) {
         filter: brightness(1.1); /* Slightly brighter on hover */
     }
+
+    :global(a.link) {
+        color: #212529;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    :global(a.link:hover) {
+        color: #007bff;
+    }
 </style>
