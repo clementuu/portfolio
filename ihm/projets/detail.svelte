@@ -33,7 +33,8 @@
     {#if error}
         <p class="error">{error}</p>
     {:else if projet}
-        <h1>{projet.name} - {projet.sujet}</h1>
+        <h1><b>{projet.name}</b></h1>
+        <h2><b>{projet.sujet}</b></h2>
         {@html projet.tmpl}
     {:else}
         <p>Chargement du projet...</p>
@@ -51,10 +52,18 @@
         max-width: 900px;
         background-color: #fff;
     }
+
     h1 {
-        color: #333;
+        padding-bottom: 10px;
+        margin-bottom: 0;
+    }
+
+    h2 {
         border-bottom: 2px solid #eee;
+        padding-top: 0;
         padding-bottom: 2rem;
+        padding-left: 0;
+        margin-top: 0;
         margin-bottom: 2rem;
     }
     p {
@@ -128,21 +137,21 @@
         padding: 0.2em 0.6em; /* Similar to card-span */
         margin: 0.25em;
         border-radius: 4px; /* Similar to card-span */
-        color: white;
+        color: black;
         text-decoration: none;
         transition: background-color 0.2s ease;
     }
 
     :global(.competence-tag.technique) {
-        background-color: darkgrey;
+        background-color: var(--dev-color);
     }
 
     :global(.competence-tag.humain) {
-        background-color: darkturquoise;
+        background-color: var(--human-color);
     }
 
     :global(.competence-tag.devops) {
-        background-color: orchid;
+        background-color: var(--devops-color);
     }
 
     :global(.competence-tag:hover) {

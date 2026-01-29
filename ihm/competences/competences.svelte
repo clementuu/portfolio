@@ -41,7 +41,7 @@
     {#if error}
         <p class="error">{error}</p>
     {:else if displayedCompetences}
-        <h2>Mes Compétences</h2>
+        <h2><b>Mes Compétences</b></h2>
         <div class="competences-grid">
             {#each displayedCompetences as competence}
                 <Card

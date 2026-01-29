@@ -53,7 +53,7 @@
     {:else if loading}
         <p>Chargement des détails de la compétence...</p>
     {:else if competence}
-        <h1>{competence.name}</h1>
+        <h1><b>{competence.name}</b></h1>
         <img src={competence.image} alt={`Logo de ${competence.name}`} />
         <div class="stars">{getStars(competence.rating)}</div>
         <div class="detail-text">{@html competence.template}</div>
@@ -161,7 +161,7 @@
         text-decoration: none;
         transition: background-color 0.2s ease;
         text-decoration: none;
-        background-color: #007bff;
+        background-color: var(--tertiary-color);
         font-weight: 500;
     }
 
@@ -170,11 +170,12 @@
     }
 
     :global(a.link) {
-        color: #212529;
+        color: var(--primary-color);
         font-weight: bold;
         text-decoration: none;
     }
     :global(a.link:hover) {
-        color: #007bff;
+        color: var(--dev-color);
+        text-decoration: underline;
     }
 </style>
