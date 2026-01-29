@@ -1,9 +1,9 @@
 package tmpl
 
-// PenseeCritiqueComp contient la description HTML de la compétence Pensée Critique.
-const PenseeCritiqueComp = `
+// PenseeCritiqueCompetence contient la description HTML de la compétence Pensée Critique.
+const PenseeCritiqueCompetence = `
 <section class="comp-section">
-    <h3>Définition</h3>
+    <h3><b>Définition</b></h3>
     <p>
         La pensée critique est la capacité d'analyser objectivement une information ou une situation pour 
         se forger un jugement. En développement logiciel, cela se traduit par l'aptitude à évaluer 
@@ -19,7 +19,7 @@ const PenseeCritiqueComp = `
 </section>
 
 <section class="comp-section">
-    <h3>Éléments de preuve</h3>
+    <h3><b>Éléments de preuve</b></h3>
     <p>
         Ma pensée critique est un atout fondamental pour analyser les problèmes complexes, évaluer les options et prendre des décisions éclairées, que ce soit en architecture logicielle ou en analyse de données.
     </p>
@@ -41,7 +41,7 @@ const PenseeCritiqueComp = `
 </section>
 
 <section class="comp-section">
-    <h3>Autocritique</h3>
+    <h3><b>Autocritique</b></h3>
     <p>
         Je considère ma pensée critique comme une compétence <strong>très développée</strong>. J'ai une aptitude naturelle à analyser les situations de manière objective, à identifier les failles logiques et à évaluer les solutions sous différents angles. C'est une compétence qui s'est affûtée avec l'expérience, notamment en étant confronté à des systèmes existants complexes et des problématiques métier ambiguës. Elle est essentielle pour prendre des décisions techniques éclairées et pour la résolution de problèmes.
     </p>
@@ -51,7 +51,7 @@ const PenseeCritiqueComp = `
 </section>
 
 <section class="comp-section">
-    <h3>Évolution</h3>
+    <h3><b>Évolution</b></h3>
     <p>
         À moyen terme, je souhaite approfondir l'application de la pensée critique dans le domaine de la <strong>cybersécurité</strong> et de l'<strong>éthique de l'IA</strong>. Mon objectif est d'être capable d'évaluer non seulement les aspects techniques et fonctionnels des solutions, mais aussi leurs impacts sécuritaires, éthiques et sociétaux, en anticipant les risques potentiels.
     </p>

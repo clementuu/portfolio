@@ -1,9 +1,9 @@
 package tmpl
 
-// DockerComp contient la description HTML de la compétence Docker.
-const DockerComp = `
+// DockerCompetence contient la description HTML de la compétence Docker.
+const DockerCompetence = `
 <section class="comp-section">
-    <h3>Définition</h3>
+    <h3><b>Définition</b></h3>
     <p>
         Docker est une plateforme de conteneurisation permettant d'empaqueter une application et ses 
         dépendances dans un conteneur isolé, garantissant un comportement identique quel que soit 
@@ -20,7 +20,7 @@ const DockerComp = `
 </section>
 
 <section class="comp-section">
-    <h3>Éléments de preuve</h3>
+    <h3><b>Éléments de preuve</b></h3>
     <p>
         Mon expérience avec Docker couvre aussi bien la conteneurisation d'applications simples que 
         l'orchestration de plateformes complètes impliquant plusieurs services interdépendants. 
@@ -65,7 +65,7 @@ const DockerComp = `
 </section>
 
 <section class="comp-section">
-    <h3>Autocritique</h3>
+    <h3><b>Autocritique</b></h3>
     <p>
         Ma maîtrise de Docker est <strong>solide</strong>. Je suis à l'aise avec la création d'images 
         optimisées, la gestion de réseaux et de volumes, l'orchestration multi-services avec Docker Compose 
@@ -81,7 +81,7 @@ const DockerComp = `
 </section>
 
 <section class="comp-section">
-    <h3>Évolution</h3>
+    <h3><b>Évolution</b></h3>
     <p>
         À moyen terme, je souhaite approfondir l'orchestration avancée avec <strong>Kubernetes</strong>. 
         Après avoir géré des architectures multi-conteneurs complexes via Docker Compose, la prochaine étape 

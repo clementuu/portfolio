@@ -1,9 +1,9 @@
 package tmpl
 
-// SQLComp contient la description HTML de la compétence SQL.
-const SQLComp = `
+// SQLCompetence contient la description HTML de la compétence SQL.
+const SQLCompetence = `
 <section class="comp-section">
-    <h3>Définition</h3>
+    <h3><b>Définition</b></h3>
     <p>
         SQL (Structured Query Language) est le langage de référence pour interagir avec les bases de données 
         relationnelles. Dans un contexte professionnel où les organisations s'appuient de plus en plus sur 
@@ -15,15 +15,15 @@ const SQLComp = `
     <p>
         Mon expérience avec SQL couvre l'ensemble du cycle de vie des données : conception de schémas, 
         optimisation de requêtes, migrations critiques, indexation, gestion de transactions et intégration 
-        dans des architectures applicatives. J'ai travaillé avec plusieurs SGBD, notamment <strong>MySQL</strong> 
-        et <strong>SQLite</strong>, en utilisant SQL aussi bien directement qu'à travers des ORM ou des 
+        dans des architectures applicatives. J'ai travaillé avec plusieurs SGBD, notamment 
+        et SQLite, en utilisant SQL aussi bien directement qu'à travers des ORM ou des 
         bibliothèques bas niveau. Cette compétence est au cœur de mes projets, qu'il s'agisse d'applications 
         web, de systèmes embarqués ou de plateformes métier complexes.
     </p>
 </section>
 
 <section class="comp-section">
-    <h3>Éléments de preuve</h3>
+    <h3><b>Éléments de preuve</b></h3>
     <p>
         Ma maîtrise de SQL s'est construite à travers des projets concrets où j'ai dû concevoir, refondre, 
         optimiser et sécuriser des bases de données complètes. Voici trois anecdotes illustrant l'application 
@@ -31,43 +31,40 @@ const SQLComp = `
     </p>
 
     <p>
-        <strong>Refonte de schémas complexes et modernisation des données (Escarcelle, PMT).</strong>
-        Sur les projets <strong>Escarcelle</strong> et <strong>PMT</strong>, j'ai conçu et fait évoluer des 
+        <strong>Refonte de schémas complexes et modernisation des données (<a class="link" href="/projets/detail.html?id=1">Escarcelle</a>, <a class="link" href="/projets/detail.html?id=6">PMT</a>).</strong>
+        <br>Sur les projets Escarcelle et PMT, j'ai conçu et fait évoluer des 
         schémas relationnels complets. J'ai notamment transformé un système de catégories basé sur l'ordre 
         des IDs en une structure hiérarchique moderne utilisant un <i>parent_id</i>, et j'ai étendu les tables 
         produits pour intégrer un système multi-code-barres flexible.  
-        <br><strong>Résultat :</strong> une base plus cohérente, plus performante et capable de supporter de 
+        <br>Résultat une base plus cohérente, plus performante et capable de supporter de 
         nouvelles fonctionnalités métier.  
-        <br><strong>Ma valeur ajoutée :</strong> j'ai apporté une vision structurée et évolutive de la donnée, 
+        <br>J'ai apporté une vision structurée et évolutive de la donnée, 
         permettant de moderniser un socle historique sans rupture.
     </p>
 
     <p>
-        <strong>Migration critique de MySQL 5 vers MySQL 8 (Escarcelle).</strong>
-        J'ai mené une migration complète du SGBD, incluant l'analyse d'impact, la correction de requêtes 
+        <strong>Migration critique de MySQL 5 vers MySQL 8 (<a class="link" href="/projets/detail.html?id=1">Escarcelle</a>).</strong>
+        <br>J'ai mené une migration complète du SGBD, incluant l'analyse d'impact, la correction de requêtes 
         dépréciées, la mise à jour des index et l'adaptation du code applicatif. Cette opération était 
         essentielle pour garantir la sécurité, la performance et la pérennité du système.  
-        <br><strong>Résultat :</strong> une transition fluide, sans perte de données ni interruption de service.  
-        <br><strong>Ma valeur ajoutée :</strong> j'ai sécurisé une opération à fort enjeu technique et métier, 
-        tout en améliorant la performance globale du système.
+        <br>La transition s'est déroulée de manière totalement fluide, sans perte de données ni interruption de service.  
+        <br>J'ai apporté une réelle valeur en sécurisant une opération à fort enjeu technique et métier, tout en améliorant la performance globale du système.
     </p>
 
     <p>
-        <strong>Gestion d'une base locale embarquée et synchronisation (Caisse Escarcelle).</strong>
-        Pour l'application de <strong>Caisse</strong>, j'ai conçu et géré une base <strong>SQLite</strong> 
-        locale, incluant la gestion des migrations, l'indexation et un mécanisme de synchronisation 
+        <strong>Gestion d'une base locale embarquée et synchronisation (<a class="link" href="/projets/detail.html?id=2">Caisse</a>).</strong>
+        <br>Pour l'application de Caisse, j'ai conçu et géré une base SQLite 
+        locale, incluant la gestion des migrations et un mécanisme de synchronisation 
         bidirectionnelle avec l'API centrale.  
-        <br><strong>Résultat :</strong> une application capable de fonctionner hors ligne tout en garantissant 
-        la cohérence des données lors de la resynchronisation.  
-        <br><strong>Ma valeur ajoutée :</strong> j'ai apporté une solution robuste à un problème critique de 
-        continuité de service, essentiel pour un outil utilisé quotidiennement en production.
+        <br>Cette architecture a permis à l'application de fonctionner hors ligne tout en garantissant la cohérence des données lors de la resynchronisation.
+        <br>Ma contribution a consisté à fournir une solution robuste à un problème critique de continuité de service, essentielle pour un outil utilisé quotidiennement en production.
     </p>
 </section>
 
 <section class="comp-section">
-    <h3>Autocritique</h3>
+    <h3><b>Autocritique</b></h3>
     <p>
-        Je considère ma maîtrise de SQL comme <strong>avancée et opérationnelle</strong>. C'est une compétence 
+        Je considère ma maîtrise de SQL comme avancée et opérationnelle. C'est une compétence 
         essentielle dans mon métier de développeur full-stack, car elle conditionne la qualité, la performance 
         et la fiabilité des applications que je conçois. SQL occupe une place centrale dans mon profil 
         d'ingénierie : elle me permet de comprendre en profondeur les enjeux liés à la donnée, d'optimiser 
@@ -82,7 +79,7 @@ const SQLComp = `
 </section>
 
 <section class="comp-section">
-    <h3>Évolution</h3>
+    <h3><b>Évolution</b></h3>
     <p>
         À moyen terme, je souhaite approfondir mes compétences en optimisation avancée (indexation fine, 
         analyse de plans d'exécution, partitionnement) et explorer davantage les problématiques de 
@@ -98,7 +95,7 @@ const SQLComp = `
 </section>
 
 <section class="comp-section">
-    <h3>Projets Associés</h3>
+    <h5>Projets Associés</h5>
     <div class="project-list">
         <ul>
             <li><a class="project-link" href="/projets/detail.html?id=1">Escarcelle</a></li>

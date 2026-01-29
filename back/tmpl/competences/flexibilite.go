@@ -1,9 +1,9 @@
 package tmpl
 
-// FlexibiliteComp contient la description HTML de la compétence Flexibilité.
-const FlexibiliteComp = `
+// FlexibiliteCompetence contient la description HTML de la compétence Flexibilité.
+const FlexibiliteCompetence = `
 <section class="comp-section">
-    <h3>Définition</h3>
+    <h3><b>Définition</b></h3>
     <p>
         La flexibilité est la capacité de s'adapter rapidement et efficacement aux changements, 
         qu'il s'agisse de nouvelles technologies, de nouvelles exigences de projet ou de changements dans l'environnement de travail. 
@@ -17,7 +17,7 @@ const FlexibiliteComp = `
 </section>
 
 <section class="comp-section">
-    <h3>Éléments de preuve</h3>
+    <h3><b>Éléments de preuve</b></h3>
     <p>
         Ma flexibilité s'est manifestée concrètement dans divers contextes, me permettant de m'adapter rapidement aux évolutions technologiques et aux besoins changeants des projets.
     </p>
@@ -39,7 +39,7 @@ const FlexibiliteComp = `
 </section>
 
 <section class="comp-section">
-    <h3>Autocritique</h3>
+    <h3><b>Autocritique</b></h3>
     <p>
         Je considère ma flexibilité comme une compétence <strong>forte</strong>. Ma capacité à m'adapter à de nouveaux environnements techniques, à apprendre rapidement et à pivoter sur des solutions est un atout majeur dans ma carrière. Cette compétence s'est développée naturellement au fil des projets, me permettant de rester pertinent et efficace face aux évolutions rapides du secteur.
     </p>
@@ -49,12 +49,10 @@ const FlexibiliteComp = `
 </section>
 
 <section class="comp-section">
-    <h3>Évolution</h3>
+    <h3><b>Évolution</b></h3>
     <p>
-        À moyen terme, je souhaite continuer à développer ma flexibilité en m'exposant délibérément à de nouvelles technologies et méthodologies, notamment dans les domaines du Machine Learning (MLOps) et de la Blockchain. Mon objectif est de pouvoir rapidement évaluer, apprendre et intégrer de nouvelles briques technologiques dans des projets complexes.
-    </p>
-    <p>
-        Je suis actuellement des MOOCs sur l'introduction au Machine Learning et je prévois de réaliser un projet personnel intégrant une solution Blockchain simple.
+        À moyen terme, je souhaite continuer à développer ma flexibilité en m'exposant délibérément à de nouvelles technologies et méthodologies. 
+        Mon objectif est de pouvoir rapidement évaluer, apprendre et intégrer de nouvelles briques technologiques dans des projets complexes.
     </p>
 </section>
 

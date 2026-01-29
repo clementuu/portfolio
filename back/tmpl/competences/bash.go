@@ -1,9 +1,9 @@
 package tmpl
 
-// BashComp contient la description HTML de la compétence Bash.
-const BashComp = `
+// BashCompetence contient la description HTML de la compétence Bash.
+const BashCompetence = `
 <section class="comp-section">
-    <h3>Définition</h3>
+    <h3><b>Définition</b></h3>
     <p>
         Bash (Bourne-Again SHell) est l'interpréteur de commandes par défaut sur la plupart des systèmes Linux. Au-delà d'une simple interface en ligne de commande, c'est un langage de script puissant qui permet d'automatiser une grande variété de tâches système et de développement.
     </p>
@@ -13,7 +13,7 @@ const BashComp = `
 </section>
 
 <section class="comp-section">
-    <h3>Éléments de preuve</h3>
+    <h3><b>Éléments de preuve</b></h3>
     <p>
         Mon utilisation de Bash va de la simple gestion de mon environnement de développement à la création de scripts pour des opérations complexes et critiques.
     </p>
@@ -30,7 +30,7 @@ const BashComp = `
 </section>
 
 <section class="comp-section">
-    <h3>Autocritique</h3>
+    <h3><b>Autocritique</b></h3>
     <p>
         Ma maîtrise de Bash est <strong>avancée</strong>. Je suis capable d'écrire des scripts complexes et robustes pour automatiser diverses tâches. Je comprends bien les concepts de redirection, de piping, de gestion des variables et des fonctions en Bash. C'est une compétence pratique que j'ai acquise par l'usage quotidien et la résolution de problèmes spécifiques.
     </p>
@@ -40,7 +40,7 @@ const BashComp = `
 </section>
 
 <section class="comp-section">
-    <h3>Évolution</h3>
+    <h3><b>Évolution</b></h3>
     <p>
         À moyen terme, je souhaite approfondir ma connaissance des outils de gestion de configuration comme Ansible ou Terraform, qui s'appuient souvent sur des scripts shell pour l'automatisation. Mon objectif est d'intégrer Bash de manière plus systématisée dans des pipelines CI/CD complexes et des infrastructures cloud.
     </p>
@@ -50,7 +50,7 @@ const BashComp = `
 </section>
 
 <section class="comp-section">
-    <h3>Projets Associés</h3>
+    <h5>Projets Associés</h5>
     <div class="project-list">
         <ul>
             <li><a class="project-link" href="/projets/detail.html?id=1">Escarcelle</a></li>

@@ -1,9 +1,9 @@
 package tmpl
 
-// GoComp contient la description HTML de la compétence Go.
-const GoComp = `
+// GoCompetence contient la description HTML de la compétence Go.
+const GoCompetence = `
 <section class="comp-section">
-    <h3>Définition</h3>
+    <h3><b>Définition</b></h3>
     <p>
         Go, souvent appelé Golang, est un langage de programmation compilé et concurrentiel développé par Google. 
         Il est reconnu pour sa simplicité, sa performance et sa robustesse, ce qui en fait un choix privilégié 
@@ -19,7 +19,7 @@ const GoComp = `
 </section>
 
 <section class="comp-section">
-    <h3>Éléments de preuve</h3>
+    <h3><b>Éléments de preuve</b></h3>
     <p>
         Dans le cadre des projets Escarcelle et Caisse, 
         j'ai développé l'intégralité du backend et de l'application de caisse en Go. 
@@ -49,7 +49,7 @@ const GoComp = `
 </section>
 
 <section class="comp-section">
-    <h3>Autocritique</h3>
+    <h3><b>Autocritique</b></h3>
     <p>
         Je considère ma maîtrise de Go comme <strong>avancée</strong>. J'ai une solide compréhension de ses idiomes, de sa gestion de la concurrence (goroutines, channels) et de son écosystème. 
         C'est aujourd'hui ma compétence technique la plus forte pour le développement backend et les outils CLI. 
@@ -62,7 +62,7 @@ const GoComp = `
 </section>
 
 <section class="comp-section">
-    <h3>Évolution</h3>
+    <h3><b>Évolution</b></h3>
     <p>
         À moyen terme, je souhaite approfondir ma connaissance des frameworks web Go (comme Gin ou Echo) pour des APIs encore plus optimisées, ainsi que les déploiements sur Kubernetes. 
         Je suis également intéressé par l'intégration de Go avec des bases de données NoSQL et l'exploration de solutions d'observabilité natives (Prometheus, Grafana) pour des architectures distribuées. 
@@ -74,7 +74,7 @@ const GoComp = `
 </section>
 
 <section class="comp-section">
-    <h3>Projets Associés</h3>
+    <h5>Projets Associés</h5>
     <div class="project-list">
         <ul>
             <li><a class="project-link" href="/projets/detail.html?id=1">Escarcelle</a></li>

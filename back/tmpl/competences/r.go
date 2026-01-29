@@ -1,9 +1,9 @@
 package tmpl
 
-// RComp contient la description HTML de la compétence R.
-const RComp = `
+// RCompetence contient la description HTML de la compétence R.
+const RCompetence = `
 <section class="comp-section">
-    <h3>Définition</h3>
+    <h3><b>Définition</b></h3>
     <p>
         R est un langage de programmation et un environnement logiciel libre dédié aux statistiques et à la science des données. Très populaire dans le milieu universitaire et en recherche, il offre un écosystème extrêmement riche pour la manipulation de données, l'analyse statistique et la visualisation.
     </p>
@@ -13,7 +13,7 @@ const RComp = `
 </section>
 
 <section class="comp-section">
-    <h3>Éléments de preuve</h3>
+    <h3><b>Éléments de preuve</b></h3>
     <p>
         Ma maîtrise du langage R s'est illustrée lors de ma mission pour le service civique <strong>TousAntiGaspi</strong>, où j'ai été chargé de mener une étude statistique complète sur le gaspillage alimentaire.
     </p>
@@ -30,7 +30,7 @@ const RComp = `
 </section>
 
 <section class="comp-section">
-    <h3>Autocritique</h3>
+    <h3><b>Autocritique</b></h3>
     <p>
         Ma maîtrise de R est <strong>intermédiaire à avancé</strong>. Je suis capable de réaliser des analyses statistiques complexes, de manipuler des jeux de données volumineux et de créer des visualisations informatives. Mon expérience en R est particulièrement ancrée dans le domaine de l'analyse descriptive et exploratoire, ainsi que dans la modélisation statistique. C'est une compétence que j'ai acquise durant mes études universitaires et renforcée par des projets concrets à forte valeur ajoutée.
     </p>
@@ -40,7 +40,7 @@ const RComp = `
 </section>
 
 <section class="comp-section">
-    <h3>Évolution</h3>
+    <h3><b>Évolution</b></h3>
     <p>
         À moyen terme, je souhaite approfondir ma connaissance des méthodes statistiques avancées avec R, notamment la modélisation prédictive et les séries chronologiques. Mon objectif est d'être capable de construire des modèles statistiques plus sophistiqués et d'intégrer R dans des pipelines de données automatisés pour la prise de décision en temps réel.
     </p>

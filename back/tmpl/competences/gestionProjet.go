@@ -1,9 +1,9 @@
 package tmpl
 
-// GestionProjetComp contient la description HTML de la compétence en gestion de projet.
-const GestionProjetComp = `
+// GestionProjetCompetence contient la description HTML de la compétence en gestion de projet.
+const GestionProjetCompetence = `
 <section class="comp-section">
-    <h3>Définition</h3>
+    <h3><b>Définition</b></h3>
     <p>
         La gestion de projet est l'art de planifier, d'organiser, de sécuriser et de gérer les ressources 
         pour atteindre des objectifs spécifiques dans des délais définis. Cela inclut la définition des 
@@ -20,7 +20,7 @@ const GestionProjetComp = `
 </section>
 
 <section class="comp-section">
-    <h3>Éléments de preuve</h3>
+    <h3><b>Éléments de preuve</b></h3>
     <p>
         J'ai appliqué les principes de la gestion de projet sur des initiatives complexes, où ma capacité à naviguer entre 
         les contraintes techniques, les besoins fonctionnels et les attentes des parties prenantes a été déterminante.
@@ -47,7 +47,7 @@ const GestionProjetComp = `
 </section>
 
 <section class="comp-section">
-    <h3>Autocritique</h3>
+    <h3><b>Autocritique</b></h3>
     <p>
         Ma maîtrise de la gestion de projet est à un niveau <strong>intermédiaire</strong>. Ayant principalement évolué 
         dans de petites structures et sur des postes à dominante technique, j'ai souvent été amené à gérer des 
@@ -58,14 +58,14 @@ const GestionProjetComp = `
     <p>
         Je suis conscient de ma marge de progression, notamment sur les aspects plus formels de la gestion de 
         projet : animation d'équipe, pilotage transverse, planification avancée ou encore gestion des parties 
-        prenantes. Mon conseil — que j'applique également à moi-même — est de ne jamais sous-estimer 
+        prenantes. Mon conseil - que j'applique également à moi-même - est de ne jamais sous-estimer 
         l'importance de la communication, de la clarté des objectifs et de l'écoute active. Ce sont des 
         compétences transversales essentielles, même dans un rôle très technique.
     </p>
 </section>
 
 <section class="comp-section">
-    <h3>Évolution</h3>
+    <h3><b>Évolution</b></h3>
     <p>
         À moyen terme, je souhaite renforcer mes compétences en gestion de projet afin de pouvoir évoluer vers 
         des rôles plus transversaux. Mon objectif est d'apprendre à encadrer des équipes, à structurer des 
