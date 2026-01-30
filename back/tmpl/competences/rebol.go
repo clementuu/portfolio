@@ -27,28 +27,28 @@ const RebolCompetence = `
 
     <p>
         <strong>Maintenance évolutive et corrective d'une application critique (<a class="link" href="/projets/detail.html?id=1">Escarcelle</a>).</strong>
-        J'ai assuré la maintenance de l'application de gestion et de l'ancienne caisse, toutes deux développées en REBOL, 
+        <br>J'ai assuré la maintenance de l'application de gestion et de l'ancienne caisse, toutes deux développées en REBOL, 
         pour le projet Escarcelle. Cela impliquait une analyse fine du code legacy pour y intégrer des 
         évolutions fonctionnelles et corriger des bugs, assurant ainsi la continuité de service. 
-        <br>Cette intervention a permis de stabiliser un système critique et d'en garantir le fonctionnement durant toute la période de transition. 
-        <br>J'ai contribué à maintenir en production un outil essentiel malgré les contraintes techniques liées à son ancienneté.
+        Cette intervention a permis de stabiliser un système central durant toute la période de transition, en préservant 
+        la fiabilité d'un outil essentiel malgré les contraintes liées à son ancienneté.
     </p>
 
     <p>
         <strong>Adaptation d'une base de code REBOL à de nouvelles structures de données (<a class="link" href="/projets/detail.html?id=1">Escarcelle</a>).</strong>
-        Une de mes missions clés a été d'adapter l'ensemble de la base de code REBOL à une nouvelle structuration de la 
+        <br>Une de mes missions clés a été d'adapter l'ensemble de la base de code REBOL à une nouvelle structuration de la 
         table des catégories de produits. Ce changement majeur a eu un impact à la fois sur l'application de gestion et sur la caisse, 
         nécessitant une compréhension approfondie du code existant et des modifications précises. 
-        <br>Cette mise à jour a permis au système de supporter une structure de données plus flexible et plus simple à maintenir. 
-        <br>J'ai apporté la capacité d'intégrer un changement structurel complexe dans un environnement legacy sans perturber l'existant.
+        Cette mise à jour a permis au système de prendre en charge une structure de données plus flexible et plus simple à maintenir, 
+        tout en assurant une transition sans perturbation pour les utilisateurs.
     </p>
 
     <p>
         <strong>Amorçage de la transition technologique depuis REBOL (<a class="link" href="/projets/detail.html?id=1">Escarcelle</a>).</strong>
-        Ma compréhension de l'existant en REBOL m'a permis de jeter les bases de la migration technologique d'Escarcelle. 
+        <br>Ma compréhension de l'existant en REBOL m'a permis de jeter les bases de la migration technologique d'Escarcelle. 
         J'ai reconstruit certains composants en Go pour le backend et en Svelte pour le frontend, en m'assurant de la bonne intégration avec les parties restantes en REBOL. 
-        <br>Ce travail a ouvert la voie à une transition progressive et maîtrisée vers une stack moderne, tout en limitant les risques liés à un remplacement brutal. 
-        <br>J'ai facilité la modernisation du système en assurant une interopérabilité fluide entre les composants historiques et les nouvelles technologies.
+        Ce travail a ouvert la voie à une transition progressive vers une stack moderne, en limitant les risques liés à un remplacement trop 
+        abrupt et en assurant une cohabitation fluide entre les technologies.
     </p>
 </section>
 

@@ -26,22 +26,14 @@ const JavaCompetence = `
         <strong>Développement d'une API RESTful robuste avec Spring Boot (<a class="link" href="/projets/detail.html?id=6">PMT</a>).</strong>
         <br>Pour le projet PMT, j'ai développé une API REST complète et robuste en Java avec Spring Boot, pour gérer toutes les ressources de l'application (projets, tâches, utilisateurs). 
         Cette API sert de point d'entrée pour l'application front-end Angular, lui fournissant les données nécessaires de manière structurée et sécurisée. 
-        <br>J'ai construis un backend fiable et performant, capable de gérer les opérations CRUD pour la gestion de projet. 
-        <br>Ma valeur ajoutée a été de fournir une fondation solide et extensible pour l'application, garantissant une communication efficace avec le frontend.
-    </p>
-    <p>
-        <strong>Architecture logicielle en couches et bonnes pratiques (<a class="link" href="/projets/detail.html?id=6">PMT</a>).</strong>
-        <br>Le backend de PMT a été conçu selon une architecture en couches classique (Controller, Service, Repository/Store). 
-        Cette approche garantit une séparation claire des responsabilités, rendant le code plus facile à maintenir, à tester et à faire évoluer. 
-        <br>Le résultat est une base de code propre et modulaire, favorisant la collaboration et la scalabilité. 
-        <br>Ma valeur ajoutée a été d'appliquer les principes d'ingénierie logicielle pour construire un système robuste et facile à comprendre.
+        Le backend ainsi développé gère efficacement toutes les opérations CRUD nécessaires à la gestion de projet.Ma contribution a été d'établir une base technique stable et évolutive, 
+        assurant un échange de données fluide avec l'interface utilisateur.
     </p>
     <p>
         <strong>Intégration dans un environnement Full-Stack conteneurisé (<a class="link" href="/projets/detail.html?id=6">PMT</a>).</strong>
         <br>Le service Java/Spring de PMT s'intégrait parfaitement dans un écosystème moderne : il dialoguait avec une base de données SQL pour la persistance des données, servait de socle pour le front-end 
         <a class="link" href=/competences/detail.html?id=5>Angular</a>, et l'ensemble était orchestré et déployé dans un environnement conteneurisé avec <a class="link" href=/competences/detail.html?id=12>Docker</a>. 
-        <br>Le résultat est une application full-stack complète, fonctionnelle et prête pour le déploiement. 
-        <br>Ma valeur ajoutée a été de garantir une intégration fluide et une cohésion technique entre toutes les couches de l'application.
+        L'application obtenue est cohérente, fonctionnelle et prête à être déployée. J'ai ainsi assuré une intégration harmonieuse entre toutes les couches, garantissant une architecture stable et homogène.
     </p>
 </section>
 

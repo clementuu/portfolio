@@ -30,21 +30,21 @@ const GoCompetence = `
         <strong>Développement d'une application de bureau multiplateforme (<a class="link" href="/projets/detail.html?id=2">Caisse</a>).</strong>
         <br>J'ai utilisé le toolkit UI multiplateforme Fyne pour construire l'intégralité de l'interface utilisateur de l'application Caisse. 
         Le résultat est une application de point de vente robuste, moderne et compatible Windows, macOS et Linux, qui remplace efficacement l'ancienne version Rebol obsolète. 
-        <br>Ce projet m'a permis de mettre en œuvre une technologie innovante et de la maîtriser pour livrer une solution performante adaptée aux besoins spécifiques.
+        Ce projet m'a permis de mettre en œuvre une technologie innovante et de la maîtriser pour livrer une solution performante adaptée aux besoins spécifiques.
     </p>
 
     <p>
         <strong>Conception et implémentation d'APIs RESTful performantes (<a class="link" href="/projets/detail.html?id=1">Escarcelle</a>, <a class="link" href="/projets/detail.html?id=2">Caisse</a>).</strong>
         <br>J'ai conçu et développé des APIs RESTful robustes pour servir de backend aux applications Escarcelle et Caisse. 
         Ces APIs gèrent des logiques métier complexes liées à la distribution (stocks, promotions, tarifs) et assurent une communication fluide et sécurisée entre les différentes parties du système. 
-        <br>Cette expérience a renforcé ma capacité à concevoir une infrastructure fiable et scalable.
+        Cette expérience a renforcé ma capacité à concevoir une infrastructure fiable et scalable.
     </p>
 
     <p>
         <strong>Intégration de périphériques et tests unitaires (<a class="link" href="/projets/detail.html?id=1">Escarcelle</a>, <a class="link" href="/projets/detail.html?id=2">Caisse</a>).</strong>
         <br>J'ai développé des modules d'impression complets pour la génération de documents A4 et de tickets de caisse sur imprimantes thermiques (protocole ESC/POS). 
         Pour garantir la qualité et la fiabilité du code, j'ai mis en place des stratégies de tests complètes, incluant des tests unitaires et end-to-end. 
-        <br>Ce travail a permis de créer un système d'impression robuste et une intégration matérielle fiable, tout en maintenant un haut niveau de qualité logicielle.
+        Ce travail a permis de créer un système d'impression robuste et une intégration matérielle fiable, tout en maintenant un haut niveau de qualité logicielle.
     </p>
 </section>
 

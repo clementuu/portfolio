@@ -26,8 +26,8 @@ const PythonCompetence = `
         Au cours d'un stage en R&D, j'ai mis en place une solution complète d'automatisation des tests pour un projet d'innovation. J'ai utilisé Selenium WebDriver 
         pour piloter les navigateurs web et simuler les interactions utilisateur, tandis que le framework de BDD (Behavior-Driven Development) Behave servait à interpréter 
         les scénarios de test écrits en langage Gherkin. 
-        <br>La mise en place a abouti à un pipeline de tests fiable, maintenable et entièrement intégré à la CI/CD, ce qui a renforcé la qualité logicielle et limité les régressions.
-        <br>J'ai contribué à structurer une automatisation des tests robuste, capable de détecter rapidement les anomalies et de sécuriser le cycle de développement.
+        La mise en place a abouti à un pipeline de tests fiable, maintenable et entièrement intégré à la CI/CD, ce qui a renforcé la qualité logicielle et limité les régressions.
+        J'ai contribué à structurer une automatisation des tests robuste, capable de détecter rapidement les anomalies et de sécuriser le cycle de développement.
     </p>
 
     <p>
@@ -35,8 +35,8 @@ const PythonCompetence = `
         Dans le cadre de la Mission TousAntiGaspi, j'ai utilisé Python et ses bibliothèques scientifiques (notamment Pandas pour la manipulation et Matplotlib pour la visualisation) 
         pour mener une étude approfondie sur le gaspillage alimentaire. Mon travail a consisté à nettoyer et consolider les données collectées sur le terrain, à réaliser des 
         analyses statistiques exploratoires et multifactorielles, et à produire des visualisations pour un rapport final destiné aux élus locaux. 
-        <br>Cette mission a abouti à un rapport détaillé accompagné de recommandations directement exploitables, fondées sur une analyse de données rigoureuse.
-        <br>J'ai rendu ces données compréhensibles et actionnables, en les transformant en informations utiles pour orienter les décisions publiques.
+        Cette mission a abouti à un rapport détaillé accompagné de recommandations directement exploitables, fondées sur une analyse de données rigoureuse.
+        J'ai rendu ces données compréhensibles et actionnables, en les transformant en informations utiles pour orienter les décisions publiques.
     </p>
 </section>
 

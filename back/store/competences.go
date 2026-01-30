@@ -26,7 +26,7 @@ var (
 	gestionProjetCompetence  = model.Competence{ID: 14, Name: "Gestion de projet", Image: constants.ManageLogo, Rating: 2, Template: tmpl.GestionProjetCompetence, Type: model.Human}
 	flexibiliteCompetence    = model.Competence{ID: 15, Name: "Flexibilité", Image: constants.FlexLogo, Rating: 4, Template: tmpl.FlexibiliteCompetence, Type: model.Human}
 	creativiteCompetence     = model.Competence{ID: 16, Name: "Créativité", Image: constants.CreativeLogo, Rating: 3, Template: tmpl.CreativiteCompetence, Type: model.Human}
-	espritCritiqueCompetence = model.Competence{ID: 17, Name: "Esprit critique", Image: constants.CriticalLogo, Rating: 4, Template: tmpl.PenseeCritiqueCompetence, Type: model.Human}
+	espritCritiqueCompetence = model.Competence{ID: 17, Name: "Esprit critique", Image: constants.CriticalLogo, Rating: 4, Template: tmpl.EspritCritiqueCompetence, Type: model.Human}
 )
 
 var competencesList = []model.Competence{

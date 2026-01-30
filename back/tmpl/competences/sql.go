@@ -35,10 +35,8 @@ const SQLCompetence = `
         <br>Sur les projets Escarcelle et PMT, j'ai conçu et fait évoluer des 
         schémas relationnels complets. J'ai notamment transformé un système de catégories basé sur l'ordre 
         des IDs en une structure hiérarchique moderne utilisant un <i>parent_id</i>, et j'ai étendu les tables 
-        produits pour intégrer un système multi-code-barres flexible.  
-        <br>Résultat une base plus cohérente, plus performante et capable de supporter de 
-        nouvelles fonctionnalités métier.  
-        <br>J'ai apporté une vision structurée et évolutive de la donnée, 
+        produits pour intégrer un système multi-code-barres flexible. Résultat une base plus cohérente, plus performante 
+        et capable de supporter de nouvelles fonctionnalités métier. J'ai apporté une vision structurée et évolutive de la donnée, 
         permettant de moderniser un socle historique sans rupture.
     </p>
 
@@ -46,18 +44,18 @@ const SQLCompetence = `
         <strong>Migration critique de MySQL 5 vers MySQL 8 (<a class="link" href="/projets/detail.html?id=1">Escarcelle</a>).</strong>
         <br>J'ai mené une migration complète du SGBD, incluant l'analyse d'impact, la correction de requêtes 
         dépréciées, la mise à jour des index et l'adaptation du code applicatif. Cette opération était 
-        essentielle pour garantir la sécurité, la performance et la pérennité du système.  
-        <br>La transition s'est déroulée de manière totalement fluide, sans perte de données ni interruption de service.  
-        <br>J'ai apporté une réelle valeur en sécurisant une opération à fort enjeu technique et métier, tout en améliorant la performance globale du système.
+        essentielle pour garantir la sécurité, la performance et la pérennité du système. La transition s'est déroulée de manière totalement fluide, 
+        sans perte de données ni interruption de service. J'ai apporté une réelle valeur en sécurisant une opération à fort enjeu technique et métier, 
+        tout en améliorant la performance globale du système.
     </p>
 
     <p>
         <strong>Gestion d'une base locale embarquée et synchronisation (<a class="link" href="/projets/detail.html?id=2">Caisse</a>).</strong>
         <br>Pour l'application de Caisse, j'ai conçu et géré une base SQLite 
         locale, incluant la gestion des migrations et un mécanisme de synchronisation 
-        bidirectionnelle avec l'API centrale.  
-        <br>Cette architecture a permis à l'application de fonctionner hors ligne tout en garantissant la cohérence des données lors de la resynchronisation.
-        <br>Ma contribution a consisté à fournir une solution robuste à un problème critique de continuité de service, essentielle pour un outil utilisé quotidiennement en production.
+        bidirectionnelle avec l'API centrale. Cette architecture a permis à l'application de fonctionner hors ligne tout en garantissant 
+        la cohérence des données lors de la resynchronisation. Ma contribution a consisté à fournir une solution robuste à un problème 
+        critique de continuité de service, essentielle pour un outil utilisé quotidiennement en production.
     </p>
 </section>
 

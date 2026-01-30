@@ -51,7 +51,9 @@ const WebCompetence = `
         Ces compétences sont particulièrement importantes lorsque je conçois des expériences cohérentes ou que j'intègre des interfaces dans des architectures plus larges.
     </p>
     <p>
-        J'ai acquis cette expertise progressivement, à travers des projets concrets et variés. Mon conseil pour les développeurs : avant de se lancer dans des frameworks modernes, il est indispensable de maîtriser les fondamentaux - sémantique HTML, modèles de boîte, Flexbox, Grid et accessibilité. Ces bases garantissent des interfaces robustes et facilitent l'apprentissage de technologies plus avancées.
+        J'ai acquis cette expertise progressivement, à travers des projets concrets et variés. Mon conseil pour les développeurs : 
+        avant de se lancer dans des frameworks modernes, il est indispensable de maîtriser les fondamentaux - sémantique HTML, modèles de boîte, Flexbox, Grid et accessibilité. 
+        Ces bases garantissent des interfaces robustes et facilitent l'apprentissage de technologies plus avancées.
     </p>
 </section>
 

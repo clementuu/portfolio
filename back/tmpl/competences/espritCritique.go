@@ -1,7 +1,7 @@
 package tmpl
 
-// CreativiteCompetence contient la description HTML de la compétence Créativité.
-const CreativiteCompetence = `
+// EspritCritiqueCompetence contient la description HTML de la compétence Pensée Critique.
+const EspritCritiqueCompetence = `
 <section class="comp-section">
     <h3><b>Définition</b></h3>
     <p>
@@ -28,30 +28,29 @@ const CreativiteCompetence = `
 
     <p>
         <strong>Conception d'expériences ludiques et éducatives (<a href="/projets/detail.html?id=4">Jeu Anti-Gaspi</a>).</strong>
-        <br>Sur le projet Jeu Anti-Gaspi, j'ai imaginé un jeu 2D en <a href="/competences/detail.html?id=2">HTML/CSS</a>/
-        <a class="link" href=/competences/detail.html?id=3>JavaScript</a> sans framework ni moteur externe. 
+        Sur le projet Jeu Anti-Gaspi, j'ai imaginé un jeu 2D en HTML/CSS/JavaScript sans framework ni moteur externe. 
         L'objectif était de sensibiliser les enfants aux éco-gestes. J'ai conçu des mécaniques simples, des interactions claires 
         et une interface accessible, transformant un sujet sérieux en une expérience ludique et pédagogique. 
-        Le résultat est un jeu engageant qui remplit pleinement son rôle éducatif. Ma valeur ajoutée a été de montrer 
-        qu'on peut créer des outils pédagogiques efficaces avec des moyens légers et une bonne dose d'imagination.
+        Le jeu a su capter l'attention du public visé et remplir pleinement son rôle éducatif, démontrant qu'on peut créer 
+        des outils pédagogiques efficaces avec des moyens légers et une bonne dose d'imagination.
     </p>
 
     <p>
         <strong>Refonte d'interfaces et d'ergonomie (<a href="/projets/detail.html?id=2">Caisse</a>).</strong>
-        <br>Lors de la refonte de la Caisse, ma créativité a été mise à contribution pour repenser les workflows utilisateurs 
+        Lors de la refonte de la Caisse, ma créativité a été mise à contribution pour repenser les workflows utilisateurs 
         et proposer une interface tactile-friendly, simple et agréable à utiliser. J'ai imaginé des parcours intuitifs, 
         des visuels clairs et des interactions fluides, modernisant une application vieillissante pour en faire un outil 
-        plus efficace au quotidien. Le résultat est une expérience utilisateur améliorée, réduisant les erreurs 
-        et le temps de prise en main.
+        plus efficace au quotidien. Cette approche a permis d'améliorer nettement l'expérience utilisateur, 
+        en réduisant les erreurs et le temps de prise en main.
     </p>
 
     <p>
         <strong>Architecture et résolution de problèmes (<a href="/projets/detail.html?id=6">PMT</a>, <a href="/projets/detail.html?id=2">Caisse</a>).</strong>
-        <br>La créativité intervient aussi dans la manière de structurer une application. Pour PMT, la conception d'un tableau 
+        La créativité intervient aussi dans la manière de structurer une application. Pour PMT, la conception d'un tableau 
         de bord clair et exploitable a demandé une réflexion sur la manière de présenter des informations complexes de façon 
         simple et efficace. Pour la Caisse, j'ai imaginé un mécanisme de résilience permettant de gérer les ventes hors ligne 
         et leur resynchronisation, répondant à un enjeu critique de continuité de service. 
-        Ma valeur ajoutée a été de proposer des solutions techniques adaptées et pragmatiques à des problématiques réelles.
+        Ces approches ont permis d'apporter des solutions techniques adaptées et pragmatiques à des problématiques réelles.
     </p>
 </section>
 
@@ -83,12 +82,11 @@ const CreativiteCompetence = `
 </section>
 
 <section class="comp-section">
-    <h5>Projets Associés</h5>
+    <h3>Projets Associés</h3>
     <div class="project-list">
         <ul>
             <li><a class="project-link" href="/projets/detail.html?id=2">Caisse</a></li>
-            <li><a class="project-link" href="/projets/detail.html?id=4">Jeu Anti-Gaspi</a></li>
-            <li><a class="project-link" href="/projets/detail.html?id=6">PMT</a></li>
+            <li><a class="project-link" href="/projets/detail.html?id=3">Mission TousAntiGaspi</a></li>
         </ul>
     </div>
 </section>

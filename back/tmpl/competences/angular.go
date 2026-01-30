@@ -46,10 +46,10 @@ const AngularCompetence = `
 <section class="comp-section">
     <h3><b>Autocritique</b></h3>
     <p>
-        Mon expérience avec Angular me permet de concevoir des applications front-end fonctionnelles et maintenables, mais je ne me considère pas encore comme un expert. 
-        Angular est un framework puissant et complet, mais sa complexité implique des années de pratique avant de le maîtriser completement. 
-        Sur le projet PMT, j'ai appris beaucoup sur la structuration d'une SPA, la gestion de services et l'intégration avec un backend, mais il me reste encore beaucoup 
-        à découvrir pour tirer pleinement parti de toutes ses possibilités.
+        Mon niveau de pratique d'Angular me permet de concevoir des applications front-end basiques, fonctionnelles et maintenables, mais je ne me considère pas encore comme un expert. 
+        Angular est un framework puissant et complet, mais sa complexité implique pas mal de pratique avant de le maîtriser completement. 
+        Sur le projet PMT, j'ai beaucoup appris sur la structuration d'une SPA, la gestion de services et l'intégration avec un backend, mais il me reste encore 
+        à découvrir avant de pouvoir tirer pleinement parti de toutes ses possibilités.
     </p>
     <p>
         Pour l'instant, je préfère me concentrer sur des frameworks plus légers et réactifs comme Svelte, qui me permettent de créer rapidement des interfaces performantes tout 
@@ -64,7 +64,8 @@ const AngularCompetence = `
         J'aimerais continuer à en apprendre davantage progressivement, au fil des projets où Angular s'avère pertinent.
     </p>
     <p>
-        Mon intérêt actuel se porte davantage sur des frameworks légers et modernes qui facilitent le développement rapide et la réactivité des interfaces, comme Svelte. Cependant, je garde Angular dans ma boîte à outils pour les projets d'envergure qui nécessitent sa robustesse et sa structure complète.
+        Mon intérêt actuel se porte davantage sur des frameworks légers et modernes qui facilitent le développement rapide et la réactivité des interfaces. 
+        Cependant, je garde Angular dans ma boîte à outils pour les projets d'envergure qui nécessitent sa robustesse et sa structure complète.
     </p>
 </section>
 
