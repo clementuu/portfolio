@@ -19,6 +19,7 @@ describe('FormationCard component', () => {
         render(FormationCard, { props: { formation: sampleFormation } });
 
         expect(screen.getByText('Master Ingénierie Logicielle')).toBeInTheDocument();
-        expect(screen.getByText('Université de Montpellier | 2020 - 2022')).toBeInTheDocument();
+        expect(screen.getByText('Université de Montpellier')).toBeInTheDocument();
+        expect(screen.getByText('| 2020 - 2022')).toBeInTheDocument();
     });
 });

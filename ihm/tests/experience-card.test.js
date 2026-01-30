@@ -25,7 +25,8 @@ describe('ExperienceCard component', () => {
         render(ExperienceCard, { props: { experience: sampleExperience } });
 
         expect(screen.getByText('Développeur Full Stack [CDI]')).toBeInTheDocument();
-        expect(screen.getByText('Tech Solutions Inc. | Jan 2022 - Présent')).toBeInTheDocument();
+        expect(screen.getByText('Tech Solutions Inc.')).toBeInTheDocument();
+        expect(screen.getByText('| Jan 2022 - Présent')).toBeInTheDocument();
         expect(screen.getByText('Développement de nouvelles fonctionnalités')).toBeInTheDocument();
         expect(screen.getByText('Maintenance corrective et évolutive')).toBeInTheDocument();
         expect(screen.getByText('Participation aux revues de code')).toBeInTheDocument();

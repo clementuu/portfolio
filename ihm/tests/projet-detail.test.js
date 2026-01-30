@@ -50,7 +50,8 @@ describe('ProjetDetail component (simple, reliable tests)', () => {
     render(ProjetDetail);
 
     // on attend que le titre soit rendu
-    expect(await screen.findByText('Projet Zeta - Sujet important')).toBeTruthy();
+    expect(await screen.findByText('Projet Zeta')).toBeTruthy();
+    expect(await screen.findByText('Sujet important')).toBeTruthy();
 
     // et que le HTML injecté via {@html} soit présent (on peut chercher le texte ou la balise)
     expect(await screen.findByText('Présentation')).toBeTruthy();

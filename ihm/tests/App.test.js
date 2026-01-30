@@ -3,21 +3,21 @@ import { describe, it, expect } from 'vitest';
 import App from '../App.svelte';
 
 describe('App - static UI checks', () => {
-  it('renders the name "Clément Calia" inside the h1 strong', () => {
+  it('renders the name "Clément Calia" inside h1', () => {
     const { container } = render(App);
-    const strong = container.querySelector('h1.name strong');
-    expect(strong).toBeTruthy();
-    expect(strong?.textContent).toBe('Clément Calia');
+    const h1 = container.querySelector('h1.name');
+    expect(h1).toBeTruthy();
+    expect(h1?.textContent).toBe('Clément Calia');
   });
 
-  it('renders the initial job title inside the h2 strong', () => {
+  it('renders the initial job title inside h2', () => {
     const { container } = render(App);
-    const strong = container.querySelector('h2.metier strong');
-    expect(strong).toBeTruthy();
-    expect(strong?.textContent).toBe('Expert en ingénierie logicielle');
+    const h2 = container.querySelector('h2.metier');
+    expect(h2).toBeTruthy();
+    expect(h2?.textContent).toBe('Expert en ingénierie logicielle');
   });
 
-  it('does not apply fade-out class initially on the h2', () => {
+  it('does not apply fade-out class initially on h2', () => {
     const { container } = render(App);
     const h2 = container.querySelector('h2.metier');
     expect(h2).toBeTruthy();
