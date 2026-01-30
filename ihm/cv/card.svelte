@@ -30,12 +30,7 @@
 
     p {
         font-size: 1rem;
-        color: #555;
         line-height: 1.5;
-    }
-
-    strong {
-        color: #007bff;
     }
 
     /* Styles for slotted content */

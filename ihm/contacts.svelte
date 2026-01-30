@@ -34,7 +34,7 @@
 </script>
 
 <div class="contact-div">
-    <h2>Me Contacter</h2>
+    <h2><b>Me Contacter</b></h2>
     <div class="contact-list">
         {#each contacts as contact}
             <div class="contact-item">
@@ -42,7 +42,7 @@
                     <i class="bi {contact.iconClass}"></i>
                 </div>
                 <strong>{contact.type}:</strong>
-                <a href={contact.link} target="_blank" rel="noopener noreferrer">{contact.value}</a>
+                <a class="link" href={contact.link} target="_blank" rel="noopener noreferrer">{contact.value}</a>
             </div>
         {/each}
     </div>
@@ -81,15 +81,6 @@
 
     .contact-item strong {
         flex-grow: 1;
-    }
-
-    .contact-item a {
-        color: #007bff;
-        text-decoration: none;
-    }
-
-    .contact-item a:hover {
-        text-decoration: underline;
     }
 
     .contact-div {

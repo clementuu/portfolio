@@ -31,8 +31,8 @@
 	<div class="its-me">
 		<img class="my-pic" src="./assets/photo_cv.png" alt="">
 		<div class="banner-content">
-			<h1 class="name"><strong>{name}</strong></h1>
-			<h2 class="metier" class:fade-out={isFading}><strong>{currentH2Text}</strong></h2>
+			<h1 class="name"><b>{name}</b></h1>
+			<h2 class="metier" class:fade-out={isFading}><b>{currentH2Text}</b></h2>
 		</div>
 	</div>
 	<span class="parcours">Mon parcours</span>

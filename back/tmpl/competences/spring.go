@@ -1,49 +1,83 @@
 package tmpl
 
-// SpringComp contient la description HTML de la compétence Spring.
-const SpringComp = `
-<!-- =================================================================== -->
-<!-- SECTION : TITRE ET INTRODUCTION DE LA COMPÉTENCE                    -->
-<!-- =================================================================== -->
+// SpringCompetence contient la description HTML de la compétence Spring.
+const SpringCompetence = `
 <section class="comp-section">
+    <h3><b>Définition</b></h3>
     <p>
-        Spring est un framework open source pour le développement d'applications Java. 
-        Il fournit une infrastructure complète pour développer des applications Java robustes et performantes, 
-        en particulier pour le web. Le framework Spring simplifie le développement Java en fournissant une 
-        gamme de fonctionnalités telles que l'injection de dépendances, la gestion des transactions et la sécurité.
+        Spring est un framework open source majeur de l'écosystème <a class="link" href="/competences/detail.html?id=7">Java</a>, 
+        conçu pour faciliter le développement d'applications robustes, modulaires et sécurisées. Dans un contexte professionnel 
+        où les entreprises recherchent des solutions fiables, scalables et compatibles avec les architectures cloud-native, 
+        Spring s'impose comme un standard incontournable. L'actualité technologique - montée en puissance 
+        des microservices, généralisation des API REST, adoption massive de Kubernetes - renforce encore 
+        son importance dans les systèmes d'information modernes.
     </p>
     <p>
-        Mon expérience avec Spring se concentre sur Spring Boot, qui simplifie encore davantage la création d'applications Spring autonomes. 
-        J'ai utilisé Spring Boot pour créer des API RESTful, gérer l'accès aux bases de données avec Spring Data, 
-        et sécuriser des applications.
+        Mon expertise se concentre sur Spring Boot, qui simplifie la création d'applications 
+        autonomes prêtes pour la production. Je l'utilise pour concevoir des API performantes, gérer la 
+        persistance des données via Spring Data, structurer des architectures en couches maintenables et 
+        intégrer des mécanismes de sécurité adaptés aux besoins métier.
     </p>
 </section>
 
-<!-- =================================================================== -->
-<!-- SECTION : MISE EN PRATIQUE                                          -->
-<!-- =================================================================== -->
 <section class="comp-section">
-    <h3>Mise en pratique</h3>
+    <h3><b>Éléments de preuve</b></h3>
     <p>
-        Spring, et plus particulièrement <strong>Spring Boot</strong>, est mon framework de prédilection pour le développement d'applications backend Java robustes et performantes. Le projet <strong>Project Management Tool (PMT)</strong> en est une illustration parfaite.
+        Ma maîtrise de Spring Boot s'est construite à travers des projets concrets où j'ai dû concevoir, 
+        optimiser et sécuriser des architectures backend complètes. Voici trois anecdotes illustrant 
+        l'application directe de cette compétence.
     </p>
-    <ul>
-        <li>
-            <strong>Développement rapide d'API RESTful :</strong> Grâce à Spring Boot, j'ai pu construire efficacement une API RESTful complète et sécurisée pour le PMT. Le framework a grandement facilité la création des endpoints, la gestion des requêtes HTTP et des réponses JSON, accélérant ainsi le développement du backend.
-        </li>
-        <li>
-            <strong>Architecture modulaire et maintenable :</strong> Spring a permis de structurer le code du backend selon une <strong>architecture en couches</strong> (Contrôleur, Service, Repository) en s'appuyant sur les principes d'Inversion de Contrôle (IoC) et d'Injection de Dépendances (DI). Cela garantit une forte cohésion et un faible couplage, essentiels pour la maintenabilité et l'évolutivité.
-        </li>
-        <li>
-            <strong>Gestion de la persistance des données :</strong> J'ai utilisé l'écosystème Spring (notamment <strong>Spring Data JPA</strong>) pour interagir de manière fluide avec la base de données SQL. Cela a simplifié la gestion des entités, l'exécution des requêtes et la manipulation des données, tout en bénéficiant des fonctionnalités avancées de gestion des transactions.
-        </li>
-        <li>
-            <strong>Intégration dans un écosystème Full-Stack :</strong> Spring Boot a joué un rôle clé dans l'intégration harmonieuse du backend Java au sein de l'architecture full-stack du PMT, facilitant sa communication avec le frontend Angular et son déploiement conteneurisé via Docker.
-        </li>
-    </ul>
+
+    <p>
+        <b>Développement d'une API REST complète et sécurisée (<a class="link" href="/projets/detail.html?id=6">PMT</a>).</b>
+        <br>Dans le cadre du projet Project Management Tool (PMT), j'ai conçu une API RESTful 
+        permettant la gestion des projets, des tâches et des utilisateurs. Spring Boot m'a permis de 
+        structurer rapidement les endpoints et de gérer les flux JSON facilement. 
+        En respectant les convention et l'esprit du framework, on obtient un backend fiable, performant et extensible, facilitant l'évolution du produit.  
+    </p>
+
+    <p>
+        <b>Architecture modulaire et maintenable (<a class="link" href="/projets/detail.html?id=6">PMT</a>).</b>
+        <br>Pour garantir la qualité du code et la facilité d'évolution, j'ai structuré le backend selon une 
+        architecture en couches (Controller, Service, Repository) en appliquant les principes d'Inversion 
+        de Contrôle (IoC) et d'Injection de Dépendances (DI). Résultat : un code propre, testable et durable, 
+        facilitant l'intégration de nouvelles fonctionnalités et permettant à d'autres développeurs de contribuer efficacement. 
+    </p>
+
+    <p>
+        <b>Gestion avancée de la persistance avec Spring Data JPA (<a class="link" href="/projets/detail.html?id=6">PMT</a>).</b>
+        <br>J'ai utilisé Spring Data JPA pour automatiser les opérations CRUD, optimiser les requêtes complexes 
+        et garantir la fiabilité des transactions. Cela a permis de réduire le code répétitif et une meilleure performance globale.
+    </p>
 </section>
+
 <section class="comp-section">
-    <h3>Projets Associés</h3>
+    <h3><b>Autocritique</b></h3>
+    <p>
+        Je ne me considère pas encore comme un expert de Spring Boot mais je peux déjà mettre. 
+        J'ai découvert le framework dans le cadre de mes études puis à travers un projet personnel, 
+        et c'est ce qui m'a réellement réconcilié avec l'écosystème <a class="link" href="/competences/detail.html?id=7">Java</a>. 
+        Ces expériences m'ont permis de comprendre les mécanismes essentiels du framework et de développer des API structurées, 
+        maintenables et adaptées aux besoins métier.
+    </p>
+    <p>
+        Même si mon expérience reste limitée en volume, elle m'a donné une bonne compréhension des fondamentaux: 
+        injection de dépendances, gestion des entités, transactions, architecture en couches. 
+        Je suis convaincu que la solidité d'un backend repose d'abord sur ces bases avant d'aborder des architectures plus ambitieuses.
+    </p>
+</section>
+
+<section class="comp-section">
+    <h3><b>Évolution</b></h3>
+    <p>
+        À moyen terme, je souhaite approfondir mes compétences autour de l'écosystème Spring, notamment 
+        sur des sujets avancés comme Spring Security, et l'intégration avec des orchestrateurs tels que Kubernetes. 
+        Mon objectif est de maîtriser la conception de microservices distribués, résilients et observables.
+    </p>
+</section>
+
+<section class="comp-section">
+    <h5>Projets Associés</h5>
     <div class="project-list">
         <ul>
             <li><a class="project-link" href="/projets/detail.html?id=6">PMT</a></li>

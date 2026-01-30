@@ -5,5 +5,5 @@
 
 <Card>
     <span slot="title">{formation.Intitule}</span>
-    <span slot="subtitle">{formation.Etablissement} | {formation.Periode}</span>
+    <span slot="subtitle"><span style="color: var(--primary-color);">{formation.Etablissement}</span> | {formation.Periode}</span>
 </Card>

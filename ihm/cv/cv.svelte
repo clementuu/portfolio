@@ -53,7 +53,7 @@
 
 <section>
     <OnScrollAppear index={formationTitleIndex}>
-        <h2>Formations</h2>
+        <h2><b>Formations</b></h2>
     </OnScrollAppear>
     {#if error}
         <p class="error">{error}</p>
@@ -70,7 +70,7 @@
 
 <section>
     <OnScrollAppear index={experienceTitleIndex}>
-        <h2>Expériences professionnelles</h2>
+        <h2><b>Expériences professionnelles</b></h2>
     </OnScrollAppear>
     {#if error}
         <p class="error">{error}</p>

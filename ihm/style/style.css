@@ -1,5 +1,11 @@
 :root {
   --header-height: 60px;
+  --primary-color: #81c553;
+  --tertiary-color: #567443;
+  --dev-color: #b3e493;
+  --human-color: rgb(226, 204, 241);
+  --devops-color: rgb(175, 235, 227);
+  --text-color: rgb(5,15,5,1);
 }
 
 html {
@@ -34,6 +40,7 @@ h2 {
 }
 
 .card-span {
+    color: var(--text-color);
     font-size: 12px;
     margin: 5px;
     padding: 5px;
@@ -42,18 +49,29 @@ h2 {
 }
 
 .technique {
-    background-color: darkgrey;
+    background-color: var(--dev-color);
 }
 
 .humain {
-    background-color: darkturquoise;
+    background-color: var(--human-color);
 }
 
 .devops {
-    background-color: orchid;
+    background-color: var(--devops-color);
 }
 
 .error {
     color: red;
     text-align: center;
+}
+
+a.link {
+    color: var(--primary-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a.link:hover {
+    color: var(--dev-color);
+    text-decoration: underline;
 }
