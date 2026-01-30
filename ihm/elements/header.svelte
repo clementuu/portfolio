@@ -1,5 +1,3 @@
-<svelte:options customElement="header-portfolio" />
-
 <script>
   import { onMount } from "svelte";
 
@@ -26,27 +24,32 @@
 </script>
 
 <nav class="header">
-    <a href="/"><i class="bi bi-house-door-fill"></i><span class="link-text">Accueil</span></a>
-    <div class="dropdown">
-        <a href="/projets/projets.html"><i class="bi bi-kanban-fill"></i><span class="link-text">Projets</span></a>
-        <div class="dropdown-content">
-            {#each projets as projet}
-                <a href="/projets/detail.html?id={projet.ID}">{projet.Name}</a>
-            {/each}
-        </div>
+    <div class="acceuil-link">
+        <a class="" href="/"><img class="my-pic mini" src="../assets/photo_cv.png" alt=""><span class="link-text">Clément Calia</span></a>
     </div>
-    <div class="dropdown">
-        <a href="/competences/competences.html"><i class="bi bi-person-badge"></i><span class="link-text">Compétences</span></a>
-        <div class="dropdown-content">
-            <a href="/competences/competences.html?type=dev">Développement</a>
-            <a href="/competences/competences.html?type=devops">DevOps</a>
-            <a href="/competences/competences.html?type=humain">Soft skills</a>
+    <div class="header-right">
+        <div class="dropdown">
+            <a href="/projets/projets.html"><i class="bi bi-kanban-fill"></i><span class="link-text">Projets</span></a>
+            <div class="dropdown-content">
+                {#each projets as projet}
+                    <a href="/projets/detail.html?id={projet.ID}">{projet.Name}</a>
+                {/each}
+            </div>
         </div>
+        <div class="dropdown">
+            <a href="/competences/competences.html"><i class="bi bi-person-badge"></i><span class="link-text">Compétences</span></a>
+            <div class="dropdown-content">
+                <a href="/competences/competences.html?type=dev">Développement</a>
+                <a href="/competences/competences.html?type=devops">DevOps</a>
+                <a href="/competences/competences.html?type=humain">Soft skills</a>
+            </div>
+        </div>
+        <a href="/contacts.html"><i class="bi bi-envelope-fill"></i><span class="link-text">Contacts</span></a>
     </div>
-    <a href="/contacts.html"><i class="bi bi-envelope-fill"></i><span class="link-text">Contacts</span></a>
 </nav>
 
 <style>
+    @import "../style/style.css";
     @import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");
     @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
@@ -62,15 +65,29 @@
         height: var(--header-height);
         color: white;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         gap: 1em;
+    }
+
+    .header-right {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        margin-right: 1em;
+    }
+
+    .acceuil-link {
+        display: flex;
+        align-items: center;
+        margin-left: 1em;
+        min-width: 80px;
     }
 
     a {
         color: white;
         text-decoration: none;
-        font-size: 1.2em;
+        font-size: 18px;
         padding: 0.5em 1em;
         border-radius: 5px;
         display: inline-flex;
@@ -94,7 +111,7 @@
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         z-index: 1000;
         border-radius: 5px;
-        top: 3em;
+        top: 2.9em;
     }
 
     .dropdown-content a {
@@ -141,5 +158,13 @@
         .dropdown:hover .dropdown-content {
             display: none;
         }
+    }
+
+    .mini{
+        width: 32px;
+        height: 32px;
+        object-position: center;
+        border: none;
+        box-shadow: none;
     }
 </style>

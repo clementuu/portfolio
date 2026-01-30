@@ -1,6 +1,8 @@
 <svelte:options customElement="competence-detail" />
 
 <script>
+    import Header from "../elements/header.svelte";
+
     let competence = null;
     let error = null;
     let loading = true;
@@ -46,6 +48,8 @@
         return stars;
     }
 </script>
+
+<Header/>
 
 <div class="container competence-detail">
     {#if error}

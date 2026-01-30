@@ -30,7 +30,8 @@ describe('Contacts component - static checks', () => {
     // Values / links
     expect(screen.getByText('+33 6 25 45 25 66')).toBeInTheDocument();
     expect(screen.getByText('clementcalia@gmail.com')).toBeInTheDocument();
-    expect(screen.getByText('Clément Calia')).toBeInTheDocument();
+    const linkedinLinks = screen.getAllByText('Clément Calia');
+    expect(linkedinLinks).toHaveLength(2);
     expect(screen.getByText('clementuu')).toBeInTheDocument();
   });
 
@@ -45,7 +46,8 @@ describe('Contacts component - static checks', () => {
     const mailLink = screen.getByText('clementcalia@gmail.com').closest('a');
     expect(mailLink).toHaveAttribute('href', 'mailto:clementcalia@gmail.com');
 
-    const linkedinLink = screen.getByText('Clément Calia').closest('a');
+    const linkedinLinks = screen.getAllByText('Clément Calia');
+    const linkedinLink = linkedinLinks[1].closest('a');
     expect(linkedinLink).toHaveAttribute('href', 'https://www.linkedin.com/in/clement-calia');
 
     const githubLink = screen.getByText('clementuu').closest('a');

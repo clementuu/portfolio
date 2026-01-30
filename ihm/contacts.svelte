@@ -5,6 +5,8 @@
 </svelte:head>
 
 <script>
+    import Header from "./elements/header.svelte";
+
     const contacts = [
         {
             type: "Téléphone",
@@ -32,6 +34,8 @@
         }
     ];
 </script>
+
+<Header/>
 
 <div class="contact-div">
     <h2><b>Me Contacter</b></h2>

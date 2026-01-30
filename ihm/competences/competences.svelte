@@ -1,6 +1,7 @@
 <svelte:options customElement="competences-portfolio" />
 
 <script>
+    import Header from '../elements/header.svelte';
     import Card from './card.svelte';
 
     let error = null;
@@ -36,6 +37,8 @@
         }
     }
 </script>
+
+<Header/>
 
 <div class="competences-div">
     {#if error}

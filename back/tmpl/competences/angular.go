@@ -30,7 +30,8 @@ const AngularCompetence = `
 
     <p>
         <strong>Centralisation de l'état et communication avec le backend (<a class="link" href="/projets/detail.html?id=6">PMT</a>).</strong>
-        <br>Les services Angular ont été utilisés pour gérer la logique métier et la communication asynchrone avec l'API backend (Java/Spring Boot). 
+        <br>Les services Angular ont été utilisés pour gérer la logique métier et la communication asynchrone avec l'API backend 
+        (<a class="link" href=/competences/detail.html?id=9>Java</a>, <a class="link" href=/competences/detail.html?id=8>Spring</a>). 
         Cette organisation a permis de découpler les composants de la logique de récupération des données, garantissant un code clair et une application fiable, 
         avec un flux de données optimisé.
     </p>

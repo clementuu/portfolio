@@ -1,6 +1,7 @@
 <svelte:options customElement="projets-portfolio" />
 
 <script>
+    import Header from '../elements/header.svelte';
     import Card from './card.svelte';
 
     let projets = [];
@@ -22,6 +23,8 @@
             projets = [];
         });
 </script>
+
+<Header/>
 
 <div class="projets-div">
     {#if error}

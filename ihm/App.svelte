@@ -3,6 +3,7 @@
 <script>	
 	import { onMount } from 'svelte';
     import Cv from './cv/cv.svelte';
+ 	import Header from './elements/header.svelte';
 
 	let name = "Clément Calia";
 	let inge = "Expert en ingénierie logicielle";
@@ -27,6 +28,8 @@
 	});
 </script>
 
+<Header/>
+
 <div class="banner">
 	<div class="its-me">
 		<img class="my-pic" src="./assets/photo_cv.png" alt="">
@@ -46,6 +49,7 @@
 </div>
 
 <style>
+	@import "./style/style.css";
 	@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 	@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");
 
@@ -160,24 +164,6 @@
 			text-align: left;
 			padding-left: 20px;
 		}
-	}
-
-	.my-pic {
-		width: clamp(150px, 15vw, 250px);
-		height: clamp(150px, 15vw, 250px);
-		background-color: whitesmoke;
-		border-radius: 50%;
-		border: 3px solid rgba(255, 255, 255, 0.7);
-		box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.3),
-		            0 4px 10px rgba(0, 0, 0, 0.5);
-		object-fit: cover;
-		object-position: center -20px;
-		transition: all 0.3s ease;
-	}
-
-	.my-pic:hover {
-		box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.4),
-		            0 6px 15px rgba(0, 0, 0, 0.6);
 	}
 
 	.metier, .name {

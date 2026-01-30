@@ -4,7 +4,7 @@ import sveltePlugin from 'esbuild-svelte';
 const isDev = process.argv.includes('--dev')
 
 let commonOptions = {
-	entryPoints: ['./App.svelte', './header.svelte', './projets/projets.svelte', './projets/detail.svelte', './competences/competences.svelte', './competences/detail.svelte', './contacts.svelte'],
+	entryPoints: ['./App.svelte', './projets/projets.svelte', './projets/detail.svelte', './competences/competences.svelte', './competences/detail.svelte', './contacts.svelte'],
 	bundle: true,
 	format: 'esm',
 	plugins: [

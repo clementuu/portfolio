@@ -1,6 +1,8 @@
 <svelte:options customElement="projet-detail" />
 
 <script>
+    import Header from "../elements/header.svelte";
+
     let projet = null;
     let error = null;
 
@@ -28,6 +30,8 @@
         error = "Aucun ID de projet n'a été fourni.";
     }
 </script>
+
+<Header/>
 
 <div class="container projet-detail">
     {#if error}

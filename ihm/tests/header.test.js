@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/svelte';
 import { describe, it, expect, afterEach } from 'vitest';
-import Header from '../header.svelte';
+import Header from '../elements/header.svelte';
 
 afterEach(() => {
   document.body.innerHTML = '';
@@ -9,7 +9,7 @@ afterEach(() => {
 describe('Header - static checks (no network)', () => {
   it('renders main links and structure', () => {
     const { container } = render(Header);
-    expect(screen.getByText('Accueil')).toBeInTheDocument();
+    expect(screen.getByText('Clément Calia')).toBeInTheDocument();
     expect(screen.getByText('Projets')).toBeInTheDocument();
     expect(screen.getByText('Compétences')).toBeInTheDocument();
     expect(screen.getByText('Contacts')).toBeInTheDocument();
@@ -27,7 +27,7 @@ describe('Header - static checks (no network)', () => {
 
   it('links have correct hrefs for static items', () => {
     render(Header);
-    const accueil = screen.getByText('Accueil').closest('a');
+    const accueil = screen.getByText('Clément Calia').closest('a');
     expect(accueil).toHaveAttribute('href', '/');
 
     const contacts = screen.getByText('Contacts').closest('a');
