@@ -36,13 +36,13 @@
         border: 1px solid #eee;
         border-radius: 8px;
         padding: 2em 0;
-        margin: 1em;
+        margin: 0.8em;
         box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
-        width: 180px;
+        width: 150px;
         transition: transform 0.2s;
         cursor: pointer;
     }

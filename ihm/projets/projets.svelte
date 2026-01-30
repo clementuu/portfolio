@@ -52,7 +52,7 @@
         top: 0;
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 770px) {
 		.projets-div {
 			top: var(--header-height);
 		}

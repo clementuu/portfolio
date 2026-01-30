@@ -71,7 +71,7 @@
         line-height: 1.6;
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 770px) {
 		.projet-detail {
 			top: var(--header-height);
             margin: 1em auto 5em auto;
