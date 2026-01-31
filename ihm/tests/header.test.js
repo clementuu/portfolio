@@ -10,6 +10,7 @@ describe('Header - static checks (no network)', () => {
   it('renders main links and structure', () => {
     const { container } = render(Header);
     expect(screen.getByText('Clément Calia')).toBeInTheDocument();
+    expect(screen.getByText('À propos')).toBeInTheDocument();
     expect(screen.getByText('Projets')).toBeInTheDocument();
     expect(screen.getByText('Compétences')).toBeInTheDocument();
     expect(screen.getByText('Contacts')).toBeInTheDocument();
