@@ -27,4 +27,8 @@ const (
 	CaisseLogo    = "../assets/Panier.png"
 	SaintJeanLogo = "../assets/Logo_de_saint-jean_de_vedas.jpg"
 	PMTLogo       = "../assets/logo-pmt.png"
+	// logos formations
+	LaetitiaLogo = "../assets/logo-llb.jpg"
+	PaulVaLogo   = "../assets/logo-udmpv.jpg"
+	ISCODLogo    = "../assets/logo-iscod.jpg"
 )

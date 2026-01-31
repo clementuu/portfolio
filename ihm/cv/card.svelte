@@ -1,12 +1,14 @@
 <article>
-    <h3>
-        <slot name="title" />
-    </h3>
-    <p>
-        <strong>
-            <slot name="subtitle" />
-        </strong>
-    </p>
+    <div>
+        <h3>
+            <slot name="title" />
+        </h3>
+        <p>
+            <strong>
+                <slot name="subtitle" />
+            </strong>
+        </p>
+    </div>
     <slot />
 </article>
 
@@ -18,6 +20,8 @@
         border-radius: 8px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         transition: box-shadow 0.2s ease-in-out;
+        display: flex;
+        justify-content: space-between;
     }
 
     h3 {
