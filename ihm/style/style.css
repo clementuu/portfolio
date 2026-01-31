@@ -40,6 +40,19 @@ h1, h2 {
     padding: 1em 2em;
 }
 
+h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    border-bottom: none;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
 .card-span {
     color: var(--text-color);
     font-size: 12px;

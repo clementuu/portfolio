@@ -3,16 +3,6 @@
 </script>
 
 <article class = {className}>
-    <div>
-        <h3>
-            <slot name="title" />
-        </h3>
-        <p>
-            <strong>
-                <slot name="subtitle" />
-            </strong>
-        </p>
-    </div>
     <slot />
 </article>
 
@@ -29,19 +19,6 @@
     .flex {
         display: flex;
         justify-content: space-between;
-    }
-
-    h3 {
-        font-size: 1.3rem;
-        color: #333;
-        margin-top: 0;
-        margin-bottom: 0.5rem;
-        border-bottom: none;
-    }
-
-    p {
-        font-size: 1rem;
-        line-height: 1.5;
     }
 
     /* Styles for slotted content */

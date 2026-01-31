@@ -5,12 +5,21 @@
 </script>
 
 <Card className="flex">
-    <span slot="title">{formation.Intitule}</span>
-    <Tooltip slot="subtitle" text={formation.Presentation} placement="top">
-        <span style="color: var(--primary-color);">
+    <Tooltip html={formation.Presentation} placement="top">
+        <div>
+            <h3>      
+                <span>{formation.Intitule}</span>
+            </h3>
+            <p>
+                <strong>
+                    <span style="color: var(--primary-color);">
             {formation.Etablissement}
         </span>
         <span>| {formation.Periode}</span>
+                </strong>
+            </p>
+        </div>
+        
     </Tooltip>
     <div class="img-container">
         <img src="{formation.Logo}" alt="{formation.Intitule}">

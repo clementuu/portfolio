@@ -14,6 +14,9 @@ build:
 start:
 	docker compose up -d
 
+.PHONY: build-and-start
+build-and-start: build start
+
 .PHONY: stop
 stop:
 	docker compose down

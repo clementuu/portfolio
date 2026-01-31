@@ -1,7 +1,7 @@
 <script>
     import { tick } from 'svelte';
 
-    export let text = "";
+    export let html = "";
     export let placement = "top"; // top | bottom | left | right
 
     let visible = false;
@@ -48,27 +48,24 @@
 
     {#if visible}
         <div class="tooltip {placement} visible" bind:this={tooltipEl}>
-            {@html text}
+            {@html html}
         </div>
     {/if}
 </div>
 
 <style>
-    .wrapper {
-        position: relative;
-        display: inline-block;
-    }
 
     :global(.tooltip) {
         position: absolute;
-        min-width: 80vw;
-        max-width: 800px;
+        min-width: 50vw;
+        max-width: 80vw;
+        margin: 0;
         background: #333;
         color: white;
         padding: 10px 10px;
         border-radius: 6px;
         font-size: 0.85rem;
-        white-space: nowrap;
+        white-space: normal;
         text-wrap: wrap;
         z-index: 2000;
         opacity: 0;
@@ -78,6 +75,18 @@
 
     :global(.tooltip.visible) {
         opacity: 1;
+    }
+
+    :global(.tooltip ul) {
+        margin: 0;
+        padding: 0;
+    }
+
+    :global(.tooltip li) {
+        background-color: #333;
+        max-width: fit-content;
+        color: white;
+        white-space: normal;
     }
 
     /* placements */

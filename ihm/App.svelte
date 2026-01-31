@@ -174,7 +174,7 @@
 	}
 
 	.name {
-		font-size: clamp(30px, 15vw, 60px);
+		font-size: clamp(30px, 8vw, 60px);
 	}
 
 	.metier {

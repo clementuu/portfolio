@@ -3,7 +3,7 @@ package store
 import (
 	"back/constants"
 	"back/model"
-	tmpl "back/tmpl/etablissement"
+	tmpl "back/tmpl/etablissements"
 )
 
 var (

@@ -25,7 +25,7 @@ const (
 	SiLogo        = "../assets/logo-si.png"
 	AntiGapsiLogo = "../assets/playerDown1.png"
 	CaisseLogo    = "../assets/Panier.png"
-	SaintJeanLogo = "../assets/Logo_de_saint-jean_de_vedas.jpg"
+	SaintJeanLogo = "../assets/logo-saint-jean.png"
 	PMTLogo       = "../assets/logo-pmt.png"
 	// logos formations
 	LaetitiaLogo = "../assets/logo-llb.jpg"

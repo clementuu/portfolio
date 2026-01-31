@@ -41,14 +41,21 @@
         transform: scale(1.05);
         text-decoration: none; /* Ensure no underline on hover */
     }
+    img {
+        width: 100%;
+        height: 70px;
+    }
 
     .image-container {
-        height: 70px;
-        width: 100%;
+        width: 80px;
+        height: 80px;
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 1rem;
         margin-bottom: 1em;
+        background-color: #f7f6f6;
+        border-radius: 10%;
     }
 
     .project-card img {

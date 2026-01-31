@@ -23,7 +23,7 @@ const BashCompetence = `
 
     <p>
         <strong>Automatisation de migration de base de données (<a class="link" href="/projets/detail.html?id=1">Escarcelle</a>).</strong>
-        <br>J'ai développé un script Bash pour automatiser entièrement la migration d'une base de données de <strong>MySQL 5 vers MySQL 8</strong>
+        <br>J'ai développé un script Bash pour automatiser entièrement la migration d'une base de données de MySQL 5 vers MySQL 8
         pour le projet Escarcelle. Ce script intégrait des points de contrôle à chaque étape cruciale (sauvegarde, mise à jour, redémarrage du service) 
         et générait un fichier de log détaillé pour assurer la traçabilité et la sécurité de l'opération. Le résultat a été une migration de base de données complexe 
         réalisée de manière fiable et sans erreur, réduisant considérablement le temps d'arrêt. Ma valeur ajoutée a été de transformer 
