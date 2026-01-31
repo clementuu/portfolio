@@ -4,7 +4,7 @@
     export let formation;
 </script>
 
-<Card>
+<Card className="flex">
     <span slot="title">{formation.Intitule}</span>
     <Tooltip slot="subtitle" text={formation.Presentation} placement="top">
         <span style="color: var(--primary-color);">

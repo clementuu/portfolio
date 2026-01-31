@@ -55,6 +55,8 @@
 
 	.cv-container {
 		padding-top: var(--header-height);
+		position: relative;
+		z-index: 2;
 	}
 
 	.banner {

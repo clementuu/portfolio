@@ -1,4 +1,8 @@
-<article>
+<script>
+    export let className;
+</script>
+
+<article class = {className}>
     <div>
         <h3>
             <slot name="title" />
@@ -20,6 +24,9 @@
         border-radius: 8px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         transition: box-shadow 0.2s ease-in-out;
+    }
+
+    .flex {
         display: flex;
         justify-content: space-between;
     }
