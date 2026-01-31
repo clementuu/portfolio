@@ -63,7 +63,7 @@
     }
 
     h2 {
-        color: var(--primary-color);
+        color: var(--secondary-color);
         border-bottom: 2px solid #eee;
         padding-top: 0;
         padding-bottom: 2rem;

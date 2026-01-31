@@ -123,7 +123,7 @@
 		animation: bounce 2s infinite;
 	}
 
-	@media (max-width: 768px) {
+	@media (max-width: 800px) {
 		.banner {
 			top:0
 		}

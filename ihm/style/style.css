@@ -2,7 +2,7 @@
   --header-height: 60px;
   --primary-color: #81c553;
   --secondary-color: #d17474;
-  --tertiary-color: #2a8846;
+  --tertiary-color: #a08879;
   --dev-color: #b3e493;
   --human-color: rgb(226, 204, 241);
   --devops-color: rgb(175, 235, 227);
@@ -17,7 +17,7 @@ html, body {
     margin: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     body {
         padding-bottom: var(--header-height);
         box-sizing: border-box;
