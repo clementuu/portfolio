@@ -36,7 +36,7 @@ const EscarcelleHTML = `
 <!-- SECTION : MISSIONS ET COMPÉTENCES DÉVELOPPÉES                       -->
 <!-- =================================================================== -->
 <section class="project-section">
-    <h3>Missions et Compétences Développées</h3>
+    <h3><b>Missions et Compétences Développées</b></h3>
     <p>
         Mon intervention sur Escarcelle a couvert un large spectre technique, allant de la modernisation 
         d'un socle existant à la conception de nouveaux modules. Ce projet m'a permis de renforcer mes 
@@ -102,7 +102,7 @@ const EscarcelleHTML = `
 <!-- SECTION : CONCLUSION                                                -->
 <!-- =================================================================== -->
 <section class="project-section">
-    <h3>Conclusion</h3>
+    <h3><b>Conclusion</b></h3>
     <p>
         Le projet Escarcelle a été une expérience particulièrement enrichissante, mêlant modernisation 
         d'un système existant, création de nouveaux outils et collaboration avec des acteurs externes. 
@@ -117,7 +117,7 @@ const EscarcelleHTML = `
 <!-- SECTION : COMPÉTENCES ASSOCIÉES                                     -->
 <!-- =================================================================== -->
 <section class="project-section">
-    <h3>Compétences Associées</h3>
+    <h5>Compétences Associées</h5>
     <div class="competences-list">
         <a href="/competences/detail.html?id=1" class="competence-tag technique">Go</a>
         <a href="/competences/detail.html?id=10" class="competence-tag technique">Rebol</a>

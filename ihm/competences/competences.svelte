@@ -70,7 +70,7 @@
         top: 0;
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 800px) {
 		.competences-div {
 			top: var(--header-height);
 		}

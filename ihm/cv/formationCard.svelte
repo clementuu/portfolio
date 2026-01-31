@@ -23,12 +23,18 @@
     }
 
     .img-container {
-        display: flex;
+        display: none;
         justify-content: center;
         align-items: center;
         height: 100px;
         width: 100px;
         border-radius: 10%;
         background-color: white;
-    } 
+    }
+
+    @media (min-width: 800px) {
+		.img-container {
+			display: flex;
+		}
+	}
 </style>

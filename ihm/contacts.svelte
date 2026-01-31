@@ -92,7 +92,7 @@
         top: 0;
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 800px) {
 		.contact-div {
 			top: var(--header-height);
 		}

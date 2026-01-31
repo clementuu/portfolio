@@ -43,7 +43,7 @@ const RCompetence = `
 <section class="comp-section">
     <h3><b>Autocritique</b></h3>
     <p>
-        Ma maîtrise de R est <strong>fonctionnelle</strong>. Je ne suis pas un développeur R aguerri, mais je connais suffisamment 
+        Ma maîtrise de R est fonctionnelle. Je ne suis pas un développeur R aguerri, mais je connais suffisamment 
         bien l'écosystème pour comprendre dans quelles situations ce langage apporte une réelle valeur, notamment pour l'analyse statistique et l'exploration de données. 
         Lorsque j'ai besoin d'utiliser R, je suis capable de m'appuyer efficacement sur la documentation et les ressources en ligne pour atteindre mes objectifs, 
         même sur des sujets que je ne maîtrise pas encore totalement.

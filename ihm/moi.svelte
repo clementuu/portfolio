@@ -68,7 +68,6 @@
     .article {
         position: relative;
         top: 0;
-        padding: 1em;
         margin: auto;
     }
 
@@ -90,9 +89,10 @@
         padding-left: 0;
     }
 
-    @media (min-width: 770px) {
+    @media (min-width: 800px) {
 		.article {
 			top: var(--header-height);
+            padding: 1em;
             margin: auto auto 5em auto;
 		}
 	}

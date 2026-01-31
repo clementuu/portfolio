@@ -25,7 +25,7 @@ const JeuAntiGaspiHTML = `
 <!-- SECTION : MISSIONS ET COMPÉTENCES DÉVELOPPÉES                       -->
 <!-- =================================================================== -->
 <section class="project-section">
-    <h3>Missions et Compétences Développées</h3>
+    <h3><b>Missions et Compétences Développées</b></h3>
     <p>
         Ce projet m'a permis de découvrir et d'expérimenter les fondations du développement de jeux 
         2D en JavaScript. J'ai dû apprendre à manipuler des ressources graphiques, gérer un canvas, 
@@ -96,7 +96,7 @@ const JeuAntiGaspiHTML = `
 <!-- SECTION : CONCLUSION                                                -->
 <!-- =================================================================== -->
 <section class="project-section">
-    <h3>Conclusion</h3>
+    <h3><b>Conclusion</b></h3>
     <p>
         Ce jeu antigaspi est un projet qui me tient particulièrement à cœur. Bien que son code ne 
         reflète plus mon niveau actuel, il représente une étape fondatrice dans mon parcours de 
@@ -110,7 +110,7 @@ const JeuAntiGaspiHTML = `
 <!-- SECTION : COMPÉTENCES ASSOCIÉES                                     -->
 <!-- =================================================================== -->
 <section class="project-section">
-    <h3>Compétences Associées</h3>
+    <h5>Compétences Associées</h5>
     <div class="competences-list">
         <a href="/competences/detail.html?id=3" class="competence-tag technique">JavaScript</a>
         <a href="/competences/detail.html?id=2" class="competence-tag technique">HTML/CSS</a>

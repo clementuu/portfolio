@@ -3,7 +3,7 @@ package tmpl
 // CaisseHTML contient la description HTML du projet de refonte de la caisse Escarcelle.
 const CaisseHTML = `
 <!-- =================================================================== -->
-<!-- SECTION : TITRE ET INTRODUCTION DU PROJET                           -->
+<!-- SECTION : INTRODUCTION DU PROJET                           -->
 <!-- =================================================================== -->
 <section class="project-section">
     <p>
@@ -33,7 +33,7 @@ const CaisseHTML = `
 <!-- SECTION : MISSIONS ET COMPÉTENCES DÉVELOPPÉES                       -->
 <!-- =================================================================== -->
 <section class="project-section">
-    <h3>Missions et Compétences Développées</h3>
+    <h3><b>Missions et Compétences Développées</b></h3>
     <p>
         L'application repose sur une architecture modulaire et événementielle permettant de découpler 
         l'interface, la logique métier, la synchronisation réseau et la gestion des données locales. 
@@ -128,7 +128,7 @@ const CaisseHTML = `
 <!-- SECTION : CONCLUSION                                                -->
 <!-- =================================================================== -->
 <section class="project-section">
-    <h3>Conclusion</h3>
+    <h3><b>Conclusion</b></h3>
     <p>
         Cette refonte a été un succès technique majeur, aboutissant à une application de caisse moderne, 
         rapide, sécurisée et considérablement plus simple à maintenir et à faire évoluer.  
@@ -142,7 +142,7 @@ const CaisseHTML = `
 <!-- SECTION : COMPÉTENCES ASSOCIÉES                                     -->
 <!-- =================================================================== -->
 <section class="project-section">
-    <h3>Compétences Associées</h3>
+    <h5>Compétences Associées</h5>
     <div class="competences-list">
         <a href="/competences/detail.html?id=1" class="competence-tag technique">Go</a>
         <a href="/competences/detail.html?id=6" class="competence-tag technique">SQL</a>

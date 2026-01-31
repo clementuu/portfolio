@@ -24,7 +24,7 @@ const PmtHTML = `
     <!-- SECTION : MISSIONS ET COMPÉTENCES DÉVELOPPÉES                       -->
     <!-- =================================================================== -->
     <section class="project-section">
-        <h3>Missions et Compétences Développées</h3>
+        <h3><b>Missions et Compétences Développées</b></h3>
         <p>
             Ce projet complet m'a permis de maîtriser l'ensemble du cycle de vie d'une application 
             web moderne, de la conception de la base de données à l'intégration continue, en passant 
@@ -93,7 +93,7 @@ const PmtHTML = `
     <!-- SECTION : CONCLUSION                                                -->
     <!-- =================================================================== -->
     <section class="project-section">
-        <h3>Conclusion</h3>
+        <h3><b>Conclusion</b></h3>
         <p>
             PMT est un projet intégrateur qui démontre ma capacité à concevoir, développer et déployer 
            une application web complète et fonctionnelle. Il met en évidence mes compétences techniques 
@@ -109,7 +109,7 @@ const PmtHTML = `
 <!-- SECTION : COMPÉTENCES ASSOCIÉES                                     -->
 <!-- =================================================================== -->
 <section class="project-section">
-    <h3>Compétences Associées</h3>
+    <h5>Compétences Associées</h5>
     <div class="competences-list">
         <a href="/competences/detail.html?id=8" class="competence-tag technique">Spring</a>
         <a href="/competences/detail.html?id=7" class="competence-tag technique">Java</a>

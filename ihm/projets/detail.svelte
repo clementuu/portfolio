@@ -38,7 +38,7 @@
         <p class="error">{error}</p>
     {:else if projet}
         <h1><b>{projet.name}</b></h1>
-        <h2><b>{projet.sujet}</b></h2>
+        <h2>{projet.sujet}</h2>
         {@html projet.tmpl}
     {:else}
         <p>Chargement du projet...</p>
@@ -63,6 +63,7 @@
     }
 
     h2 {
+        color: var(--primary-color);
         border-bottom: 2px solid #eee;
         padding-top: 0;
         padding-bottom: 2rem;
@@ -75,7 +76,7 @@
         line-height: 1.6;
     }
 
-    @media (min-width: 770px) {
+    @media (min-width: 800px) {
 		.projet-detail {
 			top: var(--header-height);
             margin: 1em auto 5em auto;
@@ -98,13 +99,15 @@
         padding-bottom: 0;
     }
 
-    :global(.project-section h2) {
-        font-size: 1.8em;
+    :global(.project-section h3) {
+        color: var(--secondary-color);
+        font-size: 1.4em;
         margin-bottom: 1rem;
+        margin-top: 1.5rem;
     }
 
-    :global(.project-section h3) {
-        font-size: 1.4em;
+    :global(.project-section h5) {
+        color: var(--secondary-color);
         margin-bottom: 1rem;
         margin-top: 1.5rem;
     }
