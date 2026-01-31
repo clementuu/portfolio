@@ -93,9 +93,11 @@
         font-size: clamp(1rem, 8vw, 2.5rem); /* Larger font size */
         font-weight: 700; /* Bolder */
         text-align: center; /* Center the title */
-        padding-bottom: 0.5rem;
-        margin-bottom: 2rem; /* More space below the title */
+        padding-bottom: 0.5em;
+        margin-bottom: 1rem; /* More space below the title */
+        padding: 0;
     }
+
     .error {
         color: red;
         text-align: center;

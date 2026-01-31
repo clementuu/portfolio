@@ -30,7 +30,7 @@
     {#if error}
         <p class="error">{error}</p>
     {:else if projets.length > 0}
-        <h2><b>Mes Projets</b></h2>
+        <h1><b>Mes Projets</b></h1>
         <div class="projets-grid">
             {#each projets as projet}
                 <Card {projet} />

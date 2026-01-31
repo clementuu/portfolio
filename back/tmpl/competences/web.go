@@ -46,7 +46,7 @@ const WebCompetence = `
 <section class="comp-section">
     <h3><b>Autocritique</b></h3>
     <p>
-        Je considère ma maîtrise du développement web comme <b>solide et polyvalente</b>, bien que toujours perfectible. 
+        Je considère ma maîtrise du développement web comme solide et polyvalente, bien que toujours perfectible. 
         HTML et CSS constituent un socle essentiel dans mon profil full-stack, me permettant de créer des interfaces esthétiques, accessibles et performantes. 
         Ces compétences sont particulièrement importantes lorsque je conçois des expériences cohérentes ou que j'intègre des interfaces dans des architectures plus larges.
     </p>
@@ -60,11 +60,8 @@ const WebCompetence = `
 <section class="comp-section">
     <h3><b>Évolution</b></h3>
     <p>
-        À moyen terme, je souhaite approfondir mes compétences en <b>UI/UX Design</b> et en <b>design system</b>, afin de concevoir des interfaces cohérentes et scalables. 
+        À moyen terme, je souhaite approfondir mes compétences en UI/UX Design, afin des maîtriser les fondements et de concevoir des interfaces plus intutives. 
         Je m'intéresse également aux nouvelles spécifications CSS (container queries, subgrid, CSS nesting) qui offrent des mises en page encore plus flexibles.
-    </p>
-    <p>
-        Je consulte actuellement des ressources sur l'accessibilité web (a11y) et prévois de suivre une formation dédiée à l'UX Design. Mon objectif est de proposer des expériences utilisateur toujours plus intuitives, modernes et inclusives.
     </p>
 </section>
 

@@ -38,7 +38,7 @@
 <Header/>
 
 <div class="contact-div">
-    <h2><b>Me Contacter</b></h2>
+    <h1><b>Me Contacter</b></h1>
     <div class="contact-list">
         {#each contacts as contact}
             <div class="contact-item">

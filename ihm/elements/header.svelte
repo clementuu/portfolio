@@ -28,6 +28,7 @@
         <a class="" href="/"><img class="my-pic mini" src="../assets/photo_cv.png" alt=""><span class="link-text">Clément Calia</span></a>
     </div>
     <div class="header-right">
+        <a href="/moi.html"><i class="bi bi-person-vcard-fill"></i><span class="link-text">À propos</span></a>
         <div class="dropdown">
             <a href="/projets/projets.html"><i class="bi bi-kanban-fill"></i><span class="link-text">Projets</span></a>
             <div class="dropdown-content">
@@ -81,13 +82,12 @@
         display: flex;
         align-items: center;
         margin-left: 1em;
-        min-width: 80px;
     }
 
     a {
         color: white;
         text-decoration: none;
-        font-size: 18px;
+        font-size: 16px;
         padding: 0.5em 1em;
         border-radius: 5px;
         display: inline-flex;
@@ -111,7 +111,7 @@
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         z-index: 1000;
         border-radius: 5px;
-        top: 2.9em;
+        top: 2.5em;
     }
 
     .dropdown-content a {
@@ -131,14 +131,14 @@
         display: block;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 800px) {
         nav.header {
             position: fixed;
             top: auto;
             bottom: 0;
             left: 0;
             right: 0;
-            justify-content: space-around;
+            justify-content: center;
             z-index: 1001;
             height: var(--header-height);
             padding: 0.5em;
@@ -157,6 +157,10 @@
 
         .dropdown:hover .dropdown-content {
             display: none;
+        }
+
+        .header-right{
+            gap: 0;
         }
     }
 

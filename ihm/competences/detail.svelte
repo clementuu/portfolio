@@ -96,7 +96,7 @@
         line-height: 1.6;
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 770px) {
 		.competence-detail {
 			top: var(--header-height);
             margin: 1em auto 5em auto;
@@ -124,7 +124,14 @@
     }
 
     :global(.comp-section h3) {
+        color: var(--secondary-color);
         font-size: 1.4em;
+        margin-bottom: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    :global(.comp-section h5) {
+        color: var(--secondary-color);
         margin-bottom: 1rem;
         margin-top: 1.5rem;
     }

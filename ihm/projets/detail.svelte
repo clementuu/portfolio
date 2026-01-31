@@ -53,12 +53,12 @@
         top: 0;
         margin: auto;
         padding: 2rem;
-        max-width: 900px;
+        max-width: 800px;
         background-color: #fff;
     }
 
     h1 {
-        padding-bottom: 10px;
+        padding: 10px 0;
         margin-bottom: 0;
     }
 
