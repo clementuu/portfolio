@@ -2,15 +2,17 @@
     let isFlipped = false;
 </script>
 
-<article
-    class:flipped={isFlipped}
-    on:click={() => isFlipped = !isFlipped}
->
-    {#if isFlipped}
-        <slot name="upside-down"/>
-    {:else}
-        <slot name="hawkins"/>
-    {/if}
+<article class:flipped={isFlipped}>
+    <button
+        class="invisible-button"
+        on:click={() => isFlipped = !isFlipped}
+    >
+        {#if isFlipped}
+            <slot name="upside-down"/>
+        {:else}
+            <slot name="hawkins"/>
+        {/if}
+    </button>
 </article>
 
 <style>
@@ -34,6 +36,15 @@
         background-color: #363636;
         color: white;
     }
+
+    .invisible-button {
+        all: unset;
+        display: block;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    }
+
 
     /* --- Simplified global styles for slotted content --- */
     /* Default text color for "hawkins" content */
