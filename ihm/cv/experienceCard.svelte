@@ -1,11 +1,10 @@
 <script>
-    import Tooltip from '../elements/tooltip.svelte';
-import Card from './card.svelte';
+    import Card from './card.svelte';
     export let experience;
 </script>
 
 <Card>
-    <Tooltip html={experience.Description} placement="top">
+    <div slot="hawkins" >
         <div>
             <h3>      
                 <span>{experience.Intitule} [{experience.Type}]</span>
@@ -22,5 +21,8 @@ import Card from './card.svelte';
                 <li>{tache}</li>
             {/each}
         </ul>
-    </Tooltip>
+    </div>
+    <div slot="upside-down">
+        {@html experience.Description}
+    </div>
 </Card>

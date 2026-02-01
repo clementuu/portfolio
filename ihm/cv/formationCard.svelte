@@ -1,11 +1,10 @@
 <script>
-  import Tooltip from '../elements/tooltip.svelte';
     import Card from './card.svelte';
     export let formation;
 </script>
 
-<Card className="flex">
-    <Tooltip html={formation.Presentation} placement="top">
+<Card>
+    <div slot="hawkins" class="flex">
         <div>
             <h3>      
                 <span>{formation.Intitule}</span>
@@ -13,16 +12,18 @@
             <p>
                 <strong>
                     <span style="color: var(--primary-color);">
-            {formation.Etablissement}
-        </span>
-        <span>| {formation.Periode}</span>
+                        {formation.Etablissement}
+                    </span>
+                    <span>| {formation.Periode}</span>
                 </strong>
             </p>
         </div>
-        
-    </Tooltip>
-    <div class="img-container">
-        <img src="{formation.Logo}" alt="{formation.Intitule}">
+        <div class="img-container">
+            <img src="{formation.Logo}" alt="{formation.Intitule}">
+        </div>
+    </div>
+    <div slot="upside-down">
+        {@html formation.Presentation}
     </div>
 </Card>
 
@@ -39,6 +40,11 @@
         width: 100px;
         border-radius: 10%;
         background-color: white;
+    }
+
+    .flex {
+        display: flex;
+        justify-content: space-between;
     }
 
     @media (min-width: 800px) {

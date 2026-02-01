@@ -1,34 +1,62 @@
 <script>
-    export let className;
+    let isFlipped = false;
 </script>
 
-<article class = {className}>
-    <slot />
+<article
+    class:flipped={isFlipped}
+    on:click={() => isFlipped = !isFlipped}
+>
+    {#if isFlipped}
+        <slot name="upside-down"/>
+    {:else}
+        <slot name="hawkins"/>
+    {/if}
 </article>
 
 <style>
     article {
-        background-color: #f9f9f9;
+        background-color: white;
         padding: 1.5rem;
         margin-bottom: 1.5rem;
         border-radius: 8px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: box-shadow 0.2s ease-in-out;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+        cursor: pointer; /* Indicates the element is clickable */
     }
 
-    .flex {
-        display: flex;
-        justify-content: space-between;
+    article:hover {
+        transform: scale(1.01); /* Provides visual feedback on hover */
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
     }
 
-    /* Styles for slotted content */
-    :global(article ul) {
-        padding-left: 20px;
-        margin-top: 1rem;
+    /* Style for the "upside-down" state, applied on click */
+    article.flipped {
+        background-color: #363636;
+        color: white;
+    }
+
+    /* --- Simplified global styles for slotted content --- */
+    /* Default text color for "hawkins" content */
+    :global(article ul),
+    :global(article li),
+    :global(article p) {
+        transition: color 0.3s ease-in-out;
         color: #666;
     }
 
-    :global(article li) {
-        margin-bottom: 0.5rem;
+    
+    :global(article h3),
+    :global(article h4) {
+        transition: color 0.3s ease-in-out;
+        color: black;
+    }
+
+    /* Text color for "upside-down" content */
+    article.flipped :global(ul),
+    article.flipped :global(li),
+    article.flipped :global(h3),
+    article.flipped :global(h4),
+    article.flipped :global(p) {
+        color: white;
     }
 </style>
