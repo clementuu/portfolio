@@ -30,8 +30,9 @@
         margin-bottom: 1.5rem;
         border-radius: 8px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+        transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out, box-shadow 0.4s ease-in-out, transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* More impactful transform transition */
         cursor: pointer; /* Indicates the element is clickable */
+        transform-origin: center center; /* Ensure transform originates from the center */
     }
 
     article:hover {
@@ -43,6 +44,8 @@
     article.flipped {
         background-color: #363636;
         color: white;
+        transform: rotateY(5deg) scale(1.03); /* Subtle rotation and scale for a dynamic flip feel */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* More pronounced shadow when flipped */
     }
 
     .invisible-button {
