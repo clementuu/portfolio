@@ -52,43 +52,41 @@
     $: experienceStartIndex = experienceTitleIndex + 1;
 </script>
 
-<section>
-    <OnScrollAppear index={formationTitleIndex}>
-        <h2><b>Formations</b></h2>
-    </OnScrollAppear>
-    {#if error}
-        <p class="error">{error}</p>
-    {:else if formations.length > 0}
-        <CardGroup>
+<CardGroup>
+    <section>
+        <OnScrollAppear index={formationTitleIndex}>
+            <h2><b>Formations</b></h2>
+        </OnScrollAppear>
+        {#if error}
+            <p class="error">{error}</p>
+        {:else if formations.length > 0}
             {#each formations as formation, i}
                 <OnScrollAppear index={formationStartIndex + i}>
                     <FormationCard {formation}/>
                 </OnScrollAppear>
             {/each}
-        </CardGroup>
-    {:else}
-        <p>Chargement des formations...</p>
-    {/if}
-</section>
+        {:else}
+            <p>Chargement des formations...</p>
+        {/if}
+    </section>
 
-<section>
-    <OnScrollAppear index={experienceTitleIndex}>
-        <h2><b>Expériences professionnelles</b></h2>
-    </OnScrollAppear>
-    {#if error}
-        <p class="error">{error}</p>
-    {:else if experiences.length > 0}
-        <CardGroup>
+    <section>
+        <OnScrollAppear index={experienceTitleIndex}>
+            <h2><b>Expériences professionnelles</b></h2>
+        </OnScrollAppear>
+        {#if error}
+            <p class="error">{error}</p>
+        {:else if experiences.length > 0}
             {#each experiences as experience, i}
                 <OnScrollAppear index={experienceStartIndex + i}>
                     <ExperienceCard {experience}/>
                 </OnScrollAppear>
             {/each}
-        </CardGroup>
-    {:else}
-        <p>Chargement des expériences...</p>
-    {/if}
-</section>
+        {:else}
+            <p>Chargement des expériences...</p>
+        {/if}
+    </section>
+</CardGroup>
 
 <style>
     section {

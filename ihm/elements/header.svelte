@@ -25,24 +25,28 @@
 
 <nav class="header">
     <div class="acceuil-link">
-        <a class="" href="/"><img class="my-pic mini" src="../assets/photo_cv.png" alt=""><span class="link-text">Clément Calia</span></a>
+        <a href="/"><img class="my-pic mini" src="../assets/photo_cv.png" alt=""><span class="link-text">Clément Calia</span></a>
     </div>
     <div class="header-right">
         <a href="/moi.html"><i class="bi bi-person-vcard-fill"></i><span class="link-text">À propos</span></a>
         <div class="dropdown">
             <a href="/projets/projets.html"><i class="bi bi-kanban-fill"></i><span class="link-text">Projets</span></a>
             <div class="dropdown-content">
-                {#each projets as projet}
-                    <a href="/projets/detail.html?id={projet.ID}">{projet.Name}</a>
-                {/each}
+                <ul class="list-group list-group-flush">
+                    {#each projets as projet}
+                        <li class="list-group-item"><a class="dropdown-link" href="/projets/detail.html?id={projet.ID}">{projet.Name}</a></li>
+                    {/each}
+                </ul>
             </div>
         </div>
         <div class="dropdown">
             <a href="/competences/competences.html"><i class="bi bi-person-badge"></i><span class="link-text">Compétences</span></a>
             <div class="dropdown-content">
-                <a href="/competences/competences.html?type=dev">Développement</a>
-                <a href="/competences/competences.html?type=devops">DevOps</a>
-                <a href="/competences/competences.html?type=humain">Soft skills</a>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><a class="dropdown-link" href="/competences/competences.html?type=dev">Développement</a></li>
+                    <li class="list-group-item"><a class="dropdown-link" href="/competences/competences.html?type=devops">DevOps</a></li>
+                    <li class="list-group-item"><a class="dropdown-link" href="/competences/competences.html?type=humain">Soft skills</a></li>
+                </ul>
             </div>
         </div>
         <a href="/contacts.html"><i class="bi bi-envelope-fill"></i><span class="link-text">Contacts</span></a>
@@ -83,6 +87,11 @@
         align-items: center;
         margin-left: 1em;
     }
+    
+    li {
+        margin: 0;
+        padding: 0;
+    }
 
     a {
         color: white;
@@ -93,6 +102,10 @@
         display: inline-flex;
         align-items: center;
         gap: 0.5em;
+    }
+
+    a.dropdown-link {
+        border-radius: 0;
     }
 
     a:hover {

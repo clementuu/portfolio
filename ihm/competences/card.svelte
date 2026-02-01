@@ -1,22 +1,22 @@
 <script>
-  export let competence;
+    export let competence;
 
-  // Function to generate star icons
-  function getStars(rating) {
-    let stars = '';
-    for (let i = 0; i < 5; i++) {
-      if (i < rating) {
-        stars += '⭐'; // Filled star
-      } else {
-        stars += '☆'; // Empty star
-      }
+    // Function to generate star icons
+    function getStars(rating) {
+        let stars = '';
+        for (let i = 0; i < 5; i++) {
+        if (i < rating) {
+            stars += '⭐'; // Filled star
+        } else {
+            stars += '☆'; // Empty star
+        }
+        }
+        return stars;
     }
-    return stars;
-  }
 
-  function handleClick() {
-    window.location.href = `detail.html?id=${competence.id}`;
-  }
+    function handleClick() {
+        window.location.href = `detail.html?id=${competence.id}`;
+    }
 </script>
 
 <button class="competence-card" on:click={handleClick} type="button" tabindex="0">
