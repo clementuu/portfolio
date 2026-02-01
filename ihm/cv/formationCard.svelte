@@ -3,7 +3,7 @@
     export let formation;
 </script>
 
-<Card>
+<Card id={formation.ID}>
     <div slot="hawkins" class="flex">
         <div>
             <h3>      

@@ -1,6 +1,7 @@
 package model
 
 type Experience struct {
+	ID          int
 	Intitule    string
 	Type        string
 	Structure   string

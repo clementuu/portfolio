@@ -1,11 +1,19 @@
 <script>
-    let isFlipped = false;
+    import { getContext } from 'svelte';
+
+    export let id;
+
+    const { flippedCardId, handleFlip } = getContext('card-group');
+
+    $: isFlipped = $flippedCardId === id;
 </script>
 
 <article class:flipped={isFlipped}>
     <button
         class="invisible-button"
-        on:click={() => isFlipped = !isFlipped}
+        on:click={() => {
+            handleFlip(id);
+        }}
     >
         {#if isFlipped}
             <slot name="upside-down"/>
