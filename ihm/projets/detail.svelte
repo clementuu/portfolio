@@ -53,7 +53,7 @@
         top: 0;
         margin: auto;
         padding: 2rem;
-        max-width: 800px;
+        max-width: var(--mobile-width);
         background-color: #fff;
     }
 

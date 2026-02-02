@@ -2,9 +2,6 @@ package tmpl
 
 // AlternanceHTML contient la description HTML de l'expérience en alternance.
 const AlternanceDescription = `
-<!-- =================================================================== -->
-<!-- SECTION : INTRODUCTION DE L'EXPÉRIENCE                            -->
-<!-- =================================================================== -->
 <section class="experience-section">
     <p>
         Mon passage chez Softinnov en tant que développeur ful-stack m'a plongé dans le quotidien complet d'un cycle de vie logiciel : 

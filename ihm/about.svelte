@@ -1,4 +1,4 @@
-<svelte:options customElement="moi-portfolio" />
+<svelte:options customElement="about-portfolio" />
 
 <script>
   import Header from "./elements/header.svelte";
@@ -72,7 +72,7 @@
     }
 
     .about {  
-        max-width: 800px;
+        max-width: var(--mobile-width);
         margin: 0 auto;
         padding: 2em;
         line-height: 1.6;

@@ -75,7 +75,7 @@
         top: 0;
         margin: auto;
         padding: 2em;
-        max-width: 800px;
+        max-width: var(--mobile-width);
         text-align: center;
     }
 

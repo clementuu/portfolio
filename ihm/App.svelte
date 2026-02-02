@@ -26,6 +26,14 @@
 
 		return () => clearInterval(interval); // Cleanup on component unmount
 	});
+
+	function scrollToCVSection() {
+		const headerHeight = getComputedStyle(document.documentElement) 
+		.getPropertyValue('--header-height') 
+		.trim();
+
+		window.scrollTo({ top: window.innerHeight - parseInt(headerHeight), behavior: "smooth" });
+    }
 </script>
 
 <Header/>
@@ -39,9 +47,9 @@
 		</div>
 	</div>
 	<span class="parcours">Mon parcours</span>
-	<div class="scroll-indicator">
+	<button class="btn scroll-indicator" type="button" on:click={scrollToCVSection}>
 		<i class="bi bi-arrow-down-circle"></i>
-	</div>
+	</button>
 </div>
 
 <div class="cv-container">
@@ -56,7 +64,6 @@
 	.cv-container {
 		padding-top: var(--header-height);
 		position: relative;
-		z-index: 2;
 	}
 
 	.banner {
@@ -118,9 +125,14 @@
 		margin-bottom: 1rem;
 		font-size: 1.5rem;
 		color: white;
+		border: none;
 		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 		z-index: 1;
-		animation: bounce 2s infinite;
+	}
+
+	.scroll-indicator:hover {
+		cursor: pointer;
+		animation: bounce 2s 1;
 	}
 
 	@media (max-width: 800px) {

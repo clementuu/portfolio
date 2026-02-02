@@ -55,7 +55,7 @@
 <CardGroup>
     <section>
         <OnScrollAppear index={formationTitleIndex}>
-            <h2><b>Formations</b></h2>
+            <h2 id="formations-title"><b>Formations</b></h2>
         </OnScrollAppear>
         {#if error}
             <p class="error">{error}</p>
