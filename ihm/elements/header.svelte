@@ -1,25 +1,9 @@
 <script>
-  import { onMount } from "svelte";
-
-    let projets = [];
-
-    async function getProjetsNames() {
-        try {
-            const response = await fetch('/projets/names');
-
-            if (!response.ok) {
-                throw new Error(`Erreur HTTP ${response.status}: ${response.statusText}`);
-            }
-
-            const data = await response.json();
-            projets = data;
-        } catch (error) {
-            console.error("Échec de la récupération des compétences :", error.message || error);
-        }
-    }
+    import { onMount } from "svelte";
+    import { projets, loadProjets } from "../projets/store.js";
 
     onMount(async ()=> {
-        await getProjetsNames();
+        await loadProjets();
     })
 </script>
 
@@ -33,7 +17,7 @@
             <a href="/projets/projets.html"><i class="bi bi-kanban-fill"></i><span class="link-text">Projets</span></a>
             <div class="dropdown-content">
                 <ul class="list-group list-group-flush">
-                    {#each projets as projet}
+                    {#each $projets as projet}
                         <li class="list-group-item"><a class="dropdown-link" href="/projets/detail.html?id={projet.ID}">{projet.Name}</a></li>
                     {/each}
                 </ul>
