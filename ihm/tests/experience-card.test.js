@@ -2,7 +2,6 @@ import { describe, it, expect, afterEach } from 'vitest';
 import { screen } from '@testing-library/dom';
 import { render } from '@testing-library/svelte';
 import ExperienceCard from '../cv/experienceCard.svelte';
-import Card from '../cv/card.svelte'; // Using the actual Card component as it's simple
 
 describe('ExperienceCard component', () => {
     afterEach(() => {
