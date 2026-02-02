@@ -112,7 +112,6 @@ const PmtHTML = `
     <h5>Compétences Associées</h5>
     <div class="competences-list">
         <a href="/competences/detail.html?id=8" class="competence-tag technique">Spring</a>
-        <a href="/competences/detail.html?id=7" class="competence-tag technique">Java</a>
         <a href="/competences/detail.html?id=5" class="competence-tag technique">Angular</a>
         <a href="/competences/detail.html?id=6" class="competence-tag technique">SQL</a>
         <a href="/competences/detail.html?id=12" class="competence-tag devops">Docker</a>

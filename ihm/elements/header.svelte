@@ -28,7 +28,7 @@
         <a href="/"><img class="my-pic mini" src="../assets/photo_cv.png" alt=""><span class="link-text">Clément Calia</span></a>
     </div>
     <div class="header-right">
-        <a href="/moi.html"><i class="bi bi-person-vcard-fill"></i><span class="link-text">À propos</span></a>
+        <a href="/about.html"><i class="bi bi-person-vcard-fill"></i><span class="link-text">À propos</span></a>
         <div class="dropdown">
             <a href="/projets/projets.html"><i class="bi bi-kanban-fill"></i><span class="link-text">Projets</span></a>
             <div class="dropdown-content">

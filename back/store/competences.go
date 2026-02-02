@@ -16,7 +16,6 @@ var (
 	svelteCompetence         = model.Competence{ID: 4, Name: "Svelte", Image: constants.SvelteLogo, Rating: 4, Template: tmpl.SvelteCompetence, Type: model.Dev}
 	angularCompetence        = model.Competence{ID: 5, Name: "Angular", Image: constants.AngularLogo, Rating: 2, Template: tmpl.AngularCompetence, Type: model.Dev}
 	sqlCompetence            = model.Competence{ID: 6, Name: "SQL", Image: constants.SqlLogo, Rating: 4, Template: tmpl.SQLCompetence, Type: model.Dev}
-	javaCompetence           = model.Competence{ID: 7, Name: "Java", Image: constants.JavaLogo, Rating: 2, Template: tmpl.JavaCompetence, Type: model.Dev}
 	springCompetence         = model.Competence{ID: 8, Name: "Spring", Image: constants.SpringLogo, Rating: 3, Template: tmpl.SpringCompetence, Type: model.Dev}
 	pythonCompetence         = model.Competence{ID: 9, Name: "Python", Image: constants.PythonLogo, Rating: 3, Template: tmpl.PythonCompetence, Type: model.Dev}
 	rebolCompetence          = model.Competence{ID: 10, Name: "Rebol", Image: constants.RebolLogo, Rating: 2, Template: tmpl.RebolCompetence, Type: model.Dev}
@@ -36,7 +35,6 @@ var competencesList = []model.Competence{
 	svelteCompetence,
 	angularCompetence,
 	sqlCompetence,
-	javaCompetence,
 	springCompetence,
 	pythonCompetence,
 	rebolCompetence,

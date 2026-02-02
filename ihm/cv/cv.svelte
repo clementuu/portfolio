@@ -3,7 +3,7 @@
     import FormationCard from './formationCard.svelte';
     import ExperienceCard from './experienceCard.svelte';
     import OnScrollAppear from '../elements/OnScrollAppear.svelte';
-    import CardGroup from './cardGroup.svelte';
+    import CardGroup from '../elements/cardGroup.svelte';
 
     let formations = [];
     let error = '';

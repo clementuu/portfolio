@@ -1,5 +1,5 @@
 <script>
-    import Card from './card.svelte';
+    import Card from '../elements/card.svelte';
     export let formation;
 </script>
 
