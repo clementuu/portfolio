@@ -1,6 +1,7 @@
 package web
 
 import (
+	"back/log"
 	"back/model"
 	"back/service/competence"
 	"back/service/projet"
@@ -12,6 +13,9 @@ import (
 )
 
 func TestGetCompetenceByID(t *testing.T) {
+	logger := log.NewLogger()
+	handler := &Handler{Logger: logger}
+
 	ts := []struct {
 		name       string
 		id         string
@@ -30,7 +34,7 @@ func TestGetCompetenceByID(t *testing.T) {
 
 			rr := httptest.NewRecorder()
 
-			GetCompetenceByID(rr, req)
+			handler.GetCompetenceByID(rr, req)
 
 			if rr.Code != tc.wantStatus {
 				t.Fatalf("expected status %d, got %d", tc.wantStatus, rr.Code)
@@ -50,10 +54,13 @@ func TestGetCompetenceByID(t *testing.T) {
 }
 
 func TestGetAllCompetences(t *testing.T) {
+	logger := log.NewLogger()
+	handler := &Handler{Logger: logger}
+
 	req := httptest.NewRequest(http.MethodGet, "/competences", nil)
 	rr := httptest.NewRecorder()
 
-	GetAllCompetences(rr, req)
+	handler.GetAllCompetences(rr, req)
 
 	if rr.Code != http.StatusOK {
 		t.Fatalf("expected status %d, got %d", http.StatusOK, rr.Code)
@@ -71,10 +78,13 @@ func TestGetAllCompetences(t *testing.T) {
 }
 
 func TestGetAllProjets(t *testing.T) {
+	logger := log.NewLogger()
+	handler := &Handler{Logger: logger}
+
 	req := httptest.NewRequest(http.MethodGet, "/projets", nil)
 	rr := httptest.NewRecorder()
 
-	GetAllProjets(rr, req)
+	handler.GetAllProjets(rr, req)
 
 	if rr.Code != http.StatusOK {
 		t.Fatalf("expected status %d, got %d", http.StatusOK, rr.Code)
@@ -91,6 +101,9 @@ func TestGetAllProjets(t *testing.T) {
 }
 
 func TestGetProjetByID(t *testing.T) {
+	logger := log.NewLogger()
+	handler := &Handler{Logger: logger}
+
 	ts := []struct {
 		name       string
 		id         string
@@ -109,7 +122,7 @@ func TestGetProjetByID(t *testing.T) {
 
 			rr := httptest.NewRecorder()
 
-			GetProjetByID(rr, req)
+			handler.GetProjetByID(rr, req)
 
 			if rr.Code != tc.wantStatus {
 				t.Fatalf("expected status %d, got %d", tc.wantStatus, rr.Code)
@@ -129,10 +142,13 @@ func TestGetProjetByID(t *testing.T) {
 }
 
 func TestGetProjetsNames(t *testing.T) {
+	logger := log.NewLogger()
+	handler := &Handler{Logger: logger}
+
 	req := httptest.NewRequest(http.MethodGet, "/projets/names", nil)
 	rr := httptest.NewRecorder()
 
-	GetProjetsNames(rr, req)
+	handler.GetProjetsNames(rr, req)
 
 	if rr.Code != http.StatusOK {
 		t.Fatalf("expected status %d, got %d", http.StatusOK, rr.Code)
@@ -150,10 +166,13 @@ func TestGetProjetsNames(t *testing.T) {
 }
 
 func TestGetFormations(t *testing.T) {
+	logger := log.NewLogger()
+	handler := &Handler{Logger: logger}
+
 	req := httptest.NewRequest(http.MethodGet, "/formations", nil)
 	rr := httptest.NewRecorder()
 
-	GetFormations(rr, req)
+	handler.GetFormations(rr, req)
 
 	if rr.Code != http.StatusOK {
 		t.Fatalf("expected status %d, got %d", http.StatusOK, rr.Code)
@@ -170,10 +189,13 @@ func TestGetFormations(t *testing.T) {
 }
 
 func TestGetExperiences(t *testing.T) {
+	logger := log.NewLogger()
+	handler := &Handler{Logger: logger}
+
 	req := httptest.NewRequest(http.MethodGet, "/experiences", nil)
 	rr := httptest.NewRecorder()
 
-	GetExperiences(rr, req)
+	handler.GetExperiences(rr, req)
 
 	if rr.Code != http.StatusOK {
 		t.Fatalf("expected status %d, got %d", http.StatusOK, rr.Code)
