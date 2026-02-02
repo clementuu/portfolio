@@ -2,6 +2,7 @@ import { describe, it, expect, afterEach } from 'vitest';
 import { screen } from '@testing-library/dom';
 import { render } from '@testing-library/svelte';
 import FormationCard from '../cv/formationCard.svelte';
+import TestWrapper from './TestWrapper.svelte';
 
 describe('FormationCard component', () => {
     afterEach(() => {
@@ -15,7 +16,7 @@ describe('FormationCard component', () => {
     };
 
     it('renders formation details correctly', () => {
-        render(FormationCard, { props: { formation: sampleFormation } });
+        render(TestWrapper, { props: { Component: FormationCard, props: { formation: sampleFormation } } });
 
         expect(screen.getByText('Master Ingénierie Logicielle')).toBeInTheDocument();
         expect(screen.getByText('Université de Montpellier')).toBeInTheDocument();

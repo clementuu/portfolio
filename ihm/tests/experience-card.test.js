@@ -2,6 +2,7 @@ import { describe, it, expect, afterEach } from 'vitest';
 import { screen } from '@testing-library/dom';
 import { render } from '@testing-library/svelte';
 import ExperienceCard from '../cv/experienceCard.svelte';
+import TestWrapper from './TestWrapper.svelte';
 
 describe('ExperienceCard component', () => {
     afterEach(() => {
@@ -21,7 +22,7 @@ describe('ExperienceCard component', () => {
     };
 
     it('renders experience details correctly', () => {
-        render(ExperienceCard, { props: { experience: sampleExperience } });
+        render(TestWrapper, { props: { Component: ExperienceCard, props: { experience: sampleExperience } } });
 
         expect(screen.getByText('Développeur Full Stack [CDI]')).toBeInTheDocument();
         expect(screen.getByText('Tech Solutions Inc.')).toBeInTheDocument();
