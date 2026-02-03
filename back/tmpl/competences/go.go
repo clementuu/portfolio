@@ -51,7 +51,7 @@ const GoCompetence = `
 <section class="comp-section">
     <h3><b>Autocritique</b></h3>
     <p>
-        Je considère ma maîtrise de Go comme <strong>avancée</strong>. J'ai une solide compréhension de ses idiomes, de sa gestion de la concurrence (goroutines, channels) et de son écosystème. 
+        Je considère ma maîtrise de Go comme avancée. J'ai une solide compréhension de ses idiomes, de sa gestion de la concurrence (goroutines, channels) et de son écosystème. 
         C'est aujourd'hui ma compétence technique la plus forte pour le développement backend et les outils CLI. 
         J'ai pu l'approfondir rapidement grâce à des projets concrets qui m'ont permis de comprendre ses subtilités et ses bonnes pratiques.
     </p>

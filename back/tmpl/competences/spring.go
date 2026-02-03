@@ -30,7 +30,7 @@ const SpringCompetence = `
     </p>
 
     <p>
-        <b>Développement d'une API REST complète et sécurisée (<a class="link" href="/projets/detail.html?id=6">PMT</a>).</b>
+        <strong>Développement d'une API REST complète et sécurisée (<a class="link" href="/projets/detail.html?id=6">PMT</a>).</strong>
         <br>Dans le cadre du projet Project Management Tool (PMT), j'ai conçu une API RESTful 
         permettant la gestion des projets, des tâches et des utilisateurs. Spring Boot m'a permis de 
         structurer rapidement les endpoints et de gérer les flux JSON facilement. 
@@ -39,7 +39,7 @@ const SpringCompetence = `
     </p>
 
     <p>
-        <b>Architecture modulaire et maintenable (<a class="link" href="/projets/detail.html?id=6">PMT</a>).</b>
+        <strong>Architecture modulaire et maintenable (<a class="link" href="/projets/detail.html?id=6">PMT</a>).</strong>
         <br>Pour garantir la qualité du code et la facilité d'évolution, j'ai structuré le backend selon une 
         architecture en couches (Controller, Service, Repository) en appliquant les principes d'Inversion 
         de Contrôle (IoC) et d'Injection de Dépendances (DI). Résultat : un code propre, testable et durable, 

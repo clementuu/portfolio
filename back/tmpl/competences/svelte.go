@@ -25,7 +25,7 @@ const SvelteCompetence = `
     </p>
     
     <p>
-        <b>Refonte de modules métier complexes (<a class="link" href="/projets/detail.html?id=1">Escarcelle</a>).</b>
+        <strong>Refonte de modules métier complexes (<a class="link" href="/projets/detail.html?id=1">Escarcelle</a>).</strong>
         <br>Dans le cadre du projet Escarcelle, j'ai utilisé Svelte pour refondre des modules historiques de l'application de gestion métier. 
         J'ai développé une architecture front-end modulaire basée sur des composants, permettant de gérer des données complexes (produits, stocks) et de 
         communiquer de manière asynchrone avec une API REST. Cette refonte a nettement amélioré la maintenabilité du code et rendu l'interface plus réactive. 
@@ -33,7 +33,7 @@ const SvelteCompetence = `
     </p>
 
     <p>
-        <b>Construction d'un portfolio web complet et performant.</b>
+        <strong>Construction d'un portfolio web complet et performant.</strong>
         <br>L'intégralité de ce portfolio a été construite avec Svelte. Ce projet sert de démonstration concrète de ma capacité à structurer une application web complète, 
         à créer des composants réutilisables (comme les cartes de projet ou de compétence), à gérer la navigation et à assurer une expérience utilisateur fluide et performante. 
         Le site obtenu est rapide, léger et interactif. J'ai apporté une véritable valeur en créant une vitrine professionnelle soignée, 
