@@ -132,7 +132,7 @@
 
 	.scroll-indicator:hover {
 		cursor: pointer;
-		animation: bounce 2s 1;
+		animation: bounce 2s infinite;
 	}
 
 	@media (max-width: 800px) {
