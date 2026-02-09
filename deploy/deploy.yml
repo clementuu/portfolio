@@ -1,0 +1,31 @@
+---
+- hosts: webserver
+  remote_user: ubuntu
+  become: true
+
+  roles:
+    - docker
+
+  tasks:
+    - name: app dir
+      file:
+        path: "/app"
+        mode: u+rwX,g=rX,o=rX
+        recurse: yes
+        state: directory
+
+    - name: copy docker-compose
+      template:
+        src: "./conf/docker-compose.yml"
+        dest: "/app/docker-compose.yml"
+        mode: u+rw,g=r,o=r
+
+    - name: docker pull
+      shell: docker compose pull -q
+      args:
+        chdir: "/app"
+
+    - name: docker up
+      shell: docker compose up -d --remove-orphans
+      args:
+        chdir: "/app"

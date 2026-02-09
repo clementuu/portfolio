@@ -32,3 +32,7 @@ test-ihm:
 .PHONY: back-coverage
 back-coverage:
 	cd back && go tool cover -html=coverage.out
+
+.PHONY: deploy
+deploy:
+	cd deploy && ansible-playbook -i hosts.ini deploy.yml

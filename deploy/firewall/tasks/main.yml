@@ -1,0 +1,21 @@
+- name: Install ufw
+  apt: package=ufw state=present
+
+- name: Reset ufw
+  ufw: state=reset
+
+- name: Configure ufw defaults
+  ufw: direction={{ item.direction }} policy={{ item.policy }}
+  with_items:
+    - { direction: 'incoming', policy: 'deny' }
+    - { direction: 'outgoing', policy: 'allow' }
+
+- name: Configure ufw rules
+  ufw: rule={{ item.rule }} port={{ item.port }} proto={{ item.proto }} src={{ item.src }}
+  with_items:
+    - { rule: 'limit', port: '{{ ssh_port | default("22") }}', proto: 'tcp', src: '109.190.47.161' } # ovh@office
+    - { rule: 'limit', port: '{{ ssh_port | default("22") }}', proto: 'tcp', src: '78.197.88.234'  } # free@home
+    - { rule: 'allow', port: '8080', proto: 'tcp', src: '' }
+
+- name: Enable ufw
+  ufw: state=enabled
