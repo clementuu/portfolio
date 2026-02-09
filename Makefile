@@ -36,3 +36,7 @@ back-coverage:
 .PHONY: deploy
 deploy:
 	cd deploy && ansible-playbook -i hosts.ini deploy.yml
+
+.PHONY: ssl
+ssl:
+	cd deploy && ansible-playbook -i hosts.ini ssl.yml
