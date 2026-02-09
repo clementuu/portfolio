@@ -23,7 +23,7 @@ func GetConfig() (Config, error) {
 		servConfig.StaticDir = dir
 	}
 
-	servConfig.Host = "localhost"
+	servConfig.Host = "127.0.0.1"
 	servConfig.Port = ":8080"
 
 	return servConfig, nil

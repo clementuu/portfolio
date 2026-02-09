@@ -1,0 +1,50 @@
+- name: Configuration Nginx et SSL
+  hosts: webserver
+  remote_user: ubuntu
+  become: true
+  vars:
+    domain_name: "clementcalia.fr"
+    app_port: 8080
+
+  tasks:
+    - name: Installer Nginx et Certbot
+      apt:
+        name:
+          - nginx
+          - certbot
+          - python3-certbot-nginx
+        state: present
+        update_cache: yes
+
+    - name: Créer la configuration Nginx Reverse Proxy
+      template:
+        src: ./conf/nginx_proxy.j2
+        dest: "/etc/nginx/sites-available/{{ domain_name }}"
+      notify: Reload Nginx
+
+    - name: Activer la configuration Nginx
+      file:
+        src: "/etc/nginx/sites-available/{{ domain_name }}"
+        dest: "/etc/nginx/sites-enabled/{{ domain_name }}"
+        state: link
+      notify: Reload Nginx
+
+    - name: Ouvrir les ports 80 et 443 dans UFW
+      community.general.ufw:
+        rule: allow
+        port: "{{ item }}"
+        proto: tcp
+      loop: ['80', '443']
+
+    - name: Obtenir le certificat SSL Let's Encrypt
+      command: >
+        certbot --nginx -d {{ domain_name }} -d www.{{ domain_name }} 
+        --non-interactive --agree-tos -m clementcalia@gmail.com
+      args:
+        creates: "/etc/letsencrypt/live/{{ domain_name }}/fullchain.pem"
+
+  handlers:
+    - name: Reload Nginx
+      service:
+        name: nginx
+        state: reloaded
