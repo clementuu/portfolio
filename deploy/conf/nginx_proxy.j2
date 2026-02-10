@@ -1,24 +1,29 @@
-# Bloc de redirection HTTP vers HTTPS
 server {
     listen 80;
     server_name {{ domain_name }} www.{{ domain_name }};
+
+    # Redirection vers HTTPS uniquement si le certificat existe
+    {% if ssl_cert_check.stat.exists %}
     return 301 https://$host$request_uri;
+    {% else %}
+    location / {
+        proxy_pass http://localhost:{{ app_port }};
+    }
+    {% endif %}
 }
 
-# Bloc principal en HTTPS
+{% if ssl_cert_check.stat.exists %}
 server {
-    listen 443 ssl; # Écoute sur le port sécurisé
+    listen 443 ssl;
     server_name {{ domain_name }} www.{{ domain_name }};
 
-    # Chemins vers tes certificats (générés par Certbot)
     ssl_certificate /etc/letsencrypt/live/{{ domain_name }}/fullchain.pem;
     ssl_certificate_key /etc/letsencrypt/live/{{ domain_name }}/privkey.pem;
 
     location / {
-        proxy_pass http://127.0.0.1:8080; # Ton app Docker
+        proxy_pass http://localhost:{{ app_port }};
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
     }
 }
+{% endif %}

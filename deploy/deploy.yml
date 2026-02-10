@@ -5,6 +5,8 @@
 
   roles:
     - docker
+    - firewall
+    - timezone
 
   tasks:
     - name: app dir

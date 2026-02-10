@@ -16,32 +16,30 @@
         state: present
         update_cache: yes
 
+    - name: Vérifier si le certificat SSL existe
+      stat:
+        path: "/etc/letsencrypt/live/{{ domain_name }}/fullchain.pem"
+      register: ssl_cert_check
+
     - name: Créer la configuration Nginx Reverse Proxy
       template:
         src: ./conf/nginx_proxy.j2
         dest: "/etc/nginx/sites-available/{{ domain_name }}"
+      # On ne reload Nginx ici que si le fichier est valide
       notify: Reload Nginx
 
-    - name: Activer la configuration Nginx
-      file:
-        src: "/etc/nginx/sites-available/{{ domain_name }}"
-        dest: "/etc/nginx/sites-enabled/{{ domain_name }}"
-        state: link
-      notify: Reload Nginx
-
-    - name: Ouvrir les ports 80 et 443 dans UFW
-      community.general.ufw:
-        rule: allow
-        port: "{{ item }}"
-        proto: tcp
-      loop: ['80', '443']
-
-    - name: Obtenir le certificat SSL Let's Encrypt
+    - name: Obtenir le certificat SSL (si absent)
       command: >
-        certbot --nginx -d {{ domain_name }} -d www.{{ domain_name }} 
+        certbot certonly --nginx -d {{ domain_name }} -d www.{{ domain_name }} 
         --non-interactive --agree-tos -m clementcalia@gmail.com
-      args:
-        creates: "/etc/letsencrypt/live/{{ domain_name }}/fullchain.pem"
+      when: not ssl_cert_check.stat.exists
+
+    - name: Re-générer la config Nginx avec SSL actif
+      template:
+        src: ./conf/nginx_proxy.j2
+        dest: "/etc/nginx/sites-available/{{ domain_name }}"
+      when: not ssl_cert_check.stat.exists
+      notify: Reload Nginx
 
   handlers:
     - name: Reload Nginx
