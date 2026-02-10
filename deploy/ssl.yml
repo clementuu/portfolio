@@ -4,41 +4,68 @@
   become: true
   vars:
     domain_name: "clementcalia.fr"
+    email_admin: "clementcalia@gmail.com"
     app_port: 8080
 
   tasks:
-    - name: Installer Nginx et Certbot
+    - name: 1. Installer Nginx, Certbot et UFW
       apt:
-        name:
-          - nginx
-          - certbot
-          - python3-certbot-nginx
+        name: [nginx, certbot, python3-certbot-nginx, ufw]
         state: present
         update_cache: yes
 
-    - name: Vérifier si le certificat SSL existe
+    - name: 2. Configurer UFW (HTTP et HTTPS)
+      ufw:
+        rule: allow
+        port: "{{ item }}"
+        proto: tcp
+      loop: ['80', '443']
+
+    - name: 3. Supprimer la config par défaut d'Nginx
+      file:
+        path: /etc/nginx/sites-enabled/default
+        state: absent
+
+    - name: 4. Vérifier si le certificat existe déjà
       stat:
         path: "/etc/letsencrypt/live/{{ domain_name }}/fullchain.pem"
       register: ssl_cert_check
 
-    - name: Créer la configuration Nginx Reverse Proxy
-      template:
-        src: ./conf/nginx_proxy.j2
+    - name: 5. [Initialisation] Config temporaire (si pas de certificat)
+      copy:
+        content: |
+          server {
+              listen 80;
+              server_name {{ domain_name }} www.{{ domain_name }};
+              location /.well-known/acme-challenge/ { root /var/www/html; }
+              location / { return 200 'En attente de certificat...'; }
+          }
         dest: "/etc/nginx/sites-available/{{ domain_name }}"
-      # On ne reload Nginx ici que si le fichier est valide
-      notify: Reload Nginx
+      when: not ssl_cert_check.stat.exists
 
-    - name: Obtenir le certificat SSL (si absent)
+    - name: 6. Activer la config temporaire et redémarrer Nginx
+      file:
+        src: "/etc/nginx/sites-available/{{ domain_name }}"
+        dest: "/etc/nginx/sites-enabled/{{ domain_name }}"
+        state: link
+      when: not ssl_cert_check.stat.exists
+
+    - name: 7. Forcer le redémarrage d'Nginx pour libérer le port 80
+      service:
+        name: nginx
+        state: restarted
+      when: not ssl_cert_check.stat.exists
+
+    - name: 8. Obtenir le certificat SSL avec Certbot
       command: >
         certbot certonly --nginx -d {{ domain_name }} -d www.{{ domain_name }} 
-        --non-interactive --agree-tos -m clementcalia@gmail.com
+        --non-interactive --agree-tos -m {{ email_admin }}
       when: not ssl_cert_check.stat.exists
 
-    - name: Re-générer la config Nginx avec SSL actif
+    - name: 9. Appliquer la config Nginx FINALE (avec SSL)
       template:
         src: ./conf/nginx_proxy.j2
         dest: "/etc/nginx/sites-available/{{ domain_name }}"
-      when: not ssl_cert_check.stat.exists
       notify: Reload Nginx
 
   handlers:
