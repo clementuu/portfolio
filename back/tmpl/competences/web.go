@@ -24,7 +24,7 @@ const WebCompetence = `
     </p>
 
     <p>
-        <strong>Interfaces modulaires et dynamiques (<a class="link" href="/projets/detail.html?id=1">Escarcelle</a>, <a class="link" href="/projets/detail.html?id=6">PMT</a>).</strong>
+        <strong>Interfaces modulaires et dynamiques (<a class="link" href="/projets/detail.html?id=1">Escarcelle</a>, <a class="link" href="/projets/detail.html?id=5">PMT</a>).</strong>
         <br>Pour ces projets, j'ai conçu des interfaces modernes avec <a class="link" href=/competences/detail.html?id=4>Svelte</a> et <a class="link" href=/competences/detail.html?id=5>Angular</a>, 
         en créant des composants réutilisables, en gérant l'état applicatif et en intégrant les API REST de manière fluide. Les applications obtenues sont ergonomiques, performantes et 
         faciles à maintenir. Grâce à une architecture front-end claire et modulaire, leur évolution future est beaucoup plus simple.
@@ -37,7 +37,7 @@ const WebCompetence = `
     </p>
 
     <p>
-        <strong>Optimisation de l'ergonomie et de l'expérience utilisateur (<a class="link" href="/projets/detail.html?id=1">Escarcelle</a>, <a class="link" href="/projets/detail.html?id=6">PMT</a>).</strong>
+        <strong>Optimisation de l'ergonomie et de l'expérience utilisateur (<a class="link" href="/projets/detail.html?id=1">Escarcelle</a>, <a class="link" href="/projets/detail.html?id=5">PMT</a>).</strong>
         <br>J'ai accordé une attention particulière à la clarté des workflows, à la responsivité des interfaces et à la facilité de navigation tactile. Ces améliorations ont permis de réduire les erreurs, 
         d'accélérer la prise en main et d'adapter les interfaces aux besoins réels des utilisateurs, tout en conciliant contraintes techniques et besoins fonctionnels.
     </p>
@@ -71,7 +71,7 @@ const WebCompetence = `
         <ul>
             <li><a class="project-link" href="/projets/detail.html?id=1">Escarcelle</a></li>
             <li><a class="project-link" href="/projets/detail.html?id=4">Jeu Anti-Gaspi</a></li>
-            <li><a class="project-link" href="/projets/detail.html?id=6">PMT</a></li>
+            <li><a class="project-link" href="/projets/detail.html?id=5">PMT</a></li>
         </ul>
     </div>
 </section>

@@ -61,6 +61,18 @@
         <img src={competence.image} alt={`Logo de ${competence.name}`} />
         <div class="stars">{getStars(competence.rating)}</div>
         <div class="detail-text">{@html competence.template}</div>
+        <div class="arrow-bar">
+            {#if id > 1}
+                <a href="/competences/detail.html?id={competence.id-1}"><i class="bi bi-arrow-left-short"></i></a>
+            {:else}
+                <p></p>
+            {/if}
+            {#if id < 16}
+                <a href="/competences/detail.html?id={competence.id+1}"><i class="bi bi-arrow-right-short"></i></a>
+            {:else}
+                <p></p>
+            {/if}
+        </div>
     {:else}
         <p>Aucune donnée de compétence trouvée. Veuillez retourner à la page des compétences et en sélectionner une.</p>
     {/if}
@@ -88,6 +100,17 @@
         font-size: 1.5em;
         color: gold;
         margin-bottom: 1em;
+    }
+
+    .arrow-bar {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .arrow-bar i {
+        color: var(--primary-color);
+        font-size: 30px;
+        font-weight: bolder;
     }
 
     .detail-text {

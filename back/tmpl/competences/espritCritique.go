@@ -45,7 +45,7 @@ const EspritCritiqueCompetence = `
     </p>
 
     <p>
-        <strong>Architecture et résolution de problèmes (<a class="link" href="/projets/detail.html?id=6">PMT</a>, <a class="link" href="/projets/detail.html?id=2">Caisse</a>).</strong>
+        <strong>Architecture et résolution de problèmes (<a class="link" href="/projets/detail.html?id=5">PMT</a>, <a class="link" href="/projets/detail.html?id=2">Caisse</a>).</strong>
         La créativité intervient aussi dans la manière de structurer une application. Pour PMT, la conception d'un tableau 
         de bord clair et exploitable a demandé une réflexion sur la manière de présenter des informations complexes de façon 
         simple et efficace. Pour la Caisse, j'ai imaginé un mécanisme de résilience permettant de gérer les ventes hors ligne 

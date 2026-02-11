@@ -31,7 +31,7 @@ const SQLCompetence = `
     </p>
 
     <p>
-        <strong>Refonte de schémas complexes et modernisation des données (<a class="link" href="/projets/detail.html?id=1">Escarcelle</a>, <a class="link" href="/projets/detail.html?id=6">PMT</a>).</strong>
+        <strong>Refonte de schémas complexes et modernisation des données (<a class="link" href="/projets/detail.html?id=1">Escarcelle</a>, <a class="link" href="/projets/detail.html?id=5">PMT</a>).</strong>
         <br>Sur les projets Escarcelle et PMT, j'ai conçu et fait évoluer des 
         schémas relationnels complets. J'ai notamment transformé un système de catégories basé sur l'ordre 
         des IDs en une structure hiérarchique moderne utilisant un <i>parent_id</i>, et j'ai étendu les tables 
@@ -98,7 +98,7 @@ const SQLCompetence = `
         <ul>
             <li><a class="project-link" href="/projets/detail.html?id=1">Escarcelle</a></li>
             <li><a class="project-link" href="/projets/detail.html?id=2">Caisse</a></li>
-            <li><a class="project-link" href="/projets/detail.html?id=6">PMT</a></li>
+            <li><a class="project-link" href="/projets/detail.html?id=5">PMT</a></li>
         </ul>
     </div>
 </section>

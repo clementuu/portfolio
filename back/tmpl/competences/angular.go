@@ -23,21 +23,21 @@ const AngularCompetence = `
     </p>
     
     <p>
-        <strong>SPA modulable et maintenable (<a class="link" href="/projets/detail.html?id=6">PMT</a>).</strong>
+        <strong>SPA modulable et maintenable (<a class="link" href="/projets/detail.html?id=5">PMT</a>).</strong>
         <br>Pour le projet PMT, j'ai structuré le front-end comme une Single-Page Application dynamique, avec une architecture par composants (Dashboard, Projet, Tâche). 
         Cela a permis de créer une interface cohérente, facile à maintenir et évolutive, tout en facilitant la gestion de projets complexes.
     </p>
 
     <p>
-        <strong>Centralisation de l'état et communication avec le backend (<a class="link" href="/projets/detail.html?id=6">PMT</a>).</strong>
+        <strong>Centralisation de l'état et communication avec le backend (<a class="link" href="/projets/detail.html?id=5">PMT</a>).</strong>
         <br>Les services Angular ont été utilisés pour gérer la logique métier et la communication asynchrone avec l'API backend 
-        (<a class="link" href=/competences/detail.html?id=8>Spring</a>). 
+        (<a class="link" href=/competences/detail.html?id=7>Spring</a>). 
         Cette organisation a permis de découpler les composants de la logique de récupération des données, garantissant un code clair et une application fiable, 
         avec un flux de données optimisé.
     </p>
 
     <p>
-        <strong>Intégration full-stack et environnement conteneurisé (<a class="link" href="/projets/detail.html?id=6">PMT</a>).</strong>
+        <strong>Intégration full-stack et environnement conteneurisé (<a class="link" href="/projets/detail.html?id=5">PMT</a>).</strong>
         <br>Le front-end Angular a été intégré à une API RESTful et déployé dans un environnement Docker, couvrant l'ensemble du cycle d'intégration, 
         de la définition des contrats de données jusqu'à la gestion des requêtes HTTP. Cette approche a permis d'assurer une cohésion parfaite entre les 
         différentes couches de l'application et un déploiement fluide.
@@ -74,7 +74,7 @@ const AngularCompetence = `
     <h5>Projets Associés</h5>
     <div class="project-list">
         <ul>
-            <li><a class="project-link" href="/projets/detail.html?id=6">PMT</a></li>
+            <li><a class="project-link" href="/projets/detail.html?id=5">PMT</a></li>
         </ul>
     </div>
 </section>

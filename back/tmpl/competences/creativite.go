@@ -27,8 +27,8 @@ const CreativiteCompetence = `
     </p>
 
     <p>
-        <strong>Conception d'expériences ludiques et éducatives (<a href="/projets/detail.html?id=4">Jeu Anti-Gaspi</a>).</strong>
-        <br>Sur le projet Jeu Anti-Gaspi, j'ai imaginé un jeu 2D en <a href="/competences/detail.html?id=2">HTML/CSS</a>/
+        <strong>Conception d'expériences ludiques et éducatives (<a class="link" href="/projets/detail.html?id=4">Jeu Anti-Gaspi</a>).</strong>
+        <br>Sur le projet Jeu Anti-Gaspi, j'ai imaginé un jeu 2D en <a class="link" href="/competences/detail.html?id=2">HTML/CSS</a> /
         <a class="link" href=/competences/detail.html?id=3>JavaScript</a> sans framework ni moteur externe. 
         L'objectif était de sensibiliser les enfants aux éco-gestes. J'ai conçu des mécaniques simples, des interactions claires 
         et une interface accessible, transformant un sujet sérieux en une expérience ludique et pédagogique. 
@@ -37,7 +37,7 @@ const CreativiteCompetence = `
     </p>
 
     <p>
-        <strong>Refonte d'interfaces et d'ergonomie (<a href="/projets/detail.html?id=2">Caisse</a>).</strong>
+        <strong>Refonte d'interfaces et d'ergonomie (<a class="link" href="/projets/detail.html?id=2">Caisse</a>).</strong>
         <br>Lors de la refonte de la Caisse, ma créativité a été mise à contribution pour repenser les workflows utilisateurs 
         et proposer une interface tactile-friendly, simple et agréable à utiliser. J'ai imaginé des parcours intuitifs, 
         des visuels clairs et des interactions fluides, modernisant une application vieillissante pour en faire un outil 
@@ -46,7 +46,7 @@ const CreativiteCompetence = `
     </p>
 
     <p>
-        <strong>Architecture et résolution de problèmes (<a href="/projets/detail.html?id=6">PMT</a>, <a href="/projets/detail.html?id=2">Caisse</a>).</strong>
+        <strong>Architecture et résolution de problèmes (<a class="link" href="/projets/detail.html?id=5">PMT</a>, <a class="link" href="/projets/detail.html?id=2">Caisse</a>).</strong>
         <br>La créativité intervient aussi dans la manière de structurer une application. Pour PMT, la conception d'un tableau 
         de bord clair et exploitable a demandé une réflexion sur la manière de présenter des informations complexes de façon 
         simple et efficace. Pour la Caisse, j'ai imaginé un mécanisme de résilience permettant de gérer les ventes hors ligne 
@@ -88,7 +88,7 @@ const CreativiteCompetence = `
         <ul>
             <li><a class="project-link" href="/projets/detail.html?id=2">Caisse</a></li>
             <li><a class="project-link" href="/projets/detail.html?id=4">Jeu Anti-Gaspi</a></li>
-            <li><a class="project-link" href="/projets/detail.html?id=6">PMT</a></li>
+            <li><a class="project-link" href="/projets/detail.html?id=5">PMT</a></li>
         </ul>
     </div>
 </section>

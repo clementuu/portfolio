@@ -114,7 +114,7 @@ const JeuAntiGaspiHTML = `
     <div class="competences-list">
         <a href="/competences/detail.html?id=3" class="competence-tag technique">JavaScript</a>
         <a href="/competences/detail.html?id=2" class="competence-tag technique">HTML/CSS</a>
-        <a href="/competences/detail.html?id=16" class="competence-tag humain">Créativité</a>
+        <a href="/competences/detail.html?id=15" class="competence-tag humain">Créativité</a>
     </div>
 </section>
 `

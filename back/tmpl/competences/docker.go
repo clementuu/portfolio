@@ -29,16 +29,16 @@ const DockerCompetence = `
     </p>
 
     <p>
-        <strong>Conteneurisation d'applications Full-Stack (Portfolio, <a class="link" href="/projets/detail.html?id=6">PMT</a>).</strong>
+        <strong>Conteneurisation d'applications Full-Stack (Portfolio, <a class="link" href="/projets/detail.html?id=5">PMT</a>).</strong>
         Pour mon Portfolio et le projet PMT j'ai conçu des images Docker 
         capables d'embarquer à la fois le frontend (<a class="link" href=/competences/detail.html?id=4>Svelte</a>/<a class="link" href=/competences/detail.html?id=5>Angular</a>) 
-        et le backend (<a class="link" href=/competences/detail.html?id=>Go</a>/<a class="link" href=/competences/detail.html?id=8>Spring</a>). 
+        et le backend (<a class="link" href=/competences/detail.html?id=1>Go</a>/<a class="link" href=/competences/detail.html?id=7>Spring</a>). 
         Cette approche a permis de garantir une reproductibilité totale entre les environnements et 
         d'accélérer les cycles de développement et de déploiement.
     </p>
 
     <p>
-        <strong>Optimisation des builds avec Docker multi-étapes. (<a class="link" href="/projets/detail.html?id=1">Escarcelle</a>, <a class="link" href="/projets/detail.html?id=6">PMT</a>)</strong>
+        <strong>Optimisation des builds avec Docker multi-étapes. (<a class="link" href="/projets/detail.html?id=1">Escarcelle</a>, <a class="link" href="/projets/detail.html?id=5">PMT</a>)</strong>
         J'ai systématiquement recours aux <code>Dockerfile</code> multi-étapes pour réduire la taille 
         des images finales, améliorer la sécurité et accélérer les déploiements. Par exemple, pour 
         mon portfolio, une première étape compile le frontend, une seconde compile le backend Go en 
@@ -48,8 +48,8 @@ const DockerCompetence = `
     <p>
         <strong>Orchestration multi-conteneurs avancée avec Docker Compose (<a class="link" href="/projets/detail.html?id=1">Escarcelle</a>).</strong>
         Sur le projet Escarcelle, j'ai orchestré une architecture complète composée de 
-        plusieurs services indépendants : frontend <a class="link" href=/competences/detail.html?id=4>Svelte</a>, backend <a class="link" href=/competences/detail.html?id=>Go</a>, 
-        base de données <a class="link" href=/competences/detail.html?id=7>MySQL</a>, serveur SMTP, services internes et API partenaire. 
+        plusieurs services indépendants : frontend <a class="link" href=/competences/detail.html?id=4>Svelte</a>, backend <a class="link" href=/competences/detail.html?id=1>Go</a>, 
+        base de données <a class="link" href=/competences/detail.html?id=6>MySQL</a>, serveur SMTP, services internes et API partenaire. 
         Contrairement à mes projets personnels où une seule image regroupait frontend et backend, chaque composant d'Escarcelle possède sa propre image Docker, 
         permettant une modularité accrue, un déploiement granulaire et une meilleure isolation.
         <br><br>
@@ -102,7 +102,7 @@ const DockerCompetence = `
         <ul>
             <li><a class="project-link" href="/projets/detail.html?id=1">Escarcelle</a></li>
             <li><a class="project-link" href="/projets/detail.html?id=2">Caisse</a></li>
-            <li><a class="project-link" href="/projets/detail.html?id=6">PMT</a></li>
+            <li><a class="project-link" href="/projets/detail.html?id=5">PMT</a></li>
         </ul>
     </div>
 </section>

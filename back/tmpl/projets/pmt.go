@@ -111,12 +111,12 @@ const PmtHTML = `
 <section class="project-section">
     <h5>Compétences Associées</h5>
     <div class="competences-list">
-        <a href="/competences/detail.html?id=8" class="competence-tag technique">Spring</a>
+        <a href="/competences/detail.html?id=7" class="competence-tag technique">Spring</a>
         <a href="/competences/detail.html?id=5" class="competence-tag technique">Angular</a>
         <a href="/competences/detail.html?id=6" class="competence-tag technique">SQL</a>
-        <a href="/competences/detail.html?id=12" class="competence-tag devops">Docker</a>
-        <a href="/competences/detail.html?id=16" class="competence-tag humain">Créativité</a>
-        <a href="/competences/detail.html?id=17" class="competence-tag humain">Esprit critique</a>
+        <a href="/competences/detail.html?id=11" class="competence-tag devops">Docker</a>
+        <a href="/competences/detail.html?id=15" class="competence-tag humain">Créativité</a>
+        <a href="/competences/detail.html?id=16" class="competence-tag humain">Esprit critique</a>
     </div>
 </section>
 `

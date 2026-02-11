@@ -26,7 +26,7 @@ const JavaScriptCompetence = `
     
     <p>
         <strong>Développement d'un jeu 2D interactif en JavaScript natif (<a class="link" href="/projets/detail.html?id=4">Jeu Anti-Gaspi</a>).</strong>
-        <br>Le projet Jeu Anti-Gaspi est l'illustration la plus parlante de ma compétence en <a class="link" href=/competences/detail.html?id=3>JavaScript</a> natif. 
+        <br>Le projet Jeu Anti-Gaspi est l'illustration la plus parlante de ma compétence en JavaScript natif. 
         Développé sans aucun framework, il m'a permis de mettre en œuvre des mécaniques de jeu complexes : 
         manipulation du Canvas HTML5 pour le rendu, création d'une boucle de jeu, gestion des animations, détection de collisions et gestion des entrées utilisateur. 
         Le résultat a été un jeu 2D fonctionnel et engageant, démontrant une compréhension approfondie des mécanismes fondamentaux de JavaScript pour le développement interactif. 

@@ -27,7 +27,7 @@ const FlexibiliteCompetence = `
         <strong>Adaptation technologique et modernisation (<a class="link" href="/projets/detail.html?id=1">Escarcelle</a>).</strong>
         <br>Sur le projet Escarcelle, j'ai activement participé à la modernisation d'un système historique. 
         Cela a impliqué l'intégration de nouvelles technologies (<a class="link" href=/competences/detail.html?id=1>Go</a>, <a class="link" href=/competences/detail.html?id=4>Svelte</a>) 
-        avec un socle existant (<a class="link" href=/competences/detail.html?id=10>Rebol</a>), nécessitant une grande 
+        avec un socle existant (<a class="link" href=/competences/detail.html?id=9>Rebol</a>), nécessitant une grande 
         capacité d'adaptation pour assurer la coexistence et l'interopérabilité des différentes briques technologiques, tout en repensant des modules clés. 
         Le résultat a été une transition technologique fluide, avec une amélioration significative de la maintenabilité et de la performance. 
         Ma valeur ajoutée a été de transformer un écosystème hétérogène en une solution cohérente et évolutive.

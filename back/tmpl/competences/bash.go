@@ -31,7 +31,7 @@ const BashCompetence = `
     </p>
 
     <p>
-        <strong>Gestion quotidienne et optimisation de l'environnement de dev (<a class="link" href="/projets/detail.html?id=1">Escarcelle</a>, <a class="link" href="/projets/detail.html?id=6">PMT</a>, <a class="link" href="/projets/detail.html?id=2">Caisse</a>).</strong>
+        <strong>Gestion quotidienne et optimisation de l'environnement de dev (<a class="link" href="/projets/detail.html?id=1">Escarcelle</a>, <a class="link" href="/projets/detail.html?id=5">PMT</a>, <a class="link" href="/projets/detail.html?id=2">Caisse</a>).</strong>
         <br>J'utilise couramment Bash pour naviguer dans le système de fichiers, gérer mes projets avec Git, manipuler des conteneurs Docker et lancer mes applications. 
         J'ai également créé des alias et des fonctions personnalisées dans mon <code>.bashrc</code> pour accélérer les tâches répétitives. 
         Le résultat est un environnement de développement hautement productif et personnalisé. Ma valeur ajoutée a été d'optimiser mon flux de travail quotidien, 

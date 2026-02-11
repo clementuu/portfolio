@@ -30,7 +30,7 @@ const SpringCompetence = `
     </p>
 
     <p>
-        <strong>Développement d'une API REST complète et sécurisée (<a class="link" href="/projets/detail.html?id=6">PMT</a>).</strong>
+        <strong>Développement d'une API REST complète et sécurisée (<a class="link" href="/projets/detail.html?id=5">PMT</a>).</strong>
         <br>Dans le cadre du projet Project Management Tool (PMT), j'ai conçu une API RESTful 
         permettant la gestion des projets, des tâches et des utilisateurs. Spring Boot m'a permis de 
         structurer rapidement les endpoints et de gérer les flux JSON facilement. 
@@ -39,7 +39,7 @@ const SpringCompetence = `
     </p>
 
     <p>
-        <strong>Architecture modulaire et maintenable (<a class="link" href="/projets/detail.html?id=6">PMT</a>).</strong>
+        <strong>Architecture modulaire et maintenable (<a class="link" href="/projets/detail.html?id=5">PMT</a>).</strong>
         <br>Pour garantir la qualité du code et la facilité d'évolution, j'ai structuré le backend selon une 
         architecture en couches (Controller, Service, Repository) en appliquant les principes d'Inversion 
         de Contrôle (IoC) et d'Injection de Dépendances (DI). Résultat : un code propre, testable et durable, 
@@ -47,9 +47,9 @@ const SpringCompetence = `
     </p>
 
     <p>
-        <strong>Intégration dans un environnement Full-Stack conteneurisé (<a class="link" href="/projets/detail.html?id=6">PMT</a>).</strong>
+        <strong>Intégration dans un environnement Full-Stack conteneurisé (<a class="link" href="/projets/detail.html?id=5">PMT</a>).</strong>
         <br>Le service Java/Spring de PMT s'intégrait parfaitement dans un écosystème moderne : il dialoguait avec une base de données SQL pour la persistance des données, servait de socle pour le front-end 
-        <a class="link" href=/competences/detail.html?id=5>Angular</a>, et l'ensemble était orchestré et déployé dans un environnement conteneurisé avec <a class="link" href=/competences/detail.html?id=12>Docker</a>. 
+        <a class="link" href=/competences/detail.html?id=5>Angular</a>, et l'ensemble était orchestré et déployé dans un environnement conteneurisé avec <a class="link" href=/competences/detail.html?id=11>Docker</a>. 
         L'application obtenue est cohérente, fonctionnelle et prête à être déployée. J'ai ainsi assuré une intégration harmonieuse entre toutes les couches, garantissant une architecture stable et homogène.
     </p>
 </section>
@@ -83,7 +83,7 @@ const SpringCompetence = `
     <h5>Projets Associés</h5>
     <div class="project-list">
         <ul>
-            <li><a class="project-link" href="/projets/detail.html?id=6">PMT</a></li>
+            <li><a class="project-link" href="/projets/detail.html?id=5">PMT</a></li>
         </ul>
     </div>
 </section>
