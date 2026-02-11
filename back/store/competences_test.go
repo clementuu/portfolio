@@ -35,7 +35,7 @@ func TestGetCompetence(t *testing.T) {
 			name:         "Retrieve existing competence (ID 10)",
 			competenceID: 10,
 			expectError:  false,
-			expectedName: "Rebol",
+			expectedName: "R",
 		},
 		{
 			name:         "Retrieve non-existent competence (ID 999)",
