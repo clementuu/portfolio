@@ -116,3 +116,20 @@ Le pipeline exécute les tâches suivantes :
 
 1. **Build** : Construit l'image Docker de l'application.
 2. **Test** : Exécute les tests unitaires et de couverture pour le backend Go et le frontend Svelte.
+3. **Push** : Push de l'image Docker sur Docker Hub.
+
+## Déploiement
+
+Le `Makefile` fournit des cibles pour le déploiement de l'application. Ces commandes poussent les fichiers sur le serveur et mettent en place les certificats SSL ainsi que le proxy pour autoriser l'HTTPS.
+
+- **Déployer l'application :**
+
+    ```sh
+    make deploy
+    ```
+
+- **Mettre en place les certificats SSL et le proxy HTTPS :**
+
+    ```sh
+    make ssl
+    ```
