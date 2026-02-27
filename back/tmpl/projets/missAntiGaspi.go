@@ -6,7 +6,7 @@ const MissionAntiGaspiHTML = `
 <!-- =================================================================== -->
 <section class="project-section">
     <p>
-        TousAntiGaspi est une action menée dans le cadre d'un service civique pour la mairie de 
+        <b>TousAntiGaspi</b> est une action menée dans le cadre d'un service civique pour la mairie de 
         Saint-Jean-de-Védas, au sein de la métropole de Montpellier. L'objectif était de réaliser une étude 
         approfondie du gaspillage alimentaire dans les écoles de la commune afin d'identifier les leviers 
         d'amélioration et de proposer des pistes d'action concrètes aux élus locaux.
@@ -19,6 +19,38 @@ const MissionAntiGaspiHTML = `
         et capacité à vulgariser des analyses complexes pour un public non spécialiste.
     </p>
 </section>
+
+<!-- =================================================================== -->
+<!-- SECTION : ACTEURS ET INTERACTIONS DU PROJET                        -->
+<!-- =================================================================== -->
+<section class="project-section">
+    <h3><b>Acteurs et Interactions</b></h3>
+    <p>
+        La mission TousAntiGaspi a mobilisé deux acteurs principaux aux rôles clairement définis :
+    </p>
+
+    <ul>
+        <li>
+            <strong>Moi-même (réalisateur de l'étude)</strong> - responsable de la conception du protocole, 
+            de la collecte des données, de l'analyse statistique, de la rédaction du rapport et 
+            de la présentation des résultats aux décideurs.
+        </li>
+
+        <li>
+            <strong>La mairie de Saint-Jean-de-Védas (commanditaire)</strong> - définissant les objectifs 
+            de l'étude, facilitant l'accès aux écoles, validant les orientations méthodologiques 
+            et recevant les recommandations finales pour mise en œuvre.
+        </li>
+    </ul>
+
+    <p>
+        Les interactions ont été régulières tout au long de la mission : réunions de cadrage, 
+        validation du protocole, échanges sur les premiers résultats et restitution finale auprès 
+        des élus et des services scolaires. Cette collaboration étroite a permis d'aligner 
+        l'analyse scientifique avec les besoins opérationnels de la collectivité.
+    </p>
+</section>
+
 
 <!-- =================================================================== -->
 <!-- SECTION : MISSIONS ET COMPÉTENCES DÉVELOPPÉES                       -->
@@ -44,7 +76,7 @@ const MissionAntiGaspiHTML = `
         </div>
 
         <div class="skill-item">
-            <strong>Analyse Statistique (R & Python)</strong>
+            <strong>Analyse Statistique (<a class="link" href="/competences/detail.html?id=10">R</a> & <a class="link" href="/competences/detail.html?id=8">Python</a>)</strong>
             <p>
                 Réalisation d'analyses statistiques descriptives et exploratoires pour identifier les 
                 tendances, variations et facteurs influençant le gaspillage.  
@@ -92,13 +124,22 @@ const MissionAntiGaspiHTML = `
 <section class="project-section">
     <h3><b>Conclusion</b></h3>
     <p>
-        La Mission TousAntiGaspi a été une expérience marquante, mêlant engagement citoyen, travail de 
-        terrain et analyse scientifique. Elle m'a permis de développer des compétences solides en 
-        statistiques, en manipulation de données et en communication auprès de décideurs publics.  
-        Ce projet a renforcé ma capacité à transformer des données brutes en recommandations concrètes 
-        et utiles pour l'action publique.
+        La Mission TousAntiGaspi a été une expérience marquante, mêlant engagement citoyen, 
+        travail de terrain et analyse scientifique. Elle m'a permis de développer des compétences 
+        solides en statistiques, en manipulation de données et en communication auprès de 
+        décideurs publics.  
+        Ce projet a renforcé ma capacité à transformer des données brutes en recommandations 
+        concrètes et utiles pour l'action publique.
+    </p>
+
+    <p>
+        Suite à la présentation du rapport, un suivi a été mis en place par la mairie pour 
+        accompagner l'application des recommandations et mesurer leur impact dans le temps.  
+        Bien que je ne dispose pas de détails sur les actions ultérieures, cette continuité 
+        témoigne de l'intérêt porté à l'étude et de sa valeur pour la collectivité.
     </p>
 </section>
+
 <!-- =================================================================== -->
 <!-- SECTION : COMPÉTENCES ASSOCIÉES                                     -->
 <!-- =================================================================== -->

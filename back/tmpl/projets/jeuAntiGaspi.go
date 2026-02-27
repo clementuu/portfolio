@@ -12,12 +12,47 @@ const JeuAntiGaspiHTML = `
     </p>
 
     <p>
-        Le jeu a été développé entièrement en <b>HTML / CSS / JavaScript</b> sans framework ni moteur 
+        Le jeu a été développé entièrement en <a class="link" href="/competences/detail.html?id=3">JavaScript</a> 
+        et <a class="link" href="/competences/detail.html?id=2">HTML/CSS</a> sans framework ni moteur 
         externe. Il s'agit d'un jeu en vue du dessus dans lequel le joueur doit accomplir différentes 
         actions liées au tri, à la gestion des déchets ou à la consommation responsable. 
         Ce projet représente une étape importante dans mon parcours : c'est l'un de mes premiers 
         développements interactifs, et il m'a permis d'apprendre les bases de la programmation 
         orientée jeu vidéo.
+    </p>
+</section>
+
+<!-- =================================================================== -->
+<!-- SECTION : ACTEURS ET INTERACTIONS DU PROJET                        -->
+<!-- =================================================================== -->
+<section class="project-section">
+    <h3><b>Acteurs et Interactions</b></h3>
+    <p>
+        Ce projet a été réalisé dans un contexte particulier : j'étais le seul développeur et testeur, 
+        chargé de concevoir l'intégralité du jeu, de son gameplay à son intégration graphique. 
+        Les interactions se faisaient principalement avec :
+    </p>
+
+    <ul>
+        <li>
+            <strong>Moi-même (développeur et testeur)</strong> - responsable de la conception, du développement, 
+            des tests, de l'équilibrage du gameplay et de l'intégration des contenus pédagogiques.
+        </li>
+
+        <li>
+            <strong>La mairie de Saint-Jean-de-Védas</strong> - commanditaire du projet, définissant les objectifs 
+            pédagogiques et validant les mécaniques liées aux éco-gestes.
+        </li>
+
+        <li>
+            <strong>Les enfants (public cible)</strong> - leurs retours informels ont permis d'ajuster la difficulté, 
+            la lisibilité des actions et la dimension ludique du jeu.
+        </li>
+    </ul>
+
+    <p>
+        Cette configuration m'a permis de travailler en autonomie complète, tout en gardant un lien 
+        constant avec les besoins pédagogiques du commanditaire et les attentes du jeune public.
     </p>
 </section>
 
@@ -28,7 +63,8 @@ const JeuAntiGaspiHTML = `
     <h3><b>Missions et Compétences Développées</b></h3>
     <p>
         Ce projet m'a permis de découvrir et d'expérimenter les fondations du développement de jeux 
-        2D en JavaScript. J'ai dû apprendre à manipuler des ressources graphiques, gérer un canvas, 
+        2D en <a class="link" href="/competences/detail.html?id=3">JavaScript</a>. 
+        J'ai dû apprendre à manipuler des ressources graphiques, gérer un canvas, 
         créer une boucle de jeu fluide et mettre en place des mécaniques interactives.
     </p>
 
@@ -105,7 +141,16 @@ const JeuAntiGaspiHTML = `
         Surtout, il a permis de sensibiliser des enfants aux éco-gestes de manière amusante et 
         pédagogique, ce qui en fait une réussite autant technique qu'humaine.
     </p>
+
+    <p>
+        Les lendemains du projet restent ouverts : aucune évolution fonctionnelle n'est prévue pour 
+        l'instant, mais j'envisage une refonte complète afin d'améliorer la qualité du code, 
+        moderniser la structure et faciliter la maintenance.  
+        Je pourrais également profiter de mon serveur VPS pour rendre le jeu accessible en ligne, 
+        afin qu'il puisse continuer à être utilisé dans un cadre éducatif ou associatif.
+    </p>
 </section>
+
 <!-- =================================================================== -->
 <!-- SECTION : COMPÉTENCES ASSOCIÉES                                     -->
 <!-- =================================================================== -->

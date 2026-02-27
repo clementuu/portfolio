@@ -9,13 +9,11 @@ const CaisseHTML = `
     <p>
         Ce projet consistait en la refonte complète de l'application de caisse de l'épicerie solidaire Escarcelle. 
         L'ancienne version, développée en Rebol, était devenue obsolète : elle ne supportait pas les protocoles 
-        sécurisés (SSL/TLS), son interface était vieillissante, et sa maintenance devenait de plus en plus complexe 
-        en raison de son architecture monolithique et de l'absence de séparation claire entre logique métier, 
-        interface et stockage.
+        sécurisés (SSL/TLS), son interface était vieillissante, et sa maintenance devenait de plus en plus complexe.
     </p>
 
     <p>
-        La décision a été prise de repartir de zéro en utilisant <b>Go</b> et la bibliothèque <b>Fyne</b> afin de créer 
+        La décision a été prise de repartir de zéro en utilisant <a class="link" href="/competences/detail.html?id=1">Go</a> et la bibliothèque <strong>Fyne</strong> afin de créer 
         une application de bureau moderne, multiplateforme (Windows, macOS, Linux), sécurisée et capable de 
         fonctionner en mode connecté comme en mode autonome. La caisse repose sur une base de données locale 
         synchronisée avec l'API partenaire, permettant une continuité de service même en cas de coupure Internet.
@@ -26,6 +24,47 @@ const CaisseHTML = `
         d'intégrer de nouvelles fonctionnalités (multi-code-barres, gestion avancée des tickets, 
         resynchronisation automatique, mise en attente des ventes, etc.) et de proposer une interface 
         adaptée aux écrans tactiles, plus intuitive et plus robuste.
+    </p>
+</section>
+
+<!-- =================================================================== -->
+<!-- SECTION : ACTEURS ET INTERACTIONS DU PROJET                        -->
+<!-- =================================================================== -->
+<section class="project-section">
+    <h3><b>Acteurs et Interactions</b></h3>
+    <p>
+        Le projet a mobilisé plusieurs acteurs aux rôles complémentaires :
+    </p>
+
+    <ul>
+        <li>
+            <strong>Moi-même (développeur principal)</strong> - en charge de la conception, du développement, 
+            des choix techniques, de l'architecture et de la coordination globale du projet.
+        </li>
+
+        <li>
+            <strong>Mon maître d'apprentissage</strong> - garant de la cohérence technique et fonctionnelle, 
+            apportant un accompagnement régulier, des validations d'architecture et des retours 
+            sur les choix de conception.
+        </li>
+
+        <li>
+            <strong>Une testeuse dédiée</strong> - responsable de la qualification fonctionnelle, de la 
+            détection des anomalies, de la validation des workflows utilisateurs et de la 
+            conformité aux besoins métier.
+        </li>
+
+        <li>
+            <strong>Les épiceries solidaires (utilisateurs finaux)</strong> - parties prenantes essentielles 
+            pour la compréhension des usages réels, la remontée des irritants, la priorisation 
+            des fonctionnalités et la validation terrain.
+        </li>
+    </ul>
+
+    <p>
+        Les interactions entre ces acteurs ont rythmé le projet : ateliers de cadrage, 
+        démonstrations intermédiaires, retours utilisateurs, sessions de tests, et ajustements 
+        continus pour garantir une solution robuste, intuitive et adaptée aux contraintes du terrain.
     </p>
 </section>
 
@@ -55,7 +94,7 @@ const CaisseHTML = `
         </div>
 
         <div class="skill-item">
-            <strong>Gestion de Données (SQLite)</strong>
+            <strong>Gestion de Données (<a class="link" href="/competences/detail.html?id=6">SQLite</a>)</strong>
             <p>
                 Mise en place du package <i>store</i> pour gérer la base locale SQLite : structure des tables, 
                 migrations, indexation, gestion des ventes en attente, stockage des tickets, et 
@@ -133,9 +172,16 @@ const CaisseHTML = `
         Cette refonte a été un succès technique majeur, aboutissant à une application de caisse moderne, 
         rapide, sécurisée et considérablement plus simple à maintenir et à faire évoluer.  
         Le projet m'a permis d'acquérir une expertise approfondie dans le développement d'applications 
-        de bureau en Go avec Fyne, la conception d'architectures événementielles, la gestion de données 
+        de bureau en <a class="link" href="/competences/detail.html?id=1">Go</a> avec Fyne, la conception d'architectures événementielles, la gestion de données 
         locales synchronisées et l'intégration de périphériques (imprimantes, douchettes, audio).  
         Il constitue aujourd'hui un socle robuste pour les futures évolutions de l'écosystème Escarcelle.
+    </p>
+
+    <p> 
+        À l'issue du projet, l'application constitue désormais un socle robuste pour l'écosystème Escarcelle. 
+        Les lendemains du projet se concentrent principalement sur la maintenance évolutive et corrective, 
+        l'ajout de petites améliorations fonctionnelles, ainsi que l'adaptation continue aux retours des épiceries. 
+        La structure modulaire mise en place facilite grandement ces évolutions futures. 
     </p>
 </section>
 <!-- =================================================================== -->
