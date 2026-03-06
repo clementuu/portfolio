@@ -12,6 +12,8 @@ const PmtHTML = `
         intuitif.
     </p>
 
+    <img class="project-image" src="../assets/PmtProjet.png" alt="Projet PMT">
+
     <p>
         Le projet est construit sur une architecture découplée avec un backend en 
         <a class="link" href="/competences/detail.html?id=7">Java/Spring</a> exposant une API REST, et un frontend en <a class="link" href="/competences/detail.html?id=5">Angular</a> 

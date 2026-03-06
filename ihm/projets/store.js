@@ -1,6 +1,6 @@
 import { writable } from "svelte/store";
 
-const cached = localStorage.getItem("projets");
+const cached = sessionStorage.getItem("projets");
 export const projets = writable(cached ? JSON.parse(cached) : []);
 
 let loaded = cached !== null;
@@ -13,7 +13,7 @@ export async function loadProjets() {
         const data = await response.json();
 
         projets.set(data);
-        localStorage.setItem("projets", JSON.stringify(data));
+        sessionStorage.setItem("projets", JSON.stringify(data));
 
         loaded = true;
     } catch (err) {
