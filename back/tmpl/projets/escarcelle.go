@@ -21,6 +21,8 @@ const EscarcelleHTML = `
         interopérables.
     </p>
 
+    <img class="project-image" src="../assets/AccueilEscarcelle.png" alt="Accueil Escarcelle">
+
     <p>
         La plateforme se compose de trois modules principaux :
     </p>

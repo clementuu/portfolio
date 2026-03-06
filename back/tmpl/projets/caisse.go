@@ -19,6 +19,8 @@ const CaisseHTML = `
         synchronisée avec l'API partenaire, permettant une continuité de service même en cas de coupure Internet.
     </p>
 
+    <img class="project-image" src="../assets/CaisseEscarcelle.png" alt="Caisse Escarcelle">
+
     <p>
         Cette refonte a également été l'occasion de repenser entièrement les workflows utilisateurs, 
         d'intégrer de nouvelles fonctionnalités (multi-code-barres, gestion avancée des tickets, 
