@@ -46,24 +46,24 @@ const EscarcelleHTML = `
 
     <ul>
         <li>
-            <strong>Mon maître d'apprentissage (développeur principal)</strong> - responsable de la vision technique 
+            <strong>Brahim Hamdouni</strong> - responsable de la vision technique 
             globale, des choix d'architecture, de la priorisation des évolutions et de la coordination 
             entre les différents modules.
         </li>
 
         <li>
-            <strong>Moi-même (développeur full-stack)</strong> - en charge de la modernisation du socle existant, 
+            <strong>Moi-même</strong> - en charge de la modernisation du socle existant, 
             de la refonte de modules critiques, de la création de nouveaux services et de la migration 
             progressive du legacy vers la stack moderne <a class="link" href="/competences/detail.html?id=1">Go</a>/<a class="link" href="/competences/detail.html?id=4">Svelte</a>.
         </li>
 
         <li>
-            <strong>Une testeuse dédiée</strong> - intervenant sur la qualification fonctionnelle, la validation 
-            des workflows, la détection des anomalies et la conformité aux besoins métier.
+            <strong>L'équipe de test</strong> - intervenant sur la qualification fonctionnelle, 
+            la détection des anomalies et la conformité aux besoins métier.
         </li>
 
         <li>
-            <strong>Les épiceries solidaires (utilisateurs finaux)</strong> - apportant des retours terrain essentiels 
+            <strong>Les épiceries solidaires</strong> - apportant des retours terrain essentiels 
             pour orienter les priorités, identifier les irritants et valider les évolutions.
         </li>
     </ul>

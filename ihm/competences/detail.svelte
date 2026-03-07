@@ -102,17 +102,6 @@
         margin-bottom: 1em;
     }
 
-    .arrow-bar {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .arrow-bar i {
-        color: var(--primary-color);
-        font-size: 30px;
-        font-weight: bolder;
-    }
-
     .detail-text {
         text-align: justify;
         margin-top: 1.5em;
@@ -164,6 +153,7 @@
         gap: 1.5rem;
         background-color: #f8f9fa;
         padding: 1.5rem;
+        padding-bottom: 0;
         transition: transform 0.2s ease, box-shadow 0.2s ease;
         justify-content: center;
     }

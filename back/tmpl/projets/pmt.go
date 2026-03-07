@@ -34,9 +34,9 @@ const PmtHTML = `
 
     <ul>
         <li>
-            <strong>Moi-même (développeur, testeur et utilisateur)</strong> - responsable de la conception 
+            <strong>Moi-même</strong> - responsable de la conception 
             fonctionnelle, du développement backend et frontend, des tests, de la conteneurisation 
-            et de l'utilisation quotidienne de l'outil.
+            et utilisateur de l'outil.
         </li>
     </ul>
 

@@ -40,18 +40,18 @@ const CaisseHTML = `
 
     <ul>
         <li>
-            <strong>Moi-même (développeur principal)</strong> - en charge de la conception, du développement, 
+            <strong>Moi-même</strong> - en charge de la conception, du développement, 
             des choix techniques, de l'architecture et de la coordination globale du projet.
         </li>
 
         <li>
-            <strong>Mon maître d'apprentissage</strong> - garant de la cohérence technique et fonctionnelle, 
+            <strong>Brahim Hamdouni</strong> - garant de la cohérence technique et fonctionnelle, 
             apportant un accompagnement régulier, des validations d'architecture et des retours 
             sur les choix de conception.
         </li>
 
         <li>
-            <strong>Une testeuse dédiée</strong> - responsable de la qualification fonctionnelle, de la 
+            <strong>L'équipe de test</strong> - responsable de la 
             détection des anomalies, de la validation des workflows utilisateurs et de la 
             conformité aux besoins métier.
         </li>

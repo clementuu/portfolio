@@ -40,6 +40,18 @@
         <h1><b>{projet.name}</b></h1>
         <h2>{projet.sujet}</h2>
         {@html projet.tmpl}
+        <div class="arrow-bar">
+            {#if id > 1}
+                <a href="/projets/detail.html?id={projet.id-1}"><i class="bi bi-arrow-left-short"></i></a>
+            {:else}
+                <p></p>
+            {/if}
+            {#if id < 5}
+                <a href="/projets/detail.html?id={projet.id+1}"><i class="bi bi-arrow-right-short"></i></a>
+            {:else}
+                <p></p>
+            {/if}
+        </div>
     {:else}
         <p>Chargement du projet...</p>
     {/if}

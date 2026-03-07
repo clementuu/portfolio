@@ -37,8 +37,8 @@ const JeuAntiGaspiHTML = `
 
     <ul>
         <li>
-            <strong>Moi-même (développeur et testeur)</strong> - responsable de la conception, du développement, 
-            des tests, de l'équilibrage du gameplay et de l'intégration des contenus pédagogiques.
+            <strong>Moi-même</strong> - responsable de la conception, du développement, 
+            des tests, de l'équilibrage du gameplay, de l'intégration des contenus pédagogiques et de l'animation des ateliers.
         </li>
 
         <li>
@@ -47,7 +47,7 @@ const JeuAntiGaspiHTML = `
         </li>
 
         <li>
-            <strong>Les enfants (public cible)</strong> - leurs retours informels ont permis d'ajuster la difficulté, 
+            <strong>Les enfants</strong> - leurs retours informels ont permis d'ajuster la difficulté, 
             la lisibilité des actions et la dimension ludique du jeu.
         </li>
     </ul>

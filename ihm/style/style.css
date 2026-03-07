@@ -80,6 +80,17 @@ p {
     text-align: center;
 }
 
+.arrow-bar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.arrow-bar i {
+    color: var(--primary-color);
+    font-size: 30px;
+    font-weight: bolder;
+}
+
 a.link {
     color: var(--primary-color);
     font-weight: bold;

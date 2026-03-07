@@ -31,13 +31,13 @@ const MissionAntiGaspiHTML = `
 
     <ul>
         <li>
-            <strong>Moi-même (réalisateur de l'étude)</strong> - responsable de la conception du protocole, 
+            <strong>Moi-même</strong> - responsable de la conception du protocole, 
             de la collecte des données, de l'analyse statistique, de la rédaction du rapport et 
             de la présentation des résultats aux décideurs.
         </li>
 
         <li>
-            <strong>La mairie de Saint-Jean-de-Védas (commanditaire)</strong> - définissant les objectifs 
+            <strong>La mairie de Saint-Jean-de-Védas</strong> - définissant les objectifs 
             de l'étude, facilitant l'accès aux écoles, validant les orientations méthodologiques 
             et recevant les recommandations finales pour mise en œuvre.
         </li>
