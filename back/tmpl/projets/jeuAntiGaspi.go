@@ -11,7 +11,7 @@ const JeuAntiGaspiHTML = `
         réduction du gaspillage alimentaire à travers une expérience ludique, simple et accessible.
     </p>
 
-    <img class="project-image" src="../assets/AntiGaspi.gif" alt="Jeu Anti-Gaspi">
+    <img class="project-image" src="../assets/AntiGaspi.png" alt="Jeu Anti-Gaspi">
 
     <p>
         Le jeu a été développé entièrement en <a class="link" href="/competences/detail.html?id=3">JavaScript</a> 
