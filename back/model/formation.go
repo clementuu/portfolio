@@ -7,4 +7,5 @@ type Formation struct {
 	Periode       string
 	Presentation  string
 	Logo          string
+	URL           string
 }

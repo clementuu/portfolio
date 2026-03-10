@@ -8,4 +8,5 @@ type Experience struct {
 	Periode     string
 	Description string
 	Taches      []string
+	URL         string
 }

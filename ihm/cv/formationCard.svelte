@@ -11,9 +11,9 @@
             </h3>
             <p>
                 <strong>
-                    <span style="color: var(--primary-color);">
+                    <a href="{formation.URL}" class="link">
                         {formation.Etablissement}
-                    </span>
+                    </a>
                     <span>| {formation.Periode}</span>
                 </strong>
             </p>

@@ -11,7 +11,7 @@
             </h3>
             <p>
                 <strong>
-                    <span><span style="color: var(--primary-color);">{experience.Structure}</span> | {experience.Periode}</span>
+                    <span><a href="{experience.URL}" class="link">{experience.Structure}</a> | {experience.Periode}</span>
                 </strong>
             </p>
         </div>
