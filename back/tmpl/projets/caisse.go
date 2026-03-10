@@ -120,11 +120,13 @@ const CaisseHTML = `
         <div class="skill-item">
             <strong>Intégration d'Impression</strong>
             <p>
-                Création d'un package d'impression complet : <br>
-                • gestion des tickets ESC/POS pour imprimantes thermiques <br>
-                • génération de tickets A4 via appels système <br>
-                • configuration avancée (nombre d'exemplaires, format, caractères par ligne, test d'impression) <br>
-                • intégration avec les paramètres utilisateurs (thème, police, confirmation d'impression) <br>
+                Création d'un package d'impression complet : 
+                <ul>
+                    <li>gestion des tickets ESC/POS pour imprimantes thermiques</li>
+                    <li>génération de tickets A4 via appels système</li>
+                    <li>configuration avancée (nom/lie d'exemplaires, format, caractères par ligne, test d'impression)</li>
+                    <li>intégration avec les paramètres utilisateurs (thème, police, confirmation d'impression)</li>
+                </ul>
             </p>
         </div>
 
@@ -150,15 +152,17 @@ const CaisseHTML = `
         <div class="skill-item">
             <strong>Fonctionnalités Métier Avancées</strong>
             <p>
-                Implémentation de fonctionnalités essentielles : <br> 
-                • saisie client et contrôle des droits d'accès <br>
-                • gestion du panier (quantités, remises, suppression, filtrage) <br>
-                • mise en attente de ventes multiples <br>
-                • encaissement multi-modes de paiement <br>
-                • envoi du ticket par email <br>
-                • gestion du budget client et des tarifs spécifiques <br>
-                • affichage des informations produit (catégorie, stock, DLC, etc.) <br>
-                • support complet du multi-code-barres via l'API partenaire <br>
+                Implémentation de fonctionnalités essentielles : 
+                <ul>
+                    <li>saisie client et contrôle des droits d'accès</li>
+                    <li>gestion du panier (quantités, remises, suppression, filtrage)</li>
+                    <li>mise en attente de ventes multiples</li>
+                    <li>encaissement multi-modes de paiement</li>
+                    <li>envoi du ticket par email</li>
+                    <li>gestion du budget client et des tarifs spécifiques</li>
+                    <li>affichage des informations produit (catégorie, stock, DLC, etc.)</li>
+                    <li>support complet du multi-code-barres via l'API partenaire</li>
+                </ul>
             </p>
         </div>
 
@@ -176,13 +180,12 @@ const CaisseHTML = `
         Le projet m'a permis d'acquérir une expertise approfondie dans le développement d'applications 
         de bureau en <a class="link" href="/competences/detail.html?id=1">Go</a> avec Fyne, la conception d'architectures événementielles, la gestion de données 
         locales synchronisées et l'intégration de périphériques (imprimantes, douchettes, audio).  
-        Il constitue aujourd'hui un socle robuste pour les futures évolutions de l'écosystème Escarcelle.
     </p>
 
     <p> 
         À l'issue du projet, l'application constitue désormais un socle robuste pour l'écosystème Escarcelle. 
-        Les lendemains du projet se concentrent principalement sur la maintenance évolutive et corrective, 
-        l'ajout de petites améliorations fonctionnelles, ainsi que l'adaptation continue aux retours des épiceries. 
+        Les lendemains du projet seront principalement faits de maintenance évolutive et corrective, 
+        d'ajout de petites améliorations fonctionnelles, et d'adaptation aux retours des épiceries. 
         La structure modulaire mise en place facilite grandement ces évolutions futures. 
     </p>
 </section>

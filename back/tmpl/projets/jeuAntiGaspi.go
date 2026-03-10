@@ -136,7 +136,7 @@ const JeuAntiGaspiHTML = `
 <section class="project-section">
     <h3><b>Conclusion</b></h3>
     <p>
-        Ce jeu antigaspi est un projet qui me tient particulièrement à cœur. Bien que son code ne 
+        Ce jeu anti gaspi est un projet qui me tient particulièrement à cœur. Bien que son code ne 
         reflète plus mon niveau actuel, il représente une étape fondatrice dans mon parcours de 
         développeur : j'y ai appris les bases du développement de jeux 2D, la manipulation du canvas, 
         la gestion d'assets et la création d'interactions ludiques.  
@@ -148,7 +148,7 @@ const JeuAntiGaspiHTML = `
         Les lendemains du projet restent ouverts : aucune évolution fonctionnelle n'est prévue pour 
         l'instant, mais j'envisage une refonte complète afin d'améliorer la qualité du code, 
         moderniser la structure et faciliter la maintenance.  
-        Je pourrais également profiter de mon serveur VPS pour rendre le jeu accessible en ligne, 
+        Je pourrais également profiter de mon VPS pour rendre le jeu accessible en ligne, 
         afin qu'il puisse continuer à être utilisé dans un cadre éducatif ou associatif.
     </p>
 </section>

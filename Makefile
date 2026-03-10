@@ -21,6 +21,9 @@ build-and-start: build start
 stop:
 	docker compose down
 
+.PHONY: test
+test: test-back test-ihm
+
 .PHONY: test-back
 test-back:
 	cd back && go test ./... -coverprofile=coverage.out

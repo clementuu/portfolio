@@ -92,51 +92,99 @@ const EscarcelleHTML = `
         <div class="skill-item">
             <strong>Base de Données (<a class="link" href="/competences/detail.html?id=6">SQL</a>)</strong>
             <p>
-                • Migration complète de MySQL 5 vers MySQL 8, incluant l'analyse d'impact, la mise à jour 
-                des requêtes incompatibles et l'adaptation du code applicatif.<br>
-                • Refonte du système de catégories produits : passage d'un modèle basé sur l'ordre des IDs 
-                à une structure hiérarchique moderne utilisant un <i>parent_id</i>, rendant l'outil plus 
-                flexible et maintenable.<br>
-                • Conception du système multi-code-barres : création d'une table dédiée permettant 
-                d'associer un nombre illimité de codes à un produit, remplaçant l'ancienne limite de deux 
-                codes par article.
+                <ul>
+                    <li>
+                        Migration complète de MySQL 5 vers MySQL 8, incluant l'analyse d'impact, 
+                        la mise à jour des requêtes incompatibles et l'adaptation du code applicatif.
+                    </li>
+                    <li>
+                        Refonte du système de catégories produits : passage d'un modèle basé sur l'ordre des IDs 
+                        à une structure hiérarchique moderne utilisant un <i>parent_id</i>, rendant l'outil plus 
+                        flexible et maintenable.
+                    </li>
+                    <li>
+                        Conception du système multi-code-barres : création d'une table dédiée permettant 
+                    d'associer un nombre illimité de codes à un produit, remplaçant l'ancienne limite de deux 
+                    codes par article.
+                    </li>
             </p>
         </div>
 
         <div class="skill-item">
             <strong>Legacy (<a class="link" href="/competences/detail.html?id=9">Rebol</a>)</strong>
             <p>
-                • Mise à jour du code <a class="link" href="/competences/detail.html?id=9">Rebol</a> de l'application de gestion et de l'ancienne caisse afin 
-                d'intégrer la nouvelle structure de catégories.<br>
-                • Maintenance corrective et évolutive sur un codebase historique nécessitant une 
-                compréhension fine du fonctionnement interne et des contraintes métier.<br>
-                • Décommission progressive de certaines parties du legacy grâce à la création de nouveaux 
-                composants modernes (ex : gestion des codes-barres).
+                <ul>
+                    <li>
+                        Mise à jour du code <a class="link" href="/competences/detail.html?id=9">Rebol</a> de l'application de gestion et de l'ancienne caisse afin 
+                        d'intégrer la nouvelle structure de catégories.
+                    </li
+                    <li>
+                        Maintenance corrective et évolutive sur un codebase historique nécessitant une 
+                        compréhension fine du fonctionnement interne et des contraintes métier.<br>
+                    </li>
+                    <li>
+                        Décommission progressive de certaines parties du legacy grâce à la création de nouveaux 
+                        composants modernes (ex : gestion des codes-barres).
+                    </li>
+                </ul>
             </p>
         </div>
 
         <div class="skill-item">
             <strong>Backend (<a class="link" href="/competences/detail.html?id=1">Go</a>)</strong>
             <p>
-                • Conception et développement d'une API partenaire RESTful permettant à une entreprise 
-                tierce de créer une application de click & collect.<br>
-                • Extension de l'API pour supporter le système multi-code-barres, incluant la gestion 
-                CRUD des codes associés à un produit.<br>
-                • Mise en place d'une architecture sécurisée, documentée et extensible, destinée également 
-                à alimenter la future application de caisse.
+                <ul>
+                    <li>
+                        Conception et développement d'une API partenaire RESTful permettant à une entreprise 
+                        tierce de créer une application de click & collect.
+                    </li>
+                    <li>
+                        Extension de l'API pour supporter le système multi-code-barres, incluant la gestion 
+                        CRUD des codes associés à un produit.
+                    </li>
+                    <li>
+                        Mise en place d'une architecture sécurisée, documentée et extensible, destinée également 
+                        à alimenter la future application de caisse.
+                    </li>
+                </ul>
             </p>
         </div>
 
         <div class="skill-item">
             <strong>Frontend (<a class="link" href="/competences/detail.html?id=4">Svelte</a>)</strong>
             <p>
-                • Développement des interfaces de l'application web de gestion, avec un accent particulier 
-                sur l'ergonomie, la clarté des workflows et la cohérence de l'expérience utilisateur.<br>
-                • Refonte complète de la gestion des produits pour intégrer le multi-code-barres via des 
-                composants <a class="link" href="/competences/detail.html?id=4">Svelte</a> modernes, remplaçant le code 
-                <a class="link" href="/competences/detail.html?id=9">Rebol</a> historique.<br>
-                • Amélioration de la maintenabilité et de la lisibilité du code grâce à une architecture 
-                front plus modulaire.
+                <ul>
+                    <li>
+                        Développement des interfaces de l'application web de gestion, avec un accent particulier 
+                        sur l'ergonomie, la clarté des workflows et la cohérence de l'expérience utilisateur.
+                    </li>
+                    <li>
+                        Refonte complète de la gestion des produits pour intégrer le multi-code-barres via des 
+                        composants <a class="link" href="/competences/detail.html?id=4">Svelte</a> modernes, remplaçant le code 
+                        <a class="link" href="/competences/detail.html?id=9">Rebol</a> historique.
+                    </li>
+                    <li>
+                        Amélioration de la maintenabilité et de la lisibilité du code grâce à une architecture 
+                        front plus modulaire.
+                    </li>
+                </ul>
+            </p>
+        </div>
+
+        <div class="skill-item">
+            <strong>Architecture Logicielle</strong>
+            <p>
+                <ul>
+                    <li>
+                        Réorganisation complète de l'architecture du projet en recentrant les entités et les règles métier à la racine du codebase, afin de les placer au cœur de l'écosystème applicatif.
+                    </li>
+                    <li>
+                        Mutualisation des règles métier entre les différents modules (gestion, caisse, API), supprimant la duplication de logique et améliorant la cohérence globale.
+                    </li>
+                    <li>
+                        Analyse approfondie des risques liés à cette refonte (impacts sur le legacy, compatibilité ascendante, dépendances croisées) et conduite d'une refactorisation majeure de plusieurs modules pour garantir une transition progressive et sécurisée.
+                    </li>
+                </ul>
             </p>
         </div>
 
