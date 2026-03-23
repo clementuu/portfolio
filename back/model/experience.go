@@ -9,4 +9,5 @@ type Experience struct {
 	Description string
 	Taches      []string
 	URL         string
+	Logo        string
 }

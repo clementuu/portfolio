@@ -22,13 +22,16 @@ const (
 	CreativeLogo = "../assets/icons8-creativity-80.png"
 	BashLogo     = "../assets/terminal-svgrepo-com.svg"
 	// logos projets
-	SiLogo        = "../assets/logo-si.png"
-	AntiGapsiLogo = "../assets/playerDown1.png"
-	CaisseLogo    = "../assets/Panier.png"
-	SaintJeanLogo = "../assets/logo-saint-jean.png"
-	PMTLogo       = "../assets/logo-pmt.png"
+	EscarcelleLogo = "../assets/logo-escarcelle.png"
+	AntiGapsiLogo  = "../assets/playerDown1.png"
+	CaisseLogo     = "../assets/Panier.png"
+	SaintJeanLogo  = "../assets/logo-saint-jean.png"
+	PMTLogo        = "../assets/logo-pmt.png"
 	// logos formations
 	LaetitiaLogo = "../assets/logo-llb.jpg"
 	PaulVaLogo   = "../assets/logo-udmpv.jpg"
 	ISCODLogo    = "../assets/logo-iscod.jpg"
+	// logos expériences
+	IdemiaLogo = "../assets/idemia.webp"
+	SiLogo     = "../assets/logo-si.png"
 )

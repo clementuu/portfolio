@@ -80,6 +80,11 @@ p {
     text-align: center;
 }
 
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
 .arrow-bar {
     display: flex;
     justify-content: space-between;
@@ -118,4 +123,21 @@ a.link:hover {
 .my-pic:hover {
     box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.4),
                 0 6px 15px rgba(0, 0, 0, 0.6);
+}
+
+.img-container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    border-radius: 10%;
+    background-color: white;
+}
+
+
+@media (min-width: 800px) {
+    .img-container {
+        display: flex;
+    }
 }
