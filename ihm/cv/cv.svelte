@@ -5,50 +5,33 @@
     import OnScrollAppear from '../elements/OnScrollAppear.svelte';
     import CardGroup from '../elements/cardGroup.svelte';
 
-    let formations = [];
+    let cv = {Formations: [], Experiences: []};
     let error = '';
     let loaded = false;
 
-    async function getFormations() {
+    async function getCv() {
         try {
-            const response = await fetch('/formations');
+            const response = await fetch('/cv');
             if (!response.ok) {
                 throw new Error(`Erreur HTTP ${response.status}: ${response.statusText}`);
             }
             const data = await response.json();
-            formations = data;
+            cv = data;
         } catch (e) {
-            console.error("Échec de la récupération des formations :", e.message || e);
-            error = "Impossible de charger les formations. Veuillez réessayer plus tard.";
-        }
-    }
-
-    let experiences = [];
-
-    async function getExperiences() {
-        try {
-            const response = await fetch('/experiences');
-            if (!response.ok) {
-                throw new Error(`Erreur HTTP ${response.status}: ${response.statusText}`);
-            }
-            const data = await response.json();
-            experiences = data;
-        } catch (e) {
-            console.error("Échec de la récupération des expériences :", e.message || e);
-            error = "Impossible de charger les expériences. Veuillez réessayer plus tard.";
+            console.error("Échec de la récupération du cv :", e.message || e);
+            error = "Impossible de charger le cv. Veuillez réessayer plus tard.";
         }
     }
 
     onMount(()=>{
-        getFormations();
-        getExperiences();
+        getCv();
         loaded = true;
     });
 
     // calculs d'offset
     let formationTitleIndex = 0;
     let formationStartIndex = formationTitleIndex + 1;
-    $: experienceTitleIndex = formationStartIndex + formations.length;
+    $: experienceTitleIndex = formationStartIndex + cv.Formations.length;
     $: experienceStartIndex = experienceTitleIndex + 1;
 </script>
 
@@ -59,8 +42,8 @@
         </OnScrollAppear>
         {#if error}
             <p class="error">{error}</p>
-        {:else if formations.length > 0}
-            {#each formations as formation, i}
+        {:else if cv.Formations.length > 0}
+            {#each cv.Formations as formation, i}
                 <OnScrollAppear index={formationStartIndex + i}>
                     <FormationCard {formation}/>
                 </OnScrollAppear>
@@ -76,8 +59,8 @@
         </OnScrollAppear>
         {#if error}
             <p class="error">{error}</p>
-        {:else if experiences.length > 0}
-            {#each experiences as experience, i}
+        {:else if cv.Experiences.length > 0}
+            {#each cv.Experiences as experience, i}
                 <OnScrollAppear index={experienceStartIndex + i}>
                     <ExperienceCard {experience}/>
                 </OnScrollAppear>
