@@ -15,5 +15,9 @@ const LaetitiaPresentation = `
 		en offrant une grande diversité de filières et un environnement propice
 		au travail.
 	</p>
+
+	<p>
+		Accéder au site du lycée Laetitia Bonaparte : <a class="link" href="https://llb.ac-corse.fr/">llb.ac-corse.fr</a>
+	</p>
 </div>
 `

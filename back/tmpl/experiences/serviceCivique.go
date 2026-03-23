@@ -18,5 +18,9 @@ const ServiceCiviqueDescription = `
         Cette expérience m'a beaucoup marqué : elle m'a donné le sentiment de contribuer à quelque chose de tangible, en reliant 
         théorie et impact réel sur le terrain.
     </p>
+
+    <p>
+		Accéder au site de la mairie de Saint-Jean de Védas : <a class="link" href="https://saintjeandevedas.fr/">saintjeandevedas.fr</a>
+	</p>
 </section>
 `

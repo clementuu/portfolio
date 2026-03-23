@@ -12,5 +12,9 @@ const IscodPresentation = `
 		L'école se distingue par son accompagnement personnalisé, son rythme flexible,
 		ses rentrées décalées et une forte employabilité grâce à l'alternance.
 	</p>
+
+	<p>
+		Accéder au site de l'ISCOD : <a class="link" href="https://www.iscod.fr/">iscod.fr</a>
+	</p>
 </div>
 `

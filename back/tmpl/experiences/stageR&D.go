@@ -18,5 +18,9 @@ const StageDescription = `
         et capacité à s'adapter à un environnement où l'innovation avance vite. Une expérience dense et formatrice, qui a posé les 
         bases de mon intérêt pour l'informatique et le développement.
     </p>
+
+    <p>
+		Accéder au site d'IDEMIA : <a class="link" href="https://www.idemia.com/">idemia.com</a>
+	</p>
 </section>
 `

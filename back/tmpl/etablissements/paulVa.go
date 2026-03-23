@@ -14,5 +14,9 @@ const PaulVaPresentation = `
 		et une vie artistique dynamique portée par le Théâtre La Vignette,
 		le Musée des Moulages et de nombreux événements étudiants.
 	</p>
+
+	<p>
+		Accéder au site de l'univeristé Paul Valéry : <a class="link" href="https://www.univ-montp3.fr">univ-montp3.fr</a>
+	</p>
 </div>
 `

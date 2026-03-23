@@ -19,5 +19,8 @@ const AlternanceDescription = `
         pour un environnement de production. Suivre le développement du module de caisse depuis les premières idées jusqu'à 
         son installation en épicerie a été particulièrement enrichissant et motivant.
     </p>
-</section>
+
+    <p>
+		Accéder au site de Softinnov : <a class="link" href="https://softinnov.fr/">softinnov.fr</a>
+	</p>
 `
