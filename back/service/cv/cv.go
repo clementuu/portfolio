@@ -2,10 +2,14 @@ package cv
 
 import "back/model"
 
-func GetFormations() []model.Formation {
-	return storage.GetFormations()
+type CV struct {
+	Formations  []model.Formation
+	Experiences []model.Experience
 }
 
-func GetExperiences() []model.Experience {
-	return storage.GetExperiences()
+func GetCV() CV {
+	return CV{
+		Formations:  storage.GetFormations(),
+		Experiences: storage.GetExperiences(),
+	}
 }

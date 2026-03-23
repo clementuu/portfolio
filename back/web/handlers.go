@@ -99,21 +99,10 @@ func (h *Handler) GetProjetByID(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-// GetFormations renvoie la liste des formations
-func (h *Handler) GetFormations(w http.ResponseWriter, r *http.Request) {
+// GetCV renvoie la liste des formations et des expériences professionnelles
+func (h *Handler) GetCV(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
-	err := encodeJSON(w, cv.GetFormations())
-	if err != nil {
-		h.Logger.Error("Error encoding formations: %v", err)
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-		return
-	}
-}
-
-// GetExperiences renvoie la liste des expériences professionnelles
-func (h *Handler) GetExperiences(w http.ResponseWriter, r *http.Request) {
-	w.WriteHeader(http.StatusOK)
-	err := encodeJSON(w, cv.GetExperiences())
+	err := encodeJSON(w, cv.GetCV())
 	if err != nil {
 		h.Logger.Error("Error encoding experiences: %v", err)
 		http.Error(w, err.Error(), http.StatusInternalServerError)

@@ -19,8 +19,7 @@ func MakeRoutes() {
 		{"GET /projets", handler.GetAllProjets},
 		{"GET /projets/names", handler.GetProjetsNames},
 		{"GET /projet/{id}", handler.GetProjetByID},
-		{"GET /formations", handler.GetFormations},
-		{"GET /experiences", handler.GetExperiences},
+		{"GET /cv", handler.GetCV},
 	}
 
 	for _, r := range routes {

@@ -4,6 +4,7 @@ import (
 	"back/log"
 	"back/model"
 	"back/service/competence"
+	"back/service/cv"
 	"back/service/projet"
 	"encoding/json"
 	"fmt"
@@ -165,48 +166,29 @@ func TestGetProjetsNames(t *testing.T) {
 	}
 }
 
-func TestGetFormations(t *testing.T) {
+func TestGetCV(t *testing.T) {
 	logger := log.NewLogger()
 	handler := &Handler{Logger: logger}
 
-	req := httptest.NewRequest(http.MethodGet, "/formations", nil)
+	req := httptest.NewRequest(http.MethodGet, "/cv", nil)
 	rr := httptest.NewRecorder()
 
-	handler.GetFormations(rr, req)
+	handler.GetCV(rr, req)
 
 	if rr.Code != http.StatusOK {
 		t.Fatalf("expected status %d, got %d", http.StatusOK, rr.Code)
 	}
 
-	var got []model.Formation
+	var got cv.CV
 	if err := json.NewDecoder(rr.Body).Decode(&got); err != nil {
 		t.Fatalf("could not decode response body: %v", err)
 	}
 
-	if len(got) != 3 {
-		t.Errorf("expected 3 formations, got %d", len(got))
-	}
-}
-
-func TestGetExperiences(t *testing.T) {
-	logger := log.NewLogger()
-	handler := &Handler{Logger: logger}
-
-	req := httptest.NewRequest(http.MethodGet, "/experiences", nil)
-	rr := httptest.NewRecorder()
-
-	handler.GetExperiences(rr, req)
-
-	if rr.Code != http.StatusOK {
-		t.Fatalf("expected status %d, got %d", http.StatusOK, rr.Code)
+	if len(got.Formations) != 3 {
+		t.Errorf("expected 3 formations, got %d", len(got.Formations))
 	}
 
-	var got []model.Experience
-	if err := json.NewDecoder(rr.Body).Decode(&got); err != nil {
-		t.Fatalf("could not decode response body: %v", err)
-	}
-
-	if len(got) != 2 {
-		t.Errorf("expected 2 experiences, got %d", len(got))
+	if len(got.Experiences) != 2 {
+		t.Errorf("expected 2 experiences, got %d", len(got.Experiences))
 	}
 }
