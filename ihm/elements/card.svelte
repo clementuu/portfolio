@@ -44,7 +44,7 @@
     article.flipped {
         background-color: #363636;
         color: white;
-        transform: rotateY(5deg) scale(1.03); /* Subtle rotation and scale for a dynamic flip feel */
+        transform: rotateY(5deg) scale(1.02); /* Subtle rotation and scale for a dynamic flip feel */
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* More pronounced shadow when flipped */
     }
 
@@ -56,7 +56,6 @@
         cursor: pointer;
     }
 
-
     /* --- Simplified global styles for slotted content --- */
     /* Default text color for "hawkins" content */
     :global(article ul),
@@ -66,7 +65,6 @@
         color: #666;
     }
 
-    
     :global(article h3),
     :global(article h4) {
         transition: color 0.3s ease-in-out;
