@@ -47,7 +47,7 @@
                 La <b>curiosité</b>, la <b>rigueur</b> et le <b>sens du partage</b> sont au cœur de ma manière de travailler. J'aime comprendre 
                 en profondeur, documenter ce que j'apprends, structurer ce que je fais et faciliter la vie de ceux qui 
                 passeront derrière moi. 
-                Douze années de sports collectifs - rugby puis handball - m'ont appris l'importance du collectif, de 
+                Douze années de sports collectifs - rugby puis handball - m'ont appris l'importance du <b>collectif</b>, de 
                 <b>l'écoute</b> et de <b>l'humilité</b>. Ces réflexes se retrouvent aujourd'hui dans ma façon de collaborer, d'animer 
                 des réunions ou de préparer des présentations professionnelles.
             </p>
