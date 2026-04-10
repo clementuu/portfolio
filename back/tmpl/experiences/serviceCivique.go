@@ -22,5 +22,16 @@ const ServiceCiviqueDescription = `
     <p>
 		Accéder au site de la mairie de Saint-Jean de Védas : <a class="link" href="https://saintjeandevedas.fr/">saintjeandevedas.fr</a>
 	</p>
+
+    <div class="link-list">
+        <a class="project-link" href="/projets/detail.html?id=4">Jeu Anti-Gaspi</a>
+        <a class="project-link" href="/projets/detail.html?id=3">Mission TousAntiGaspi</a>
+        <a href="/competences/detail.html?id=3" class="competence-link">JavaScript</a>
+        <a href="/competences/detail.html?id=2" class="competence-link">HTML/CSS</a>
+        <a href="/competences/detail.html?id=10" class="competence-link">R</a>
+        <a href="/competences/detail.html?id=8" class="competence-link">Python</a>
+        <a href="/competences/detail.html?id=15" class="competence-link">Créativité</a>
+        <a href="/competences/detail.html?id=16" class="competence-link">Esprit critique</a>
+    </div>
 </section>
 `

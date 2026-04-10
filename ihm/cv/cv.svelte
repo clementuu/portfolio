@@ -152,4 +152,43 @@
         color: red;
         text-align: center;
     }
+
+    :global(.link-list) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 1rem auto;
+    }
+
+    :global(.competence-link) {
+        display: inline-block;
+        padding: 0.2em 0.6em; /* Similar to card-span */
+        margin: 0.25em;
+        border-radius: 4px; /* Similar to card-span */
+        color: white;
+        background-color: var(--secondary-color);
+        text-decoration: none;
+        transition: background-color 0.2s ease;
+    }
+
+    :global(.competence-link:hover) {
+        filter: brightness(1.1); /* Slightly brighter on hover */
+    }
+
+    :global(a.project-link) {
+        display: inline-block;
+        padding: 0.2em 0.6em; /* Similar to card-span */
+        margin: 0.25em;
+        border-radius: 4px; /* Similar to card-span */
+        color: white;
+        text-decoration: none;
+        transition: background-color 0.2s ease;
+        text-decoration: none;
+        background-color: var(--primary-color);
+        font-weight: 500;
+    }
+
+    :global(a.project-link:hover) {
+        filter: brightness(1.1); /* Slightly brighter on hover */
+    }
 </style>

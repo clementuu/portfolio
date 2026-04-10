@@ -22,5 +22,9 @@ const StageDescription = `
     <p>
 		Accéder au site d'IDEMIA : <a class="link" href="https://www.idemia.com/">idemia.com</a>
 	</p>
+    <div class="link-list">
+        <a href="/competences/detail.html?id=8" class="competence-link">Python</a>
+        <a href="/competences/detail.html?id=12" class="competence-link">Bash</a>
+    </div>
 </section>
 `

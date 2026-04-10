@@ -23,4 +23,19 @@ const AlternanceDescription = `
     <p>
 		Accéder au site de Softinnov : <a class="link" href="https://softinnov.fr/">softinnov.fr</a>
 	</p>
+
+    <div class="link-list">
+        <a class="project-link" href="/projets/detail.html?id=1">Escarcelle</a>
+        <a class="project-link" href="/projets/detail.html?id=2">Caisse</a>
+        <a href="/competences/detail.html?id=1" class="competence-link">Go</a>
+        <a href="/competences/detail.html?id=9" class="competence-link">Rebol</a>
+        <a href="/competences/detail.html?id=2" class="competence-link">HTML/CSS</a>
+        <a href="/competences/detail.html?id=4" class="competence-link">Svelte</a>
+        <a href="/competences/detail.html?id=6" class="competence-link">SQL</a>
+        <a href="/competences/detail.html?id=12" class="competence-link">Bash</a>
+        <a href="/competences/detail.html?id=11" class="competence-link">Docker</a>
+        <a href="/competences/detail.html?id=15" class="competence-link">Créativité</a>
+        <a href="/competences/detail.html?id=14" class="competence-link">Flexibilité</a>
+        <a href="/competences/detail.html?id=16" class="competence-link">Esprit critique</a>
+    </div>
 `

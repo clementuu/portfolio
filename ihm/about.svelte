@@ -34,21 +34,16 @@
                 C'est là que l'informatique a commencé à prendre une vraie place.
             </p>
             <p>
-                Après ma licence en mathématiques et informatique appliquées aux sciences humaines et sociales, un service 
+                Après ma licence de mathématiques et informatique appliquées aux sciences humaines et sociales, mon service 
                 civique m'a fait découvrir la gestion de projet et l'impact concret qu'un outil bien pensé peut avoir. 
                 C'est ce qui m'a poussé à poursuivre en master d'expert en ingénierie logicielle, avec l'envie de créer 
                 des applications <b>utiles</b>, <b>accessibles</b> et <b>robustes</b>.
             </p>
             <p>
-                Depuis, j'ai travaillé sur des projets variés : création d'un jeu éducatif, 
-                <b>automatisation de tests</b> End-2-End d'un logiciel utilisant la reconnaissance faciale, <b>refonte d'une application</b> de caisse, 
-                <b>modernisation d'un SI</b> pour des épiceries solidaires… 
-            </p>
-            <p>
-                Aujourd'hui, ma <b>polyvalence</b> me permet de passer d'une casquette à l'autre - développeur, architecte de données, 
-                ou statisticien - comme lors de ma mission de lutte contre le gaspillage alimentaire pour la mairie de Saint-Jean-de-Védas. 
-                J'y ai allié analyse statistique et pédagogie en concevant un jeu vidéo éducatif pour sensibiliser les enfants aux écogestes. 
-                Ces expériences renforcent mon goût pour les solutions simples, maintenables et tournées vers l'humain.
+                Depuis, j'ai travaillé sur des projets variés, me premettant d'acquérir une certaine <b>polyvalence</b>. Notamment la création d'un jeu éducatif, 
+                l'<b>automatisation de tests End-2-End</b> d'un logiciel utilisant la reconnaissance faciale, la <b>refonte d'une application</b> de caisse, 
+                la <b>modernisation d'un SI</b> pour des épiceries solidaires ou encore une <b>analyse statistique</b> du gaspillage alimentaire.
+                <br>Ces expériences renforcent mon goût pour les solutions simples, maintenables et tournées vers l'humain.
             </p>
 
             <h4>Ce que j'apporte</h4>
