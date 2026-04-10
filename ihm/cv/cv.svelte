@@ -38,7 +38,7 @@
 <div class="cv-layout">
     <CardGroup>
         <div class="timeline-line"></div>
-        <section>
+        <section class="cv-section">
             <OnScrollAppear index={formationTitleIndex}>
                 <h2 id="formations-title"><b>Formations</b></h2>
             </OnScrollAppear>
@@ -58,7 +58,7 @@
             {/if}
         </section>
 
-        <section>
+        <section class="cv-section">
             <OnScrollAppear index={experienceTitleIndex}>
                 <h2><b>Expériences professionnelles</b></h2>
             </OnScrollAppear>
@@ -124,15 +124,21 @@
         z-index: 2;
     }
 
+    .cv-section {
+        margin: 3rem;
+    }
+
     @media (max-width: 800px) {
         .timeline-line, .dot {
             display: none;
         }
+
+        .cv-section {
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
     }
 
-    section {
-        margin: 3rem;
-    }
     h2 {
         font-size: clamp(1rem, 8vw, 2.5rem);
         font-weight: 700;
