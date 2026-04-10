@@ -4,6 +4,7 @@
 	import { onMount } from 'svelte';
     import Cv from './cv/cv.svelte';
  	import Header from './elements/header.svelte';
+	import OnScrollAppear from './elements/OnScrollAppear.svelte';
 
 	let name = "Clément Calia";
 	let inge = "Expert en ingénierie logicielle";
@@ -53,6 +54,18 @@
 </div>
 
 <div class="cv-container">
+	<OnScrollAppear index={0}>
+		<section class="approach-summary">
+			<div class="summary-card container">
+				<p>
+					L'ingénierie logicielle est pour moi bien plus qu'une question de technique : c'est un engagement au service de l'humain. 
+					Je m'attache à concevoir des solutions durables, inclusives et parfaitement adaptées aux réalités du terrain. 
+					Ma polyvalence technique et mon approche pragmatique me permettent de transformer des enjeux complexes en outils pratiques et responsables.
+				</p>
+				<a href="/about.html" class="about-link">En savoir plus sur mon approche <i class="bi bi-arrow-right"></i></a>
+			</div>
+		</section>
+	</OnScrollAppear>
 	<Cv/>
 </div>
 
@@ -191,5 +204,50 @@
 
 	.metier {
 		font-size: clamp(15px, 8vw, 40px);
+	}
+
+	.approach-summary {
+		margin: 4rem auto 2rem auto;
+		max-width: 1200px;
+		padding: 0 1rem;
+	}
+
+	.summary-card {
+		padding: 2.5rem;
+		text-align: center;
+		border-left: 5px solid var(--primary-color);
+		position: relative;
+	}
+
+	.summary-card p {
+		font-size: 1.25rem;
+		font-style: italic;
+		line-height: 1.8;
+		color: #444;
+		margin-bottom: 1.5rem;
+	}
+
+	.about-link {
+		color: var(--primary-color);
+		text-decoration: none;
+		font-weight: 700;
+		font-size: 1.1rem;
+		transition: color 0.3s ease;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	.about-link:hover {
+		color: #5a8a3a;
+		text-decoration: underline;
+	}
+
+	.about-link i {
+		transition: transform 0.3s ease;
+	}
+
+	.about-link:hover i {
+		transform: translateX(5px);
 	}
 </style>

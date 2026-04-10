@@ -17,8 +17,12 @@
                 à la rescousse quand l'ordinateur faisait des siennes, J'allais bidoullier un peu dans le panneau de navigation 
                 et c'était très souvent c'était suffisant.
                 <br>J'ai toujours été un vrai « touche à tout ». J'ai toujours eu besoin d'<b>explorer</b>, de <b>comprendre</b>, 
-                de <b>tester</b>. Cette curiosité m'a suivi partout : dans mes lectures, mes projets, mes passions… et plus tard, 
-                dans ma manière d'aborder l'ingénierie.
+                de <b>tester</b>. Cette curiosité m'a suivi partout : dans mes lectures, mes projets, mes passions… et a forgé ma vision actuelle : 
+                l'ingénierie ne se résume pas à la technique, elle prend tout son sens lorsqu'elle se met au service des personnes.
+            </p>
+            <p>
+                C'est ce que j'aime appeller l'<b>innovation responsable</b> : créer des solutions pérennes, inclusives, qui s'adaptent aux réalités 
+                du terrain pour servir l'intérêt général et réduire les fractures sociales.
             </p>
 
             <h4>Comment j'en suis arrivé là</h4>
@@ -39,7 +43,12 @@
                 Depuis, j'ai travaillé sur des projets variés : création d'un jeu éducatif, 
                 <b>automatisation de tests</b> End-2-End d'un logiciel utilisant la reconnaissance faciale, <b>refonte d'une application</b> de caisse, 
                 <b>modernisation d'un SI</b> pour des épiceries solidaires… 
-                <br>Des expériences qui ont renforcé mon goût pour les solutions simples, maintenables et tournées vers l'humain.
+            </p>
+            <p>
+                Aujourd'hui, ma <b>polyvalence</b> me permet de passer d'une casquette à l'autre - développeur, architecte de données, 
+                ou statisticien - comme lors de ma mission de lutte contre le gaspillage alimentaire pour la mairie de Saint-Jean-de-Védas. 
+                J'y ai allié analyse statistique et pédagogie en concevant un jeu vidéo éducatif pour sensibiliser les enfants aux écogestes. 
+                Ces expériences renforcent mon goût pour les solutions simples, maintenables et tournées vers l'humain.
             </p>
 
             <h4>Ce que j'apporte</h4>
@@ -51,6 +60,11 @@
                 <b>l'écoute</b> et de <b>l'humilité</b>. Ces réflexes se retrouvent aujourd'hui dans ma façon de collaborer, d'animer 
                 des réunions ou de préparer des présentations professionnelles.
             </p>
+            <p>
+                J'apporte aujourd'hui une <b>approche globale</b>, faisant le lien entre les enjeux métiers et les contraintes techniques. 
+                Grâce à mon <b>esprit critique</b>, je cherche à anticiper les risques pour proposer des outils véritablement utiles, 
+                conçus pour durer et faciliter la vie de tous les utilisateurs.
+            </p>
 
             <h4>Ce qui me nourrit</h4>
             <p>
@@ -60,6 +74,12 @@
                 Ces centres d'intérêt ne sont pas des activités à côté : ils influencent ma manière de penser, de créer, 
                 d'aborder les problèmes. Ils m'aident à garder les idées fraîches et à relier des univers qui, au premier 
                 abord, n'ont rien à voir.
+                Ayant grandi à la campagne, la <b>nature</b> occupe une place essentielle et nourrit ma conscience écologique, 
+                m'orientant naturellement vers l'<b>écoconception</b> numérique.
+            </p>
+            <p>
+                Ma curiosité me pousse aussi vers des projets plus personnels, comme le développement d'un VST pour explorer la synthèse 
+                de son ou la contribution à l'<b>open-source</b>. Pour moi, l'innovation doit rester profondément humaine, créative et responsable.
             </p>
         </article>
     </section>
