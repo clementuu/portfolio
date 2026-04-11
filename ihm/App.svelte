@@ -58,11 +58,11 @@
 		<section class="approach-summary">
 			<div class="summary-card container">
 				<p>
-					L'ingénierie logicielle est pour moi bien plus qu'une question de technique : c'est un engagement au service de l'humain. 
-					Je m'attache à concevoir des solutions durables, inclusives et parfaitement adaptées aux réalités du terrain. 
-					Ma polyvalence technique et mon approche pragmatique me permettent de transformer des enjeux complexes en outils pratiques et responsables.
+					L'ingénierie logicielle est bien plus qu'une question de technique : c'est un engagement au service de l'humain. 
+					Avec une approche pragmatique et une palette technique variée, j'aime imaginer des solutions durables, 
+					inclusives et qui répondent à des besoins concrets.
 				</p>
-				<a href="/about.html" class="about-link">En savoir plus sur mon approche <i class="bi bi-arrow-right"></i></a>
+				<a href="/about.html" class="about-link">En savoir plus <i class="bi bi-arrow-right"></i></a>
 			</div>
 		</section>
 	</OnScrollAppear>
