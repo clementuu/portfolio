@@ -1,9 +1,9 @@
 <script>
     import { onMount } from "svelte";
-    import { projets, loadProjets } from "../projets/store.js";
+    import { projets, loadProjetsNames } from "../projets/store.js";
 
     onMount(async ()=> {
-        await loadProjets();
+        await loadProjetsNames();
     })
 </script>
 

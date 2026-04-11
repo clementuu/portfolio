@@ -5,7 +5,7 @@ export const projets = writable(cached ? JSON.parse(cached) : []);
 
 let loaded = cached !== null;
 
-export async function loadProjets() {
+export async function loadProjetsNames() {
     if (loaded) return;
 
     try {

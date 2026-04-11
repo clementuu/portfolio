@@ -21,7 +21,7 @@
                 l'ingénierie ne se résume pas à la technique, elle prend tout son sens lorsqu'elle se met au service des personnes.
             </p>
             <p>
-                C'est ce que j'aime appeller l'<b>innovation responsable</b> : créer des solutions pérennes, inclusives, qui s'adaptent aux réalités 
+                C'est ce que j'aime appeller l'<b>innovation responsable</b> : créer des solutions durables, inclusives, qui s'adaptent aux réalités 
                 du terrain pour servir l'intérêt général et réduire les fractures sociales.
             </p>
 

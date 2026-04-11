@@ -58,11 +58,9 @@
 		<section class="approach-summary">
 			<div class="summary-card container">
 				<p>
-					L'ingénierie logicielle est bien plus qu'une question de technique : c'est un engagement au service de l'humain. 
-					Avec une approche pragmatique et une palette technique variée, j'aime imaginer des solutions durables, 
-					inclusives et qui répondent à des besoins concrets.
+					Pour moi, l'ingénierie logicielle est bien plus qu'une question de technique : c'est un engagement au service de l'humain.
 				</p>
-				<a href="/about.html" class="about-link">En savoir plus <i class="bi bi-arrow-right"></i></a>
+				<a href="/about.html" class="about link">En savoir plus sur mon approche <i class="bi bi-arrow-right"></i></a>
 			</div>
 		</section>
 	</OnScrollAppear>
@@ -129,7 +127,7 @@
 		margin-bottom: 0.5em;
 		z-index: 1;
 		color: white;
-		font-size: 1.5rem;
+		font-size: 1.2rem;
 		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 	}
 
@@ -199,16 +197,16 @@
 	}
 
 	.name {
-		font-size: clamp(30px, 8vw, 60px);
+		font-size: clamp(40px, 4vw, 70px);
 	}
 
 	.metier {
-		font-size: clamp(15px, 8vw, 40px);
+		font-size: clamp(30px, 4vw, 40px);
 	}
 
 	.approach-summary {
-		margin: 4rem auto 2rem auto;
-		max-width: 1200px;
+		margin: 2rem auto 1rem auto;
+		max-width: 1400px;
 		padding: 0 1rem;
 	}
 
@@ -222,14 +220,10 @@
 	.summary-card p {
 		font-size: 1.25rem;
 		font-style: italic;
-		line-height: 1.8;
 		color: #444;
-		margin-bottom: 1.5rem;
 	}
 
-	.about-link {
-		color: var(--primary-color);
-		text-decoration: none;
+	.about {
 		font-weight: 700;
 		font-size: 1.1rem;
 		transition: color 0.3s ease;
@@ -238,16 +232,11 @@
 		gap: 0.5rem;
 	}
 
-	.about-link:hover {
-		color: #5a8a3a;
-		text-decoration: underline;
-	}
-
-	.about-link i {
+	.about i {
 		transition: transform 0.3s ease;
 	}
 
-	.about-link:hover i {
+	.about:hover i {
 		transform: translateX(5px);
 	}
 </style>

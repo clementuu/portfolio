@@ -146,7 +146,8 @@
     }
 
     :global(.competences-list) {
-        display: inline-block;
+        display: flex;
+        flex-wrap: wrap;
         margin: auto;
         justify-content: center;
     }
