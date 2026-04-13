@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/svelte';
+import { render, screen, fireEvent } from '@testing-library/svelte';
 import { describe, it, expect, afterEach } from 'vitest';
 import Contacts from '../contacts.svelte';
 
@@ -18,33 +18,31 @@ describe('Contacts component - static checks', () => {
     expect(items.length).toBe(4);
   });
 
-  it('renders each contact type label and value', () => {
+  it('renders each contact type label and handles protected fields', () => {
     render(Contacts);
 
-    // Types
+    // Types labels should always be present
     expect(screen.getByText('Téléphone:')).toBeInTheDocument();
     expect(screen.getByText('Email:')).toBeInTheDocument();
     expect(screen.getByText('LinkedIn:')).toBeInTheDocument();
     expect(screen.getByText('GitHub:')).toBeInTheDocument();
 
-    // Values / links
-    expect(screen.getByText('+33 6 25 45 25 66')).toBeInTheDocument();
-    expect(screen.getByText('clementcalia@gmail.com')).toBeInTheDocument();
+    // Protected fields should show "Révéler" initially
+    const revealButtons = screen.getAllByText('Révéler');
+    expect(revealButtons).toHaveLength(2);
+
+    // Public fields should be visible
     const linkedinLinks = screen.getAllByText('Clément Calia');
     expect(linkedinLinks).toHaveLength(2);
     expect(screen.getByText('clementuu')).toBeInTheDocument();
+    
+    // Sensitive values should NOT be in the document initially
+    expect(screen.queryByText('+33 6 25 45 25 66')).not.toBeInTheDocument();
+    expect(screen.queryByText('clementcalia@gmail.com')).not.toBeInTheDocument();
   });
 
-  it('anchors have correct href, target and rel attributes', () => {
+  it('public anchors have correct href, target and rel attributes', () => {
     render(Contacts);
-
-    const telLink = screen.getByText('+33 6 25 45 25 66').closest('a');
-    expect(telLink).toHaveAttribute('href', 'tel:+33625452566');
-    expect(telLink).toHaveAttribute('target', '_blank');
-    expect(telLink).toHaveAttribute('rel', 'noopener noreferrer');
-
-    const mailLink = screen.getByText('clementcalia@gmail.com').closest('a');
-    expect(mailLink).toHaveAttribute('href', 'mailto:clementcalia@gmail.com');
 
     const linkedinLinks = screen.getAllByText('Clément Calia');
     const linkedinLink = linkedinLinks[1].closest('a');
@@ -58,13 +56,32 @@ describe('Contacts component - static checks', () => {
     const { container } = render(Contacts);
     const icons = container.querySelectorAll('.contact-icon i');
 
-    // Vérifie que chaque icône contient la classe bi et une classe spécifique
     expect(icons.length).toBe(4);
-    expect(icons[0].classList.contains('bi')).toBe(true);
     expect(icons[0].classList.contains('bi-telephone')).toBe(true);
-
     expect(icons[1].classList.contains('bi-envelope')).toBe(true);
     expect(icons[2].classList.contains('bi-linkedin')).toBe(true);
     expect(icons[3].classList.contains('bi-github')).toBe(true);
+  });
+});
+
+describe('Contacts component - captcha interaction', () => {
+  it('shows captcha when clicking Reveal', async () => {
+    render(Contacts);
+    const revealButton = screen.getAllByText('Révéler')[0];
+    await fireEvent.click(revealButton);
+    
+    expect(screen.getByText(/Pour lutter contre le spam/)).toBeInTheDocument();
+    expect(screen.getByText('Vérification')).toBeInTheDocument();
+  });
+
+  it('cancels captcha when clicking Annuler', async () => {
+    render(Contacts);
+    const revealButton = screen.getAllByText('Révéler')[0];
+    await fireEvent.click(revealButton);
+    
+    const cancelButton = screen.getByText('Annuler');
+    await fireEvent.click(cancelButton);
+    
+    expect(screen.queryByText('Vérification')).not.toBeInTheDocument();
   });
 });

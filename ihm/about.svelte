@@ -16,7 +16,9 @@
                 Mon premier contact avec l'informatique remonte à l'enfance, j'était le petit-fils que les grands-parents appelaient
                 à la rescousse quand l'ordinateur faisait des siennes, J'allais bidoullier un peu dans le panneau de navigation 
                 et c'était très souvent c'était suffisant.
-                <br>J'ai toujours été un vrai « touche à tout ». J'ai toujours eu besoin d'<b>explorer</b>, de <b>comprendre</b>, 
+            </p>
+            <p>
+                J'ai toujours été un vrai « touche à tout ». J'ai toujours eu besoin d'<b>explorer</b>, de <b>comprendre</b>, 
                 de <b>tester</b>. Cette curiosité m'a suivi partout : dans mes lectures, mes projets, mes passions… et a forgé ma vision actuelle : 
                 l'ingénierie ne se résume pas à la technique, elle prend tout son sens lorsqu'elle se met au service des personnes.
             </p>
@@ -65,12 +67,13 @@
             <p>
                 En dehors du code, je me ressource dans la <b>musique</b> : je joue de la guitare depuis le collège et je produis 
                 un peu quand j'ai le temps. Les <b>sciences</b> et la <b>culture</b> alimentent ma curiosité, et le <b>sport</b> m'aide à garder 
-                un bon équilibre. 
+                un bon équilibre. Ayant grandi à la campagne, la <b>nature</b> occupe une place essentielle et nourrit ma conscience écologique, 
+                m'orientant naturellement vers l'<b>écoconception</b> numérique.
+            </p>
+            <p>
                 Ces centres d'intérêt ne sont pas des activités à côté : ils influencent ma manière de penser, de créer, 
                 d'aborder les problèmes. Ils m'aident à garder les idées fraîches et à relier des univers qui, au premier 
                 abord, n'ont rien à voir.
-                Ayant grandi à la campagne, la <b>nature</b> occupe une place essentielle et nourrit ma conscience écologique, 
-                m'orientant naturellement vers l'<b>écoconception</b> numérique.
             </p>
             <p>
                 Ma curiosité me pousse aussi vers des projets plus personnels, comme le développement d'un VST pour explorer la synthèse 
