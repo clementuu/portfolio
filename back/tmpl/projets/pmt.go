@@ -6,19 +6,45 @@ const PmtHTML = `
 <!-- =================================================================== -->
 <section class="project-section">
     <p>
-        <b>PMT (Project Management Tool)</b> est une application web full-stack conçue pour la gestion 
-        de projets. Elle permet aux utilisateurs de créer des projets, de définir des tâches, 
-        de les assigner à des membres et de suivre leur avancement au sein d'un tableau de bord 
+        <b>PMT (Project Management Tool)</b> est une application web full-stack développée dans le 
+        cadre d'une étude de cas durant mon master. L'objectif était de concevoir un outil complet 
+        de gestion de projets permettant de créer des projets, d'organiser des tâches, de les 
+        assigner à des membres et de suivre leur avancement via un tableau de bord clair et 
         intuitif.
     </p>
 
     <img class="project-image" src="../assets/PmtProjet.png" alt="Projet PMT">
 
     <p>
-        Le projet est construit sur une architecture découplée avec un backend en 
-        <a class="link" href="/competences/detail.html?id=7">Java/Spring</a> exposant une API REST, et un frontend en <a class="link" href="/competences/detail.html?id=5">Angular</a> 
-        consommant cette API. L'ensemble est conteneurisé avec <a class="link" href="/competences/detail.html?id=11">Docker</a>, garantissant 
-        un environnement de développement et de déploiement cohérent et reproductible.
+        L'application repose sur une architecture découplée : un backend en 
+        <a class="link" href="/competences/detail.html?id=7">Java/Spring</a> exposant une API REST, 
+        et un frontend en <a class="link" href="/competences/detail.html?id=5">Angular</a> consommant 
+        cette API. L'ensemble est conteneurisé avec 
+        <a class="link" href="/competences/detail.html?id=11">Docker</a>, garantissant un 
+        environnement de développement reproductible et cohérent.
+    </p>
+</section>
+
+<section class="project-section">
+    <h3><b>Contexte et Enjeux</b></h3>
+    <p>
+        Ce projet a été réalisé dans le cadre d'une étude de cas durant mon master, avec pour 
+        objectif principal de mettre en pratique une stack technique que je n'avais encore jamais 
+        utilisée en conditions réelles.
+    </p>
+
+    <p>
+        Les enjeux étaient donc avant tout pédagogiques : comprendre les bonnes pratiques d'une 
+        architecture full-stack moderne, structurer une API REST cohérente, concevoir une interface 
+        utilisateur dynamique et mettre en place un environnement de développement isolé et 
+        reproductible.  
+        Le projet devait également démontrer ma capacité à mener un développement complet en 
+        autonomie, depuis la conception jusqu'au déploiement.
+    </p>
+
+    <p>
+        PMT a ainsi servi de terrain d'expérimentation pour consolider mes compétences en 
+        développement web, en architecture logicielle et en outillage DevOps.
     </p>
 </section>
 
@@ -53,66 +79,75 @@ const PmtHTML = `
 <section class="project-section">
     <h3><b>Missions et Compétences Développées</b></h3>
     <p>
-        Ce projet complet m'a permis de maîtriser l'ensemble du cycle de vie d'une application 
-        web moderne, de la conception de la base de données à l'intégration continue, en passant 
-        par le développement backend et frontend.
+        Ce projet complet m'a permis de maîtriser l'ensemble du cycle de vie d'une application web 
+        moderne, de la conception de la base de données à la conteneurisation, en passant par le 
+        développement backend et frontend.
     </p>
 
     <div class="skills-grid">
 
         <div class="skill-item">
-            <strong>Développement Backend (<a class="link" href="/competences/detail.html?id=7">Spring</a>)</strong>
+            <strong>Conception & Architecture</strong>
             <p>
-                Mise en place d'une API RESTful robuste avec Spring Boot. Structuration du code en 
-                couches (Controller, Service, Repository/Store) pour une meilleure maintenabilité. 
-                Gestion de la sécurité et de la configuration de l'application.
+                Élaboration du modèle de données, définition des entités et des relations.  
+                Conception de l'architecture globale (API REST, SPA Angular, conteneurs Docker).  
+                Rédaction des spécifications fonctionnelles et techniques.
             </p>
         </div>
 
         <div class="skill-item">
-            <strong>Développement Frontend (<a class="link" href="/competences/detail.html?id=5">Angular</a>)</strong>
+            <strong>Développement Backend (Spring)</strong>
             <p>
-                Création d'une application monopage (SPA) dynamique avec <a class="link" href="/competences/detail.html?id=5">Angular</a>. Développement 
-                d'une architecture à base de composants (Dashboard, Project, Task), gestion de l'état 
-                et communication asynchrone avec le backend via des services.
+                Mise en place d'une API RESTful robuste avec Spring Boot.  
+                Structuration en couches (Controller, Service, Repository) pour une meilleure 
+                maintenabilité.  
+                Gestion de la sécurité, de la validation des données et de la configuration.
+            </p>
+        </div>
+
+        <div class="skill-item">
+            <strong>Développement Frontend (Angular)</strong>
+            <p>
+                Création d'une application monopage (SPA) dynamique.  
+                Développement de composants modulaires (Dashboard, Project, Task).  
+                Gestion de l'état et communication asynchrone avec le backend via des services.
             </p>
         </div>
 
         <div class="skill-item">
             <strong>Architecture Full-Stack & Intégration</strong>
             <p>
-                Conception de l'API et du contrat de données entre le client et le serveur. 
-                Mise en place de la communication (requêtes HTTP), gestion de l'authentification 
-                et configuration des règles CORS pour assurer une intégration fluide.
+                Conception du contrat d'API, gestion des requêtes HTTP, authentification et règles CORS.  
+                Mise en place d'une communication fluide entre le client et le serveur.
             </p>
         </div>
 
         <div class="skill-item">
-            <strong>Gestion de Base de Données (<a class="link" href="/competences/detail.html?id=6">SQL</a>)</strong>
+            <strong>Gestion de Base de Données (SQL)</strong>
             <p>
-                Modélisation de la structure de la base de données relationnelle (schéma SQL). 
-                Création des entités (Projet, Tâche, Utilisateur) et gestion de leurs relations. 
-                Utilisation de scripts pour initialiser la base avec des données de test.
+                Modélisation du schéma relationnel.  
+                Création des entités (Projet, Tâche, Utilisateur) et gestion des relations.  
+                Scripts d'initialisation pour faciliter les tests.
             </p>
         </div>
 
         <div class="skill-item">
-            <strong>DevOps & Conteneurisation (<a class="link" href="/competences/detail.html?id=11">Docker</a>)</strong>
+            <strong>DevOps & Conteneurisation (Docker)</strong>
             <p>
-                Utilisation de <a class="link" href="/competences/detail.html?id=11">Docker</a> et Docker Compose pour créer un environnement de développement 
-                isolé et reproductible. Configuration des services (backend, frontend, base de 
-                données) pour qu'ils fonctionnent de manière coordonnée.
+                Création d'un environnement de développement isolé avec Docker et Docker Compose.  
+                Conteneurisation du backend, du frontend et de la base de données.  
+                Configuration d'un réseau interne pour orchestrer les services.
             </p>
         </div>
 
         <div class="skill-item">
             <strong>Automatisation & Outillage (Maven, Makefile)</strong>
             <p>
-                Utilisation de Maven pour la gestion des dépendances et le build du projet Java. 
-                Création d'un Makefile pour simplifier et automatiser les tâches courantes 
-                (lancer l'application, exécuter les tests, etc.).
+                Utilisation de Maven pour la gestion des dépendances et le build Java.  
+                Création d'un Makefile pour automatiser les tâches courantes (build, tests, lancement).
             </p>
-            </div>
+        </div>
+
     </div>
 </section>
 
@@ -121,24 +156,35 @@ const PmtHTML = `
 <!-- =================================================================== -->
 <section class="project-section">
     <h3><b>Conclusion</b></h3>
+
+    <h5>Résultats</h5>
     <p>
         PMT est un projet intégrateur qui démontre ma capacité à concevoir, développer et déployer 
-        une application web complète et fonctionnelle. Il met en évidence mes compétences techniques 
-        en <a class="link" href="/competences/detail.html?id=7">Java/Spring</a> pour la partie serveur et 
-        <a class="link" href="/competences/detail.html?id=5">Angular</a> pour la partie client, ainsi 
-        que ma maîtrise des outils DevOps modernes comme <a class="link" href="/competences/detail.html?id=11">Docker</a>.  
-        Cette réalisation atteste de ma polyvalence et de ma compréhension globale des enjeux liés à 
-        la création d'applications robustes, maintenables et prêtes pour la production.
+        une application web complète en autonomie.  
+        Il met en évidence ma maîtrise de la stack <b>Java/Spring</b> côté serveur, 
+        <b>Angular</b> côté client, ainsi que des outils DevOps modernes comme <b>Docker</b>.  
+        Ce projet a été un excellent exercice pour comprendre les enjeux d'une architecture 
+        full-stack moderne et renforcer ma polyvalence.
     </p>
 
+    <h5>Pour le futur</h5>
     <p>
-        Les lendemains du projet s'inscrivent dans une logique d'usage réel : PMT est destiné à 
-        devenir mon outil principal pour organiser mon travail et mes projets personnels.  
-        J'envisage également de le rendre accessible en ligne, ce qui nécessitera 
-        une réarchitecture partielle pour permettre son utilisation par différentes organisations, 
-        ainsi qu'un renforcement de la sécurité et de la gestion des accès.  
-        Ces évolutions futures permettront de transformer PMT en un outil plus générique, plus 
-        sécurisé et potentiellement utilisable par un public plus large.
+        PMT est destiné à devenir mon outil personnel pour organiser mes projets.  
+        J'envisage de le rendre accessible en ligne, ce qui nécessitera une gestion multi-utilisateurs, 
+        une authentification renforcée et une réarchitecture partielle pour supporter plusieurs 
+        organisations.  
+        Ces évolutions permettront d'en faire un outil plus générique, plus sécurisé et potentiellement 
+        utilisable par un public plus large.
+    </p>
+
+    <h5>Mon analyse critique</h5>
+    <p>
+        Avec le recul, PMT a été un projet très formateur. Il m'a permis de découvrir une stack 
+        technique complète et de comprendre les bonnes pratiques d'un développement full-stack.  
+        J'aurais pu aller plus loin sur certains aspects, notamment les tests automatisés, la gestion 
+        fine des rôles utilisateurs ou la CI/CD.  
+        Malgré cela, ce projet reste une excellente démonstration de ma capacité à mener un 
+        développement complet en autonomie.
     </p>
 </section>
 

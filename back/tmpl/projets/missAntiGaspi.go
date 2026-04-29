@@ -6,17 +6,45 @@ const MissionAntiGaspiHTML = `
 <!-- =================================================================== -->
 <section class="project-section">
     <p>
-        <b>TousAntiGaspi</b> est une action menée dans le cadre d'un service civique pour la mairie de 
-        Saint-Jean-de-Védas, au sein de la métropole de Montpellier. L'objectif était de réaliser une étude 
-        approfondie du gaspillage alimentaire dans les écoles de la commune afin d'identifier les leviers 
-        d'amélioration et de proposer des pistes d'action concrètes aux élus locaux.
+        <b>TousAntiGaspi</b> est une mission menée dans le cadre de mon service civique pour la mairie 
+        de Saint-Jean-de-Védas. L'objectif était de réaliser une analyse fine du gaspillage alimentaire 
+        dans les écoles de la commune afin d'en identifier les causes principales et de proposer des 
+        leviers d'action concrets aux élus locaux.
     </p>
 
     <p>
-        Le projet a nécessité la mise en place d'un protocole de collecte de données sur plusieurs sites 
-        scolaires, l'analyse statistique des résultats et la production d'un rapport complet permettant 
-        d'éclairer les décisions publiques. Cette mission mêlait travail de terrain, rigueur scientifique 
-        et capacité à vulgariser des analyses complexes pour un public non spécialiste.
+        Cette étude a nécessité la mise en place d'un protocole rigoureux de collecte de données, 
+        l'analyse statistique de plusieurs centaines de pesées réalisées sur trois années, et la 
+        production d'un rapport complet présenté en comité de pilotage.  
+        Le projet mêlait travail de terrain, rigueur scientifique et vulgarisation auprès d'un public 
+        non spécialiste.
+    </p>
+</section>
+
+<section class="project-section">
+    <h3><b>Contexte et Enjeux</b></h3>
+    <p>
+        En 2021, la commune faisait face à un constat préoccupant : près de <b>46 %</b> de la nourriture 
+        livrée par le traiteur n'était pas consommée, soit en moyenne <b>268 g de gaspillage par enfant 
+        et par repas</b>. Les causes étaient multiples : livraisons trop importantes, écarts entre repas 
+        commandés et besoins réels, manque de tri, faible sensibilisation des enfants, conditions 
+        d'accueil difficiles et absence d'accompagnement au repas.
+    </p>
+
+    <p>
+        La municipalité a donc lancé un projet pluriannuel visant à réduire durablement le gaspillage 
+        alimentaire. Ma mission s'inscrivait dans cette démarche : analyser les données issues des 
+        pesées réalisées dans les écoles, comprendre les mécanismes du gaspillage et mesurer l'impact 
+        des actions mises en place, notamment le passage d'un menu à 5 composantes à un menu à 4 
+        composantes.
+    </p>
+
+    <p>
+        Les enjeux étaient à la fois environnementaux, économiques et éducatifs : réduire les déchets, 
+        optimiser les commandes, améliorer la qualité du temps de repas et sensibiliser les enfants 
+        aux enjeux alimentaires.  
+        L'étude devait fournir des résultats fiables pour orienter les décisions publiques et préparer 
+        le futur marché de restauration scolaire.
     </p>
 </section>
 
@@ -58,9 +86,9 @@ const MissionAntiGaspiHTML = `
 <section class="project-section">
     <h3><b>Missions et Compétences Développées</b></h3>
     <p>
-        Cette mission m'a permis de combiner des compétences en analyse de données, en statistiques 
-        avancées et en communication scientifique. J'ai mené l'ensemble du processus, de la collecte 
-        jusqu'à la restitution finale.
+        Cette mission m'a permis de combiner travail de terrain, analyse statistique avancée et 
+        communication scientifique. J'ai mené l'ensemble du processus, de la collecte des données 
+        jusqu'à la restitution finale en comité de pilotage.
     </p>
 
     <div class="skills-grid">
@@ -68,50 +96,59 @@ const MissionAntiGaspiHTML = `
         <div class="skill-item">
             <strong>Collecte et Structuration des Données</strong>
             <p>
-                Mise en place d'un protocole de mesure du gaspillage alimentaire dans plusieurs écoles 
-                (pesées, catégorisation des déchets, relevés journaliers).  
-                Nettoyage, structuration et consolidation des données pour garantir leur qualité et leur 
-                exploitabilité.
+                Mise en place d'un protocole de pesées dans plusieurs écoles (12 à 18 pesées par session).  
+                Catégorisation des composantes (entrée, plat, laitage, fruit, dessert, pain…).  
+                Nettoyage, consolidation et préparation des données pour l'analyse.
             </p>
         </div>
 
         <div class="skill-item">
-            <strong>Analyse Statistique (<a class="link" href="/competences/detail.html?id=10">R</a> & <a class="link" href="/competences/detail.html?id=8">Python</a>)</strong>
+            <strong>Analyse Statistique (R & Python)</strong>
             <p>
-                Réalisation d'analyses statistiques descriptives et exploratoires pour identifier les 
-                tendances, variations et facteurs influençant le gaspillage.  
-                Utilisation de méthodes multifactorielles, notamment l'Analyse en Composantes Principales 
-                (ACP), pour mettre en évidence les corrélations entre variables (types de repas, saisons, 
-                écoles, quantités gaspillées, etc.).
+                Étude de l'évolution du gaspillage entre 2021 et 2023 (baisse de 268 g à 177 g).  
+                Tests statistiques (Wilcoxon) pour mesurer l'impact du passage à 4 composantes.  
+                Analyse en Composantes Principales (ACP) pour identifier les composantes les plus 
+                gaspillées (fruits et entrées en tête).
             </p>
         </div>
 
         <div class="skill-item">
             <strong>Visualisation et Interprétation</strong>
             <p>
-                Création de graphiques, tableaux de bord et représentations visuelles permettant de rendre 
-                les résultats accessibles et compréhensibles.  
-                Interprétation des axes factoriels de l'ACP et traduction des résultats en constats 
-                opérationnels.
+                Création de graphiques, tableaux et représentations visuelles pour faciliter la 
+                compréhension des résultats.  
+                Interprétation des axes factoriels de l'ACP et traduction en constats opérationnels.
+            </p>
+        </div>
+
+        <div class="skill-item">
+            <strong>Analyse des Impacts</strong>
+            <p>
+                Mesure de l'impact du passage à 4 composantes :
+                <ul>  
+                    <li>Baisse significative du gaspillage (p-value = 0,02)</li>  
+                    <li>Aucune baisse de la consommation des enfants (p-value = 0,26)</li> 
+                Analyse du gaspillage par type de composante et identification des recettes problématiques.
+                </ul>    
             </p>
         </div>
 
         <div class="skill-item">
             <strong>Rédaction et Présentation du Rapport</strong>
             <p>
-                Rédaction d'un rapport complet synthétisant les résultats, les causes identifiées et les 
-                recommandations.  
-                Présentation orale aux élus municipaux et aux responsables des services scolaires, avec un 
-                effort particulier de vulgarisation et de pédagogie.
+                Rédaction d'un rapport complet présenté en comité de pilotage (COPIL).  
+                Vulgarisation des résultats pour les élus et les services scolaires.  
+                Formulation de recommandations concrètes : tri, redistribution, adaptation des menus, 
+                formation des équipes, boîtes de satisfaction, etc.
             </p>
         </div>
 
         <div class="skill-item">
             <strong>Impact Social et Environnemental</strong>
             <p>
-                Contribution à une démarche de réduction du gaspillage alimentaire dans les écoles, avec 
-                un impact direct sur la sensibilisation des équipes éducatives et la mise en place de 
-                pratiques plus durables.
+                Contribution directe à la réduction du gaspillage alimentaire dans les écoles.  
+                Participation à la sensibilisation des enfants et des équipes éducatives.  
+                Aide à la préparation du futur marché public de restauration scolaire.
             </p>
         </div>
 
@@ -123,20 +160,40 @@ const MissionAntiGaspiHTML = `
 <!-- =================================================================== -->
 <section class="project-section">
     <h3><b>Conclusion</b></h3>
+
+    <h5>Résultats</h5>
     <p>
-        La Mission TousAntiGaspi a été une expérience marquante, mêlant engagement citoyen, 
-        travail de terrain et analyse scientifique. Elle m'a permis de développer des compétences 
-        solides en statistiques, en manipulation de données et en communication auprès de 
-        décideurs publics.  
-        Ce projet a renforcé ma capacité à transformer des données brutes en recommandations 
-        concrètes et utiles pour l'action publique.
+        L'étude a permis de mettre en évidence une baisse significative du gaspillage alimentaire 
+        entre 2021 et 2023, passant de 268 g à 177 g par enfant et par repas.  
+        Le passage à 4 composantes a eu un impact positif sur la réduction du gaspillage, sans 
+        diminuer la consommation des enfants.  
+        Les analyses ont également permis d'identifier les composantes les plus problématiques 
+        (fruits et entrées) et de proposer des pistes d'action concrètes.
     </p>
 
     <p>
-        Suite à la présentation du rapport, un suivi a été mis en place par la mairie pour 
-        accompagner l'application des recommandations et mesurer leur impact dans le temps.  
-        Bien que je ne dispose pas de détails sur les actions ultérieures, cette continuité 
-        témoigne de l'intérêt porté à l'étude et de sa valeur pour la collectivité.
+        Pour moi, cette mission a été une expérience riche mêlant statistiques, travail de terrain, 
+        communication et engagement citoyen. Elle m'a permis de développer une expertise solide en 
+        analyse de données appliquée à des enjeux réels.
+    </p>
+
+    <h5>Pour le futur</h5>
+    <p>
+        Les résultats de l'étude ont servi de base à la réflexion sur le futur marché public de 
+        restauration scolaire.  
+        La mairie poursuit désormais les actions engagées : tri des biodéchets, redistribution, 
+        adaptation des menus, sensibilisation des enfants, amélioration des commandes et suivi 
+        régulier des pesées.
+    </p>
+
+    <h5>Mon analyse critique</h5>
+    <p>
+        Avec le recul, cette mission a été une réussite : les données ont permis d'éclairer des 
+        décisions publiques et d'améliorer concrètement les pratiques dans les écoles.  
+        J'aurais toutefois pu aller plus loin dans l'automatisation des analyses ou dans la création 
+        d'outils de suivi pour les équipes.  
+        Malgré cela, ce projet reste l'un des plus formateurs de mon parcours, mêlant rigueur 
+        scientifique et impact social tangible.
     </p>
 </section>
 

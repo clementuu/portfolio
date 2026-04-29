@@ -7,31 +7,64 @@ const EscarcelleHTML = `
 <!-- =================================================================== -->
 <section class="project-section">
     <p>
-        <b>Escarcelle</b> est une solution logicielle complète dédiée à la gestion des épiceries solidaires. 
-        Conçu initialement comme un outil de gestion interne, le projet a progressivement évolué vers 
-        un véritable écosystème numérique regroupant une application web moderne, une caisse connectée 
+        <b>Escarcelle</b> est un système d'information complet dédié aux épiceries solidaires. 
+        Initialement conçu comme un outil de gestion interne, il a progressivement évolué vers un 
+        véritable écosystème numérique regroupant une application web moderne, une caisse connectée 
         et une API ouverte aux partenaires externes.
     </p>
 
     <p>
-        Mon rôle a été d'accompagner cette transformation en modernisant un socle historique, en 
-        introduisant des technologies plus robustes et en repensant plusieurs modules clés pour 
-        améliorer la maintenabilité, la performance et l'expérience utilisateur. Ce travail a impliqué 
-        des migrations sensibles, des refontes structurelles et la création de nouveaux services 
+        Mon rôle a été d'accompagner cette modernisation en refondant des modules historiques, en 
+        introduisant une stack plus robuste (<a class="link" href="/competences/detail.html?id=1">Go</a> / 
+        <a class="link" href="/competences/detail.html?id=4">Svelte</a>) et en améliorant la 
+        maintenabilité, la performance et l'expérience utilisateur. Ce travail a impliqué des 
+        migrations sensibles, des refontes structurelles et la création de nouveaux services 
         interopérables.
     </p>
 
     <img class="project-image" src="../assets/AccueilEscarcelle.png" alt="Accueil Escarcelle">
 
     <p>
-        La plateforme se compose de trois modules principaux :
+        L'écosystème Escarcelle repose sur trois modules principaux :
     </p>
 
     <ul>
-        <li><b>Application Web de Gestion :</b> Interface centrale permettant la gestion des stocks, des bénéficiaires, des produits et la génération de rapports.</li>
-        <li><b>Application de Caisse :</b> Logiciel de point de vente utilisé en boutique pour enregistrer les transactions.</li>
-        <li><b>API Partenaire :</b> API sécurisée destinée aux intégrations externes, notamment pour le développement d'applications tierces (ex : click & collect).</li>
+        <li><b>Application Web de Gestion :</b> gestion des stocks, bénéficiaires, produits, rapports.</li>
+        <li><b>Application de Caisse :</b> enregistrement des ventes en boutique, synchronisée avec l'API.</li>
+        <li><b>API Partenaire :</b> interface sécurisée pour les intégrations externes (ex : click & collect).</li>
     </ul>
+</section>
+
+<section class="project-section">
+    <h3><b>Contexte et Enjeux</b></h3>
+    <p>
+        Escarcelle est utilisé quotidiennement par plus de 625 épiceries solidaires, représentant 
+        plus de 1,42 million de distributions et plus de 114 000 familles bénéficiaires. Moderniser 
+        un tel système impliquait de préserver la continuité de service tout en améliorant un 
+        socle historique devenu difficile à maintenir.
+    </p>
+
+    <p>
+        Le principal enjeu était de faire cohabiter un code legacy en 
+        <a class="link" href="/competences/detail.html?id=9">Rebol</a> avec une stack moderne 
+        <a class="link" href="/competences/detail.html?id=1">Go</a>/<a class="link" href="/competences/detail.html?id=4">Svelte</a>, 
+        tout en garantissant la compatibilité ascendante et la stabilité du système. Les épiceries 
+        attendaient également des évolutions concrètes : meilleure gestion des produits, workflows 
+        simplifiés, réduction des erreurs et accélération des opérations.
+    </p>
+
+    <p>
+        Les enjeux techniques étaient tout aussi importants : migration de MySQL 5.5 vers 8.0, 
+        refonte de modules critiques, introduction du multi code-barres, intégration d'OpenFoodFacts, 
+        restructuration de l'architecture et création de nouveaux outils CLI pour améliorer 
+        l'environnement de développement.
+    </p>
+
+    <p>
+        L'objectif global était clair : rendre Escarcelle plus robuste, plus moderne, plus 
+        interopérable et plus simple à utiliser, tout en renforçant son impact social auprès des 
+        bénéficiaires.
+    </p>
 </section>
 
 <!-- =================================================================== -->
@@ -88,7 +121,6 @@ const EscarcelleHTML = `
     </p>
 
     <div class="skills-grid">
-
         <div class="skill-item">
             <strong>Base de Données (<a class="link" href="/competences/detail.html?id=6">SQL</a>)</strong>
             <p>
@@ -188,6 +220,28 @@ const EscarcelleHTML = `
             </p>
         </div>
 
+        <div class="skill-item">
+            <strong>Intégration Open Food Facts</strong>
+            <p>
+                Développement d'un outil complet permettant d'importer et transformer les données 
+                d'OpenFoodFacts pour accélérer le référencement des produits.  
+                Mise en place d'un algorithme de scoring pour proposer automatiquement la catégorie 
+                Escarcelle la plus pertinente.  
+                Intégration dans l'application : préremplissage automatique des fiches produits à 
+                partir du code-barres.
+            </p>
+        </div>
+
+        <div class="skill-item">
+            <strong>Outils CLI & Environnement de Développement</strong>
+            <p>
+                Création d'applications en ligne de commande pour automatiser des tâches complexes 
+                (import OFF, vérifications d'intégrité, migrations).  
+                Amélioration de l'environnement de développement : scripts, automatisations, 
+                outils internes facilitant les tests, la maintenance et la montée en compétence 
+                des nouveaux développeurs.
+            </p>
+        </div>
     </div>
 </section>
 
@@ -196,24 +250,44 @@ const EscarcelleHTML = `
 <!-- =================================================================== -->
 <section class="project-section">
     <h3><b>Conclusion</b></h3>
+
+    <h5>Résultats</h5>
     <p>
-        Le projet Escarcelle a été une expérience particulièrement enrichissante, mêlant modernisation 
-        d'un système existant, création de nouveaux outils et collaboration avec des acteurs externes. 
-        Il m'a permis de travailler sur des problématiques concrètes à fort impact social, tout en 
-        consolidant mes compétences en architecture logicielle, en migration de données et en 
-        développement full-stack. 
-        Cette expérience m'a également appris à faire cohabiter du legacy et des technologies modernes 
-        au sein d'un écosystème cohérent, évolutif et durable.
+        Escarcelle est aujourd'hui une plateforme plus moderne, plus performante et plus simple à 
+        maintenir. Les épiceries bénéficient d'outils plus fiables, d'une gestion des produits 
+        accélérée (multi-code-barres, OpenFoodFacts), et d'une expérience utilisateur plus fluide.  
+        Pour Softinnov, cette modernisation renforce la pérennité du système et ouvre la voie à de 
+        nouvelles intégrations externes.
     </p>
 
     <p>
-        Les lendemains du projet s'inscrivent dans une dynamique d'amélioration continue : accompagnement 
-        des épiceries dans leur utilisation quotidienne, ajout d'évolutions pertinentes et poursuite de 
-        la migration du code <a class="link" href="/competences/detail.html?id=9">Rebol</a> vers des composants modernes. 
-        Un module majeur est actuellement en phase de validation : l'intégration d'OpenFoodFacts, 
-        permettant aux épiceries de référencer automatiquement des produits à partir du code-barres, 
-        de manière standardisée et fiable. Ce travail, combiné à la réduction progressive du legacy, 
-        prépare Escarcelle à devenir une plateforme encore plus robuste, interopérable et durable.
+        Pour moi, ce projet a été un terrain d'apprentissage exceptionnel : migrations sensibles, 
+        architecture logicielle, développement full-stack, gestion du legacy, coordination technique 
+        et conception de modules à fort impact métier.
+    </p>
+
+    <h5>Pour la suite</h5>
+    <p>
+        Les évolutions à venir concernent principalement la poursuite de la migration du legacy, 
+        l'amélioration continue des workflows, l'enrichissement du paramétrage et l'intégration 
+        progressive de nouveaux services partenaires.  
+        L'architecture modernisée permet désormais d'ajouter des fonctionnalités de manière plus 
+        fluide et plus sécurisée.
+    </p>
+
+    <h5>Mon regard critique</h5>
+    <p>
+        Avec le recul, ce projet a été une réussite solide, autant sur le plan technique que sur 
+        l'impact social. Les choix d'architecture ont permis de sécuriser l'avenir de la plateforme 
+        et de simplifier le quotidien des équipes.
+    </p>
+
+    <p>
+        J'identifie néanmoins des axes d'amélioration : certaines migrations auraient pu être 
+        découpées plus finement, et la documentation initiale aurait gagné à être plus détaillée 
+        pour faciliter la transition entre legacy et stack moderne.  
+        Malgré cela, ce projet reste l'un des plus formateurs de mon parcours et m'a permis de 
+        contribuer concrètement à un outil utilisé chaque jour par des milliers de personnes.
     </p>
 </section>
 

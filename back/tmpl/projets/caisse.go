@@ -7,25 +7,60 @@ const CaisseHTML = `
 <!-- =================================================================== -->
 <section class="project-section">
     <p>
-        Ce projet consistait en la refonte complète de l'application de caisse de l'épicerie solidaire Escarcelle. 
-        L'ancienne version, développée en Rebol, était devenue obsolète : elle ne supportait pas les protocoles 
-        sécurisés (SSL/TLS), son interface était vieillissante, et sa maintenance devenait de plus en plus complexe.
+        Ce projet consistait en la refonte complète de l'application de caisse Escarcelle, un outil 
+        central utilisé quotidiennement par plus de 600 épiceries solidaires. L'ancienne version, 
+        développée en Rebol, était devenue difficile à maintenir, limitée dans ses évolutions et 
+        comportait plusieurs risques : absence de chiffrement, interface vieillissante, dépendance 
+        à une technologie obsolète.
     </p>
 
     <p>
-        La décision a été prise de repartir de zéro en utilisant <a class="link" href="/competences/detail.html?id=1">Go</a> et la bibliothèque <strong>Fyne</strong> afin de créer 
-        une application de bureau moderne, multiplateforme (Windows, macOS, Linux), sécurisée et capable de 
-        fonctionner en mode connecté comme en mode autonome. La caisse repose sur une base de données locale 
-        synchronisée avec l'API partenaire, permettant une continuité de service même en cas de coupure Internet.
+        La décision a été prise de repartir de zéro en utilisant 
+        <a class="link" href="/competences/detail.html?id=1">Go</a> et la bibliothèque 
+        <strong>Fyne</strong>, afin de concevoir une application moderne, multiplateforme 
+        (Windows, macOS, Linux), sécurisée et capable de fonctionner aussi bien en ligne qu'en mode 
+        autonome. La caisse repose sur une base locale synchronisée avec l'API partenaire, garantissant 
+        une continuité de service même en cas de coupure réseau.
     </p>
 
     <img class="project-image" src="../assets/CaisseEscarcelle.png" alt="Caisse Escarcelle">
 
     <p>
-        Cette refonte a également été l'occasion de repenser entièrement les workflows utilisateurs, 
-        d'intégrer de nouvelles fonctionnalités (multi-code-barres, gestion avancée des tickets, 
-        resynchronisation automatique, mise en attente des ventes, etc.) et de proposer une interface 
-        adaptée aux écrans tactiles, plus intuitive et plus robuste.
+        Cette refonte a également permis d'optimiser les workflows utilisateurs, 
+        d'intégrer de nombreuses fonctionnalités attendues (multi code-barres, remises avancées, 
+        tickets par email, mise en attente des ventes, resynchronisation automatique…), et de proposer 
+        une interface tactile, plus intuitive, plus accessible et adaptée aux réalités du terrain.
+    </p>
+</section>
+
+<section class="project-section">
+    <h3><b>Contexte et Enjeux</b></h3>
+    <p>
+        La caisse Escarcelle est un outil critique : elle conditionne le fonctionnement quotidien 
+        de centaines d'épiceries solidaires. Toute interruption de service aurait un impact direct 
+        sur les bénéficiaires. La refonte devait donc moderniser l'outil sans perturber l'activité, 
+        tout en garantissant une transition fluide pour des utilisateurs aux profils variés, dont 
+        beaucoup de bénévoles peu familiers avec l'informatique.
+    </p>
+
+    <p>
+        L'analyse de l'existant a révélé plusieurs limites : absence de chiffrement, interface peu 
+        lisible, impossibilité d'évoluer, difficultés de maintenance, et manque de personnalisation. 
+        Les retours terrain ont confirmé ces constats : certaines personnes peinaient à lire l'écran, 
+        d'autres souhaitaient des remises plus flexibles, un thème personnalisable ou l'envoi des 
+        tickets par email.
+    </p>
+
+    <p>
+        Les enjeux étaient donc multiples : proposer une application <strong>résiliente</strong>, 
+        <strong>sécurisée</strong>, <strong>tactile</strong>, <strong>multiplateforme</strong>, 
+        capable de fonctionner hors-ligne, parfaitement intégrée à l'écosystème Escarcelle, et 
+        déployable sans aucune interruption pour les 625 structures concernées.
+    </p>
+
+    <p>
+        Ce cadrage a posé des bases solides pour mener une transformation profonde, structurée et 
+        maîtrisée, tout en garantissant la continuité de service.
     </p>
 </section>
 
@@ -174,21 +209,60 @@ const CaisseHTML = `
 <!-- =================================================================== -->
 <section class="project-section">
     <h3><b>Conclusion</b></h3>
+
+    <h5>Résultats</h5>
     <p>
-        Cette refonte a été un succès technique majeur, aboutissant à une application de caisse moderne, 
-        rapide, sécurisée et considérablement plus simple à maintenir et à faire évoluer.  
-        Le projet m'a permis d'acquérir une expertise approfondie dans le développement d'applications 
-        de bureau en <a class="link" href="/competences/detail.html?id=1">Go</a> avec Fyne, la conception d'architectures événementielles, la gestion de données 
-        locales synchronisées et l'intégration de périphériques (imprimantes, douchettes, audio).  
+        La refonte de la caisse Escarcelle a été un succès majeur, autant pour l'entreprise que pour 
+        moi. Pour Softinnov, elle a permis de moderniser un outil central utilisé par plus de 600 
+        épiceries solidaires, d'améliorer la fiabilité du service, de réduire les erreurs en caisse 
+        et de fluidifier le travail des équipes sur le terrain. L'application est désormais plus 
+        rapide, plus sécurisée, plus ergonomique et beaucoup plus simple à maintenir.
     </p>
 
-    <p> 
-        À l'issue du projet, l'application constitue désormais un socle robuste pour l'écosystème Escarcelle. 
-        Les lendemains du projet seront principalement faits de maintenance évolutive et corrective, 
-        d'ajout de petites améliorations fonctionnelles, et d'adaptation aux retours des épiceries. 
-        La structure modulaire mise en place facilite grandement ces évolutions futures. 
+    <p>
+        Pour ma part, ce projet a été l'un des plus formateurs de mon parcours. Il m'a permis 
+        d'acquérir une expertise solide en développement d'applications de bureau en 
+        <a class="link" href="/competences/detail.html?id=1">Go</a> avec Fyne, en conception 
+        d'architectures événementielles, en gestion de données locales synchronisées, en intégration 
+        de périphériques et en pilotage complet d'un projet stratégique, du cadrage à la livraison.
     </p>
+
+    <h5>Pour la suite</h5>
+    <p>
+        La nouvelle caisse constitue désormais un socle robuste pour l'écosystème Escarcelle. Les 
+        évolutions à venir porteront principalement sur des améliorations fonctionnelles, 
+        l'enrichissement du paramétrage, l'adaptation aux retours des épiceries et l'optimisation 
+        continue de l'expérience utilisateur.  
+        Grâce à l'architecture modulaire mise en place, ces évolutions pourront être intégrées de 
+        manière fluide, sans remettre en cause la stabilité du système.
+    </p>
+
+    <h5>Mon regard critique</h5>
+    <p>
+        Avec le recul, je considère ce projet comme une réussite solide : l'adoption a été fluide, 
+        les retours des utilisateurs très positifs et la transition s'est faite sans interruption de 
+        service, ce qui était l'un des enjeux majeurs. La collaboration avec les équipes de test, 
+        les épiceries pilotes et le référent technique a été déterminante pour atteindre ce niveau 
+        de qualité.
+    </p>
+
+    <p>
+        Sur le plan technique, j'ai également identifié des axes d'amélioration. La complexité du 
+        projet aurait pu être mieux anticipée en amont, notamment en matière de gestion des risques 
+        et de découpage des modules. Certaines décisions techniques auraient gagné à être challengées 
+        plus tôt, et j'aurais pu documenter davantage certaines parties du code pour faciliter la 
+        montée en compétence d'autres développeurs.
+    </p>
+
+    <p>
+        Malgré ces points d'amélioration, ce projet reste l'un des plus importants de mon parcours. 
+        Il m'a permis de progresser autant sur le plan technique que sur le plan organisationnel, et 
+        m'a donné une vision plus mature de ce que représente la refonte d'un outil métier critique 
+        à grande échelle.
+    </p>
+
 </section>
+
 <!-- =================================================================== -->
 <!-- SECTION : COMPÉTENCES ASSOCIÉES                                     -->
 <!-- =================================================================== -->

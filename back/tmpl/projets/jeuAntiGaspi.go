@@ -6,21 +6,45 @@ const JeuAntiGaspiHTML = `
 <!-- =================================================================== -->
 <section class="project-section">
     <p>
-        Ce projet est un jeu vidéo 2D conçu pendant mon service civique pour la mairie de 
-        Saint-Jean-de-Védas. L'objectif était de sensibiliser les enfants aux éco-gestes et à la 
-        réduction du gaspillage alimentaire à travers une expérience ludique, simple et accessible.
+        Ce projet est un jeu vidéo 2D conçu pour sensibiliser les enfants aux éco-gestes et à la 
+        réduction du gaspillage alimentaire. Pensé comme un support ludique et accessible, il propose 
+        une expérience simple en vue du dessus, où le joueur doit accomplir différentes actions liées 
+        au tri, à la gestion des déchets ou à la consommation responsable.
     </p>
 
     <img class="project-image" src="../assets/AntiGaspi.png" alt="Jeu Anti-Gaspi">
 
     <p>
-        Le jeu a été développé entièrement en <a class="link" href="/competences/detail.html?id=3">JavaScript</a> 
-        et <a class="link" href="/competences/detail.html?id=2">HTML/CSS</a> sans framework ni moteur 
-        externe. Il s'agit d'un jeu en vue du dessus dans lequel le joueur doit accomplir différentes 
-        actions liées au tri, à la gestion des déchets ou à la consommation responsable. 
-        Ce projet représente une étape importante dans mon parcours : c'est l'un de mes premiers 
-        développements interactifs, et il m'a permis d'apprendre les bases de la programmation 
-        orientée jeu vidéo.
+        Le jeu a été développé entièrement en 
+        <a class="link" href="/competences/detail.html?id=3">JavaScript</a> 
+        et <a class="link" href="/competences/detail.html?id=2">HTML/CSS</a>, 
+        sans framework ni moteur externe.  
+        Il s'agit de l'un de mes premiers projets interactifs, et il m'a permis d'apprendre les bases 
+        du développement orienté jeu vidéo.
+    </p>
+</section>
+
+<section class="project-section">
+    <h3><b>Contexte et Enjeux</b></h3>
+    <p>
+        Ce projet a été réalisé dans le cadre de mon service civique au sein de la mairie de 
+        Saint-Jean-de-Védas. Ma mission consistait à concevoir et animer un atelier destiné aux 
+        enfants des écoles de la commune, afin de les sensibiliser aux éco-gestes et à la réduction 
+        du gaspillage alimentaire.
+    </p>
+
+    <p>
+        Plutôt que de proposer un atelier classique, j'ai choisi de mettre à profit mes compétences 
+        en développement pour créer un jeu vidéo éducatif. Ce support interactif permettait 
+        d'aborder des notions importantes - tri des déchets, consommation responsable, gestes du 
+        quotidien - de manière ludique et engageante.
+    </p>
+
+    <p>
+        Les enjeux étaient multiples : concevoir un outil <strong>fiable</strong>, <strong>intuitif</strong> et <strong>pédagogique</strong>, 
+        tout en veillant à ce qu'il reste amusant et accessible pour un jeune public.  
+        Le jeu devait également être suffisamment robuste pour être utilisé dans plusieurs écoles, 
+        dans des conditions matérielles variées.
     </p>
 </section>
 
@@ -136,20 +160,55 @@ const JeuAntiGaspiHTML = `
 <section class="project-section">
     <h3><b>Conclusion</b></h3>
     <p>
-        Ce jeu anti gaspi est un projet qui me tient particulièrement à cœur. Bien que son code ne 
+        Ce jeu anti-gaspi est un projet qui me tient particulièrement à cœur. Bien que son code ne 
         reflète plus mon niveau actuel, il représente une étape fondatrice dans mon parcours de 
-        développeur : j'y ai appris les bases du développement de jeux 2D, la manipulation du canvas, 
-        la gestion d'assets et la création d'interactions ludiques.  
-        Surtout, il a permis de sensibiliser des enfants aux éco-gestes de manière amusante et 
-        pédagogique, ce qui en fait une réussite autant technique qu'humaine.
+        développeur et un exemple concret de la manière dont le numérique peut servir des objectifs 
+        pédagogiques et citoyens.
+    </p>
+
+    <h5>Résultats</h5>
+    <p>
+        J'y ai appris les bases du développement de jeux 2D, la manipulation du canvas, la gestion 
+        d'assets et la création d'interactions ludiques.  
+        Surtout, le jeu a rempli sa mission : il a permis de sensibiliser des enfants aux éco-gestes 
+        de manière amusante et efficace, et a été très bien accueilli par les équipes éducatives de 
+        la commune.
+    </p>
+
+    <h5>Pour la suite</h5>
+    <p>
+        Aucune évolution fonctionnelle n'est prévue pour l'instant, mais j'envisage une refonte 
+        complète afin d'améliorer la qualité du code, moderniser la structure et faciliter la 
+        maintenance.  
+        Je pourrais également profiter de mon VPS pour rendre le jeu accessible en ligne, afin qu'il 
+        puisse continuer à être utilisé dans un cadre éducatif ou associatif.
+    </p>
+
+    <h5>Mon regard critique</h5>
+    <p>
+        Avec le recul, je considère ce projet comme une véritable réussite : les enfants ont apprécié 
+        le jeu, les ateliers se sont très bien déroulés et les équipes de la commune ont salué la 
+        qualité du support pédagogique.
     </p>
 
     <p>
-        Les lendemains du projet restent ouverts : aucune évolution fonctionnelle n'est prévue pour 
-        l'instant, mais j'envisage une refonte complète afin d'améliorer la qualité du code, 
-        moderniser la structure et faciliter la maintenance.  
-        Je pourrais également profiter de mon VPS pour rendre le jeu accessible en ligne, 
-        afin qu'il puisse continuer à être utilisé dans un cadre éducatif ou associatif.
+        Techniquement, j'aurais pu mieux faire. Je ne maîtrisais pas encore pleinement le 
+        développement web, ce qui m'a conduit à commettre certaines erreurs de structure et 
+        d'organisation. L'absence de gestion de version dès le début (pas de Git) a également rendu 
+        le suivi du projet plus difficile.
+    </p>
+
+    <p>
+        Si le jeu avait été plus complexe, j'aurais probablement rencontré des problèmes de 
+        performance ou des bugs difficiles à corriger. C'est d'ailleurs pour cette raison que j'ai 
+        récemment entrepris un refactoring complet du code, afin de le rendre plus lisible, plus 
+        propre et plus facile à maintenir.
+    </p>
+
+    <p>
+        Malgré ces limites, ce projet reste une étape importante de mon parcours : il m'a permis 
+        d'apprendre énormément, de gagner en autonomie et de comprendre l'importance d'une bonne 
+        architecture dès les premières lignes de code.
     </p>
 </section>
 
