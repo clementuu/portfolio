@@ -31,7 +31,7 @@
         align-items: center;
         text-align: center;
         transition: transform 0.2s;
-        max-width: 300px; 
+        max-width: 400px;
         cursor: pointer;
         color: inherit; /* Make link text color same as parent */
         text-decoration: none; /* Remove underline from link */
@@ -73,5 +73,9 @@
     .project-card p {
         color: #666;
         font-size: 0.9em;
+    }
+
+    .competences {
+        margin-top: auto;
     }
 </style>

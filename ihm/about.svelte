@@ -11,16 +11,24 @@
     <section class="container about">
         <h1><b>À propos</b></h1>
         <article>
-            <h4>Ce qui m'anime</h4>
             <p>
                 Mon premier contact avec l'informatique remonte à l'enfance, j'était le petit-fils que les grands-parents appelaient
                 à la rescousse quand l'ordinateur faisait des siennes, J'allais bidoullier un peu dans le panneau de navigation 
                 et c'était très souvent c'était suffisant.
             </p>
+            <h4>Ce qui m'anime</h4>
             <p>
                 J'ai toujours été un vrai « touche à tout ». J'ai toujours eu besoin d'<b>explorer</b>, de <b>comprendre</b>, 
                 de <b>tester</b>. Cette curiosité m'a suivi partout : dans mes lectures, mes projets, mes passions… et a forgé ma vision actuelle : 
                 l'ingénierie ne se résume pas à la technique, elle prend tout son sens lorsqu'elle se met au service des personnes.
+            </p>
+            <p>
+                Cet engagement est aussi profondément <b>social</b>. Je suis persuadé que la science et la technologie ont un rôle crucial à jouer pour réduire les fractures et servir l'intérêt général.
+                Innover, pour moi, ne signifie pas complexifier. Il s'agit plutôt de créer des solutions adaptées aux besoins réels et conçues pour durer. 
+            </p>
+            <p>
+                Ma démarche repose sur une collaboration étroite avec les acteurs de terrain. En allant à leur rencontre, je peux saisir leurs enjeux, leurs contraintes et leurs façons de travailler. 
+                Cette proximité est indispensable pour concevoir des outils véritablement utiles.
             </p>
             <p>
                 C'est ce que j'aime appeller l'<b>innovation responsable</b> : créer des solutions durables, inclusives, qui s'adaptent aux réalités 
@@ -59,7 +67,7 @@
             </p>
             <p>
                 J'apporte aujourd'hui une <b>approche globale</b>, faisant le lien entre les enjeux métiers et les contraintes techniques. 
-                Grâce à mon <b>esprit critique</b>, je cherche à anticiper les risques pour proposer des outils véritablement utiles, 
+                Grâce à mon esprit critique, je cherche à anticiper les risques pour proposer des outils véritablement utiles, 
                 conçus pour durer et faciliter la vie de tous les utilisateurs.
             </p>
 

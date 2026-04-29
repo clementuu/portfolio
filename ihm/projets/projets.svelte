@@ -44,7 +44,7 @@
   
     .projets-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
         gap: 1em;
         justify-items: center;
         padding: 1em 2em;
