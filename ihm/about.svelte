@@ -13,8 +13,8 @@
         <article>
             <p>
                 Mon premier contact avec l'informatique remonte à l'enfance, j'était le petit-fils que les grands-parents appelaient
-                à la rescousse quand l'ordinateur faisait des siennes, J'allais bidoullier un peu dans le panneau de navigation 
-                et c'était très souvent c'était suffisant.
+                à la rescousse quand l'ordinateur faisait des siennes, J'allais bidoullier un peu dans le panneau de configuration 
+                ou dans le gestionnaire de tâches et c'était très souvent c'était suffisant.
             </p>
             <h4>Ce qui m'anime</h4>
             <p>

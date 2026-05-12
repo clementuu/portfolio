@@ -6,39 +6,41 @@ const CaisseHTML = `
 <!-- SECTION : INTRODUCTION DU PROJET                           -->
 <!-- =================================================================== -->
 <section class="project-section">
+    <h3><b>Présentation</b></h3>
+
     <p>
-        Ce projet consistait en la refonte complète de l'application de caisse Escarcelle, un outil 
-        central utilisé quotidiennement par plus de 600 épiceries solidaires. L'ancienne version, 
-        développée en Rebol, était devenue difficile à maintenir, limitée dans ses évolutions et 
-        comportait plusieurs risques : absence de chiffrement, interface vieillissante, dépendance 
-        à une technologie obsolète.
+        Pour ce projet j'ai complètement repensé l'application de caisse Escarcelle, un outil 
+        central utilisé au quotidien par plus de 600 épiceries solidaires. L'ancienne version, 
+        développée en Rebol, était devenue difficile à maintenir et limitée dans ses évolutions. 
+        Elle présentait plusieurs failles importantes, notamment une absence de chiffrement, une interface 
+        vieillissante et une dépendance forte à une technologie obsolète.
     </p>
 
     <p>
-        La décision a été prise de repartir de zéro en utilisant 
-        <a class="link" href="/competences/detail.html?id=1">Go</a> et la bibliothèque 
-        <strong>Fyne</strong>, afin de concevoir une application moderne, multiplateforme 
-        (Windows, macOS, Linux), sécurisée et capable de fonctionner aussi bien en ligne qu'en mode 
-        autonome. La caisse repose sur une base locale synchronisée avec l'API partenaire, garantissant 
-        une continuité de service même en cas de coupure réseau.
+        Nous avons donc choisi de repartir sur des bases neuves, en recodant entièrement l'application en 
+        <a class="link" href="/competences/detail.html?id=1">Go</a> et utilisant la bibliothèque 
+        <strong>Fyne</strong>. L'objectif était de concevoir une application de bureau moderne, multiplateforme 
+        (Windows, macOS, Linux), sécurisée et capable de fonctionner aussi bien en ligne qu'hors ligne. 
+        La caisse repose sur une base locale synchronisée avec l'API partenaire, ce qui permet de garantir 
+        la continuité de service même en cas de coupure réseau.
     </p>
 
     <img class="project-image" src="../assets/CaisseEscarcelle.png" alt="Caisse Escarcelle">
 
     <p>
-        Cette refonte a également permis d'optimiser les workflows utilisateurs, 
-        d'intégrer de nombreuses fonctionnalités attendues (multi code-barres, remises avancées, 
-        tickets par email, mise en attente des ventes, resynchronisation automatique…), et de proposer 
-        une interface tactile, plus intuitive, plus accessible et adaptée aux réalités du terrain.
+        Au lieu de refaire l'application à l'identique, on a profité de cette refonte pour l'améliorer.
+        Les workflows utilisateurs ont été améliorés, de nombreuses fonctionnalités attendues ont été ajoutées 
+        (multi code-barres, remises avancées, tickets par email, mise en attente des ventes, resynchronisation automatique…), 
+        et on a rendu l'interface plus intuitive, plus accessible et tactile-friendly.
     </p>
 </section>
 
 <section class="project-section">
     <h3><b>Contexte et Enjeux</b></h3>
     <p>
-        La caisse Escarcelle est un outil critique : elle conditionne le fonctionnement quotidien 
-        de centaines d'épiceries solidaires. Toute interruption de service aurait un impact direct 
-        sur les bénéficiaires. La refonte devait donc moderniser l'outil sans perturber l'activité, 
+        La caisse est un outil critique pour tous les utilisateurs d'Escarcelle. Elle conditionne le bon 
+        fonctionnement de centaines d'épiceries solidaires. Un dsyfonctionnement ou une interruption de service 
+        aurait un impact direct sur les bénéficiaires. La refonte devait donc moderniser l'outil sans perturber l'activité, 
         tout en garantissant une transition fluide pour des utilisateurs aux profils variés, dont 
         beaucoup de bénévoles peu familiers avec l'informatique.
     </p>
@@ -46,7 +48,7 @@ const CaisseHTML = `
     <p>
         L'analyse de l'existant a révélé plusieurs limites : absence de chiffrement, interface peu 
         lisible, impossibilité d'évoluer, difficultés de maintenance, et manque de personnalisation. 
-        Les retours terrain ont confirmé ces constats : certaines personnes peinaient à lire l'écran, 
+        Les retours des utilisateurs ont confirmé ces constats : certaines personnes peinaient à lire l'écran, 
         d'autres souhaitaient des remises plus flexibles, un thème personnalisable ou l'envoi des 
         tickets par email.
     </p>
@@ -62,12 +64,7 @@ const CaisseHTML = `
         Ce cadrage a posé des bases solides pour mener une transformation profonde, structurée et 
         maîtrisée, tout en garantissant la continuité de service.
     </p>
-</section>
 
-<!-- =================================================================== -->
-<!-- SECTION : ACTEURS ET INTERACTIONS DU PROJET                        -->
-<!-- =================================================================== -->
-<section class="project-section">
     <h3><b>Acteurs et Interactions</b></h3>
     <p>
         Le projet a mobilisé plusieurs acteurs aux rôles complémentaires :
@@ -159,8 +156,8 @@ const CaisseHTML = `
                 <ul>
                     <li>gestion des tickets ESC/POS pour imprimantes thermiques</li>
                     <li>génération de tickets A4 via appels système</li>
-                    <li>configuration avancée (nom/lie d'exemplaires, format, caractères par ligne, test d'impression)</li>
-                    <li>intégration avec les paramètres utilisateurs (thème, police, confirmation d'impression)</li>
+                    <li>configuration avancée (format, nombres d'impressions, caractères par ligne, impression test)</li>
+                    <li>intégration avec les paramètres utilisateurs (thème, police, confirmation avant l'impression)</li>
                 </ul>
             </p>
         </div>
@@ -208,9 +205,7 @@ const CaisseHTML = `
 <!-- SECTION : CONCLUSION                                                -->
 <!-- =================================================================== -->
 <section class="project-section">
-    <h3><b>Conclusion</b></h3>
-
-    <h5>Résultats</h5>
+    <h3><b>Résultats</b></h3>
     <p>
         La refonte de la caisse Escarcelle a été un succès majeur, autant pour l'entreprise que pour 
         moi. Pour Softinnov, elle a permis de moderniser un outil central utilisé par plus de 600 
@@ -227,7 +222,7 @@ const CaisseHTML = `
         de périphériques et en pilotage complet d'un projet stratégique, du cadrage à la livraison.
     </p>
 
-    <h5>Pour la suite</h5>
+    <h3><b>Pour la suite</b></h3>
     <p>
         La nouvelle caisse constitue désormais un socle robuste pour l'écosystème Escarcelle. Les 
         évolutions à venir porteront principalement sur des améliorations fonctionnelles, 
@@ -237,28 +232,27 @@ const CaisseHTML = `
         manière fluide, sans remettre en cause la stabilité du système.
     </p>
 
-    <h5>Mon regard critique</h5>
+    <h3><b>Mon regard critique</b></h3>
     <p>
-        Avec le recul, je considère ce projet comme une réussite solide : l'adoption a été fluide, 
-        les retours des utilisateurs très positifs et la transition s'est faite sans interruption de 
-        service, ce qui était l'un des enjeux majeurs. La collaboration avec les équipes de test, 
-        les épiceries pilotes et le référent technique a été déterminante pour atteindre ce niveau 
-        de qualité.
+        Avec du recul, je pense que ce projet est une vraie réussite. Le nouvel outil a été adopté 
+        sans problème, les retours des utilisateurs étaient positifs, et on n'a eu aucune interruption de service, 
+        ce qui était vraiment un point très important. Sans le travail des équipes de test, 
+        des épiceries pilotes et du référent technique, on n'aurait jamais eu un résultat aussi propre.
     </p>
 
     <p>
-        Sur le plan technique, j'ai également identifié des axes d'amélioration. La complexité du 
-        projet aurait pu être mieux anticipée en amont, notamment en matière de gestion des risques 
-        et de découpage des modules. Certaines décisions techniques auraient gagné à être challengées 
-        plus tôt, et j'aurais pu documenter davantage certaines parties du code pour faciliter la 
-        montée en compétence d'autres développeurs.
+        Techniquement, j'ai repéré quelques axes d'amélioration. La complexité du projet, par exemple, 
+        méritait d'être mieux anticipée dès le départ, surtout pour la gestion des risques et le découpage des modules, 
+        ce qui nous aurait fait gagner du temps. Certaines décisions techniques auraient gagné à être remises 
+        en question plus tôt, comme pour le module d'impression ticket, l'utilisation de commandes ESC-POS n'a rendu le code 
+        compatible qu'avec certaines marques d'imprimantes. Et puis, j'aurais dû documenter un peu plus certaines parties du code, 
+        histoire que d'autres développeurs puissent reprendre le travail plus facilement.
     </p>
 
     <p>
-        Malgré ces points d'amélioration, ce projet reste l'un des plus importants de mon parcours. 
-        Il m'a permis de progresser autant sur le plan technique que sur le plan organisationnel, et 
-        m'a donné une vision plus mature de ce que représente la refonte d'un outil métier critique 
-        à grande échelle.
+        Malgré ces petites choses à améliorer, ce projet reste l'un des plus marquants de ma carrière. Il m'a fait progresser autant 
+        sur le plan technique que dans l'organisation, et il m'a donné une vision bien plus mature de ce que ça implique de refonder 
+        un outil métier critique à grande échelle.
     </p>
 
 </section>

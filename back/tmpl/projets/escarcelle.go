@@ -6,6 +6,8 @@ const EscarcelleHTML = `
 <!-- SECTION : TITRE ET INTRODUCTION DU PROJET                           -->
 <!-- =================================================================== -->
 <section class="project-section">
+    <h3><b>Présentation</b></h3>
+
     <p>
         <b>Escarcelle</b> est un système d'information complet dédié aux épiceries solidaires. 
         Initialement conçu comme un outil de gestion interne, il a progressivement évolué vers un 
@@ -48,15 +50,15 @@ const EscarcelleHTML = `
         Le principal enjeu était de faire cohabiter un code legacy en 
         <a class="link" href="/competences/detail.html?id=9">Rebol</a> avec une stack moderne 
         <a class="link" href="/competences/detail.html?id=1">Go</a>/<a class="link" href="/competences/detail.html?id=4">Svelte</a>, 
-        tout en garantissant la compatibilité ascendante et la stabilité du système. Les épiceries 
+        tout en garantissant la compatibilité des différents modules et la stabilité du système. Les épiceries 
         attendaient également des évolutions concrètes : meilleure gestion des produits, workflows 
         simplifiés, réduction des erreurs et accélération des opérations.
     </p>
 
     <p>
         Les enjeux techniques étaient tout aussi importants : migration de MySQL 5.5 vers 8.0, 
-        refonte de modules critiques, introduction du multi code-barres, intégration d'OpenFoodFacts, 
-        restructuration de l'architecture et création de nouveaux outils CLI pour améliorer 
+        refonte de modules critiques, introduction du multi code-barres, intégration de la base de données 
+        d'OpenFoodFacts, restructuration de l'architecture et création de nouveaux outils CLI pour améliorer 
         l'environnement de développement.
     </p>
 
@@ -65,12 +67,7 @@ const EscarcelleHTML = `
         interopérable et plus simple à utiliser, tout en renforçant son impact social auprès des 
         bénéficiaires.
     </p>
-</section>
 
-<!-- =================================================================== -->
-<!-- SECTION : ACTEURS ET INTERACTIONS DU PROJET                        -->
-<!-- =================================================================== -->
-<section class="project-section">
     <h3><b>Acteurs et Interactions</b></h3>
     <p>
         Le projet Escarcelle a impliqué plusieurs acteurs aux rôles complémentaires, chacun contribuant 
@@ -249,9 +246,7 @@ const EscarcelleHTML = `
 <!-- SECTION : CONCLUSION                                                -->
 <!-- =================================================================== -->
 <section class="project-section">
-    <h3><b>Conclusion</b></h3>
-
-    <h5>Résultats</h5>
+    <h3><b>Résultats</b></h3>
     <p>
         Escarcelle est aujourd'hui une plateforme plus moderne, plus performante et plus simple à 
         maintenir. Les épiceries bénéficient d'outils plus fiables, d'une gestion des produits 
@@ -266,7 +261,7 @@ const EscarcelleHTML = `
         et conception de modules à fort impact métier.
     </p>
 
-    <h5>Pour la suite</h5>
+    <h3><b>Pour la suite</b></h3>
     <p>
         Les évolutions à venir concernent principalement la poursuite de la migration du legacy, 
         l'amélioration continue des workflows, l'enrichissement du paramétrage et l'intégration 
@@ -275,7 +270,7 @@ const EscarcelleHTML = `
         fluide et plus sécurisée.
     </p>
 
-    <h5>Mon regard critique</h5>
+    <h3><b>Mon regard critique</b></h3>
     <p>
         Avec le recul, ce projet a été une réussite solide, autant sur le plan technique que sur 
         l'impact social. Les choix d'architecture ont permis de sécuriser l'avenir de la plateforme 

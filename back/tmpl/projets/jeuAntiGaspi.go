@@ -5,6 +5,8 @@ const JeuAntiGaspiHTML = `
 <!-- SECTION : TITRE ET INTRODUCTION DU PROJET                           -->
 <!-- =================================================================== -->
 <section class="project-section">
+    <h3><b>Présentation</b></h3>
+
     <p>
         Ce projet est un jeu vidéo 2D conçu pour sensibiliser les enfants aux éco-gestes et à la 
         réduction du gaspillage alimentaire. Pensé comme un support ludique et accessible, il propose 
@@ -46,12 +48,7 @@ const JeuAntiGaspiHTML = `
         Le jeu devait également être suffisamment robuste pour être utilisé dans plusieurs écoles, 
         dans des conditions matérielles variées.
     </p>
-</section>
 
-<!-- =================================================================== -->
-<!-- SECTION : ACTEURS ET INTERACTIONS DU PROJET                        -->
-<!-- =================================================================== -->
-<section class="project-section">
     <h3><b>Acteurs et Interactions</b></h3>
     <p>
         Ce projet a été réalisé dans un contexte particulier : j'étais le seul développeur et testeur, 
@@ -158,7 +155,7 @@ const JeuAntiGaspiHTML = `
 <!-- SECTION : CONCLUSION                                                -->
 <!-- =================================================================== -->
 <section class="project-section">
-    <h3><b>Conclusion</b></h3>
+    <h3><b>Résultats</b></h3>
     <p>
         Ce jeu anti-gaspi est un projet qui me tient particulièrement à cœur. Bien que son code ne 
         reflète plus mon niveau actuel, il représente une étape fondatrice dans mon parcours de 
@@ -166,7 +163,6 @@ const JeuAntiGaspiHTML = `
         pédagogiques et citoyens.
     </p>
 
-    <h5>Résultats</h5>
     <p>
         J'y ai appris les bases du développement de jeux 2D, la manipulation du canvas, la gestion 
         d'assets et la création d'interactions ludiques.  
@@ -175,7 +171,7 @@ const JeuAntiGaspiHTML = `
         la commune.
     </p>
 
-    <h5>Pour la suite</h5>
+    <h3><b>Pour la suite</b></h3>
     <p>
         Aucune évolution fonctionnelle n'est prévue pour l'instant, mais j'envisage une refonte 
         complète afin d'améliorer la qualité du code, moderniser la structure et faciliter la 
@@ -184,7 +180,7 @@ const JeuAntiGaspiHTML = `
         puisse continuer à être utilisé dans un cadre éducatif ou associatif.
     </p>
 
-    <h5>Mon regard critique</h5>
+    <h3><b>Mon regard critique</b></h3>
     <p>
         Avec le recul, je considère ce projet comme une véritable réussite : les enfants ont apprécié 
         le jeu, les ateliers se sont très bien déroulés et les équipes de la commune ont salué la 

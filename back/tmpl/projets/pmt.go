@@ -5,6 +5,8 @@ const PmtHTML = `
 <!-- SECTION : TITRE ET INTRODUCTION DU PROJET                           -->
 <!-- =================================================================== -->
 <section class="project-section">
+    <h3><b>Présentation</b></h3>
+
     <p>
         <b>PMT (Project Management Tool)</b> est une application web full-stack développée dans le 
         cadre d'une étude de cas durant mon master. L'objectif était de concevoir un outil complet 
@@ -46,12 +48,7 @@ const PmtHTML = `
         PMT a ainsi servi de terrain d'expérimentation pour consolider mes compétences en 
         développement web, en architecture logicielle et en outillage DevOps.
     </p>
-</section>
 
-<!-- =================================================================== -->
-<!-- SECTION : ACTEURS ET INTERACTIONS DU PROJET                        -->
-<!-- =================================================================== -->
-<section class="project-section">
     <h3><b>Acteurs et Interactions</b></h3>
     <p>
         PMT est un projet entièrement personnel, conçu et développé en autonomie. J'ai assuré 
@@ -155,9 +152,7 @@ const PmtHTML = `
 <!-- SECTION : CONCLUSION                                                -->
 <!-- =================================================================== -->
 <section class="project-section">
-    <h3><b>Conclusion</b></h3>
-
-    <h5>Résultats</h5>
+    <h3><b>Résultats</b></h3>
     <p>
         PMT est un projet intégrateur qui démontre ma capacité à concevoir, développer et déployer 
         une application web complète en autonomie.  
@@ -167,7 +162,7 @@ const PmtHTML = `
         full-stack moderne et renforcer ma polyvalence.
     </p>
 
-    <h5>Pour le futur</h5>
+    <h3><b>Pour le futur</b></h3>
     <p>
         PMT est destiné à devenir mon outil personnel pour organiser mes projets.  
         J'envisage de le rendre accessible en ligne, ce qui nécessitera une gestion multi-utilisateurs, 
@@ -177,7 +172,7 @@ const PmtHTML = `
         utilisable par un public plus large.
     </p>
 
-    <h5>Mon analyse critique</h5>
+    <h3><b>Mon analyse critique</b></h3>
     <p>
         Avec le recul, PMT a été un projet très formateur. Il m'a permis de découvrir une stack 
         technique complète et de comprendre les bonnes pratiques d'un développement full-stack.  

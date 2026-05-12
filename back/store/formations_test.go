@@ -7,7 +7,7 @@ import (
 
 func TestGetFormations(t *testing.T) {
 	s := NewRAMStore()
-	
+
 	formations := s.GetFormations()
 
 	if !reflect.DeepEqual(formations, formationsList) {

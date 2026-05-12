@@ -5,6 +5,8 @@ const MissionAntiGaspiHTML = `
 <!-- SECTION : TITRE ET INTRODUCTION DU PROJET                           -->
 <!-- =================================================================== -->
 <section class="project-section">
+    <h3><b>Présentation</b></h3>
+
     <p>
         <b>TousAntiGaspi</b> est une mission menée dans le cadre de mon service civique pour la mairie 
         de Saint-Jean-de-Védas. L'objectif était de réaliser une analyse fine du gaspillage alimentaire 
@@ -46,12 +48,7 @@ const MissionAntiGaspiHTML = `
         L'étude devait fournir des résultats fiables pour orienter les décisions publiques et préparer 
         le futur marché de restauration scolaire.
     </p>
-</section>
 
-<!-- =================================================================== -->
-<!-- SECTION : ACTEURS ET INTERACTIONS DU PROJET                        -->
-<!-- =================================================================== -->
-<section class="project-section">
     <h3><b>Acteurs et Interactions</b></h3>
     <p>
         La mission TousAntiGaspi a mobilisé deux acteurs principaux aux rôles clairement définis :
@@ -159,9 +156,7 @@ const MissionAntiGaspiHTML = `
 <!-- SECTION : CONCLUSION                                                -->
 <!-- =================================================================== -->
 <section class="project-section">
-    <h3><b>Conclusion</b></h3>
-
-    <h5>Résultats</h5>
+    <h3><b>Résultats</b></h3>
     <p>
         L'étude a permis de mettre en évidence une baisse significative du gaspillage alimentaire 
         entre 2021 et 2023, passant de 268 g à 177 g par enfant et par repas.  
@@ -177,7 +172,7 @@ const MissionAntiGaspiHTML = `
         analyse de données appliquée à des enjeux réels.
     </p>
 
-    <h5>Pour le futur</h5>
+    <h3><b>Pour le futur</b></h3>
     <p>
         Les résultats de l'étude ont servi de base à la réflexion sur le futur marché public de 
         restauration scolaire.  
@@ -186,7 +181,7 @@ const MissionAntiGaspiHTML = `
         régulier des pesées.
     </p>
 
-    <h5>Mon analyse critique</h5>
+    <h3><b>Mon analyse critique</b></h3>
     <p>
         Avec le recul, cette mission a été une réussite : les données ont permis d'éclairer des 
         décisions publiques et d'améliorer concrètement les pratiques dans les écoles.  
