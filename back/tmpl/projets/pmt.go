@@ -174,8 +174,8 @@ const PmtHTML = `
 
     <h3><b>Mon analyse critique</b></h3>
     <p>
-        Avec le recul, PMT a été un projet très formateur. Il m'a permis de découvrir une stack 
-        technique complète et de comprendre les bonnes pratiques d'un développement full-stack.  
+        Sans grands enjeux, PMT reste un projet très formateur. Il m'a permis de découvrir une stack 
+        technique complète et de comprendre les bonnes pratiques du développement full-stack.  
         J'aurais pu aller plus loin sur certains aspects, notamment les tests automatisés, la gestion 
         fine des rôles utilisateurs ou la CI/CD.  
         Malgré cela, ce projet reste une excellente démonstration de ma capacité à mener un 

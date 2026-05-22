@@ -264,25 +264,26 @@ const EscarcelleHTML = `
     <h3><b>Pour la suite</b></h3>
     <p>
         Les évolutions à venir concernent principalement la poursuite de la migration du legacy, 
-        l'amélioration continue des workflows, l'enrichissement du paramétrage et l'intégration 
-        progressive de nouveaux services partenaires.  
+        l'amélioration continue des workflows avec la refonte de certains modules et processus, 
+        l'enrichissement du paramétrage et l'intégration progressive de nouveaux services partenaires. 
         L'architecture modernisée permet désormais d'ajouter des fonctionnalités de manière plus 
         fluide et plus sécurisée.
     </p>
 
     <h3><b>Mon regard critique</b></h3>
     <p>
-        Avec le recul, ce projet a été une réussite solide, autant sur le plan technique que sur 
-        l'impact social. Les choix d'architecture ont permis de sécuriser l'avenir de la plateforme 
-        et de simplifier le quotidien des équipes.
+        Je considère ce projet comme une réussite solide, autant sur le plan technique que sur 
+        l'impact social. La nouvelle architecture, les migrations et les différentes évolutions 
+        ont permis de sécuriser l'avenir de la plateforme, tout en facilitant le quotidien des équipes.
     </p>
 
     <p>
-        J'identifie néanmoins des axes d'amélioration : certaines migrations auraient pu être 
-        découpées plus finement, et la documentation initiale aurait gagné à être plus détaillée 
-        pour faciliter la transition entre legacy et stack moderne.  
-        Malgré cela, ce projet reste l'un des plus formateurs de mon parcours et m'a permis de 
-        contribuer concrètement à un outil utilisé chaque jour par des milliers de personnes.
+        Il y a toutefois quelques points à améliorer : certaines migrations auraient pu être 
+        mieux découpées, une documentation plus détaillée aurait été bienvenue 
+        pour faciliter la transition entre legacy et stack moderne. 
+        Ce projet reste tout de même l'un des plus formateurs de mon parcours. Il m'a permis 
+        d'appréhender différents aspects du développement et de la modernisation de solutions informatiques, en 
+        travaillant sur un outil utilisé chaque jour par des milliers de personnes.
     </p>
 </section>
 

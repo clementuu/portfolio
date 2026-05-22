@@ -183,12 +183,13 @@ const MissionAntiGaspiHTML = `
 
     <h3><b>Mon analyse critique</b></h3>
     <p>
-        Avec le recul, cette mission a été une réussite : les données ont permis d'éclairer des 
-        décisions publiques et d'améliorer concrètement les pratiques dans les écoles.  
-        J'aurais toutefois pu aller plus loin dans l'automatisation des analyses ou dans la création 
-        d'outils de suivi pour les équipes.  
-        Malgré cela, ce projet reste l'un des plus formateurs de mon parcours, mêlant rigueur 
-        scientifique et impact social tangible.
+        Cette mission était importante, et a été un succès. les données ont permis d'éclairer des 
+        décisions publiques et d'améliorer les pratiques dans les cantines.  
+        Ce n'était pas demandé mais j'aurais pu aller plus loin dans l'automatisation des analyses 
+        ou dans la création d'outils de suivi pour les équipes. 
+        Cette mission est l'une des plus atypique de mon parcours, mêlant rigueur 
+        scientifique et impact social, tout en démontrant les compétences en statistiques acquises 
+        lors de mon cursus universitaire.
     </p>
 </section>
 

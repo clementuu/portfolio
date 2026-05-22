@@ -241,7 +241,7 @@ const CaisseHTML = `
     </p>
 
     <p>
-        Techniquement, j'ai repéré quelques axes d'amélioration. La complexité du projet, par exemple, 
+        Cela dit tout n'était pas parfait. La complexité du projet, par exemple, 
         méritait d'être mieux anticipée dès le départ, surtout pour la gestion des risques et le découpage des modules, 
         ce qui nous aurait fait gagner du temps. Certaines décisions techniques auraient gagné à être remises 
         en question plus tôt, comme pour le module d'impression ticket, l'utilisation de commandes ESC-POS n'a rendu le code 

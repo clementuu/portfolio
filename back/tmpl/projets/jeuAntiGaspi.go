@@ -182,13 +182,13 @@ const JeuAntiGaspiHTML = `
 
     <h3><b>Mon regard critique</b></h3>
     <p>
-        Avec le recul, je considère ce projet comme une véritable réussite : les enfants ont apprécié 
-        le jeu, les ateliers se sont très bien déroulés et les équipes de la commune ont salué la 
-        qualité du support pédagogique.
+        Si je devais donner mon avis je dirais que malgré ses lacunes ce projet est un véritable 
+        accomplissement. Les enfants ont apprécié le jeu, les ateliers se sont très bien déroulés 
+        et les équipes de la commune ont salué la qualité du support pédagogique.
     </p>
 
     <p>
-        Techniquement, j'aurais pu mieux faire. Je ne maîtrisais pas encore pleinement le 
+        C'est techniquement que le bât blesse. Je ne maîtrisais pas encore pleinement le 
         développement web, ce qui m'a conduit à commettre certaines erreurs de structure et 
         d'organisation. L'absence de gestion de version dès le début (pas de Git) a également rendu 
         le suivi du projet plus difficile.
@@ -202,9 +202,9 @@ const JeuAntiGaspiHTML = `
     </p>
 
     <p>
-        Malgré ces limites, ce projet reste une étape importante de mon parcours : il m'a permis 
-        d'apprendre énormément, de gagner en autonomie et de comprendre l'importance d'une bonne 
-        architecture dès les premières lignes de code.
+        Malgré ces limites, ce projet reste une étape importante de mon parcours : c'est lui qui 
+        qui m'a donné goût au développement web. Il m'a permis d'apprendre énormément, de gagner en 
+        autonomie et de comprendre l'importance d'une bonne architecture dès les premières lignes de code.
     </p>
 </section>
 
