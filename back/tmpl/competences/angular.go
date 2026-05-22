@@ -3,7 +3,7 @@ package tmpl
 // AngularCompetence contient la description HTML de la compétence Angular.
 const AngularCompetence = `
 <section class="comp-section">
-    <h3><b>Définition</b></h3>
+    <h3>Définition</h3>
     <p>
         Angular est un framework open-source basé sur TypeScript, maintenu par l'équipe Angular de Google. 
         Il est conçu pour créer des applications web monopages (Single Page Applications) complexes et performantes. 
@@ -17,7 +17,7 @@ const AngularCompetence = `
 </section>
 
 <section class="comp-section">
-    <h3><b>Éléments de preuve</b></h3>
+    <h3>Éléments de preuve</h3>
     <p>
         J'ai appliqué mes compétences Angular sur le développement de Project Management Tool (PMT), une application web full-stack où Angular était au cœur du front-end.
     </p>
@@ -45,7 +45,7 @@ const AngularCompetence = `
 </section>
 
 <section class="comp-section">
-    <h3><b>Autocritique</b></h3>
+    <h3>Autocritique</h3>
     <p>
         Mon niveau de pratique d'Angular me permet de concevoir des applications front-end basiques, fonctionnelles et maintenables, mais je ne me considère pas encore comme un expert. 
         Angular est un framework puissant et complet, mais sa complexité implique pas mal de pratique avant de le maîtriser completement. 
@@ -59,7 +59,7 @@ const AngularCompetence = `
 </section>
 
 <section class="comp-section">
-    <h3><b>Évolution</b></h3>
+    <h3>Évolution</h3>
     <p>
         À court terme, je n'ai pas de plan pour devenir un expert Angular, mais je reste curieux des nouvelles fonctionnalités comme les Standalone Components ou le Server-Side Rendering (SSR). 
         J'aimerais continuer à en apprendre davantage progressivement, au fil des projets où Angular s'avère pertinent.

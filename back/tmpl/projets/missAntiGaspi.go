@@ -54,17 +54,17 @@ const MissionAntiGaspiHTML = `
         La mission TousAntiGaspi a mobilisé deux acteurs principaux aux rôles clairement définis :
     </p>
 
-    <ul>
+    <ul class="actors-list">
         <li>
-            <strong>Moi-même</strong> - responsable de la conception du protocole, 
-            de la collecte des données, de l'analyse statistique, de la rédaction du rapport et 
-            de la présentation des résultats aux décideurs.
+            <strong>Moi-même</strong>
+            Responsable de la conception du protocole, de la collecte des données, de l'analyse statistique, 
+            de la rédaction du rapport et de la présentation des résultats aux décideurs.
         </li>
 
         <li>
-            <strong>La mairie de Saint-Jean-de-Védas</strong> - définissant les objectifs 
-            de l'étude, facilitant l'accès aux écoles, validant les orientations méthodologiques 
-            et recevant les recommandations finales pour mise en œuvre.
+            <strong>La mairie de Saint-Jean-de-Védas</strong>
+            Définissant les objectifs de l'étude, facilitant l'accès aux écoles, validant les orientations 
+            méthodologiques et recevant les recommandations finales pour mise en œuvre.
         </li>
     </ul>
 
@@ -125,8 +125,10 @@ const MissionAntiGaspiHTML = `
                 <ul>  
                     <li>Baisse significative du gaspillage (p-value = 0,02)</li>  
                     <li>Aucune baisse de la consommation des enfants (p-value = 0,26)</li> 
-                Analyse du gaspillage par type de composante et identification des recettes problématiques.
-                </ul>    
+                </ul>
+                <p>
+                    Analyse du gaspillage par type de composante et identification des aliments et des combinaisons les plus gaspillées.
+                </p>
             </p>
         </div>
 
@@ -182,10 +184,17 @@ const MissionAntiGaspiHTML = `
 
     <h3>Mon analyse critique</h3>
     <p>
-        Cette mission était importante, et a été un succès. les données ont permis d'éclairer des 
-        décisions publiques et d'améliorer les pratiques dans les cantines.  
-        Ce n'était pas demandé mais j'aurais pu aller plus loin dans l'automatisation des analyses 
-        ou dans la création d'outils de suivi pour les équipes. 
+        Au vu des enjeux du gaspillage alimentaire dans la restauration collective, cette mission était d'une 
+        grande importance. Je pense qu'elle a été menée avec succès. Les données ont permis de determiner des leviers 
+        d'action et d'éclairer des décisions publiques permettant d'améliorer les pratiques dans les cantines 
+        de la commune. 
+    </p>
+    <p>
+        Si je devais donner un point sur lequel j'aurais pu mieux faire ça serait dans l'automatisation des analyses 
+        ou dans la création d'outils de suivi pour les équipes qui aurait pu poursuivre l'étude à plus long terme 
+        et à moindre effort.
+    </p>
+    <p>
         Cette mission est l'une des plus atypique de mon parcours, mêlant rigueur 
         scientifique et impact social, tout en démontrant les compétences en statistiques acquises 
         lors de mon cursus universitaire.

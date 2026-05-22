@@ -126,23 +126,64 @@
 
     :global(.skills-grid) {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 1.5rem;
+        margin-top: 1.5rem;
     }
 
     :global(.skill-item) {
-        background-color: #f8f9fa;
+        background-color: #ffffff;
         padding: 1.5rem;
-        border-radius: 8px;
-        border: 1px solid #e9ecef;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        border-radius: 12px;
+        border: 1px solid #f1f3f5;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        display: flex;
+        flex-direction: column;
+    }
+
+    :global(.skill-item:hover) {
+        border-color: var(--secondary-color);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
     :global(.skill-item strong) {
         display: block;
         font-size: 1.1em;
-        color: #343a40;
-        margin-bottom: 0.5rem;
+        color: var(--secondary-color);
+        margin-bottom: 0.75rem;
+        border-bottom: 2px solid #f8f9fa;
+        padding-bottom: 0.5rem;
+    }
+
+    :global(.skill-item p) {
+        font-size: 0.95em;
+        margin: 0;
+        color: #555;
+        line-height: 1.5;
+    }
+
+    :global(.skill-item ul) {
+        list-style: none;
+        padding: 0;
+    }
+
+    :global(.skill-item li) {
+        position: relative;
+        padding-left: 1.25rem;
+        margin-top: 0.6rem;
+        font-size: 0.9em;
+        line-height: 1.4;
+        color: #666;
+    }
+
+    :global(.skill-item li::before) {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: var(--secondary-color);
+        font-weight: bold;
+        font-size: 1.2em;
+        line-height: 1;
     }
 
     :global(.competences-list) {
@@ -184,5 +225,35 @@
         margin: 2rem auto;
         border-radius: 8px;
         box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    :global(.actors-list) {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+        display: grid;
+        gap: 1rem;
+    }
+
+    :global(.actors-list li) {
+        background-color: #fdfdfd;
+        border: 1px solid #eee;
+        border-left: 2px solid var(--secondary-color);
+        padding: 1rem;
+        border-radius: 4px 12px 12px 4px;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    }
+
+    :global(.actors-list li:hover) {
+        transform: translateX(4px);
+    }
+
+    :global(.actors-list li strong) {
+        display: block;
+        color: var(--secondary-color);
+        font-size: 1em;
+        margin-bottom: 0.3rem;
+        letter-spacing: 0.02em;
     }
 </style>

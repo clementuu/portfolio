@@ -3,7 +3,7 @@ package tmpl
 // PythonCompetence contient la description HTML de la compétence Python.
 const PythonCompetence = `
 <section class="comp-section">
-    <h3><b>Définition</b></h3>
+    <h3>Définition</h3>
     <p>
         Python est un langage de programmation interprété, de haut niveau et à usage général. 
         Sa philosophie de conception met l'accent sur la lisibilité du code avec une utilisation significative des espaces. 
@@ -16,7 +16,7 @@ const PythonCompetence = `
 </section>
 
 <section class="comp-section">
-    <h3><b>Éléments de preuve</b></h3>
+    <h3>Éléments de preuve</h3>
     <p>
         J'ai eu l'opportunité d'appliquer la polyvalence de Python dans deux domaines très distincts : l'automatisation des tests logiciels et l'analyse de données.
     </p>
@@ -41,7 +41,7 @@ const PythonCompetence = `
 </section>
 
 <section class="comp-section">
-    <h3><b>Autocritique</b></h3>
+    <h3>Autocritique</h3>
     <p>
         Je ne me considère pas comme un expert en Python, mais comme quelqu'un qui en possède une maîtrise
         fiable et adaptée à mes usages. J'apprécie particulièrement ce langage pour sa polyvalence et la
@@ -60,7 +60,7 @@ const PythonCompetence = `
 </section>
 
 <section class="comp-section">
-    <h3><b>Évolution</b></h3>
+    <h3>Évolution</h3>
     <p>
         À moyen terme, je souhaite continuer à renforcer mes compétences en Python, en me concentrant sur
         les domaines qui correspondent réellement à mes intérêts. Même si l'IA et le Machine Learning

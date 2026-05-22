@@ -3,7 +3,7 @@ package tmpl
 // SpringCompetence contient la description HTML de la compétence Spring.
 const SpringCompetence = `
 <section class="comp-section">
-    <h3><b>Définition</b></h3>
+    <h3>Définition</h3>
     <p>
         Spring est un framework open source majeur de l'écosystème Java, conçu pour faciliter le développement 
         d'applications robustes, modulaires et sécurisées. Dans un contexte professionnel où les entreprises 
@@ -22,7 +22,7 @@ const SpringCompetence = `
 </section>
 
 <section class="comp-section">
-    <h3><b>Éléments de preuve</b></h3>
+    <h3>Éléments de preuve</h3>
     <p>
         Ma maîtrise de Spring Boot s'est construite à travers des projets concrets où j'ai dû concevoir, 
         optimiser et sécuriser des architectures backend complètes. Voici trois anecdotes illustrant 
@@ -55,7 +55,7 @@ const SpringCompetence = `
 </section>
 
 <section class="comp-section">
-    <h3><b>Autocritique</b></h3>
+    <h3>Autocritique</h3>
     <p>
         Ma maîtrise de Spring est opérationnelle. J'ai une bonne compréhension des concepts orientés objet, du framework et des concepts de base de Java. 
         J'ai découvert le framework dans le cadre de mes études puis à travers un projet personnel, 
@@ -71,7 +71,7 @@ const SpringCompetence = `
 </section>
 
 <section class="comp-section">
-    <h3><b>Évolution</b></h3>
+    <h3>Évolution</h3>
     <p>
         À moyen terme, je souhaite approfondir mes compétences autour de l'écosystème Spring, notamment 
         sur des sujets avancés comme Spring Security, et l'intégration avec des orchestrateurs tels que Kubernetes. 

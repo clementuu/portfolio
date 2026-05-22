@@ -3,7 +3,7 @@ package tmpl
 // SvelteCompetence contient la description HTML de la compétence Svelte.
 const SvelteCompetence = `
 <section class="comp-section">
-    <h3><b>Définition</b></h3>
+    <h3>Définition</h3>
     <p>
         Svelte est un framework JavaScript moderne qui déplace le travail de l'exécution (runtime) 
         vers la compilation. Contrairement aux frameworks traditionnels comme React ou Vue, Svelte 
@@ -19,7 +19,7 @@ const SvelteCompetence = `
 </section>
 
 <section class="comp-section">
-    <h3><b>Éléments de preuve</b></h3>
+    <h3>Éléments de preuve</h3>
     <p>
         J'ai adopté Svelte comme mon framework de prédilection pour le développement d'interfaces web en raison de son approche novatrice (compilateur) et de l'excellente expérience de développement qu'il procure.
     </p>
@@ -42,7 +42,7 @@ const SvelteCompetence = `
 </section>
 
 <section class="comp-section">
-    <h3><b>Autocritique</b></h3>
+    <h3>Autocritique</h3>
     <p>
         Svelte est un des framework frontend que je maîtrise le mieux. Je suis à l'aise avec la réactivité, le système de composants, les stores et les transitions. 
         J'apprécie particulièrement sa philosophie «compiler-first», qui permet des performances proches du natif tout en gardant un framework léger et simple à utiliser. 
@@ -56,7 +56,7 @@ const SvelteCompetence = `
 </section>
 
 <section class="comp-section">
-    <h3><b>Évolution</b></h3>
+    <h3>Évolution</h3>
     <p>
         À moyen terme, je souhaite approfondir mon usage de SvelteKit pour construire des applications full-stack et mieux maîtriser le Server-Side Rendering (SSR) ainsi que le Static Site Generation (SSG). 
         Je veux également explorer davantage l'écosystème Svelte, notamment les solutions avancées de gestion d'état et les bibliothèques d'UI, 

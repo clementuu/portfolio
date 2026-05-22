@@ -3,7 +3,7 @@ package tmpl
 // RCompetence contient la description HTML de la compétence R.
 const RCompetence = `
 <section class="comp-section">
-    <h3><b>Définition</b></h3>
+    <h3>Définition</h3>
     <p>
         R est un langage de programmation et un environnement logiciel libre dédié aux statistiques et à la science des données. 
         Très populaire dans le milieu universitaire et en recherche, il offre un écosystème extrêmement riche pour la manipulation de données, 
@@ -17,7 +17,7 @@ const RCompetence = `
 </section>
 
 <section class="comp-section">
-    <h3><b>Éléments de preuve</b></h3>
+    <h3>Éléments de preuve</h3>
     <p>
         Ma maîtrise du langage R s'est illustrée lors de ma mission pour le service civique TousAntiGaspi, 
         où j'ai été chargé de mener une étude statistique complète sur le gaspillage alimentaire.
@@ -41,7 +41,7 @@ const RCompetence = `
 </section>
 
 <section class="comp-section">
-    <h3><b>Autocritique</b></h3>
+    <h3>Autocritique</h3>
     <p>
         Ma maîtrise de R est fonctionnelle. Je ne suis pas un développeur R aguerri, mais je connais suffisamment 
         bien l'écosystème pour comprendre dans quelles situations ce langage apporte une réelle valeur, notamment pour l'analyse statistique et l'exploration de données. 
@@ -56,7 +56,7 @@ const RCompetence = `
 </section>
 
 <section class="comp-section">
-    <h3><b>Évolution</b></h3>
+    <h3>Évolution</h3>
     <p>
         À moyen terme, je n'ai pas l'ambition de devenir expert en R, mais je souhaite conserver et renforcer une maîtrise pragmatique du langage. 
         Mon objectif est de rester capable d'utiliser R lorsque le contexte l'exige, notamment pour des analyses ponctuelles, 
@@ -69,7 +69,7 @@ const RCompetence = `
 </section>
 
 <section class="comp-section">
-    <h3>Projets Associés</h3>
+    <h5>Projets Associés</h5>
     <div class="project-list">
         <ul>
             <li><a class="project-link" href="/projets/detail.html?id=3">Mission TousAntiGaspi</a></li>

@@ -3,7 +3,7 @@ package tmpl
 // FlexibiliteCompetence contient la description HTML de la compétence Flexibilité.
 const FlexibiliteCompetence = `
 <section class="comp-section">
-    <h3><b>Définition</b></h3>
+    <h3>Définition</h3>
     <p>
         La flexibilité est la capacité de s'adapter rapidement et efficacement aux changements, 
         qu'il s'agisse de nouvelles technologies, de nouvelles exigences de projet ou de changements dans l'environnement de travail. 
@@ -18,7 +18,7 @@ const FlexibiliteCompetence = `
 </section>
 
 <section class="comp-section">
-    <h3><b>Éléments de preuve</b></h3>
+    <h3>Éléments de preuve</h3>
     <p>
         Ma flexibilité s'est manifestée concrètement dans divers contextes, me permettant de m'adapter rapidement aux évolutions technologiques et aux besoins changeants des projets.
     </p>
@@ -52,7 +52,7 @@ const FlexibiliteCompetence = `
 </section>
 
 <section class="comp-section">
-    <h3><b>Autocritique</b></h3>
+    <h3>Autocritique</h3>
     <p>
         Je considère ma flexibilité comme une compétence forte. Ma capacité à m'adapter à de nouveaux environnements techniques, 
         à apprendre rapidement et à pivoter sur des solutions est un atout majeur dans ma carrière. Cette compétence s'est développée 
@@ -66,7 +66,7 @@ const FlexibiliteCompetence = `
 </section>
 
 <section class="comp-section">
-    <h3><b>Évolution</b></h3>
+    <h3>Évolution</h3>
     <p>
         À moyen terme, je souhaite continuer à développer ma flexibilité en m'exposant délibérément à de nouvelles technologies et méthodologies. 
         Mon objectif est de pouvoir rapidement évaluer, apprendre et intégrer de nouvelles briques technologiques dans des projets complexes.

@@ -3,7 +3,7 @@ package tmpl
 // SQLCompetence contient la description HTML de la compétence SQL.
 const SQLCompetence = `
 <section class="comp-section">
-    <h3><b>Définition</b></h3>
+    <h3>Définition</h3>
     <p>
         SQL (Structured Query Language) est le langage de référence pour interagir avec les bases de données 
         relationnelles. Dans un contexte professionnel où les organisations s'appuient de plus en plus sur 
@@ -23,7 +23,7 @@ const SQLCompetence = `
 </section>
 
 <section class="comp-section">
-    <h3><b>Éléments de preuve</b></h3>
+    <h3>Éléments de preuve</h3>
     <p>
         Ma maîtrise de SQL s'est construite à travers des projets concrets où j'ai dû concevoir, refondre, 
         optimiser et sécuriser des bases de données complètes. Voici trois anecdotes illustrant l'application 
@@ -60,7 +60,7 @@ const SQLCompetence = `
 </section>
 
 <section class="comp-section">
-    <h3><b>Autocritique</b></h3>
+    <h3>Autocritique</h3>
     <p>
         Je considère ma maîtrise de SQL comme avancée et opérationnelle. C'est une compétence 
         essentielle dans mon métier de développeur full-stack, car elle conditionne la qualité, la performance 
@@ -77,7 +77,7 @@ const SQLCompetence = `
 </section>
 
 <section class="comp-section">
-    <h3><b>Évolution</b></h3>
+    <h3>Évolution</h3>
     <p>
         À moyen terme, je souhaite approfondir mes compétences en optimisation avancée (indexation fine, 
         analyse de plans d'exécution, partitionnement) et explorer davantage les problématiques de 

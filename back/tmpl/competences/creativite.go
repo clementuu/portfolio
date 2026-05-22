@@ -3,7 +3,7 @@ package tmpl
 // CreativiteCompetence contient la description HTML de la compétence Créativité.
 const CreativiteCompetence = `
 <section class="comp-section">
-    <h3><b>Définition</b></h3>
+    <h3>Définition</h3>
     <p>
         La créativité est la capacité à générer des idées nouvelles et pertinentes pour résoudre des 
         problèmes ou imaginer des solutions adaptées. En développement, elle ne se limite pas au 
@@ -20,7 +20,7 @@ const CreativiteCompetence = `
 </section>
 
 <section class="comp-section">
-    <h3><b>Éléments de preuve</b></h3>
+    <h3>Éléments de preuve</h3>
     <p>
         Ma créativité se manifeste dans ma capacité à concevoir des applications simples, intuitives et cohérentes, 
         à rendre des concepts complexes plus accessibles, et à trouver des approches originales pour résoudre des problèmes techniques.
@@ -56,7 +56,7 @@ const CreativiteCompetence = `
 </section>
 
 <section class="comp-section">
-    <h3><b>Autocritique</b></h3>
+    <h3>Autocritique</h3>
     <p>
         Je me considère comme quelqu'un de créatif, autant dans le développement que dans d'autres domaines. 
         J'aime imaginer des concepts simples et efficaces, expérimenter de nouvelles idées et trouver des solutions 
@@ -71,7 +71,7 @@ const CreativiteCompetence = `
 </section>
 
 <section class="comp-section">
-    <h3><b>Évolution</b></h3>
+    <h3>Évolution</h3>
     <p>
         À moyen terme, je souhaite continuer à développer ma créativité en explorant des approches comme le Design Thinking 
         et l'UX/UI Design. Mon objectif est d'intégrer davantage les principes de conception centrée utilisateur dans mes projets, 

@@ -3,7 +3,7 @@ package tmpl
 // GoCompetence contient la description HTML de la compétence Go.
 const GoCompetence = `
 <section class="comp-section">
-    <h3><b>Définition</b></h3>
+    <h3>Définition</h3>
     <p>
         Go, souvent appelé Golang, est un langage de programmation compilé et concurrentiel développé par Google. 
         Il est reconnu pour sa simplicité, sa performance et sa robustesse, ce qui en fait un choix privilégié 
@@ -19,7 +19,7 @@ const GoCompetence = `
 </section>
 
 <section class="comp-section">
-    <h3><b>Éléments de preuve</b></h3>
+    <h3>Éléments de preuve</h3>
     <p>
         Dans le cadre des projets Escarcelle et Caisse, 
         j'ai développé l'intégralité du backend et de l'application de caisse en Go. 
@@ -49,7 +49,7 @@ const GoCompetence = `
 </section>
 
 <section class="comp-section">
-    <h3><b>Autocritique</b></h3>
+    <h3>Autocritique</h3>
     <p>
         Je considère ma maîtrise de Go comme avancée. J'ai une solide compréhension de ses idiomes, de sa gestion de la concurrence (goroutines, channels) et de son écosystème. 
         C'est aujourd'hui ma compétence technique la plus forte pour le développement backend et les outils CLI. 
@@ -62,7 +62,7 @@ const GoCompetence = `
 </section>
 
 <section class="comp-section">
-    <h3><b>Évolution</b></h3>
+    <h3>Évolution</h3>
     <p>
         À moyen terme, je souhaite approfondir ma connaissance des frameworks web Go (comme Gin ou Echo) pour des APIs encore plus optimisées, ainsi que les déploiements sur Kubernetes. 
         Je suis également intéressé par l'intégration de Go avec des bases de données NoSQL et l'exploration de solutions d'observabilité natives (Prometheus, Grafana) pour des architectures distribuées. 

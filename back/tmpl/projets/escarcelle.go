@@ -74,27 +74,30 @@ const EscarcelleHTML = `
         à la modernisation progressive de l'écosystème :
     </p>
 
-    <ul>
+    <ul class="actors-list">
         <li>
-            <strong>Brahim Hamdouni</strong> - responsable de la vision technique 
-            globale, des choix d'architecture, de la priorisation des évolutions et de la coordination 
-            entre les différents modules.
+            <strong>Brahim Hamdouni</strong>
+            Responsable de la vision technique globale, des choix d'architecture, de la priorisation 
+            des évolutions et de la coordination entre les différents modules.
         </li>
 
         <li>
-            <strong>Moi-même</strong> - en charge de la modernisation du socle existant, 
-            de la refonte de modules critiques, de la création de nouveaux services et de la migration 
-            progressive du legacy vers la stack moderne <a class="link" href="/competences/detail.html?id=1">Go</a>/<a class="link" href="/competences/detail.html?id=4">Svelte</a>.
+            <strong>Moi-même</strong>
+            En charge de la modernisation du socle existant, de la refonte de modules critiques, de la 
+            création de nouveaux services et de la migration progressive du legacy vers la stack moderne 
+            <a class="link" href="/competences/detail.html?id=1">Go</a>/<a class="link" href="/competences/detail.html?id=4">Svelte</a>.
         </li>
 
         <li>
-            <strong>L'équipe de test</strong> - intervenant sur la qualification fonctionnelle, 
-            la détection des anomalies et la conformité aux besoins métier.
+            <strong>L'équipe de test</strong>
+            Intervenant sur la qualification fonctionnelle, la détection des anomalies et la conformité 
+            aux besoins métier.
         </li>
 
         <li>
-            <strong>Les épiceries solidaires</strong> - apportant des retours terrain essentiels 
-            pour orienter les priorités, identifier les irritants et valider les évolutions.
+            <strong>Les épiceries solidaires</strong>
+            Apportant des retours terrain essentiels pour orienter les priorités, identifier les irritants 
+            et valider les évolutions.
         </li>
     </ul>
 
@@ -146,10 +149,10 @@ const EscarcelleHTML = `
                     <li>
                         Mise à jour du code <a class="link" href="/competences/detail.html?id=9">Rebol</a> de l'application de gestion et de l'ancienne caisse afin 
                         d'intégrer la nouvelle structure de catégories.
-                    </li
+                    </li>
                     <li>
                         Maintenance corrective et évolutive sur un codebase historique nécessitant une 
-                        compréhension fine du fonctionnement interne et des contraintes métier.<br>
+                        compréhension fine du fonctionnement interne et des contraintes métier.
                     </li>
                     <li>
                         Décommission progressive de certaines parties du legacy grâce à la création de nouveaux 

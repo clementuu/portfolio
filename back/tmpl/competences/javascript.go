@@ -3,7 +3,7 @@ package tmpl
 // JavaScriptCompetence contient la description HTML de la compétence JavaScript.
 const JavaScriptCompetence = `
 <section class="comp-section">
-    <h3><b>Définition</b></h3>
+    <h3>Définition</h3>
     <p>
         JavaScript est un langage de programmation de scripts principalement employé dans les pages web interactives, 
         mais il est aussi utilisé côté serveur (avec Node.js), pour des applications mobiles et de bureau. 
@@ -18,7 +18,7 @@ const JavaScriptCompetence = `
 </section>
 
 <section class="comp-section">
-    <h3><b>Éléments de preuve</b></h3>
+    <h3>Éléments de preuve</h3>
     <p>
         Ma maîtrise de JavaScript s'étend du développement "vanilla" (sans framework) pour des expériences interactives sur-mesure, 
         à son utilisation au cœur d'applications web modernes via des frameworks réactifs.
@@ -35,7 +35,7 @@ const JavaScriptCompetence = `
 </section>
 
 <section class="comp-section">
-    <h3><b>Autocritique</b></h3>
+    <h3>Autocritique</h3>
     <p>
         Je me considère comme un développeur JavaScript de niveau intermédiaire. J'ai de bonnes bases dans le langage et je suis à l'aise avec des concepts comme les closures, 
         le prototypage ou async/await. J'ai également une expérience concrète sur le front-end moderne et la manipulation du DOM.  
@@ -48,7 +48,7 @@ const JavaScriptCompetence = `
 </section>
 
 <section class="comp-section">
-    <h3><b>Évolution</b></h3>
+    <h3>Évolution</h3>
     <p>
         À moyen terme, j'aimerais approfondir mes connaissances de l'écosystème JavaScript, en particulier Node.js pour le backend et les outils CLI. 
         Je suis également curieux d'explorer React, même si je ne m'y suis pas encore vraiment mis : 
@@ -62,7 +62,7 @@ const JavaScriptCompetence = `
 </section>
 
 <section class="comp-section">
-    <h3>Projets Associés</h3>
+    <h5>Projets Associés</h5>
     <div class="project-list">
         <ul>
             <li><a class="project-link" href="/projets/detail.html?id=4">Jeu Anti-Gaspi</a></li>

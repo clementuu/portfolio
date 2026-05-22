@@ -3,7 +3,7 @@ package tmpl
 // WebCompetence contient la description HTML de la compétence Web (HTML/CSS).
 const WebCompetence = `
 <section class="comp-section">
-    <h3><b>Définition</b></h3>
+    <h3>Définition</h3>
     <p>
         Le développement web repose sur deux langages fondamentaux : HTML pour structurer 
         le contenu et CSS pour en définir l'apparence. Dans un contexte professionnel où 
@@ -18,7 +18,7 @@ const WebCompetence = `
 </section>
 
 <section class="comp-section">
-    <h3><b>Éléments de preuve</b></h3>
+    <h3>Éléments de preuve</h3>
     <p>
         Mes compétences se sont illustrées à travers des projets variés, allant d'applications de gestion complètes à des outils ludo-éducatifs. Voici quelques exemples concrets.
     </p>
@@ -44,7 +44,7 @@ const WebCompetence = `
 </section>
 
 <section class="comp-section">
-    <h3><b>Autocritique</b></h3>
+    <h3>Autocritique</h3>
     <p>
         Je considère ma maîtrise du développement web comme solide et polyvalente, bien que toujours perfectible. 
         HTML et CSS constituent un socle essentiel dans mon profil full-stack, me permettant de créer des interfaces esthétiques, accessibles et performantes. 
@@ -58,7 +58,7 @@ const WebCompetence = `
 </section>
 
 <section class="comp-section">
-    <h3><b>Évolution</b></h3>
+    <h3>Évolution</h3>
     <p>
         À moyen terme, je souhaite approfondir mes compétences en UI/UX Design, afin des maîtriser les fondements et de concevoir des interfaces plus intutives. 
         Je m'intéresse également aux nouvelles spécifications CSS (container queries, subgrid, CSS nesting) qui offrent des mises en page encore plus flexibles.

@@ -3,7 +3,7 @@ package tmpl
 // RebolCompetence contient la description HTML de la compétence Rebol.
 const RebolCompetence = `
 <section class="comp-section">
-    <h3><b>Définition</b></h3>
+    <h3>Définition</h3>
     <p>
         REBOL (Relative Expression-Based Object Language) est un langage d'échange de données et un langage de programmation 
         multiplateforme connu pour sa syntaxe concise et sa capacité à créer des langages spécifiques à un domaine (DSL).
@@ -18,7 +18,7 @@ const RebolCompetence = `
 </section>
 
 <section class="comp-section">
-    <h3><b>Éléments de preuve</b></h3>
+    <h3>Éléments de preuve</h3>
     <p>
         Mon expertise sur REBOL a été acquise dans un contexte de modernisation du projet Escarcelle, 
         où j'ai travaillé sur un écosystème logiciel historique. Mes interventions ont été cruciales pour assurer la 
@@ -53,7 +53,7 @@ const RebolCompetence = `
 </section>
 
 <section class="comp-section">
-    <h3><b>Autocritique</b></h3>
+    <h3>Autocritique</h3>
     <p>
         Ma maîtrise de REBOL est avant tout pratique et orientée maintenance. Je comprends suffisamment le langage
         pour analyser une base de code existante, corriger des comportements, résoudre des anomalies ou enrichir
@@ -68,7 +68,7 @@ const RebolCompetence = `
 </section>
 
 <section class="comp-section">
-    <h3><b>Évolution</b></h3>
+    <h3>Évolution</h3>
     <p>
         À moyen terme, ma priorité n'est pas de me spécialiser davantage dans REBOL, 
         mais d'utiliser cette expérience comme levier pour l'apprentissage rapide de tout nouveau langage ou écosystème. 
@@ -81,7 +81,7 @@ const RebolCompetence = `
 </section>
 
 <section class="comp-section">
-    <h3>Projets Associés</h3>
+    <h5>Projets Associés</h5>
     <div class="project-list">
         <ul>
             <li><a class="project-link" href="/projets/detail.html?id=1">Escarcelle</a></li>

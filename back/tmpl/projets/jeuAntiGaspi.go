@@ -56,20 +56,23 @@ const JeuAntiGaspiHTML = `
         Les interactions se faisaient principalement avec :
     </p>
 
-    <ul>
+    <ul class="actors-list">
         <li>
-            <strong>Moi-même</strong> - responsable de la conception, du développement, 
-            des tests, de l'équilibrage du gameplay, de l'intégration des contenus pédagogiques et de l'animation des ateliers.
+            <strong>Moi-même</strong> 
+            Responsable de la conception, du développement, des tests, de l'équilibrage du gameplay, 
+            de l'intégration des contenus pédagogiques et de l'animation des ateliers.
         </li>
 
         <li>
-            <strong>La mairie de Saint-Jean-de-Védas</strong> - commanditaire du projet, définissant les objectifs 
-            pédagogiques et validant les mécaniques liées aux éco-gestes.
+            <strong>La mairie de Saint-Jean-de-Védas</strong> 
+            Commanditaire du projet, définissant les objectifs pédagogiques et validant les mécaniques 
+            liées aux éco-gestes.
         </li>
 
         <li>
-            <strong>Les enfants</strong> - leurs retours informels ont permis d'ajuster la difficulté, 
-            la lisibilité des actions et la dimension ludique du jeu.
+            <strong>Les enfants</strong>
+            Leurs retours informels ont permis d'ajuster la difficulté, la lisibilité des actions et la 
+            dimension ludique du jeu.
         </li>
     </ul>
 

@@ -55,11 +55,11 @@ const PmtHTML = `
         l'ensemble des rôles nécessaires à sa réalisation :
     </p>
 
-    <ul>
+    <ul class="actors-list">
         <li>
-            <strong>Moi-même</strong> - responsable de la conception 
-            fonctionnelle, du développement backend et frontend, des tests, de la conteneurisation 
-            et utilisateur de l'outil.
+            <strong>Moi-même</strong> 
+            Responsable de la conception fonctionnelle, du développement backend et frontend, 
+            des tests, de la conteneurisation et utilisateur de l'outil.
         </li>
     </ul>
 

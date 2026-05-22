@@ -70,28 +70,29 @@ const CaisseHTML = `
         Le projet a mobilisé plusieurs acteurs aux rôles complémentaires :
     </p>
 
-    <ul>
+    <ul class="actors-list">
         <li>
-            <strong>Moi-même</strong> - en charge de la conception, du développement, 
-            des choix techniques, de l'architecture et de la coordination globale du projet.
+            <strong>Moi-même</strong> 
+            En charge de la conception, du développement, des choix techniques, de l'architecture 
+            et de la coordination globale du projet.
         </li>
 
         <li>
-            <strong>Brahim Hamdouni</strong> - garant de la cohérence technique et fonctionnelle, 
-            apportant un accompagnement régulier, des validations d'architecture et des retours 
-            sur les choix de conception.
+            <strong>Brahim Hamdouni</strong> 
+            Garant de la cohérence technique et fonctionnelle, apportant un accompagnement régulier, 
+            des validations d'architecture et des retours sur les choix de conception.
         </li>
 
         <li>
-            <strong>L'équipe de test</strong> - responsable de la 
-            détection des anomalies, de la validation des workflows utilisateurs et de la 
+            <strong>L'équipe de test</strong> 
+            Responsable de la détection des anomalies, de la validation des workflows utilisateurs et de la 
             conformité aux besoins métier.
         </li>
 
         <li>
-            <strong>Les épiceries solidaires (utilisateurs finaux)</strong> - parties prenantes essentielles 
-            pour la compréhension des usages réels, la remontée des irritants, la priorisation 
-            des fonctionnalités et la validation terrain.
+            <strong>Les épiceries solidaires</strong> 
+            Parties prenantes essentielles pour la compréhension des usages réels, la remontée des irritants, 
+            la priorisation des fonctionnalités et la validation terrain.
         </li>
     </ul>
 

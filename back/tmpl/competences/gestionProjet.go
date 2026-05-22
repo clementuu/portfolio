@@ -3,7 +3,7 @@ package tmpl
 // GestionProjetCompetence contient la description HTML de la compétence en gestion de projet.
 const GestionProjetCompetence = `
 <section class="comp-section">
-    <h3><b>Définition</b></h3>
+    <h3>Définition</h3>
     <p>
         La gestion de projet est l'art de planifier, d'organiser, de sécuriser et de gérer les ressources 
         pour atteindre des objectifs spécifiques dans des délais définis. Cela inclut la définition des 
@@ -20,7 +20,7 @@ const GestionProjetCompetence = `
 </section>
 
 <section class="comp-section">
-    <h3><b>Éléments de preuve</b></h3>
+    <h3>Éléments de preuve</h3>
     <p>
         J'ai appliqué les principes de la gestion de projet sur des initiatives complexes, où ma capacité à naviguer entre 
         les contraintes techniques, les besoins fonctionnels et les attentes des parties prenantes a été déterminante.
@@ -47,7 +47,7 @@ const GestionProjetCompetence = `
 </section>
 
 <section class="comp-section">
-    <h3><b>Autocritique</b></h3>
+    <h3>Autocritique</h3>
     <p>
         Ma maîtrise de la gestion de projet est à un niveau intermédiaire. Ayant évolué 
         dans de petites structures et sur des postes à dominante technique, j'ai souvent été amené à gérer des 
@@ -64,7 +64,7 @@ const GestionProjetCompetence = `
 </section>
 
 <section class="comp-section">
-    <h3><b>Évolution</b></h3>
+    <h3>Évolution</h3>
     <p>
         À moyen terme, je souhaite renforcer mes compétences en gestion de projet afin de pouvoir évoluer vers 
         des rôles plus transversaux. Je prévois de me former davantage aux méthodologies Agiles (Scrum, Kanban) et aux 
