@@ -6,7 +6,7 @@ const EscarcelleHTML = `
 <!-- SECTION : TITRE ET INTRODUCTION DU PROJET                           -->
 <!-- =================================================================== -->
 <section class="project-section">
-    <h3><b>Présentation</b></h3>
+    <h3>Présentation</h3>
 
     <p>
         <b>Escarcelle</b> est un système d'information complet dédié aux épiceries solidaires. 
@@ -38,7 +38,7 @@ const EscarcelleHTML = `
 </section>
 
 <section class="project-section">
-    <h3><b>Contexte et Enjeux</b></h3>
+    <h3>Contexte et Enjeux</h3>
     <p>
         Escarcelle est utilisé quotidiennement par plus de 625 épiceries solidaires, représentant 
         plus de 1,42 million de distributions et plus de 114 000 familles bénéficiaires. Moderniser 
@@ -68,7 +68,7 @@ const EscarcelleHTML = `
         bénéficiaires.
     </p>
 
-    <h3><b>Acteurs et Interactions</b></h3>
+    <h3>Acteurs et Interactions</h3>
     <p>
         Le projet Escarcelle a impliqué plusieurs acteurs aux rôles complémentaires, chacun contribuant 
         à la modernisation progressive de l'écosystème :
@@ -110,7 +110,7 @@ const EscarcelleHTML = `
 <!-- SECTION : MISSIONS ET COMPÉTENCES DÉVELOPPÉES                       -->
 <!-- =================================================================== -->
 <section class="project-section">
-    <h3><b>Missions et Compétences Développées</b></h3>
+    <h3>Missions et Compétences Développées</h3>
     <p>
         Mon intervention sur Escarcelle a couvert un large spectre technique, allant de la modernisation 
         d'un socle existant à la conception de nouveaux modules. Ce projet m'a permis de renforcer mes 
@@ -246,7 +246,7 @@ const EscarcelleHTML = `
 <!-- SECTION : CONCLUSION                                                -->
 <!-- =================================================================== -->
 <section class="project-section">
-    <h3><b>Résultats</b></h3>
+    <h3>Résultats</h3>
     <p>
         Escarcelle est aujourd'hui une plateforme plus moderne, plus performante et plus simple à 
         maintenir. Les épiceries bénéficient d'outils plus fiables, d'une gestion des produits 
@@ -261,7 +261,7 @@ const EscarcelleHTML = `
         et conception de modules à fort impact métier.
     </p>
 
-    <h3><b>Pour la suite</b></h3>
+    <h3>Pour la suite</h3>
     <p>
         Les évolutions à venir concernent principalement la poursuite de la migration du legacy, 
         l'amélioration continue des workflows avec la refonte de certains modules et processus, 
@@ -270,7 +270,7 @@ const EscarcelleHTML = `
         fluide et plus sécurisée.
     </p>
 
-    <h3><b>Mon regard critique</b></h3>
+    <h3>Mon regard critique</h3>
     <p>
         Je considère ce projet comme une réussite solide, autant sur le plan technique que sur 
         l'impact social. La nouvelle architecture, les migrations et les différentes évolutions 

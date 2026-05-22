@@ -5,7 +5,7 @@ const JeuAntiGaspiHTML = `
 <!-- SECTION : TITRE ET INTRODUCTION DU PROJET                           -->
 <!-- =================================================================== -->
 <section class="project-section">
-    <h3><b>Présentation</b></h3>
+    <h3>Présentation</h3>
 
     <p>
         Ce projet est un jeu vidéo 2D conçu pour sensibiliser les enfants aux éco-gestes et à la 
@@ -27,7 +27,7 @@ const JeuAntiGaspiHTML = `
 </section>
 
 <section class="project-section">
-    <h3><b>Contexte et Enjeux</b></h3>
+    <h3>Contexte et Enjeux</h3>
     <p>
         Ce projet a été réalisé dans le cadre de mon service civique au sein de la mairie de 
         Saint-Jean-de-Védas. Ma mission consistait à concevoir et animer un atelier destiné aux 
@@ -49,7 +49,7 @@ const JeuAntiGaspiHTML = `
         dans des conditions matérielles variées.
     </p>
 
-    <h3><b>Acteurs et Interactions</b></h3>
+    <h3>Acteurs et Interactions</h3>
     <p>
         Ce projet a été réalisé dans un contexte particulier : j'étais le seul développeur et testeur, 
         chargé de concevoir l'intégralité du jeu, de son gameplay à son intégration graphique. 
@@ -83,7 +83,7 @@ const JeuAntiGaspiHTML = `
 <!-- SECTION : MISSIONS ET COMPÉTENCES DÉVELOPPÉES                       -->
 <!-- =================================================================== -->
 <section class="project-section">
-    <h3><b>Missions et Compétences Développées</b></h3>
+    <h3>Missions et Compétences Développées</h3>
     <p>
         Ce projet m'a permis de découvrir et d'expérimenter les fondations du développement de jeux 
         2D en <a class="link" href="/competences/detail.html?id=3">JavaScript</a>. 
@@ -155,7 +155,7 @@ const JeuAntiGaspiHTML = `
 <!-- SECTION : CONCLUSION                                                -->
 <!-- =================================================================== -->
 <section class="project-section">
-    <h3><b>Résultats</b></h3>
+    <h3>Résultats</h3>
     <p>
         Ce jeu anti-gaspi est un projet qui me tient particulièrement à cœur. Bien que son code ne 
         reflète plus mon niveau actuel, il représente une étape fondatrice dans mon parcours de 
@@ -171,7 +171,7 @@ const JeuAntiGaspiHTML = `
         la commune.
     </p>
 
-    <h3><b>Pour la suite</b></h3>
+    <h3>Pour la suite</h3>
     <p>
         Aucune évolution fonctionnelle n'est prévue pour l'instant, mais j'envisage une refonte 
         complète afin d'améliorer la qualité du code, moderniser la structure et faciliter la 
@@ -180,7 +180,7 @@ const JeuAntiGaspiHTML = `
         puisse continuer à être utilisé dans un cadre éducatif ou associatif.
     </p>
 
-    <h3><b>Mon regard critique</b></h3>
+    <h3>Mon regard critique</h3>
     <p>
         Si je devais donner mon avis je dirais que malgré ses lacunes ce projet est un véritable 
         accomplissement. Les enfants ont apprécié le jeu, les ateliers se sont très bien déroulés 

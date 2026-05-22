@@ -5,7 +5,7 @@ const PmtHTML = `
 <!-- SECTION : TITRE ET INTRODUCTION DU PROJET                           -->
 <!-- =================================================================== -->
 <section class="project-section">
-    <h3><b>Présentation</b></h3>
+    <h3>Présentation</h3>
 
     <p>
         <b>PMT (Project Management Tool)</b> est une application web full-stack développée dans le 
@@ -28,7 +28,7 @@ const PmtHTML = `
 </section>
 
 <section class="project-section">
-    <h3><b>Contexte et Enjeux</b></h3>
+    <h3>Contexte et Enjeux</h3>
     <p>
         Ce projet a été réalisé dans le cadre d'une étude de cas durant mon master, avec pour 
         objectif principal de mettre en pratique une stack technique que je n'avais encore jamais 
@@ -49,7 +49,7 @@ const PmtHTML = `
         développement web, en architecture logicielle et en outillage DevOps.
     </p>
 
-    <h3><b>Acteurs et Interactions</b></h3>
+    <h3>Acteurs et Interactions</h3>
     <p>
         PMT est un projet entièrement personnel, conçu et développé en autonomie. J'ai assuré 
         l'ensemble des rôles nécessaires à sa réalisation :
@@ -74,7 +74,7 @@ const PmtHTML = `
 <!-- SECTION : MISSIONS ET COMPÉTENCES DÉVELOPPÉES                       -->
 <!-- =================================================================== -->
 <section class="project-section">
-    <h3><b>Missions et Compétences Développées</b></h3>
+    <h3>Missions et Compétences Développées</h3>
     <p>
         Ce projet complet m'a permis de maîtriser l'ensemble du cycle de vie d'une application web 
         moderne, de la conception de la base de données à la conteneurisation, en passant par le 
@@ -152,33 +152,33 @@ const PmtHTML = `
 <!-- SECTION : CONCLUSION                                                -->
 <!-- =================================================================== -->
 <section class="project-section">
-    <h3><b>Résultats</b></h3>
+    <h3>Résultats</h3>
     <p>
-        PMT est un projet intégrateur qui démontre ma capacité à concevoir, développer et déployer 
-        une application web complète en autonomie.  
+        PMT est un projet intégrateur qui démontre ma capacité à concevoir et à développer 
+        une application web complète en autonomie. 
         Il met en évidence ma maîtrise de la stack <b>Java/Spring</b> côté serveur, 
-        <b>Angular</b> côté client, ainsi que des outils DevOps modernes comme <b>Docker</b>.  
+        <b>Angular</b> côté client, ainsi que des outils DevOps comme <b>Docker</b> ou <b>Make</b>.  
         Ce projet a été un excellent exercice pour comprendre les enjeux d'une architecture 
         full-stack moderne et renforcer ma polyvalence.
     </p>
 
-    <h3><b>Pour le futur</b></h3>
+    <h3>Pour le futur</h3>
     <p>
         PMT est destiné à devenir mon outil personnel pour organiser mes projets.  
-        J'envisage de le rendre accessible en ligne, ce qui nécessitera une gestion multi-utilisateurs, 
-        une authentification renforcée et une réarchitecture partielle pour supporter plusieurs 
-        organisations.  
+        J'aimerais le rendre accessible en ligne, ce qui demandera quelques ajustements. 
+        Je devrai réarchitecturer en partie le projet pour supporter plusieurs organisations, mais aussi 
+        améliorer la sécurité en implémentant une authentification via JWT par exemple. 
         Ces évolutions permettront d'en faire un outil plus générique, plus sécurisé et potentiellement 
         utilisable par un public plus large.
     </p>
 
-    <h3><b>Mon analyse critique</b></h3>
+    <h3>Mon analyse critique</h3>
     <p>
-        Sans grands enjeux, PMT reste un projet très formateur. Il m'a permis de découvrir une stack 
-        technique complète et de comprendre les bonnes pratiques du développement full-stack.  
+        Sans grands enjeux, PMT reste un projet très formateur. Il m'a permis de mettre en œuvre une stack 
+        technique que je découvrais et de m'améliorer en développement full-stack.  
         J'aurais pu aller plus loin sur certains aspects, notamment les tests automatisés, la gestion 
         fine des rôles utilisateurs ou la CI/CD.  
-        Malgré cela, ce projet reste une excellente démonstration de ma capacité à mener un 
+        Malgré cela, ce projet reste une bonne démonstration de ma capacité à mener un 
         développement complet en autonomie.
     </p>
 </section>

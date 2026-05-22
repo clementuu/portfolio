@@ -5,7 +5,7 @@ const MissionAntiGaspiHTML = `
 <!-- SECTION : TITRE ET INTRODUCTION DU PROJET                           -->
 <!-- =================================================================== -->
 <section class="project-section">
-    <h3><b>Présentation</b></h3>
+    <h3>Présentation</h3>
 
     <p>
         <b>TousAntiGaspi</b> est une mission menée dans le cadre de mon service civique pour la mairie 
@@ -24,7 +24,7 @@ const MissionAntiGaspiHTML = `
 </section>
 
 <section class="project-section">
-    <h3><b>Contexte et Enjeux</b></h3>
+    <h3>Contexte et Enjeux</h3>
     <p>
         En 2021, la commune faisait face à un constat préoccupant : près de <b>46 %</b> de la nourriture 
         livrée par le traiteur n'était pas consommée, soit en moyenne <b>268 g de gaspillage par enfant 
@@ -49,7 +49,7 @@ const MissionAntiGaspiHTML = `
         le futur marché de restauration scolaire.
     </p>
 
-    <h3><b>Acteurs et Interactions</b></h3>
+    <h3>Acteurs et Interactions</h3>
     <p>
         La mission TousAntiGaspi a mobilisé deux acteurs principaux aux rôles clairement définis :
     </p>
@@ -81,7 +81,7 @@ const MissionAntiGaspiHTML = `
 <!-- SECTION : MISSIONS ET COMPÉTENCES DÉVELOPPÉES                       -->
 <!-- =================================================================== -->
 <section class="project-section">
-    <h3><b>Missions et Compétences Développées</b></h3>
+    <h3>Missions et Compétences Développées</h3>
     <p>
         Cette mission m'a permis de combiner travail de terrain, analyse statistique avancée et 
         communication scientifique. J'ai mené l'ensemble du processus, de la collecte des données 
@@ -148,7 +148,6 @@ const MissionAntiGaspiHTML = `
                 Aide à la préparation du futur marché public de restauration scolaire.
             </p>
         </div>
-
     </div>
 </section>
 
@@ -156,7 +155,7 @@ const MissionAntiGaspiHTML = `
 <!-- SECTION : CONCLUSION                                                -->
 <!-- =================================================================== -->
 <section class="project-section">
-    <h3><b>Résultats</b></h3>
+    <h3>Résultats</h3>
     <p>
         L'étude a permis de mettre en évidence une baisse significative du gaspillage alimentaire 
         entre 2021 et 2023, passant de 268 g à 177 g par enfant et par repas.  
@@ -172,7 +171,7 @@ const MissionAntiGaspiHTML = `
         analyse de données appliquée à des enjeux réels.
     </p>
 
-    <h3><b>Pour le futur</b></h3>
+    <h3>Pour le futur</h3>
     <p>
         Les résultats de l'étude ont servi de base à la réflexion sur le futur marché public de 
         restauration scolaire.  
@@ -181,7 +180,7 @@ const MissionAntiGaspiHTML = `
         régulier des pesées.
     </p>
 
-    <h3><b>Mon analyse critique</b></h3>
+    <h3>Mon analyse critique</h3>
     <p>
         Cette mission était importante, et a été un succès. les données ont permis d'éclairer des 
         décisions publiques et d'améliorer les pratiques dans les cantines.  

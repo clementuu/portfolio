@@ -6,7 +6,7 @@ const CaisseHTML = `
 <!-- SECTION : INTRODUCTION DU PROJET                           -->
 <!-- =================================================================== -->
 <section class="project-section">
-    <h3><b>Présentation</b></h3>
+    <h3>Présentation</h3>
 
     <p>
         Pour ce projet j'ai complètement repensé l'application de caisse Escarcelle, un outil 
@@ -36,7 +36,7 @@ const CaisseHTML = `
 </section>
 
 <section class="project-section">
-    <h3><b>Contexte et Enjeux</b></h3>
+    <h3>Contexte et Enjeux</h3>
     <p>
         La caisse est un outil critique pour tous les utilisateurs d'Escarcelle. Elle conditionne le bon 
         fonctionnement de centaines d'épiceries solidaires. Un dsyfonctionnement ou une interruption de service 
@@ -65,7 +65,7 @@ const CaisseHTML = `
         maîtrisée, tout en garantissant la continuité de service.
     </p>
 
-    <h3><b>Acteurs et Interactions</b></h3>
+    <h3>Acteurs et Interactions</h3>
     <p>
         Le projet a mobilisé plusieurs acteurs aux rôles complémentaires :
     </p>
@@ -106,7 +106,7 @@ const CaisseHTML = `
 <!-- SECTION : MISSIONS ET COMPÉTENCES DÉVELOPPÉES                       -->
 <!-- =================================================================== -->
 <section class="project-section">
-    <h3><b>Missions et Compétences Développées</b></h3>
+    <h3>Missions et Compétences Développées</h3>
     <p>
         L'application repose sur une architecture modulaire et événementielle permettant de découpler 
         l'interface, la logique métier, la synchronisation réseau et la gestion des données locales. 
@@ -115,7 +115,6 @@ const CaisseHTML = `
     </p>
 
     <div class="skills-grid">
-
         <div class="skill-item">
             <strong>Interface Graphique (Fyne)</strong>
             <p>
@@ -197,7 +196,6 @@ const CaisseHTML = `
                 </ul>
             </p>
         </div>
-
     </div>
 </section>
 
@@ -205,7 +203,7 @@ const CaisseHTML = `
 <!-- SECTION : CONCLUSION                                                -->
 <!-- =================================================================== -->
 <section class="project-section">
-    <h3><b>Résultats</b></h3>
+    <h3>Résultats</h3>
     <p>
         La refonte de la caisse Escarcelle a été un succès majeur, autant pour l'entreprise que pour 
         moi. Pour Softinnov, elle a permis de moderniser un outil central utilisé par plus de 600 
@@ -222,7 +220,7 @@ const CaisseHTML = `
         de périphériques et en pilotage complet d'un projet stratégique, du cadrage à la livraison.
     </p>
 
-    <h3><b>Pour la suite</b></h3>
+    <h3>Pour la suite</h3>
     <p>
         La nouvelle caisse constitue désormais un socle robuste pour l'écosystème Escarcelle. Les 
         évolutions à venir porteront principalement sur des améliorations fonctionnelles, 
@@ -232,7 +230,7 @@ const CaisseHTML = `
         manière fluide, sans remettre en cause la stabilité du système.
     </p>
 
-    <h3><b>Mon regard critique</b></h3>
+    <h3>Mon regard critique</h3>
     <p>
         Avec du recul, je pense que ce projet est une vraie réussite. Le nouvel outil a été adopté 
         sans problème, les retours des utilisateurs étaient positifs, et on n'a eu aucune interruption de service, 
