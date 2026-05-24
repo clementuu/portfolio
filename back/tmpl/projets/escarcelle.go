@@ -9,7 +9,7 @@ const EscarcelleHTML = `
     <h3>Présentation</h3>
 
     <p>
-        <b>Escarcelle</b> est un système d'information complet dédié aux épiceries solidaires. 
+        <strong>Escarcelle</strong> est un système d'information complet dédié aux épiceries solidaires. 
         Initialement conçu comme un outil de gestion interne, il a progressivement évolué vers un 
         véritable écosystème numérique regroupant une application web moderne, une caisse connectée 
         et une API ouverte aux partenaires externes.
@@ -31,9 +31,18 @@ const EscarcelleHTML = `
     </p>
 
     <ul class="escarcelle-list">
-        <li><b>Application Web de Gestion</b> gestion des stocks, bénéficiaires, produits, rapports.</li>
-        <li><b>Application de Caisse</b> enregistrement des ventes en boutique, synchronisée avec l'API.</li>
-        <li><b>API Partenaire</b> interface sécurisée pour les intégrations externes (ex : click & collect).</li>
+        <li>
+            <strong>Application de Gestion</strong>
+            Gestion des stocks, bénéficiaires, produits, rapports.
+        </li>
+        <li>
+            <strong>Logiciel de Caisse</strong> 
+            Enregistrement des ventes en boutique, synchronisée avec l'API.
+        </li>
+        <li>
+            <strong>API Partenaire</strong>
+            Interface sécurisée pour les intégrations externes (ex : click & collect).
+        </li>
     </ul>
 </section>
 
@@ -225,8 +234,10 @@ const EscarcelleHTML = `
             <p>
                 Développement d'un outil complet permettant d'importer et transformer les données 
                 d'OpenFoodFacts pour accélérer le référencement des produits.  
-                Mise en place d'un algorithme de scoring pour proposer automatiquement la catégorie 
+                Cet outil inclus un algorithme de scoring qui proposer automatiquement la catégorie 
                 Escarcelle la plus pertinente.  
+            </p>
+            <p>
                 Intégration dans l'application : préremplissage automatique des fiches produits à 
                 partir du code-barres.
             </p>
@@ -236,7 +247,7 @@ const EscarcelleHTML = `
             <strong>Outils CLI & Environnement de Développement</strong>
             <p>
                 Création d'applications en ligne de commande pour automatiser des tâches complexes 
-                (import OFF, vérifications d'intégrité, migrations).  
+                (import OFF, vérifications d'intégrité des données, migrations).  
                 Amélioration de l'environnement de développement : scripts, automatisations, 
                 outils internes facilitant les tests, la maintenance et la montée en compétence 
                 des nouveaux développeurs.

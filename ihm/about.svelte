@@ -18,12 +18,12 @@
             </p>
             <h4>Ce qui m'anime</h4>
             <p>
-                J'ai toujours été un vrai « touche à tout ». J'ai toujours eu besoin d'<b>explorer</b>, de <b>comprendre</b>, 
-                de <b>tester</b>. Cette curiosité m'a suivi partout : dans mes lectures, mes projets, mes passions… et a forgé ma vision actuelle : 
+                J'ai toujours été un vrai « touche à tout ». J'ai toujours eu besoin d'<strong>explorer</strong>, de <strong>comprendre</strong>, 
+                de <strong>tester</strong>. Cette curiosité m'a suivi partout : dans mes lectures, mes projets, mes passions… et a forgé ma vision actuelle : 
                 l'ingénierie ne se résume pas à la technique, elle prend tout son sens lorsqu'elle se met au service des personnes.
             </p>
             <p>
-                Cet engagement est aussi profondément <b>social</b>. Je suis persuadé que la science et la technologie ont un rôle crucial à jouer pour réduire les fractures et servir l'intérêt général.
+                Cet engagement est aussi profondément <strong>social</strong>. Je suis persuadé que la science et la technologie ont un rôle crucial à jouer pour réduire les fractures et servir l'intérêt général.
                 Innover, pour moi, ne signifie pas complexifier. Il s'agit plutôt de créer des solutions adaptées aux besoins réels et conçues pour durer. 
             </p>
             <p>
@@ -31,7 +31,7 @@
                 Cette proximité est indispensable pour concevoir des outils véritablement utiles.
             </p>
             <p>
-                C'est ce que j'aime appeller l'<b>innovation responsable</b> : créer des solutions durables, inclusives, qui s'adaptent aux réalités 
+                C'est ce que j'aime appeller l'<strong>innovation responsable</strong> : créer des solutions durables, inclusives, qui s'adaptent aux réalités 
                 du terrain pour servir l'intérêt général et réduire les fractures sociales.
             </p>
 
@@ -47,36 +47,36 @@
                 Après ma licence de mathématiques et informatique appliquées aux sciences humaines et sociales, mon service 
                 civique m'a fait découvrir la gestion de projet et l'impact concret qu'un outil bien pensé peut avoir. 
                 C'est ce qui m'a poussé à poursuivre en master d'expert en ingénierie logicielle, avec l'envie de créer 
-                des applications <b>utiles</b>, <b>accessibles</b> et <b>robustes</b>.
+                des applications <strong>utiles</strong>, <strong>accessibles</strong> et <strong>robustes</strong>.
             </p>
             <p>
-                Depuis, j'ai travaillé sur des projets variés, me premettant d'acquérir une certaine <b>polyvalence</b>. Notamment la création d'un jeu éducatif, 
-                l'<b>automatisation de tests End-2-End</b> d'un logiciel utilisant la reconnaissance faciale, la <b>refonte d'une application</b> de caisse, 
-                la <b>modernisation d'un SI</b> pour des épiceries solidaires ou encore une <b>analyse statistique</b> du gaspillage alimentaire.
+                Depuis, j'ai travaillé sur des projets variés, me premettant d'acquérir une certaine <strong>polyvalence</strong>. Notamment la création d'un jeu éducatif, 
+                l'<strong>automatisation de tests End-2-End</strong> d'un logiciel utilisant la reconnaissance faciale, la <strong>refonte d'une application</strong> de caisse, 
+                la <strong>modernisation d'un SI</strong> pour des épiceries solidaires ou encore une <strong>analyse statistique</strong> du gaspillage alimentaire.
                 <br>Ces expériences renforcent mon goût pour les solutions simples, maintenables et tournées vers l'humain.
             </p>
 
             <h4>Ce que j'apporte</h4>
             <p>
-                La <b>curiosité</b>, la <b>rigueur</b> et le <b>sens du partage</b> sont au cœur de ma manière de travailler. J'aime comprendre 
+                La <strong>curiosité</strong>, la <strong>rigueur</strong> et le <strong>sens du partage</strong> sont au cœur de ma manière de travailler. J'aime comprendre 
                 en profondeur, documenter ce que j'apprends, structurer ce que je fais et faciliter la vie de ceux qui 
                 passeront derrière moi. 
-                Douze années de sports collectifs - rugby puis handball - m'ont appris l'importance du <b>collectif</b>, de 
-                <b>l'écoute</b> et de <b>l'humilité</b>. Ces réflexes se retrouvent aujourd'hui dans ma façon de collaborer, d'animer 
+                Douze années de sports collectifs - rugby puis handball - m'ont appris l'importance du <strong>collectif</strong>, de 
+                <strong>l'écoute</strong> et de <strong>l'humilité</strong>. Ces réflexes se retrouvent aujourd'hui dans ma façon de collaborer, d'animer 
                 des réunions ou de préparer des présentations professionnelles.
             </p>
             <p>
-                J'apporte aujourd'hui une <b>approche globale</b>, faisant le lien entre les enjeux métiers et les contraintes techniques. 
+                J'apporte aujourd'hui une <strong>approche globale</strong>, faisant le lien entre les enjeux métiers et les contraintes techniques. 
                 Grâce à mon esprit critique, je cherche à anticiper les risques pour proposer des outils véritablement utiles, 
                 conçus pour durer et faciliter la vie de tous les utilisateurs.
             </p>
 
             <h4>Ce qui me nourrit</h4>
             <p>
-                En dehors du code, je me ressource dans la <b>musique</b> : je joue de la guitare depuis le collège et je produis 
-                un peu quand j'ai le temps. Les <b>sciences</b> et la <b>culture</b> alimentent ma curiosité, et le <b>sport</b> m'aide à garder 
-                un bon équilibre. Ayant grandi à la campagne, la <b>nature</b> occupe une place essentielle et nourrit ma conscience écologique, 
-                m'orientant naturellement vers l'<b>écoconception</b> numérique.
+                En dehors du code, je me ressource dans la <strong>musique</strong> : je joue de la guitare depuis le collège et je produis 
+                un peu quand j'ai le temps. Les <strong>sciences</strong> et la <strong>culture</strong> alimentent ma curiosité, et le <strong>sport</strong> m'aide à garder 
+                un bon équilibre. Ayant grandi à la campagne, la <strong>nature</strong> occupe une place essentielle et nourrit ma conscience écologique, 
+                m'orientant naturellement vers l'<strong>écoconception</strong> numérique.
             </p>
             <p>
                 Ces centres d'intérêt ne sont pas des activités à côté : ils influencent ma manière de penser, de créer, 
@@ -85,7 +85,7 @@
             </p>
             <p>
                 Ma curiosité me pousse aussi vers des projets plus personnels, comme le développement d'un VST pour explorer la synthèse 
-                de son ou la contribution à l'<b>open-source</b>. Pour moi, l'innovation doit rester profondément humaine, créative et responsable.
+                de son ou la contribution à l'<strong>open-source</strong>. Pour moi, l'innovation doit rester profondément humaine, créative et responsable.
             </p>
         </article>
     </section>

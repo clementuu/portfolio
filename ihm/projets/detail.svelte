@@ -149,7 +149,7 @@
     :global(.skill-item strong) {
         display: block;
         font-size: 1.1em;
-        color: var(--secondary-color);
+        color: #555;
         margin-bottom: 0.75rem;
         border-bottom: 2px solid #f8f9fa;
         padding-bottom: 0.5rem;
@@ -292,7 +292,7 @@
         box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
-    :global(.escarcelle-list li b) {
+    :global(.escarcelle-list li strong) {
         display: block;
         color: var(--secondary-color);
         font-size: 1.1em;
