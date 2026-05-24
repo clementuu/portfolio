@@ -184,9 +184,9 @@ const MissionAntiGaspiHTML = `
 
     <h3>Mon analyse critique</h3>
     <p>
-        Au vu des enjeux du gaspillage alimentaire dans la restauration collective, cette mission était d'une 
-        grande importance. Je pense qu'elle a été menée avec succès. Les données ont permis de determiner des leviers 
-        d'action et d'éclairer des décisions publiques permettant d'améliorer les pratiques dans les cantines 
+        Au vu des enjeux du gaspillage alimentaire dans la restauration collective, cette mission revêt une dimension cruciale. 
+        d'autant plus qu'elle a permis, grâce aux données recueillies, de determiner des leviers 
+        d'action pertinents et d'éclairer des décisions publiques, permettant d'améliorer les pratiques dans les cantines 
         de la commune. 
     </p>
     <p>
@@ -195,7 +195,7 @@ const MissionAntiGaspiHTML = `
         et à moindre effort.
     </p>
     <p>
-        Cette mission est l'une des plus atypique de mon parcours, mêlant rigueur 
+        Cette mission est l'une des plus atypique de mon parcours, elle mélange étude 
         scientifique et impact social, tout en démontrant les compétences en statistiques acquises 
         lors de mon cursus universitaire.
     </p>

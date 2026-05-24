@@ -30,10 +30,10 @@ const EscarcelleHTML = `
         L'écosystème Escarcelle repose sur trois modules principaux :
     </p>
 
-    <ul>
-        <li><b>Application Web de Gestion :</b> gestion des stocks, bénéficiaires, produits, rapports.</li>
-        <li><b>Application de Caisse :</b> enregistrement des ventes en boutique, synchronisée avec l'API.</li>
-        <li><b>API Partenaire :</b> interface sécurisée pour les intégrations externes (ex : click & collect).</li>
+    <ul class="escarcelle-list">
+        <li><b>Application Web de Gestion</b> gestion des stocks, bénéficiaires, produits, rapports.</li>
+        <li><b>Application de Caisse</b> enregistrement des ventes en boutique, synchronisée avec l'API.</li>
+        <li><b>API Partenaire</b> interface sécurisée pour les intégrations externes (ex : click & collect).</li>
     </ul>
 </section>
 

@@ -256,4 +256,48 @@
         margin-bottom: 0.3rem;
         letter-spacing: 0.02em;
     }
+
+    :global(.escarcelle-list) {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 0;
+        margin: 1.5rem 0;
+        list-style: none;
+    }
+
+    @media (min-width: 800px) {
+        :global(.escarcelle-list) {
+            flex-direction: row;
+            justify-content: center;
+        }
+    }
+
+    :global(.escarcelle-list li) {
+        background-color: #ffffff;
+        padding: 1.25rem;
+        border-radius: 12px;
+        border: 1px solid #f1f3f5;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        transition: all 0.2s ease-in-out;
+        font-size: 0.95em;
+        color: #555;
+    }
+
+    :global(.escarcelle-list li:hover) {
+        border-color: var(--secondary-color);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    :global(.escarcelle-list li b) {
+        display: block;
+        color: var(--secondary-color);
+        font-size: 1.1em;
+        margin-bottom: 0.5rem;
+        border-bottom: 2px solid #f8f9fa;
+        padding-bottom: 0.25rem;
+    }
 </style>
