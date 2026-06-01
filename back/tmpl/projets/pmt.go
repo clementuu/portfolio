@@ -8,7 +8,7 @@ const PmtHTML = `
     <h3>Présentation</h3>
 
     <p>
-        <b>PMT (Project Management Tool)</b> est une application web full-stack développée dans le 
+        <strong>PMT (Project Management Tool)</strong> est une application web full-stack développée dans le 
         cadre d'une étude de cas durant mon master. L'objectif était de concevoir un outil complet 
         de gestion de projets permettant de créer des projets, d'organiser des tâches, de les 
         assigner à des membres et de suivre leur avancement via un tableau de bord clair et 
@@ -156,8 +156,8 @@ const PmtHTML = `
     <p>
         PMT est un projet intégrateur qui démontre ma capacité à concevoir et à développer 
         une application web complète en autonomie. 
-        Il met en évidence ma maîtrise de la stack <b>Java/Spring</b> côté serveur, 
-        <b>Angular</b> côté client, ainsi que des outils DevOps comme <b>Docker</b> ou <b>Make</b>.  
+        Il met en évidence ma maîtrise de la stack <strong>Java/Spring</strong> côté serveur, 
+        <strong>Angular</strong> côté client, ainsi que des outils DevOps comme <strong>Docker</strong> ou <strong>Make</strong>.  
         Ce projet a été un excellent exercice pour comprendre les enjeux d'une architecture 
         full-stack moderne et renforcer ma polyvalence.
     </p>

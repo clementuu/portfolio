@@ -8,7 +8,7 @@ const MissionAntiGaspiHTML = `
     <h3>Présentation</h3>
 
     <p>
-        <b>TousAntiGaspi</b> est une mission menée dans le cadre de mon service civique pour la mairie 
+        <strong>TousAntiGaspi</strong> est une mission menée dans le cadre de mon service civique pour la mairie 
         de Saint-Jean-de-Védas. L'objectif était de réaliser une analyse fine du gaspillage alimentaire 
         dans les écoles de la commune afin d'en identifier les causes principales et de proposer des 
         leviers d'action concrets aux élus locaux.
@@ -26,9 +26,9 @@ const MissionAntiGaspiHTML = `
 <section class="project-section">
     <h3>Contexte et Enjeux</h3>
     <p>
-        En 2021, la commune faisait face à un constat préoccupant : près de <b>46 %</b> de la nourriture 
-        livrée par le traiteur n'était pas consommée, soit en moyenne <b>268 g de gaspillage par enfant 
-        et par repas</b>. Les causes étaient multiples : livraisons trop importantes, écarts entre repas 
+        En 2021, la commune faisait face à un constat préoccupant : près de <strong>46 %</strong> de la nourriture 
+        livrée par le traiteur n'était pas consommée, soit en moyenne <strong>268 g de gaspillage par enfant 
+        et par repas</strong>. Les causes étaient multiples : livraisons trop importantes, écarts entre repas 
         commandés et besoins réels, manque de tri, faible sensibilisation des enfants, conditions 
         d'accueil difficiles et absence d'accompagnement au repas.
     </p>
