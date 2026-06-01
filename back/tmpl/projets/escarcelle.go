@@ -11,8 +11,8 @@ const EscarcelleHTML = `
     <p>
         <strong>Escarcelle</strong> est un système d'information complet dédié aux épiceries solidaires. 
         Initialement conçu comme un outil de gestion interne, il a progressivement évolué vers un 
-        véritable écosystème numérique regroupant une application web moderne, une caisse connectée 
-        et une API ouverte aux partenaires externes.
+        véritable écosystème numérique regroupant une <strong>application web moderne</strong>, une <strong>caisse connectée</strong> 
+        et une <strong>API ouverte</strong> aux partenaires externes.
     </p>
 
     <p>
@@ -49,8 +49,8 @@ const EscarcelleHTML = `
 <section class="project-section">
     <h3>Contexte et Enjeux</h3>
     <p>
-        Escarcelle est utilisé quotidiennement par plus de 625 épiceries solidaires, représentant 
-        plus de 1,42 million de distributions et plus de 114 000 familles bénéficiaires. Moderniser 
+        Escarcelle est utilisé quotidiennement par plus de <strong>625 épiceries solidaires</strong>, représentant 
+        plus de <strong>1,42 million de distributions</strong> et plus de <strong>114 000 familles bénéficiaires</strong>. Moderniser 
         un tel système impliquait de préserver la continuité de service tout en améliorant un 
         socle historique devenu difficile à maintenir.
     </p>
@@ -65,9 +65,9 @@ const EscarcelleHTML = `
     </p>
 
     <p>
-        Les enjeux techniques étaient tout aussi importants : migration de MySQL 5.5 vers 8.0, 
-        refonte de modules critiques, introduction du multi code-barres, intégration de la base de données 
-        d'OpenFoodFacts, restructuration de l'architecture et création de nouveaux outils CLI pour améliorer 
+        Les enjeux techniques étaient tout aussi importants : <strong>migration de MySQL 5.5 vers 8.0</strong>, 
+        refonte de modules critiques, introduction du <strong>multi code-barres</strong>, intégration de la base de données 
+        d'<strong>OpenFoodFacts</strong>, restructuration de l'architecture et création de nouveaux <strong>outils CLI</strong> pour améliorer 
         l'environnement de développement.
     </p>
 
@@ -262,17 +262,22 @@ const EscarcelleHTML = `
 <section class="project-section">
     <h3>Résultats</h3>
     <p>
-        Escarcelle est aujourd'hui une plateforme plus moderne, plus performante et plus simple à 
-        maintenir. Les épiceries bénéficient d'outils plus fiables, d'une gestion des produits 
-        accélérée (multi-code-barres, OpenFoodFacts), et d'une expérience utilisateur plus fluide.  
-        Pour Softinnov, cette modernisation renforce la pérennité du système et ouvre la voie à de 
+        Escarcelle est aujourd'hui une plateforme plus <strong>moderne</strong>, plus <strong>performante</strong> et plus <strong>simple à 
+        maintenir</strong>. Les épiceries bénéficient d'outils plus <strong>fiables</strong>, d'une gestion des produits 
+        <strong>accélérée</strong> (multi-code-barres, OpenFoodFacts), et d'une expérience utilisateur plus <strong>fluide</strong>.  
+        Pour Softinnov, cette modernisation renforce la <strong>pérennité du système</strong> et ouvre la voie à de 
         nouvelles intégrations externes.
     </p>
 
     <p>
         Pour moi, ce projet a été un terrain d'apprentissage exceptionnel : migrations sensibles, 
-        architecture logicielle, développement full-stack, gestion du legacy, coordination technique 
-        et conception de modules à fort impact métier.
+        architecture logicielle, développement full-stack, gestion des bases de données, gestion du legacy, 
+        coordination technique et conception de modules à fort impact métier.
+    </p>
+
+    <p>
+        Sa complexité et la diversité des missions qui m'ont été attribuées m'ont permis de monter en compétences 
+        dans différents aspects du travail d'un développeur.
     </p>
 
     <h3>Pour la suite</h3>

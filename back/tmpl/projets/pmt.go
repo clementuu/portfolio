@@ -8,8 +8,8 @@ const PmtHTML = `
     <h3>Présentation</h3>
 
     <p>
-        <strong>PMT (Project Management Tool)</strong> est une application web full-stack développée dans le 
-        cadre d'une étude de cas durant mon master. L'objectif était de concevoir un outil complet 
+        <strong>PMT (Project Management Tool)</strong> est une <strong>application web full-stack</strong> développée dans le 
+        cadre d'une <strong>étude de cas</strong> durant mon master. L'objectif était de concevoir un outil complet 
         de gestion de projets permettant de créer des projets, d'organiser des tâches, de les 
         assigner à des membres et de suivre leur avancement via un tableau de bord clair et 
         intuitif.
@@ -18,10 +18,10 @@ const PmtHTML = `
     <img class="project-image" src="../assets/PmtProjet.png" alt="Projet PMT">
 
     <p>
-        L'application repose sur une architecture découplée : un backend en 
-        <a class="link" href="/competences/detail.html?id=7">Java/Spring</a> exposant une API REST, 
+        L'application repose sur une <strong>architecture découplée</strong> : un backend en 
+        <a class="link" href="/competences/detail.html?id=7">Java/Spring</a> exposant une <strong>API REST</strong>, 
         et un frontend en <a class="link" href="/competences/detail.html?id=5">Angular</a> consommant 
-        cette API. L'ensemble est conteneurisé avec 
+        cette API. L'ensemble est <strong>conteneurisé</strong> avec 
         <a class="link" href="/competences/detail.html?id=11">Docker</a>, garantissant un 
         environnement de développement reproductible et cohérent.
     </p>
@@ -30,9 +30,8 @@ const PmtHTML = `
 <section class="project-section">
     <h3>Contexte et Enjeux</h3>
     <p>
-        Ce projet a été réalisé dans le cadre d'une étude de cas durant mon master, avec pour 
-        objectif principal de mettre en pratique une stack technique que je n'avais encore jamais 
-        utilisée en conditions réelles.
+        Ce projet avait pour objectif principal de mettre en pratique une stack technique 
+        que je n'avais encore jamais utilisée en conditions réelles.
     </p>
 
     <p>
@@ -154,12 +153,13 @@ const PmtHTML = `
 <section class="project-section">
     <h3>Résultats</h3>
     <p>
-        PMT est un projet intégrateur qui démontre ma capacité à concevoir et à développer 
-        une application web complète en autonomie. 
-        Il met en évidence ma maîtrise de la stack <strong>Java/Spring</strong> côté serveur, 
-        <strong>Angular</strong> côté client, ainsi que des outils DevOps comme <strong>Docker</strong> ou <strong>Make</strong>.  
-        Ce projet a été un excellent exercice pour comprendre les enjeux d'une architecture 
-        full-stack moderne et renforcer ma polyvalence.
+        PMT est un <strong>projet abouti</strong> qui démontre ma capacité à <strong>concevoir et à développer</strong> 
+        une application web complète <strong>en autonomie</strong>. 
+        Il met en évidence ma maîtrise de la stack <a class="link" href="/competences/detail.html?id=7">Java/Spring</a> côté serveur, 
+        <a class="link" href="/competences/detail.html?id=5">Angular</a> côté client, ainsi que des outils DevOps comme 
+        <a class="link" href="/competences/detail.html?id=11">Docker</a> ou <strong>Make</strong>.  
+        Ce projet a été un excellent exercice pour <strong>comprendre les enjeux d'une architecture 
+        full-stack moderne</strong> et renforcer ma polyvalence.
     </p>
 
     <h3>Pour le futur</h3>
@@ -167,7 +167,7 @@ const PmtHTML = `
         PMT est destiné à devenir mon outil personnel pour organiser mes projets.  
         J'aimerais le rendre accessible en ligne, ce qui demandera quelques ajustements. 
         Je devrai réarchitecturer en partie le projet pour supporter plusieurs organisations, mais aussi 
-        améliorer la sécurité en implémentant une authentification via JWT par exemple. 
+        améliorer la sécurité en implémentant une authentification via <strong>JWT</strong> par exemple. 
         Ces évolutions permettront d'en faire un outil plus générique, plus sécurisé et potentiellement 
         utilisable par un public plus large.
     </p>

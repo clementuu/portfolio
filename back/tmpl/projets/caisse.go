@@ -10,8 +10,8 @@ const CaisseHTML = `
 
     <p>
         Pour ce projet j'ai complètement repensé l'application de caisse Escarcelle, un outil 
-        central utilisé au quotidien par plus de 600 épiceries solidaires. L'ancienne version, 
-        développée en Rebol, était devenue difficile à maintenir et limitée dans ses évolutions. 
+        central utilisé au quotidien par plus de <strong>600 épiceries solidaires</strong>. L'ancienne version, 
+        développée en <a class="link" href="/competences/detail.html?id=9">Rebol</a>, était devenue difficile à maintenir et limitée dans ses évolutions. 
         Elle présentait plusieurs failles importantes, notamment une absence de chiffrement, une interface 
         vieillissante et une dépendance forte à une technologie obsolète.
     </p>
@@ -206,16 +206,16 @@ const CaisseHTML = `
 <section class="project-section">
     <h3>Résultats</h3>
     <p>
-        La refonte de la caisse Escarcelle a été un succès majeur, autant pour l'entreprise que pour 
-        moi. Pour Softinnov, elle a permis de moderniser un outil central utilisé par plus de 600 
-        épiceries solidaires, d'améliorer la fiabilité du service, de réduire les erreurs en caisse 
+        La refonte de la caisse Escarcelle a été un <strong>véritable succès</strong>, autant pour l'entreprise que pour 
+        moi. Pour Softinnov, elle a permis de <strong>moderniser</strong> un outil central utilisé par plus de <strong>600 
+        épiceries solidaires</strong>, d'améliorer la <strong>fiabilité</strong> du service, de <strong>réduire les erreurs</strong> en caisse 
         et de fluidifier le travail des équipes sur le terrain. L'application est désormais plus 
-        rapide, plus sécurisée, plus ergonomique et beaucoup plus simple à maintenir.
+        <strong>rapide</strong>, plus <strong>sécurisée</strong>, plus <strong>ergonomique</strong> et beaucoup plus simple à maintenir.
     </p>
 
     <p>
         Pour ma part, ce projet a été l'un des plus formateurs de mon parcours. Il m'a permis 
-        d'acquérir une expertise solide en développement d'applications de bureau en 
+        d'acquérir une <strong>expertise solide</strong> en développement d'applications de bureau en 
         <a class="link" href="/competences/detail.html?id=1">Go</a> avec Fyne, en conception 
         d'architectures événementielles, en gestion de données locales synchronisées, en intégration 
         de périphériques et en pilotage complet d'un projet stratégique, du cadrage à la livraison.
@@ -233,10 +233,10 @@ const CaisseHTML = `
 
     <h3>Mon regard critique</h3>
     <p>
-        Avec du recul, je pense que ce projet est une vraie réussite. Le nouvel outil a été adopté 
-        sans problème, les retours des utilisateurs étaient positifs, et on n'a eu aucune interruption de service, 
-        ce qui était vraiment un point très important. Sans le travail des équipes de test, 
-        des épiceries pilotes et du référent technique, on n'aurait jamais eu un résultat aussi propre.
+        Avec du recul, je pense que ce projet est une vraie réussite et un des projets les plus importants de ma jeune carrière. 
+        Le nouvel outil a été adopté <strong>sans problème</strong>, les retours des utilisateurs étaient positifs, 
+        et on n'a eu <strong>aucune interruption de service</strong>, ce qui était vraiment un point très important. 
+        Sans le travail des équipes de test, des épiceries pilotes et du référent technique, on n'aurait jamais eu un résultat aussi propre.
     </p>
 
     <p>
@@ -253,7 +253,6 @@ const CaisseHTML = `
         sur le plan technique que dans l'organisation, et il m'a donné une vision bien plus mature de ce que ça implique de refonder 
         un outil métier critique à grande échelle.
     </p>
-
 </section>
 
 <!-- =================================================================== -->

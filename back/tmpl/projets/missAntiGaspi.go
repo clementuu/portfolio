@@ -9,7 +9,7 @@ const MissionAntiGaspiHTML = `
 
     <p>
         <strong>TousAntiGaspi</strong> est une mission menée dans le cadre de mon service civique pour la mairie 
-        de Saint-Jean-de-Védas. L'objectif était de réaliser une analyse fine du gaspillage alimentaire 
+        de Saint-Jean-de-Védas. L'objectif était de réaliser une <strong>analyse chiffrée du gaspillage alimentaire</strong> 
         dans les écoles de la commune afin d'en identifier les causes principales et de proposer des 
         leviers d'action concrets aux élus locaux.
     </p>
@@ -159,24 +159,24 @@ const MissionAntiGaspiHTML = `
 <section class="project-section">
     <h3>Résultats</h3>
     <p>
-        L'étude a permis de mettre en évidence une baisse significative du gaspillage alimentaire 
-        entre 2021 et 2023, passant de 268 g à 177 g par enfant et par repas.  
-        Le passage à 4 composantes a eu un impact positif sur la réduction du gaspillage, sans 
+        L'étude a permis de mettre en évidence une <strong>baisse significative</strong> du gaspillage alimentaire 
+        entre 2021 et 2023, passant de <strong>268 g à 177 g</strong> par enfant et par repas.  
+        Le passage à 4 composantes a eu un <strong>impact positif</strong> sur la réduction du gaspillage, sans 
         diminuer la consommation des enfants.  
-        Les analyses ont également permis d'identifier les composantes les plus problématiques 
+        Les analyses ont également permis d'<strong>identifier les composantes les plus problématiques</strong> 
         (fruits et entrées) et de proposer des pistes d'action concrètes.
     </p>
 
     <p>
-        Pour moi, cette mission a été une expérience riche mêlant statistiques, travail de terrain, 
-        communication et engagement citoyen. Elle m'a permis de développer une expertise solide en 
+        Pour moi, cette mission a été une expérience riche mêlant <strong>statistiques</strong>, travail de terrain, 
+        communication et <strong>engagement citoyen</strong>. Elle m'a permis de développer une expertise solide en 
         analyse de données appliquée à des enjeux réels.
     </p>
 
     <h3>Pour le futur</h3>
     <p>
         Les résultats de l'étude ont servi de base à la réflexion sur le futur marché public de 
-        restauration scolaire.  
+        restauration scolaire. 
         La mairie poursuit désormais les actions engagées : tri des biodéchets, redistribution, 
         adaptation des menus, sensibilisation des enfants, amélioration des commandes et suivi 
         régulier des pesées.

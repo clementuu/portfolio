@@ -8,7 +8,7 @@ const JeuAntiGaspiHTML = `
     <h3>Présentation</h3>
 
     <p>
-        Ce projet est un jeu vidéo 2D conçu pour sensibiliser les enfants aux éco-gestes et à la 
+        Ce projet est un <strong>jeu vidéo 2D</strong> conçu pour <strong>sensibiliser les enfants aux éco-gestes</strong> et à la 
         réduction du gaspillage alimentaire. Pensé comme un support ludique et accessible, il propose 
         une expérience simple en vue du dessus, où le joueur doit accomplir différentes actions liées 
         au tri, à la gestion des déchets ou à la consommation responsable.
@@ -161,7 +161,7 @@ const JeuAntiGaspiHTML = `
     <h3>Résultats</h3>
     <p>
         Ce jeu anti-gaspi est un projet qui me tient particulièrement à cœur. Bien que son code ne 
-        reflète plus mon niveau actuel, il représente une étape fondatrice dans mon parcours de 
+        reflète plus mon niveau actuel, il représente une <strong>étape fondatrice</strong> dans mon parcours de 
         développeur et un exemple concret de la manière dont le numérique peut servir des objectifs 
         pédagogiques et citoyens.
     </p>
@@ -169,8 +169,8 @@ const JeuAntiGaspiHTML = `
     <p>
         J'y ai appris les bases du développement de jeux 2D, la manipulation du canvas, la gestion 
         d'assets et la création d'interactions ludiques.  
-        Surtout, le jeu a rempli sa mission : il a permis de sensibiliser des enfants aux éco-gestes 
-        de manière amusante et efficace, et a été très bien accueilli par les équipes éducatives de 
+        Surtout, le jeu a rempli sa mission : il a permis de <strong>sensibiliser</strong> des enfants aux <strong>éco-gestes</strong> 
+        de manière amusante et efficace, et a été <strong>très bien accueilli</strong> par les équipes éducatives de 
         la commune.
     </p>
 
@@ -185,8 +185,8 @@ const JeuAntiGaspiHTML = `
 
     <h3>Mon regard critique</h3>
     <p>
-        Si je devais donner mon avis je dirais que malgré ses lacunes ce projet est un véritable 
-        accomplissement. Les enfants ont apprécié le jeu, les ateliers se sont très bien déroulés 
+        Si je devais donner mon avis je dirais que malgré ses lacunes ce projet est un <strong>bel 
+        accomplissement</strong>. Les enfants ont apprécié le jeu, les ateliers se sont très bien déroulés 
         et les équipes de la commune ont salué la qualité du support pédagogique.
     </p>
 
@@ -206,7 +206,7 @@ const JeuAntiGaspiHTML = `
 
     <p>
         Malgré ces limites, ce projet reste une étape importante de mon parcours : c'est lui qui 
-        qui m'a donné goût au développement web. Il m'a permis d'apprendre énormément, de gagner en 
+        qui m'a <strong>donné goût au développement web</strong>. Il m'a permis d'apprendre énormément, de gagner en 
         autonomie et de comprendre l'importance d'une bonne architecture dès les premières lignes de code.
     </p>
 </section>
