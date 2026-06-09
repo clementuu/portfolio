@@ -13,7 +13,7 @@
         <article>
             <p>
                 Mon premier contact avec l'informatique remonte à l'enfance, j'était le petit-fils que les grands-parents appelaient
-                à la rescousse quand l'ordinateur faisait des siennes, J'allais bidoullier un peu dans le panneau de configuration 
+                à la rescousse quand l'ordinateur faisait des siennes, J'allais bidouiller un peu dans le panneau de configuration 
                 ou dans le gestionnaire de tâches et c'était très souvent c'était suffisant.
             </p>
             <h4>Ce qui m'anime</h4>
@@ -87,6 +87,9 @@
                 Ma curiosité me pousse aussi vers des projets plus personnels, comme le développement d'un VST pour explorer la synthèse 
                 de son ou la contribution à l'<strong>open-source</strong>. Pour moi, l'innovation doit rester profondément humaine, créative et responsable.
             </p>
+
+            <!-- Pourquoi pas ajouter ici une partie sur "ce que l'on dit de moi" -->
+
         </article>
     </section>
 </div>
