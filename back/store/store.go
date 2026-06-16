@@ -40,5 +40,8 @@ func SetupTestData() *RAMStore {
 			{Intitule: "Pizzaiolo", Type: "Acrobatique"},
 			{Intitule: "Rockstar", Taches: []string{"Fumer un max de clopes", "Crier très fort dans un micro", "Faire coucou aux fans"}},
 		},
+		Blog: []model.Article{
+			{ID: 1, Titre: "Test Article", Date: "01/01/2026", Description: "Description de test", Template: "<p>Contenu de test</p>"},
+		},
 	}
 }
