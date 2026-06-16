@@ -2,6 +2,7 @@ package web
 
 import (
 	"back/log"
+	"back/service/blog"
 	"back/service/competence"
 	"back/service/cv"
 	"back/service/projet"
@@ -110,7 +111,44 @@ func (h *Handler) GetCV(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-// LoggingMiddleware logs incoming HTTP requests.
+// GetAllArticles renvoie la liste des articles
+func (h *Handler) GetAllArticles(w http.ResponseWriter, r *http.Request) {
+	w.WriteHeader(http.StatusOK)
+	err := encodeJSON(w, blog.GetArticles())
+	if err != nil {
+		h.Logger.Error("Error encoding articles: %v", err)
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+}
+
+// GetArticleByID renvoie un article d'id donné
+func (h *Handler) GetArticleByID(w http.ResponseWriter, r *http.Request) {
+	idStr := r.PathValue("id")
+	id, err := strconv.Atoi(idStr)
+	if err != nil {
+		h.Logger.Warn("Invalid ID format: %s", idStr)
+		http.Error(w, err.Error(), http.StatusBadRequest)
+		return
+	}
+
+	article, err := blog.GetArticleByID(id)
+	if err != nil {
+		h.Logger.Error("Error getting article by ID %d: %v", id, err)
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	w.WriteHeader(http.StatusOK)
+
+	err = encodeJSON(w, article)
+	if err != nil {
+		h.Logger.Error("Error encoding article: %v", err)
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+}
+
+// LoggingMiddleware logs les requêtes HTTP entrantes.
 func LoggingMiddleware(logger log.Logger, next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		logger.Info("%s %s %s", r.Method, r.URL.Path, r.RemoteAddr)

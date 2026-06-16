@@ -2,6 +2,7 @@ package main
 
 import (
 	"back/cfg"
+	"back/service/blog"
 	"back/service/competence"
 	"back/service/cv"
 	"back/service/projet"
@@ -17,11 +18,13 @@ func main() {
 		log.Fatal(err)
 	}
 
+	// Initialise le RAMStore et configure les services avec celui-ci
 	ramStore := store.NewRAMStore()
 
 	competence.Setup(ramStore)
 	projet.Setup(ramStore)
 	cv.Setup(ramStore)
+	blog.Setup(ramStore)
 
 	fs := http.FileServer(http.Dir(config.StaticDir))
 	http.Handle("/", fs)

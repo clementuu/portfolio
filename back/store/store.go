@@ -7,6 +7,7 @@ type RAMStore struct {
 	Projets     []model.Projet
 	Formations  []model.Formation
 	Experiences []model.Experience
+	Blog        []model.Article
 }
 
 // NewRAMStore crée une nouvelle instance de RAMStore.
@@ -16,6 +17,7 @@ func NewRAMStore() *RAMStore {
 		Projets:     projetsList,
 		Formations:  formationsList,
 		Experiences: experiencesList,
+		Blog:        articlesList,
 	}
 }
 
