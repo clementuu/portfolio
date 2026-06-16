@@ -4,7 +4,7 @@
     export let article;
 </script>
 
-<a href="/blog/detail.html?id={article.ID}" class="blog-card-link">
+<a href="/blog/detail.html?id={article.id}" class="blog-card-link">
     <div class="card blog-card">
         <div class="card-body">
             <div class="flex">

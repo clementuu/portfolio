@@ -3,57 +3,29 @@
 <script>
     import Header from '../elements/header.svelte';
     import { onMount } from 'svelte';
+    import { articles, loadArticles } from './store.js';
 
     let article = null;
     let error = null;
 
-    // Mock data (same as in blog.svelte for now)
-    const articles = [
-        {
-            ID: 1,
-            titre: "Mon premier article",
-            template: `
-                <p>Bienvenue sur mon blog !</p>
-                <p>Dans cet article, je partage ma vision du développement logiciel et pourquoi j'ai décidé de créer ce portfolio.</p>
-                <p>L'ingénierie logicielle est pour moi un outil au service de l'humain. C'est pourquoi j'ai choisi de mettre en avant mon parcours et mes projets.</p>
-                <p>J'espère que vous apprécierez la lecture !</p>
-            `,
-            date: "01/01/2026"
-        },
-        {
-            ID: 2,
-            titre: "Pourquoi Go ?",
-            template: `
-                <p>Go est devenu mon langage de prédilection pour le backend.</p>
-                <p>Sa simplicité, sa performance et son excellent support pour la concurrence en font un choix idéal pour les microservices modernes.</p>
-                <ul>
-                    <li>Simplicité de lecture et d'écriture</li>
-                    <li>Performance proche du C++</li>
-                    <li>Gestion native de la concurrence avec les goroutines</li>
-                </ul>
-            `,
-            date: "05/01/2026"
-        },
-        {
-            ID: 3,
-            titre: "Svelte : la simplicité au front",
-            template: `
-                <p>Après avoir utilisé Angular et React, j'ai découvert Svelte.</p>
-                <p>Sa philosophie 'sans framework' à l'exécution et sa syntaxe concise m'ont immédiatement séduit.</p>
-                <p>Svelte compile votre code en JavaScript pur, ce qui signifie pas de virtual DOM et des performances accrues.</p>
-            `,
-            date: "12/03/2026"
-        }
-    ];
-
-    onMount(() => {
+    onMount(async () => {
         const urlParams = new URLSearchParams(window.location.search);
         const id = parseInt(urlParams.get('id'));
         
         if (id) {
-            article = articles.find(a => a.ID === id);
-            if (!article) {
-                error = "Article non trouvé.";
+            try {
+                // Ensure articles are loaded in the store
+                await loadArticles();
+                
+                // Find the article in the store
+                article = $articles.find(a => a.ID === id || a.id === id);
+                
+                if (!article) {
+                    error = "Article non trouvé.";
+                }
+            } catch (err) {
+                console.error('Error finding article:', err);
+                error = "Erreur de la récupération de l'article.";
             }
         } else {
             error = "ID d'article manquant.";
@@ -66,7 +38,12 @@
 <div class="detail-container">
     {#if error}
         <div class="alert alert-danger">{error}</div>
-        <a href="/blog/blog.html" class="btn btn-secondary">Retour au blog</a>
+        <div class="flex" style="justify-content: center;">
+            <a href="/blog/blog.html" class="btn btn-secondary" style="text-align: center;">
+                <i class="bi bi-arrow-left"></i> Retour au blog
+            </a>
+        </div>
+        
     {:else if article}
         <article class="blog-article">
             <header class="article-header">
