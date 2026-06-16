@@ -33,6 +33,7 @@
                 </ul>
             </div>
         </div>
+        <a href="/blog/blog.html"><i class="bi bi-journal-text"></i><span class="link-text">Blog</span></a>
         <a href="/contacts.html"><i class="bi bi-envelope-fill"></i><span class="link-text">Contacts</span></a>
     </div>
 </nav>
