@@ -6,21 +6,41 @@
 
     let articles = [
         {
+            ID: 1,
             titre: "Mon premier article",
             description: "Bienvenue sur mon blog ! Dans cet article, je partage ma vision du développement logiciel et pourquoi j'ai décidé de créer ce portfolio. L'ingénierie logicielle est pour moi un outil au service de l'humain.",
-            template: "...",
+            template: `
+                <p>Bienvenue sur mon blog !</p>
+                <p>Dans cet article, je partage ma vision du développement logiciel et pourquoi j'ai décidé de créer ce portfolio.</p>
+                <p>L'ingénierie logicielle est pour moi un outil au service de l'humain. C'est pourquoi j'ai choisi de mettre en avant mon parcours et mes projets.</p>
+                <p>J'espère que vous apprécierez la lecture !</p>
+            `,
             date: "01/01/2026"
         },
         {
+            ID: 2,
             titre: "Pourquoi Go ?",
             description: "Go est devenu mon langage de prédilection pour le backend. Sa simplicité, sa performance et son excellent support pour la concurrence en font un choix idéal pour les microservices modernes.",
-            template: "...",
+            template: `
+                <p>Go est devenu mon langage de prédilection pour le backend.</p>
+                <p>Sa simplicité, sa performance et son excellent support pour la concurrence en font un choix idéal pour les microservices modernes.</p>
+                <ul>
+                    <li>Simplicité de lecture et d'écriture</li>
+                    <li>Performance proche du C++</li>
+                    <li>Gestion native de la concurrence avec les goroutines</li>
+                </ul>
+            `,
             date: "05/01/2026"
         },
         {
+            ID: 3,
             titre: "Svelte : la simplicité au front",
             description: "Après avoir utilisé Angular et React, j'ai découvert Svelte. Sa philosophie 'sans framework' à l'exécution et sa syntaxe concise m'ont immédiatement séduit.",
-            template: "...",
+            template: `
+                <p>Après avoir utilisé Angular et React, j'ai découvert Svelte.</p>
+                <p>Sa philosophie 'sans framework' à l'exécution et sa syntaxe concise m'ont immédiatement séduit.</p>
+                <p>Svelte compile votre code en JavaScript pur, ce qui signifie pas de virtual DOM et des performances accrues.</p>
+            `,
             date: "12/03/2026"
         }
     ];

@@ -4,32 +4,42 @@
     export let article;
 </script>
 
-<div class="card blog-card">
-    <div class="card-body">
-        <div class="flex">
-            <h3 class="card-title">{article.titre}</h3>
-            <span class="card-date">{article.date}</span>
-        </div>
-        <p class="card-text">{article.description}</p>
-        <div class="read-more">
-            <span class="link">Lire la suite <i class="bi bi-arrow-right"></i></span>
+<a href="/blog/detail.html?id={article.ID}" class="blog-card-link">
+    <div class="card blog-card">
+        <div class="card-body">
+            <div class="flex">
+                <h3 class="card-title">{article.titre}</h3>
+                <span class="card-date">{article.date}</span>
+            </div>
+            <p class="card-text">{article.description}</p>
+            <div class="read-more">
+                <span class="link">Lire la suite <i class="bi bi-arrow-right"></i></span>
+            </div>
         </div>
     </div>
-</div>
+</a>
 
 <style>
     @import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");
     @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
-    .blog-card {
+    .blog-card-link {
+        text-decoration: none;
+        color: inherit;
+        display: block;
         width: 100%;
         max-width: 800px;
         margin-bottom: 2rem;
+    }
+
+    .blog-card {
+        width: 100%;
         transition: transform 0.2s, box-shadow 0.2s;
         cursor: pointer;
         border: none;
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         border-radius: 8px;
+        margin-bottom: 0;
     }
 
     .blog-card:hover {
